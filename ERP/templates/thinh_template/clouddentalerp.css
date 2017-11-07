@@ -241,10 +241,6 @@ textarea{
     height: 60px;
     align-items: center;
 }
-/*#cashbook-content-header b span a select{
-    color: #23b14e;
-    font-size: 13px !important;
-}*/
 #cashbook-rec-content-detail thead{
     background: #23b14e;
     color: #fff;
