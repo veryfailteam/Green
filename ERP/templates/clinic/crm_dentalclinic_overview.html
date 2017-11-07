@@ -16,9 +16,9 @@
             <nav id="appointment-list" class="nav flex-column">
                 {% for customer in lstCusToday%}
                     {% if forloop.counter == 1 %}
-                    <a class="nav-link active" href="#">
+                    <a class="nav-link active" href="#" name="{{customer.customer_id}}">
                     {% else %}
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="#"  name="{{customer.customer_id}}">
                     {% endif %}
                         <span style="float: left;">
                             <b>{{customer.customer_name}}</b><br/>
@@ -26,27 +26,27 @@
                         </span>
                         <span style="float: right;text-align: right;">
                             <b>{{customer.appointment_time}}</b>
-                            {% if customer.appointment_status == appointment_status.APPOINTMENT_STATUS_PENDING_PAYMENT%}
+                            {% if customer.appointment_status == constant_key.APPOINTMENT_STATUS_PENDING_PAYMENT%}
                                 <p class="status-pendingpayment">
                                     Pending payment
                                </p>
-                            {% elif customer.appointment_status == appointment_status.APPOINTMENT_STATUS_ACTIVE%}
+                            {% elif customer.appointment_status == constant_key.APPOINTMENT_STATUS_ACTIVE%}
                                 <p class="status-active">
                                    Active
                                 </p>
-                            {% elif customer.appointment_status == appointment_status.APPOINTMENT_STATUS_CHECKED%}
+                            {% elif customer.appointment_status == constant_key.APPOINTMENT_STATUS_CHECKED%}
                                 <p class="status-checked">
                                    Checked
                                 </p>
-                            {% elif customer.appointment_status == appointment_status.APPOINTMENT_STATUS_ON_WAY%}
+                            {% elif customer.appointment_status == constant_key.APPOINTMENT_STATUS_ON_WAY%}
                                 <p class="status-onway">
                                    On way
                                 </p>
-                            {% elif customer.appointment_status == appointment_status.APPOINTMENT_STATUS_BOOKED%}
+                            {% elif customer.appointment_status == constant_key.APPOINTMENT_STATUS_BOOKED%}
                                 <p class="status-booked">
                                    Booked
                                 </p>
-                            {% elif customer.appointment_status == appointment_status.APPOINTMENT_STATUS_FOLLOW%}
+                            {% elif customer.appointment_status == constant_key.APPOINTMENT_STATUS_FOLLOW%}
                                 <p class="status-follow">
                                    Booked
                                 </p>
@@ -73,6 +73,19 @@
                 $("#appointment-list a").on("click", function(){
                    $("#appointment-list").find(".active").removeClass("active");
                    $(this).addClass("active");
+                });
+
+                $("#appointment-list a").on("click", function(){
+                    $.ajax({
+                        url: 'get_appointment_schedule/',
+                        data: {
+                            'customer_id': this.name
+                        },
+                        dataType: 'html',
+                        success: function (data) {
+                                document.getElementById("lstAppointment-body").innerHTML = data
+                            }
+                    });
                 });
             </script>
         </div>
@@ -109,18 +122,36 @@
                         <th scope="col">Action</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="lstAppointment-body">
                     {% for item in lstAppointment %}
                         <tr>
-                            <td>{{item.appointment_date}} {{item.appointment_time}}</td>
+                            <td>{{item.date}} {{item.time}}</td>
                             <td>{{item.assign_name}}</td>
-                            <td>{{item.treatment_name}}</td>
-                            <td>{{item.appointment_content}}</td>
-                            <td>{{item.appointment_note}}</td>
+                            <td>{{item.name}}</td>
+                            <td>{{item.content}}</td>
+                            <td>{{item.note}}</td>
                             <td>
-                                {% if item.appointment_status == appointment_status.APPOINTMENT}}
-                                <a class="btn btn-light" href="">Done</a>
-                                <a class="btn btn-light" href="">Edit</a>
+                                {% if item.status == constant_key.APPOINTMENT_STATUS_ACTIVE and user_role != constant_key.ROLE_RECEPTION %}
+                                    <a class="btn btn-primary" href="">Done</a>
+                                    <!-- <a class="btn btn-light" href="">Edit</a> -->
+                                {% elif item.status == constant_key.APPOINTMENT_STATUS_ACTIVE %}
+                                    <a class="btn btn-primary" href="">View</a>
+                                {% elif item.status == constant_key.APPOINTMENT_STATUS_CHECKED and user_role == constant_key.ROLE_RECEPTION %}
+                                    <a class="btn btn-primary" href="">View</a>
+                                {% elif item.status == constant_key.APPOINTMENT_STATUS_CHECKED%}
+                                    <a class="btn btn-primary" href="">Active</a>
+                                    <a class="btn btn-primary" href="">View</a>
+                                {% elif item.status == constant_key.APPOINTMENT_STATUS_ON_WAY%}
+                                    <a class="btn btn-primary" href="">Checked</a>
+                                    <a class="btn btn-primary" href="">Edit</a>
+                                {% elif item.status == constant_key.APPOINTMENT_STATUS_BOOKED%}
+                                    <a class="btn btn-primary" href="">On way</a>
+                                    <a class="btn btn-primary" href="">Edit</a>
+                                {% elif item.status == constant_key.APPOINTMENT_STATUS_FOLLOW %}
+                                    <a class="btn btn-primary" href="">Confirm</a>
+                                {% elif item.status == constant_key.APPOINTMENT_STATUS_DONE %}
+                                    <a class="btn btn-primary" href="">View</a>
+                                {% endif %}
                             </td>
                         </tr>
                     {% endfor %}
