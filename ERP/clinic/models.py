@@ -98,12 +98,20 @@ class Treatment(models.Model):
     treatment_update_by = models.CharField(max_length=8,null=True)
     treatment_delete_flag = models.CharField(max_length=1,null=True)
 
-# class TreatmentDetail(models.Model):
-#   treatment_id = models.CharField(max_length=8,null=True)
-#   treatment_detail_id = models.CharField(max_length=8,null=True)
-#   time = models.DateTimeField(null=True)
-#   content = models.TextField(max_length=500,null=True)
-#   price  = models.IntegerField(null=True)
+class TreatmentDetail(models.Model):
+    brand_id = models.IntegerField(null=True)
+    treatment_id = models.IntegerField(null=True)
+    treatmentdetail_id = models.AutoField(primary_key=True)
+    treatmentdetail_no = models.CharField(max_length=10,null=True)
+    treatmentdetail_date = models.CharField(max_length=10,null=True)
+    treatmentdetail_content = models.CharField(max_length=500,null=True)
+    treatmentdetail_price  = models.IntegerField(null=True)
+    treatmentdetail_status = models.CharField(max_length=10,null=True)
+    treatmentdetail_create_date = models.CharField(max_length=10,null=True)
+    treatmentdetail_create_by = models.CharField(max_length=8,null=True)
+    treatmentdetail_update_date = models.CharField(max_length=10,null=True)
+    treatmentdetail_update_by = models.CharField(max_length=8,null=True)
+    treatmentdetail_delete_flag = models.CharField(max_length=1,null=True)
 
 # class Invoice(models.Model):
 #   brand_id = models.CharField(max_length=8,null=True)
