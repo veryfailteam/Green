@@ -89,9 +89,12 @@
         <div class="container">
             <div class="row" id="cashbook-rec-content-header">
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <b>Total revenues:</b><span>&nbsp;900,000 <sup>vnđ</sup></span>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                     <div class="row">
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="padding-top: 10px;">
-                            <b>Choose the time:</b>
+                            <b>Filter by:</b>
                         </div>
                         <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
                             <select class="form-control" style="display: inline;">
@@ -105,9 +108,6 @@
                             </select>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                    <b>Total revenues:</b><span>&nbsp;900,000 <sup>vnđ</sup></span>
                 </div>
             </div>
             <div class="row" id="cashbook-rec-content-detail">
@@ -143,7 +143,9 @@
                             <td style="padding-left: 0px; min-width: 80px; max-width: 120px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">David Joe</td>
                             <td style="padding-left: 0px; min-width: 20px; max-width: 80px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><a href="">Cash 1</a></td>
                             <td style="padding-left: 0px; min-width: 80px; max-width: 120px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Em tên Chi</td>
-                            <td><a class="btn btn-light" href="" style="width: 120px; color: #2196f3">View</a></td>
+                            <td>
+                                <a class="btn btn-light" href="" style="width: 120px; color: #2196f3">Go to invoice</a>
+                            </td>
                         </tr>
                         <tr>
                             <td style="padding-left: 8px; min-width: 80px;">RV-00001</td>
@@ -153,7 +155,7 @@
                             <td style="padding-left: 0px; min-width: 80px; max-width: 120px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Ngô Bảo Châu</td>
                             <td style="padding-left: 0px; min-width: 20px; max-width: 80px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><a href="">ACB Bank</a></td>
                             <td style="padding-left: 0px; min-width: 80px; max-width: 120px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Em tên Chi</td>
-                            <td><a class="btn btn-light" href="" style="width: 120px; color: #2196f3;">View</a></td>
+                            <td><a class="btn btn-light" href="" style="width: 120px; color: #2196f3;">Go to invoice</a></td>
                         </tr>
                     </tbody>
                 </table><br/>
@@ -178,5 +180,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
+    <script>
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+    </script>
 </body>
 </html>

@@ -87,14 +87,19 @@
     </div>
     <div class="container" id="cashbook-rec-content">
         <div class="container">
-            <div class="row" style="margin-left: 0px;" id="cashbook-rec-content-header">
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="padding-top: 10px;">
-                            <b>Choose the time:</b>
+            <div class="row" id="cashbook-rec-content-header">
+                <div class="row col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <div style=" padding-top: 8px; padding-right: 10px;">
+                        <b>Total expenses:</b><span>&nbsp;250,000 <sup>vnđ</sup></span>
+                    </div>
+                        <a class="btn btn-primary float-right" href="#" data-toggle="modal" data-target="#cashbook-lia-modal-new">+ New</a>
+                </div>
+                <div class="row col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="padding-top: 10px; padding-right: 0px;">
+                            <b>Filter by:</b>
                         </div>
                         <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                            <select class="form-control" style="display: inline;">
+                            <select class="form-control">
                                 <option>Today (default)</option>
                                 <option>This week</option>
                                 <option>This month</option>
@@ -104,13 +109,6 @@
                                 <option>All times</option>
                             </select>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                    <div style="float: left; padding-top: 6px; ">
-                        <b>Total expenses:</b><span>&nbsp;250,000 <sup>vnđ</sup></span>
-                    </div>
-                        <a class="btn btn-primary float-right" href="#" data-toggle="modal" data-target="#cashbook-modal-new">+ New</a>
                 </div>
             </div>
             <div class="row" id="cashbook-rec-content-detail">
@@ -120,10 +118,10 @@
                             <th style="padding-left: 8px; min-width: 60px; max-width: 70px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Payment vch #</th>
                             <th style="padding-left: 0px; min-width: 60px; max-width: 70px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Amount</th>
                             <th style="padding-left: 0px; min-width: 80px; max-width: 100px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Record date/time</th>
-                            <th style="padding-left: 0px; min-width: 60px; max-width: 70px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"> Vouchers #</th>
+                            <th style="padding-left: 0px; min-width: 60px; max-width: 70px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Attached invoice</th>
                             <th style="padding-left: 0px; min-width: 80px; max-width: 100px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Pay for</th>
                             <th style="padding-left: 0px; min-width: 80px; max-width: 100px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Deductible account</th>
-                            <th style="padding-left: 0px; min-width: 80px; max-width: 100px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Record by</th>
+                            <th style="padding-left: 0px; min-width: 80px; max-width: 100px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Created by</th>
                             <th></th>
                         </tr>
                     </thead>
@@ -132,11 +130,11 @@
                             <td style="padding-left: 8px; min-width: 60px; max-width: 70px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">PV-00001</td>
                             <td style="padding-left: 0px; min-width: 60px; max-width: 70px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">50,000 <sup>vnđ</sup></td>
                             <td style="padding-left: 0px; min-width: 80px; max-width: 100px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">08/11/2017 11:45</td>
-                            <td style="padding-left: 0px; min-width: 60px; max-width: 70px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><a href=""> XXX-000Y</a></td>
+                            <td style="padding-left: 0px; min-width: 60px; max-width: 70px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><a href="mã này tạo tự động">ERU2</a> <a href="#">H6U2</a></td>
                             <td style="padding-left: 0px; min-width: 80px; max-width: 100px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Điện lực TPHCM</td>
-                            <td style="padding-left: 0px; min-width: 60px; max-width: 70px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">-</td>
-                            <td style="padding-left: 0px; min-width: 80px; max-width: 100px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">-</td>
-                            <td><a class="btn btn-primary" href="" style="max-width: 120px;">Record payment</a></td>
+                            <td style="padding-left: 0px; min-width: 60px; max-width: 70px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Quỹ tiền mặt</td>
+                            <td style="padding-left: 0px; min-width: 80px; max-width: 100px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Xuân tiểu thơ</td>
+                            <td><a class="btn btn-primary" href="" style="width: 70px;">Edit</a></td>
                         </tr>
                         <tr>
                             <td style="padding-left: 8px; min-width: 60px; max-width: 70px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">PV-00002</td>
@@ -144,16 +142,16 @@
                             <td style="padding-left: 0px; min-width: 80px; max-width: 100px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">08/11/2017 11:45</td>
                             <td style="padding-left: 0px; min-width: 60px; max-width: 70px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><a class="btn-sm btn-outline-warning" href="">Upload</a></td>
                             <td style="padding-left: 0px; min-width: 80px; max-width: 100px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Lab Ngọc Lan</td>
-                            <td style="padding-left: 0px; min-width: min-width: 60px; max-width: 70px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Bank {&name acc}</td>
+                            <td style="padding-left: 0px; min-width: min-width: 60px; max-width: 70px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">ACB</td>
                             <td style="padding-left: 0px; min-width: 80px; max-width: 100px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Hoài An</td>
-                            <td><a class="btn btn-light" href="" style="width: 120px; color: #2196f3">View</a></td>
+                            <td><a class="btn btn-primary" href="" style="width: 70px;">Edit</a></td>
                         </tr>
                     </tbody>
                 </table><br/>
-                <p>Upload chứng từ (hoá đơn) hoặc Séc yêu cầu mình chi tiền. Nhớ tạo phiếu chi + nha Thịnh</p>
+                <p>Lưu ý: Chỉ quản lý (acc-manager) của account mới được sử dụng payment account của mình để chi.</p>
             </div>
         </div>
-        <div class="container-fluid">
+        <div class="container">
             <ul class="pagination">
             <li class="page-item"><a class="page-link" href="#">Previous</a></li>
             <li class="page-item active"><a class="page-link" href="#">1</a></li>
@@ -162,12 +160,19 @@
             <li class="page-item"><a class="page-link" href="#">Next</a></li>
             </ul>
         </div>
-    </div><br/>
+    </div>
+    <div class="container">
+        <div class="alert alert-info alert-dismissable" style="margin-bottom: 0px;">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>Next update: v1.0.4: </strong>(1) Cho phép đính kèm (tải lên) file hình của hoá đơn (2) Cho phép chỉnh sửa hoá đơn khi sai sót (permited)<br/>
+            <strong>Next update: v1.0.5: </strong>(1) Cho phép nhận & lưu trữ hoá đơn điện tử vào drive "Payment invoices"
+        </div>
+    </div>
     <footer id="main-footer">
         <a>Cloud Dental CRM v.1.0.3 (alpha 1) © 2017.</a>
     </footer>
     <!-- Cashbook modal -->
-            <div class="modal" id="cashbook-modal-new">
+            <div class="modal" id="cashbook-lia-modal-new">
                 <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -177,8 +182,64 @@
                                 <span class="sr-only">Close</span>
                             </button>
                         </div>
-                        <div class="modal-body">
-
+                        <div class="modal-body" id="cashbook-lia-modal-new-body">
+                            <div class="row container-fluid">
+                                <div class="col-lg-6 col-md-6 col-sm-6" id="cashbook-lia-modal-new-body-lc">
+                                    <div class="row">
+                                        <div class="input-group mb-2 mb-sm-0">
+                                            <div class="input-group-addon"><i class="fa fa-code"></i></div>
+                                            <input type="text" class="form-control" style="" placeholder="PV-00001 (auto)" disabled>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-group mb-2 mb-sm-0">
+                                            <div class="input-group-addon"><i class="fa fa-money"></i></div>
+                                            <input type="text" class="form-control" placeholder="Amount *                                                      (vnđ)">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-group mb-2 mb-sm-0">
+                                            <div class="input-group-addon"><i class="fa fa-address-card-o"></i></div>
+                                            <select class="form-control custom-select">
+                                                <option selected>Choose a name: *</option>
+                                                <option value="1">Điện lực TPHCM</option>
+                                                <option value="2">Lab Lan Anh</option>
+                                                <option value="3">Lab Ngọc Lan</option>
+                                            </select>
+                                            <input type="text" class="form-control" placeholder="or type name *">
+                                        </div>
+                                        <a href="#" style="padding-left: 55px;"> Create new supplier</a>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-group mb-2 mb-sm-0">
+                                            <div class="input-group-addon"><i class="fa fa-credit-card"></i></div>
+                                            <select class="form-control custom-select" >
+                                                <option selected>What is deduction account? *</option>
+                                                <option value="1">Quỹ tiền mặt (default)</option>
+                                                <option value="2">Quỹ dự trữ</option>
+                                                <option value="3">ACB</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6" id="cashbook-lia-modal-new-body-rc">
+                                    <div class="row">
+                                        <div class="input-group mb-2 mb-sm-0">
+                                            <div class="input-group-addon"><i class="fa fa-sticky-note-o"></i></div>
+                                            <input type="text" class="form-control" placeholder="Number of invoice *">
+                                        </div>
+                                    </div>
+                                    <div class="row" style="background-color: #ffffcc; border-left: 6px solid #ffeb3b; padding: 10px;">
+                                        <div class="form-group">
+                                            <label for="custom-file">Upload attached Invoice *</label>
+                                            <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+                                            <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+                                            <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+                                            <small id="fileHelp" class="form-text text-muted">Tải lên hoá đơn thanh toán bạn đã nhận được.@Jos Mày nghiên cứu xem syntax nào chỉ cho upload file PDF, JPG, PNG thôi để ko attach virus :D</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
