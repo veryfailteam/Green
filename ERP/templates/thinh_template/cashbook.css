@@ -1,0 +1,38 @@
+/* ../cashbook/cashbook-content-header*/
+#cashbook-content-header{
+    color: #2196f3;
+    height: 60px;
+    align-items: center;
+    text-align: center;
+}
+#cashbook-content-header b, a, span, select{
+    color: #23b14e;
+    font-size: 13px !important;
+}
+/* ../cashbook/cashbook-content-detail */
+#cashbook-content-detail thead{
+    background: #23b14e;
+    color: #fff;
+}
+#cashbook-content-detail tbody td{
+    vertical-align:middle;
+}
+#cashbook-content-detail tbody td:last-child(){
+    text-align: center;
+}
+#cashbook-content-detail td, th{
+    padding: 0.5rem 0.1px;
+}
+#cashbook-content-detail tr th{
+    padding-right: 0px;
+}
+#cashbook-content-detail a.btn.btn-primary{
+    background-color: #2196f3;
+    border-color: #2196f3;
+}
+#cashbook-content-detail a.btn.btn-primary:hover{
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+
