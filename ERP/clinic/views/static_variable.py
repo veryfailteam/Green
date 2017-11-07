@@ -7,6 +7,7 @@ CONSTANT_KEY = {
     , "APPOINTMENT_STATUS_BOOKED" : "4" # edit onway
     , "APPOINTMENT_STATUS_FOLLOW" : "5" # confirm
     , "APPOINTMENT_STATUS_DONE" : "6" # view
+    , "APPOINTMENT_STATUS_PAID" : "7" # view
 
     # ROLE
     , "ROLE_MANAGER": "0"
@@ -17,6 +18,10 @@ CONSTANT_KEY = {
     #DELETE_FLAG
     , "DELETE_FLAG_FALSE": "0"
     , "DELETE_FLAG_TRUE": "1"
+
+    #TREATMENT_FLAG
+    , "TREATMENT_STATUS_DONE": "0"
+    , "TREATMENT_STATUS_PLAN": "1"
 }
 
 

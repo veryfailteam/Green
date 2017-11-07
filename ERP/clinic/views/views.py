@@ -19,7 +19,7 @@ def login(request):
                 else:
                     request.session['user_id'] = userlogin.user_id
                     request.session['user_name'] = userlogin.user_name
-                    request.session['role'] = userlogin.user_role
+                    request.session['user_role'] = userlogin.user_role
                     request.session['brand_id'] = userlogin.brand_id
                     return HttpResponseRedirect("/CRM-DentalClinic-Overview")
             except Exception as e:
@@ -39,7 +39,7 @@ def logout(request):
     try:
        del request.session['user_id']
        del request.session['user_name']
-       del request.session['role']
+       del request.session['user_role']
     except:
        pass
     return HttpResponseRedirect("/login")
