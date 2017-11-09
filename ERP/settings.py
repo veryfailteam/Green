@@ -79,10 +79,10 @@ WSGI_APPLICATION = 'ERP.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'green1',
-        'USER': 'postgres',
-        'PASSWORD': '123456',
-        'HOST': 'localhost',
+        'NAME': 'dcgrq5v7t5rkf9',
+        'USER': 'ctjvxxfotlzhce',
+        'PASSWORD': 'e22d3bfc33b28c54ecb873a4de12d9d94d4b8c1e3abd10bd68e031222e076feb',
+        'HOST': 'ec2-54-247-81-97.eu-west-1.compute.amazonaws.com',
         'PORT': '5432',
     }
 }
