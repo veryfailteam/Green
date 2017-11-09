@@ -73,7 +73,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'ERP.wsgi.application'
 
-
+SESSION_ENGINE= 'django.contrib.sessions.backends.cached_db'
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
@@ -141,23 +141,23 @@ STATICFILES_DIRS = (
     os.path.join(STATIC_ROOT, 'font-awesome'),
 )
 
-LOGGING_PATH = os.path.join(BASE_DIR, 'log')
+# LOGGING_PATH = os.path.join(BASE_DIR, 'log')
 
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'handlers': {
-        'file': {
-            'level': 'DEBUG',
-            'class': 'logging.FileHandler',
-            'filename': LOGGING_PATH +'/debug.log',
-        },
-    },
-    'loggers': {
-        'django': {
-            'handlers': ['file'],
-            'level': 'DEBUG',
-            'propagate': True,
-        },
-    },
-}
+# LOGGING = {
+#     'version': 1,
+#     'disable_existing_loggers': False,
+#     'handlers': {
+#         'file': {
+#             'level': 'DEBUG',
+#             'class': 'logging.FileHandler',
+#             'filename': LOGGING_PATH +'/debug.log',
+#         },
+#     },
+#     'loggers': {
+#         'django': {
+#             'handlers': ['file'],
+#             'level': 'DEBUG',
+#             'propagate': True,
+#         },
+#     },
+# }
