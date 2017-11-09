@@ -25,6 +25,7 @@ SECRET_KEY = 'k*djmp@34a)lahhfw=n+2tw=(8r(259hab)^yz5szcgt!qze7#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+TEST_RUNNER = 'gettingstarted.heroku_test_runner.HerokuDiscoverRunner'
 
 ALLOWED_HOSTS = ['*']
 
