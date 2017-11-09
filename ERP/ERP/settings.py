@@ -14,6 +14,7 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 
 # Quick-start development settings - unsuitable for production
@@ -25,7 +26,7 @@ SECRET_KEY = 'k*djmp@34a)lahhfw=n+2tw=(8r(259hab)^yz5szcgt!qze7#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -126,10 +127,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = (
-    ('css' , os.path.join(STATIC_ROOT, 'css')),
-    ('js' , os.path.join(STATIC_ROOT, 'js')),
-    ('images' , os.path.join(STATIC_ROOT, 'images')),
-    ('font-awesome' , os.path.join(STATIC_ROOT, 'font-awesome')),
+    os.path.join(STATIC_ROOT, 'css'),
+    os.path.join(STATIC_ROOT, 'js'),
+    os.path.join(STATIC_ROOT, 'images'),
+    os.path.join(STATIC_ROOT, 'font-awesome'),
 )
 
 LOGGING_PATH = os.path.join(BASE_DIR, 'log')
