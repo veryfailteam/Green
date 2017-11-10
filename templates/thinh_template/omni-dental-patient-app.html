@@ -14,7 +14,7 @@
         <!--- First menu -->
         <div class="container">
             <nav class="navbar navbar-expand-md navbar-light bg-white" style="max-height: 50px;">
-                <a class="navbar-brand" href="#" style="color: #2196f3">LOGO</a>
+                <a class="navbar-brand" href="#" style="color: #2196f3">Nha khoa GTGT <sup>CN Phạm Văn Hai</sup></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
@@ -31,10 +31,10 @@
                         </li>
                         <!--
                         <li class="nav-item">
-                            <a class="nav-link" href="inventory.html">Inventory</a>
+                            <a class="nav-link" href="#">Inventory</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="inventory.html">HR</a>
+                            <a class="nav-link" href="#">Human Resource</a>
                         </li>
                     -->
                     </ul>
@@ -98,28 +98,28 @@
                         </div>
                     </div>
                     <nav class="nav flex-column sidebar-detail">
-                        <a class="nav-link" href="#" >
+                        <a class="nav-link" href="omni-dental-patient-med.html" >
                            <i class="fa fa-heart" aria-hidden="true" style="float: left;"></i>&nbsp;&nbsp;Prehistory & Medical History <i class="fa fa-angle-right" aria-hidden="true"></i>
                         </a>
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="omni-dental-patient-cli.html">
                            <i class="fa fa-certificate" aria-hidden="true" style="float: left;"></i>&nbsp;&nbsp;&nbsp;Clinical Examination <i class="fa fa-angle-right" aria-hidden="true"></i>
                         </a>
-                        <a class="nav-link" href="#">
-                           <i class="fa fa-line-chart" aria-hidden="true" style="float: left;"></i>&nbsp;&nbsp;Preliminary Diagnosis<i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <a class="nav-link" href="omni-dental-patient-dia.html">
+                           <i class="fa fa-line-chart" aria-hidden="true" style="float: left;"></i>&nbsp;&nbsp;Diagnosis<i class="fa fa-angle-right" aria-hidden="true"></i>
                         </a>
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="omni-dental-patient-tre.html">
                            <i class="fa fa-puzzle-piece" aria-hidden="true" style="float: left;"></i>&nbsp;&nbsp;Treatment Plan & Enforcement <i class="fa fa-angle-right" aria-hidden="true"></i>
                         </a>
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="omni-dental-patient-inv.html">
                            <i class="fa fa-file" aria-hidden="true" style="float: left;"></i>&nbsp;&nbsp;&nbsp;Invoice <i class="fa fa-angle-right" aria-hidden="true"></i>
                         </a>
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="omni-dental-patient-pre.html">
                            <i class="fa fa-medkit" aria-hidden="true" style="float: left;"></i>&nbsp;&nbsp;&nbsp;Prescription <i class="fa fa-angle-right" aria-hidden="true"></i>
                         </a>
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="omni-dental-patient-doc.html">
                            <i class="fa fa-database" aria-hidden="true" style="float: left;"></i>&nbsp;&nbsp;&nbsp;Document & Data storage <i class="fa fa-angle-right" aria-hidden="true"></i>
                         </a>
-                        <a class="nav-link active" href="#">
+                        <a class="nav-link active" href="omni-dental-patient-app.html">
                             <i class="fa fa-calendar" aria-hidden="true" style="float: left;"></i>&nbsp;&nbsp;&nbsp;Appointment Schedule <i class="fa fa-angle-right" aria-hidden="true"></i>
                         </a>
                         <!-- Để cân nhắc làm sau vì trùng với các tab khác
@@ -137,10 +137,10 @@
                     <div class="col-lg-7 col-md-7 col-sm-7">
                         <div class="row">
                             <div class="col-lg-2 col-md-2 col-sm-2" style="padding-top: 2px;">
-                                <a class="btn btn-primary" data-toggle="modal" data-target="#patient-modal-new">+ New</a>
+                                <a class="btn btn-primary" data-toggle="modal" data-target="#omni-dental-patient-app-modal-new">+ New</a>
                             </div>
                             <div class="col-lg-10 col-md-10 col-sm-10">
-                                <select class="form-control" style="display: inline;">
+                                <select class="form-control custom-select" style="display: inline;">
                                     <option>This treatment (default)</option>
                                 </select>
                             </div>
@@ -224,8 +224,8 @@
     <footer id="main-footer">
         <a>Cloud Dental CRM v.1.0.3 (alpha 1) @ 2017. All rights reserved.</a>
     </footer>
-    <!--- Main body end -->
-    <div class="modal" tabindex="-1" role="dialog" id="patient-modal-new">
+    <!--- Patient Appointment schedule -->
+    <div class="modal" tabindex="-1" role="dialog" id="omni-dental-patient-app-modal-new">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -260,7 +260,7 @@
                                     <div class="row">
                                         <div class="input-group mb-2 mb-sm-0">
                                             <div class="input-group-addon"><i class="fa fa-user"></i></div>
-                                            <select class="form-control" id="exampleFormControlSelect1">
+                                            <select class="form-control custom-select" id="exampleFormControlSelect1">
                                                <option>Dr. Ngọc Anh</option>
                                                <option>Dr. Thien Luong</option>
                                             </select>
@@ -269,7 +269,7 @@
                                     <div class="row">
                                         <div class="input-group mb-2 mb-sm-0">
                                             <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
-                                            <select class="form-control" id="exampleFormControlSelect1">
+                                            <select class="form-control custom-select" id="exampleFormControlSelect1">
                                                <option>12/10/2017</option>
                                             </select>
                                         </div>
@@ -277,8 +277,9 @@
                                     <div class="row">
                                         <div class="input-group mb-2 mb-sm-0">
                                             <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
-                                            <select class="form-control" id="exampleFormControlSelect1">
-                                               <option>Sáng</option>
+                                            <select class="form-control custom-select" id="exampleFormControlSelect1">
+                                               <option>Morning</option>
+                                               <option>Afternoon</option>
                                             </select>
                                         </div>
                                     </div>

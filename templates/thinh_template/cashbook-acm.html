@@ -161,10 +161,10 @@
     </footer>
     <!-- Cashbook acm modal edit -->
     <div class="modal" id="cashbook-acm-modal-edit">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog modal-sm" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h6 class="modal-title"><strong style="color: tomato;">Edit account information</strong></h6>
+                    <h6 class="modal-title"><strong style="color: tomato;">Edit account information & permission</strong></h6>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                         <span class="sr-only">Close</span>
@@ -190,19 +190,23 @@
                             <div class="row">
                                 <div class="input-group mb-2 mb-sm-0">
                                     <div class="input-group-addon"><i class="fa fa-money"></i></div>
-                                    <input type="text" class="form-control" placeholder="Quỹ tiền mặt (click to change name)">
+                                    <input type="text" class="form-control" placeholder="Quỹ tiền mặt (VND) *Rec đc đổi tên???">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="input-group mb-2 mb-sm-0">
                                     <div class="input-group-addon"><i class="fa fa-code"></i></div>
-                                    <input type="text" class="form-control" style="" placeholder="Cash-00001 (# tiền mặt thì create automatic)" disabled>
+                                    <input type="text" class="form-control" style="" placeholder="Cash-00001" disabled>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="input-group mb-2 mb-sm-0">
                                     <div class="input-group-addon"><i class="fa fa-users"></i></div>
-                                    <input type="text" class="form-control" style="" placeholder="Xuân tiểu thư (click to change)" disabled>
+                                    <select class="form-control custom-select" disabled="">
+                                        <option selected>Xuân tiểu thư (default) *</option>
+                                        <option value="1"># account manager</option>
+                                        <option value="2">Chỉ manager đc quyền set chuyển cho ai qly tài khoản</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
@@ -217,7 +221,7 @@
     </div><!-- /.modal -->
     <!-- Cashbook acm modal transfer -->
     <div class="modal" id="cashbook-acm-modal-trans">
-        <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h6 class="modal-title"><strong style="color: tomato;">Transfer money</strong></h6>
@@ -235,13 +239,9 @@
                             <div class="row">
                                 <div class="input-group mb-2 mb-sm-0">
                                     <div class="input-group-addon"><i class="fa fa-code"></i></div>
-                                    <input type="text" class="form-control" style="" placeholder="Cash-00001" disabled>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="input-group mb-2 mb-sm-0">
-                                    <div class="input-group-addon"><i class="fa fa-users"></i></div>
-                                    <input type="text" class="form-control" style="" placeholder="Xuân tiểu thư" disabled>
+                                    <select class="form-control custom-select" disabled="">
+                                        <option selected>Cash-00001 (Xuân Tiểu thư)</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="row">
@@ -250,6 +250,12 @@
                                     <input type="text" class="form-control" style="" placeholder="Amount *">
                                 </div>
                                 <span style="color: #2196f3; padding-left: 50px;">Số tiền bằng chữ: ... (vnđ)</span>
+                            </div>
+                            <div class="row">
+                                <div class="input-group mb-2 mb-sm-0">
+                                    <div class="input-group-addon"><i class="fa fa-money"></i></div>
+                                    <input type="text" class="form-control" style="" placeholder="Fee of transfering *">
+                                </div>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6" id="cashbook-lia-modal-new-body-rc">
@@ -264,12 +270,6 @@
                                         <option value="1">Cash-00002 (Nguyễn Thiện Lương)</option>
                                         <option value="2">1813610520 (Đỗ T. Ngọc Anh)</option>
                                     </select>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="input-group mb-2 mb-sm-0">
-                                    <div class="input-group-addon"><i class="fa fa-users"></i></div>
-                                    <input type="text" class="form-control" style="" placeholder="-" disabled>
                                 </div>
                             </div>
                         </div>
