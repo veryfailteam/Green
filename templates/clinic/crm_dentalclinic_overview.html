@@ -13,81 +13,10 @@
                     </div>
                 </form>
             </div>
-            <nav id="appointment-list" class="nav flex-column">
-                {% for customer in lstCusToday%}
-                    {% if forloop.counter == 1 %}
-                    <a class="nav-link active" href="#" name="{{customer.customer_id}}">
-                    {% else %}
-                    <a class="nav-link" href="#"  name="{{customer.customer_id}}">
-                    {% endif %}
-                        <span style="float: left;">
-                            <b>{{customer.customer_name}}</b><br/>
-                            <p style="margin-bottom: 0;">{{customer.customer_phone_number}}</p>
-                        </span>
-                        <span style="float: right;text-align: right;">
-                            <b>{{customer.appointment_time}}</b>
-                            {% if customer.appointment_status == constant_key.APPOINTMENT_STATUS_PENDING_PAYMENT%}
-                                <p class="status-pendingpayment">
-                                    Pending payment
-                               </p>
-                            {% elif customer.appointment_status == constant_key.APPOINTMENT_STATUS_ACTIVE%}
-                                <p class="status-active">
-                                   Active
-                                </p>
-                            {% elif customer.appointment_status == constant_key.APPOINTMENT_STATUS_CHECKED%}
-                                <p class="status-checked">
-                                   Checked
-                                </p>
-                            {% elif customer.appointment_status == constant_key.APPOINTMENT_STATUS_ON_WAY%}
-                                <p class="status-onway">
-                                   On way
-                                </p>
-                            {% elif customer.appointment_status == constant_key.APPOINTMENT_STATUS_BOOKED%}
-                                <p class="status-booked">
-                                   Booked
-                                </p>
-                            {% elif customer.appointment_status == constant_key.APPOINTMENT_STATUS_FOLLOW%}
-                                <p class="status-follow">
-                                   Booked
-                                </p>
-                            {% else %}
-                                <p class="status-done">
-                                   Done
-                                </p>
-                            {% endif %}
-                        </span>
-                    </a>
-                {% endfor %}
-                <!-- <a class="nav-link" href="#">
-                    <span style="float: left;">
-                        <b>Ms. Cao Kỳ Duyên</b><br/>
-                        <p style="margin-bottom: 0;">0123 456 789</p>
-                    </span>
-                    <span style="float: right;text-align: right;">
-                        <b>12:03</b>
-                        <p style="margin-bottom: 0;color: #5cb85c;">On way</p>
-                    </span>
-                </a> -->
-            </nav>
-            <script type="text/javascript">
-                $("#appointment-list a").on("click", function(){
-                   $("#appointment-list").find(".active").removeClass("active");
-                   $(this).addClass("active");
-                });
 
-                $("#appointment-list a").on("click", function(){
-                    $.ajax({
-                        url: 'get_appointment_schedule/',
-                        data: {
-                            'customer_id': this.name
-                        },
-                        dataType: 'html',
-                        success: function (data) {
-                                document.getElementById("lstAppointment-body").innerHTML = data
-                            }
-                    });
-                });
-            </script>
+                {% include 'clinic/crm_dentalclinic_overview_listcustomer.html' %}
+
+
         </div>
     </div>
     <div class="col-lg-9 col-md-9" id="right-pattern">
@@ -110,20 +39,11 @@
                 </div>
             </div>
         </div>
-        <div class="row list">
-            <table class="table table-striped" style="margin-top: -1px;">
-                <thead>
-                    <tr>
-                        <th scope="col">Appointment date</th>
-                        <th scope="col">Doctor</th>
-                        <th scope="col">Treatment name</th>
-                        <th scope="col">Task list</th>
-                        <th scope="col">Notes</th>
-                        <th scope="col">Action</th>
-                    </tr>
-                </thead>
-                <tbody id="lstAppointment-body">
-                    {% for item in lstAppointment %}
+        <div id="lstAppointment" class="row list">
+            {% include 'clinic/crm_dentalclinic_overview_listappointment.html'%}
+
+
+                    <!-- {% for item in lstAppointment %}
                         <tr>
                             <td>{{item.date}} {{item.time}}</td>
                             <td>{{item.assign_name}}</td>
@@ -133,7 +53,7 @@
                             <td>
                                 {% if item.status == constant_key.APPOINTMENT_STATUS_ACTIVE and user_role != constant_key.ROLE_RECEPTION %}
                                     <a class="btn btn-primary" href="">Done</a>
-                                    <!-- <a class="btn btn-light" href="">Edit</a> -->
+
                                 {% elif item.status == constant_key.APPOINTMENT_STATUS_ACTIVE %}
                                     <a class="btn btn-primary" href="">View</a>
                                 {% elif item.status == constant_key.APPOINTMENT_STATUS_CHECKED and user_role == constant_key.ROLE_RECEPTION %}
@@ -154,7 +74,7 @@
                                 {% endif %}
                             </td>
                         </tr>
-                    {% endfor %}
+                    {% endfor %} -->
                     <!-- <tr>
                         <td>10/10/2017 12:00</td>
                         <td>Ngoc Anh</td>
@@ -177,8 +97,6 @@
                             <a class="btn btn-primary" href="">Edit</a>
                         </td>
                     </tr> -->
-                </tbody>
-            </table>
         </div>
     </div>
 </div>

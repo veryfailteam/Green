@@ -3,10 +3,13 @@ from django.http import HttpResponse
 from django.http import HttpResponseRedirect
 from clinic.models import User
 from django.contrib import messages
-
+from django.conf import settings
 
 def login(request):
     try:
+        print(settings.PROJECT_ROOT)
+        print(settings.STATIC_ROOT)
+        print(settings.STATICFILES_DIRS)
         if request.method == 'POST':
             response = HttpResponse()
             username = request.POST['username']
