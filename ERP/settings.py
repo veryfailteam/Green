@@ -163,7 +163,7 @@ STATIC_URL = '/static/'
 
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 
 
 
@@ -185,3 +185,5 @@ STATICFILES_DIRS = (
     os.path.join(STATIC_ROOT, 'js'),
     os.path.join(STATIC_ROOT, 'font-awesome')
 )
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
