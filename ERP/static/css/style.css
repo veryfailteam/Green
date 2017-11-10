@@ -198,11 +198,8 @@ a{
 textarea{
     font-size: 13px !important;
 }
-.input.form-control{
-    font-size: 13px;
-}
 .form-control{
-    font-size: 13px;
+    font-size: 13px !important;
 }
 .form-control:focus {
     box-shadow: 0 0 0 0;
@@ -286,6 +283,8 @@ textarea{
     color: #fff;
     border:0;
 }
+
+
 /* ../Patient/Sidebar */
 #patient-content .sidebar-header{
     padding: 0;
