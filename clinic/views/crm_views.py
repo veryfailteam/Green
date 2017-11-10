@@ -37,7 +37,7 @@ def crm_dentalclinic_overview(request):
         sql +=      "       clinic_customer.customer_id = clinic_appointment.customer_id"
         sql +=      "   WHERE"
         sql +=      "           appointment_date = '{}'".format(CURRENT_DATE)
-        if request.session['role'] == '1':
+        if request.session['user_role'] == '1':
             sql +=  "       AND appointment_assign_id = '{}'".format(request.session['user_id'])
         sql +=      "       AND appointment_status <> '{}'".format(CONSTANT_KEY['APPOINTMENT_STATUS_PAID'])
         sql +=      "       AND appointment_delete_flag = '{}'".format(CONSTANT_KEY['DELETE_FLAG_FALSE'])
@@ -256,4 +256,4 @@ def get_appointment_schedule(request):
             , 'lstAppointment' : lstAppointment
             , 'constant_key' : CONSTANT_KEY
         }
-    return render(request,"clinic/crm_dentalclinic_test.html", context)
+    return render(request,"clinic/crm_dentalclinic_overview_listappointment.html", context)
