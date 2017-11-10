@@ -198,7 +198,9 @@ a{
 textarea{
     font-size: 13px !important;
 }
-
+.input.form-control{
+    font-size: 13px;
+}
 .form-control{
     font-size: 13px;
 }
@@ -243,7 +245,7 @@ textarea{
 #navbarsExampleDefault li.active> a{
     color: #2196f3;
 }
-#navbarmenu li.active> a{
+#navbar-menu li.active> a{
     color: #2196f3;
 }
 .navbar-text{
