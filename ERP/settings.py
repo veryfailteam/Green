@@ -10,7 +10,7 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 """
 
 import os
-# import dj_database_url
+import dj_database_url
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -55,7 +55,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django.middleware.security.SecurityMiddleware',
+    # 'django.middleware.security.SecurityMiddleware',
 )
 
 ROOT_URLCONF = 'ERP.urls'
@@ -139,9 +139,9 @@ USE_TZ = True
 
 
 # Update database configuration with $DATABASE_URL.
-# db_from_env = dj_database_url.config(conn_max_age=500)
-# DATABASES['default'].update(db_from_env)
-# DATABASES['default']['TEST'] = {'NAME': DATABASES['default']['NAME']}
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
+DATABASES['default']['TEST'] = {'NAME': DATABASES['default']['NAME']}
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
@@ -152,7 +152,7 @@ ALLOWED_HOSTS = ['*']
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 STATIC_URL = '/static/'
 
 # Extra places for collectstatic to find static files.
@@ -179,11 +179,11 @@ STATIC_URL = '/static/'
 #     ('font-awesome', os.path.join(STATIC_ROOT, 'font-awesome'))
 # )
 STATICFILES_DIRS = (
-    # os.path.join(PROJECT_ROOT, 'static'),
+    os.path.join(PROJECT_ROOT, 'static'),
     # os.path.join(STATIC_ROOT, 'data')),
-    os.path.join(STATIC_ROOT, 'css'),
-    os.path.join(STATIC_ROOT, 'js'),
-    os.path.join(STATIC_ROOT, 'font-awesome')
+    # os.path.join(STATIC_ROOT, 'css'),
+    # os.path.join(STATIC_ROOT, 'js'),
+    # os.path.join(STATIC_ROOT, 'font-awesome')
 )
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
