@@ -10,7 +10,7 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 """
 
 import os
-# import dj_database_url
+import dj_database_url
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -27,7 +27,7 @@ SECRET_KEY = 'i+acxn5(akgsn!sr4^qgf(^m&*@+g1@u^t@=8s@axc41ml*f=s'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# TEST_RUNNER = 'ERP.heroku_test_runner.HerokuDiscoverRunner'
+TEST_RUNNER = 'ERP.heroku_test_runner.HerokuDiscoverRunner'
 
 
 # Application definition
@@ -47,7 +47,7 @@ INSTALLED_APPS = (
 MIDDLEWARE_CLASSES = (
     # Simplified static file serving.
     # https://warehouse.python.org/project/whitenoise/
-    # 'whitenoise.middleware.WhiteNoiseMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -55,7 +55,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django.middleware.security.SecurityMiddleware',
+    # 'django.middleware.security.SecurityMiddleware',
 )
 
 ROOT_URLCONF = 'ERP.urls'
@@ -89,27 +89,27 @@ SESSION_ENGINE= 'django.contrib.sessions.backends.cached_db'
 #     }
 # }
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'dbolsf07os9hnh',
-#         'USER': 'taybreyaymhcmd',
-#         'PASSWORD': '746d14f299b5b373f680923bcd7064421f7974bc8ba2e41c8dc00dcacd40f051',
-#         'HOST': 'ec2-184-72-255-211.compute-1.amazonaws.com',
-#         'PORT': '5432',
-#     }
-# }
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'green1',
-        'USER': 'postgres',
-        'PASSWORD': '123456',
-        'HOST': 'localhost',
+        'NAME': 'dbolsf07os9hnh',
+        'USER': 'taybreyaymhcmd',
+        'PASSWORD': '746d14f299b5b373f680923bcd7064421f7974bc8ba2e41c8dc00dcacd40f051',
+        'HOST': 'ec2-184-72-255-211.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'green1',
+#         'USER': 'postgres',
+#         'PASSWORD': '123456',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
 
@@ -139,9 +139,9 @@ USE_TZ = True
 
 
 # Update database configuration with $DATABASE_URL.
-# db_from_env = dj_database_url.config(conn_max_age=500)
-# DATABASES['default'].update(db_from_env)
-# DATABASES['default']['TEST'] = {'NAME': DATABASES['default']['NAME']}
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
+DATABASES['default']['TEST'] = {'NAME': DATABASES['default']['NAME']}
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
@@ -152,7 +152,7 @@ ALLOWED_HOSTS = ['*']
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 STATIC_URL = '/static/'
 
 # Extra places for collectstatic to find static files.
@@ -163,19 +163,27 @@ STATIC_URL = '/static/'
 
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 
 
 
 # STATIC_URL = '/static/'
 # DATA_ROOT = os.path.join(BASE_DIR, 'data')
 # CONFIRMED_DATA_ROOT = os.path.join(BASE_DIR, 'confirmed_data')
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATICFILES_DIRS = (
+#     # os.path.join(PROJECT_ROOT, 'static'),
+#     # os.path.join(STATIC_ROOT, 'data')),
+#     ('css', os.path.join(STATIC_ROOT, 'css')),
+#     ('js',os.path.join(STATIC_ROOT, 'js')),
+#     ('font-awesome', os.path.join(STATIC_ROOT, 'font-awesome'))
+# )
 STATICFILES_DIRS = (
-    # os.path.join(PROJECT_ROOT, 'static'),
+    os.path.join(PROJECT_ROOT, 'static'),
     # os.path.join(STATIC_ROOT, 'data')),
-    ('css', os.path.join(STATIC_ROOT, 'css')),
-    ('js',os.path.join(STATIC_ROOT, 'js')),
-    ('font-awesome', os.path.join(STATIC_ROOT, 'font-awesome'))
+    # os.path.join(STATIC_ROOT, 'css'),
+    # os.path.join(STATIC_ROOT, 'js'),
+    # os.path.join(STATIC_ROOT, 'font-awesome')
 )
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
