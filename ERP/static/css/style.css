@@ -105,10 +105,9 @@
 #main-body .list tbody td:last-child(){
     text-align: center;
 }
-.modal-dialog {
+/*.modal-dialog {
     max-width: 900px;
-}
-
+}*/
 .modal-dialog .list thead{
     background: #5cb85c;
     color: #fff;
@@ -224,6 +223,31 @@ textarea{
     border-top-color: #2196f3;
     border-right-color: #2196f3;
 }
+.form-group{
+    vertical-align: middle;
+}
+/* Table */
+
+thead{
+    background: #23b14e;
+    color: #fff;
+}
+tbody td{
+    vertical-align:middle;
+}
+tbody td:last-child(){
+    text-align: center;
+}
+td, th{
+    padding: 0.5rem 0.1px;
+}
+tr th{
+    padding-right: 0px;
+}
+tbody td{
+    vertical-align:middle;
+}
+
 /* Main footer */
 #main-footer{
     background-color: #f1f1f1;
@@ -360,7 +384,7 @@ textarea{
     border-color: #007bff;
 }
 /* ../Patient/Modal Create New */
-#patient-modal-new .modal-dialog {
+.modal-dialog {
     max-width: 900px;
 }
 /*#patient-modal-new .input-group-addon:not(:last-child) {
@@ -372,28 +396,40 @@ textarea{
     border-top-color: #2196f3;
     border-right-color: #2196f3;
 }*/
-#patient-modal-new .modal-body .nav-pills{
-    width: 360px;
+#omni-dental-patient-app-modal-new .modal-body .nav-pills{
+    width: 350px;
     margin-right: auto;
     margin-left: auto;
 }
-#patient-modal-new .nav-link-l{
+#omni-dental-patient-app-modal-new .nav-link-l{
     padding: 10px 40px;
     border-bottom-right-radius: 0px;
     border-top-right-radius: 0px;
 }
-#patient-modal-new .nav-link-r{
+#omni-dental-patient-app-modal-new .nav-link-r{
     padding: 10px 40px;
     border-bottom-left-radius: 0px;
     border-top-left-radius: 0px;
 }
+a.nav-link.nav-link-l.active{
+    background-color: #2196F3;
+}
+a.nav-link.nav-link-l.active:hover{
+    background-color: #007bff;
+}
+a.nav-link.nav-link-r.active{
+    background-color: #2196F3;
+}
+a.nav-link.nav-link-r.active:hover{
+    background-color: #007bff;
+}
 #modal-this-input-lc .row{
     margin: 15px auto;
-    width: 350px;
+    max-width: 350px;
 }
 #modal-this-input-rc .row{
     margin: 15px auto;
-    width: 350px;
+    max-width: 350px;
 }
 #modal-this-input-rc .table td, .table th{
     padding: 0.5rem 0.1px;
@@ -415,7 +451,7 @@ textarea{
     margin: 15px auto;
     width: 350px;
 }
-#patient-modal-new .modal-footer a:hover{
+/*#patient-modal-new .modal-footer a:hover{
     text-decoration: none;
     color: red;
 }
@@ -434,7 +470,7 @@ textarea{
     height: 40px;
     padding: auto;
     margin: auto;
-}
+}*/
 /* ../cashbook/cashbook-receivables/ */
 #cashbook-rec-content-header{
     color: #2196f3;
