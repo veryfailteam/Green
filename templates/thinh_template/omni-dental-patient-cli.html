@@ -102,7 +102,7 @@
                            <i class="fa fa-heart" aria-hidden="true" style="float: left;"></i>&nbsp;&nbsp;Prehistory & Medical History <i class="fa fa-angle-right" aria-hidden="true"></i>
                         </a>
                         <a class="nav-link active" href="omni-dental-patient-cli.html">
-                           <i class="fa fa-certificate" aria-hidden="true" style="float: left;"></i>&nbsp;&nbsp;&nbsp;Clinical Examination <i class="fa fa-angle-right" aria-hidden="true"></i>
+                           <i class="fa fa-certificate" aria-hidden="true" style="float: left;"></i>&nbsp;&nbsp;&nbsp;Clinical & Sub-clinical Exam <i class="fa fa-angle-right" aria-hidden="true"></i>
                         </a>
                         <a class="nav-link" href="omni-dental-patient-dia.html">
                            <i class="fa fa-line-chart" aria-hidden="true" style="float: left;"></i>&nbsp;&nbsp;Diagnosis<i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -131,9 +131,8 @@
             </div>
             <div class="col-lg-9 col-md-9 col-sm-9" style="border-left: 1px solid #dfdfdf;">
                 <div class="row content-header">
-                        <b style="white-space: nowrap; min-width: 50px; max-width: 300px; overflow: hidden; text-overflow: ellipsis; padding-left: 8px; padding-right: 20px;">Clinical Examination (Khám lâm sàng)</b>
-                                <a class="btn btn-primary" data-toggle="modal" data-target="#omni-dental-patient-cli-modal-new">+ New</a>
-
+                        <b style="white-space: nowrap; min-width: 50px; max-width: 400px; overflow: hidden; text-overflow: ellipsis; padding-left: 8px; padding-right: 20px;">Clinical & Sub-clinical (Khám lâm sàng & cận lâm sàng)</b>
+                        <a class="btn btn-primary" href="" data-toggle="modal" data-target="#omni-dental-patient-cli-modal-new">+ New</a>
                 </div>
                 <div class="row content-detail">
                     <table class="table table-responsive-md table-striped table-hover">
@@ -141,6 +140,7 @@
                            <tr>
                                 <th style="padding-left: 8px; min-width: 80px; max-width: 100px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Last updated</th>
                                 <th style="padding-left: 0px; min-width: 80px; max-width: 100px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Category</th>
+                                <th style="padding-left: 0px; min-width: 80px; max-width: 100px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Body parts</th>
                                 <th style="padding-left: 0px; max-width: 350px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Detail</th>
                                 <th></th>
                             </tr>
@@ -148,16 +148,18 @@
                         <tbody>
                             <tr>
                                 <td style="padding-left: 8px; min-width: 80px; max-width: 100px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">10/10/2017 12:00</td>
-                                <td style="padding-left: 0px; min-width: 80px; max-width: 100px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"">Mouth</td>
-                                <td style="padding-left: 0px; max-width: 350px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Răng 43 có dấu hiệu sâu, răng 22 đang lỗ trám có dấu hiệu tróc ra....</td>
+                                <td style="padding-left: 0px; min-width: 80px; max-width: 100px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"">Dentomaxillofacial (Răng hàm mặt)</td>
+                                <td style="padding-left: 0px; min-width: 80px; max-width: 100px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"">Dentomaxillofacial (Răng hàm mặt)</td>
+                                <td style="padding-left: 0px; max-width: 300px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Răng 43 có dấu hiệu sâu, răng 22 đang lỗ trám có dấu hiệu tróc ra</td>
                                 <td style="padding-right: 0px; max-width: 160px;">
                                     <a class="btn btn-primary" href="" style="width: 70px;" data-toggle="modal" data-target="#omni-dental-patient-cli-modal-edit">Update</a>
                                 </td>
                             </tr>
                             <tr>
                                 <td style="padding-left: 8px; min-width: 80px; max-width: 100px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">10/10/2017 12:00</td>
-                                <td style="padding-left: 0px; min-width: 80px; max-width: 100px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"">The four climbs</td>
-                                <td style="padding-left: 0px; max-width: 350px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Tay chân có dấu hiệu XYZ</td>
+                                <td style="padding-left: 0px; min-width: 80px; max-width: 100px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"">Internal medicine (nội khoa)</td>
+                                <td style="padding-left: 0px; min-width: 80px; max-width: 100px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"">Cyclic (tuần hoàn)</td>
+                                <td style="padding-left: 0px; max-width: 300px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Hệ tuần hoàn hoạt động bình thường</td>
                                 <td style="padding-right: 0px; max-width: 160px;">
                                     <a class="btn btn-primary" href="" style="width: 70px;" data-toggle="modal" data-target="#omni-dental-patient-cli-modal-edit">Update</a>
                                 </td>
@@ -180,7 +182,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title"><strong style="color: tomato;">Create new Clinical Examination</strong></h6>
+                    <h5 class="modal-title"><strong style="color: tomato;">Create new Clinical & Sub-clinical Exam</strong></h6>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                         <span class="sr-only">Close</span>
@@ -190,12 +192,24 @@
                     <div class="row container-fluid">
                         <div id="cashbook-lia-modal-new-body-lc">
                             <div class="row" style="background-color: #d1ecf1; border-left: 6px solid #0c5460; padding: 10px; color: #0c5460">
-                                <span>All the categories</span>
+                                <span>Dentomaxillofacial (Răng hàm mặt)</span>
+                            </div>
+                            <div class="row">
+                                <textarea class="form-control" placeholder="Description (brief, clear, number)"></textarea>
+                            </div>
+                            <div class="row" style="background-color: #d1ecf1; border-left: 6px solid #0c5460; padding: 10px; color: #0c5460">
+                                <span>Dermatology (Da liễu)</span>
+                            </div>
+                            <div class="row">
+                                <textarea class="form-control" placeholder="Description (brief, clear, number)"></textarea>
+                            </div>
+                            <div class="row" style="background-color: #d1ecf1; border-left: 6px solid #0c5460; padding: 10px; color: #0c5460">
+                                <span>Internal medicine (nội khoa)</span>
                             </div>
                             <div class="row">
                                 <div class="input-group mb-2 mb-sm-0">
                                     <div class="input-group-addon"><i class="fa fa-at"></i></div>
-                                    <input type="text" class="form-control" placeholder="The mouth" disabled>
+                                    <input type="text" class="form-control" placeholder="Cyclic (tuần hoàn)" disabled>
                                 </div>
                             </div>
                             <div class="row">
@@ -204,29 +218,46 @@
                             <div class="row">
                                 <div class="input-group mb-2 mb-sm-0">
                                     <div class="input-group-addon"><i class="fa fa-at"></i></div>
-                                    <input type="text" class="form-control" placeholder="The four climbs" disabled>
+                                    <input type="text" class="form-control" placeholder="Respiratory (hô hấp)" disabled>
                                 </div>
                             </div>
                             <div class="row">
                                 <textarea class="form-control" placeholder="Description (brief, clear, number)"></textarea>
+                            </div>
+                            <div class="row" style="background-color: #d1ecf1; border-left: 6px solid #0c5460; padding: 10px; color: #0c5460">
+                                <span>Surgery (ngoại khoa)</span>
+                            </div>
+                            <div class="row">
+                                <textarea class="form-control" placeholder="Description (brief, clear, number)"></textarea>
+                            </div>
+                            <div class="row" style="background-color: #d1ecf1; border-left: 6px solid #0c5460; padding: 10px; color: #0c5460">
+                                <span>Obstetric (Sản khoa)</span>
+                            </div>
+                            <div class="row">
+                                <textarea class="form-control" placeholder="Description (brief, clear, number)"></textarea>
+                            </div>
+                            <div class="row" style="background-color: #d1ecf1; border-left: 6px solid #0c5460; padding: 10px; color: #0c5460">
+                                <span>Eyes (Mắt)</span>
+                            </div>
+                            <div class="row">
+                                <textarea class="form-control" placeholder="Description (brief, clear, number)"></textarea>
+                            </div>
+                            <div class="row" style="background-color: #d1ecf1; border-left: 6px solid #0c5460; padding: 10px; color: #0c5460">
+                                <span>Ear - Nose - throat (Tai - mũi - họng)</span>
+                            </div>
+                            <div class="row">
+                                <textarea class="form-control" placeholder="Description (brief, clear, number)"></textarea>
+                            </div>
+                        </div>
+                        <div id="cashbook-lia-modal-new-body-rc">
+                            <div class="row" style="background-color: #d1ecf1; border-left: 6px solid #0c5460; padding: 10px; color: #0c5460">
+                                <span>Subclinical (Cận lâm sàng)</span>
                             </div>
                             <div class="row">
                                 <div class="input-group mb-2 mb-sm-0">
                                     <div class="input-group-addon"><i class="fa fa-at"></i></div>
-                                    <input type="text" class="form-control" placeholder="The head, face, neck" disabled>
+                                    <input type="text" class="form-control" placeholder="Update in next version" disabled>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <textarea class="form-control" placeholder="Description (brief, clear, number)"></textarea>
-                            </div>
-                            <div class="row">
-                                <div class="input-group mb-2 mb-sm-0">
-                                    <div class="input-group-addon"><i class="fa fa-at"></i></div>
-                                    <input type="text" class="form-control" placeholder="The chest" disabled>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <textarea class="form-control" placeholder="Description (brief, clear, number)"></textarea>
                             </div>
                         </div>
                     </div>
@@ -254,7 +285,7 @@
                     <div class="row container-fluid">
                         <div class="col-lg-6 col-md-6 col-sm-6" id="cashbook-lia-modal-new-body-lc">
                             <div class="row" style="background-color: #d1ecf1; border-left: 6px solid #0c5460; padding: 10px; color: #0c5460">
-                                <span>The category</span>
+                                <span>Internal medicine</span>
                             </div>
                             <div class="row">
                                 <div class="input-group mb-2 mb-sm-0">
