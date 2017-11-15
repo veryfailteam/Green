@@ -50,9 +50,28 @@
 
 
 
+SELECT
+    customer_name
+    treatment_name
+    user_name
+    appointment_date
+    appointment_time
+    treatmentdetail_id
+    treatmentdetail_no
+    treatmentdetail_date
+    treatmentdetail_content
+    treatmentdetail_status
+FROM
+    clinic_appointment
+INNER JOIN
 
 
 
 
-    
+appointment_assign_id
+
+
+
+
+
 print(dm)

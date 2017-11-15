@@ -14,33 +14,69 @@
             <tr>
                 <td>{{item.date}} {{item.time}}</td>
                 <td>{{item.assign_name}}</td>
-                <td>{{item.name}}</td>
+                <td>
+                    <input type="hidden" class="treatment-id" value="{{item.treatment_id}}">
+                    <input type="hidden" class="data-type" value="{{item.treatment_id}}">
+                    {{item.name}}
+                </td>
                 <td>{{item.content}}</td>
                 <td>{{item.note}}</td>
                 <td>
                     {% if item.status == constant_key.APPOINTMENT_STATUS_ACTIVE and user_role != constant_key.ROLE_RECEPTION %}
-                        <a class="btn btn-primary" href="">Done</a>
+                        <a class="abtn btn btn-primary" href="" data-toggle="modal" data-target="#omni-dental-patient-app-modal-edit">Done</a>
                         <!-- <a class="btn btn-light" href="">Edit</a> -->
                     {% elif item.status == constant_key.APPOINTMENT_STATUS_ACTIVE %}
-                        <a class="btn btn-primary" href="">View</a>
+                        <a class="abtn btn btn-primary" href="" data-toggle="modal" data-target="#omni-dental-patient-app-modal-edit">View</a>
                     {% elif item.status == constant_key.APPOINTMENT_STATUS_CHECKED and user_role == constant_key.ROLE_RECEPTION %}
-                        <a class="btn btn-primary" href="">View</a>
+                        <a class="abtn btn btn-primary" href="" data-toggle="modal" data-target="#omni-dental-patient-app-modal-edit">View</a>
                     {% elif item.status == constant_key.APPOINTMENT_STATUS_CHECKED%}
-                        <a class="btn btn-primary" href="">Active</a>
-                        <a class="btn btn-primary" href="">View</a>
+                        <a class="abtn btn btn-primary" href="" data-toggle="modal" data-target="#omni-dental-patient-app-modal-edit">Active</a>
+                        <a class="abtn btn btn-primary" href="" data-toggle="modal" data-target="#omni-dental-patient-app-modal-edit">View</a>
                     {% elif item.status == constant_key.APPOINTMENT_STATUS_ON_WAY%}
-                        <a class="btn btn-primary" href="">Checked</a>
-                        <a class="btn btn-primary" href="">Edit</a>
+                        <a class="abtn btn btn-primary" href="" data-toggle="modal" data-target="#omni-dental-patient-app-modal-edit">Checked</a>
+                        <a class="abtn btn btn-primary" href="" data-toggle="modal" data-target="#omni-dental-patient-app-modal-edit">Edit</a>
                     {% elif item.status == constant_key.APPOINTMENT_STATUS_BOOKED%}
-                        <a class="btn btn-primary" href="">On way</a>
-                        <a class="btn btn-primary" href="">Edit</a>
+                        <a class="abtn btn btn-primary" href="" data-toggle="modal" data-target="#omni-dental-patient-app-modal-edit">On way</a>
+                        <a class="abtn btn btn-primary" href="" data-toggle="modal" data-target="#omni-dental-patient-app-modal-edit">Edit</a>
                     {% elif item.status == constant_key.APPOINTMENT_STATUS_FOLLOW %}
-                        <a class="btn btn-primary" href="">Confirm</a>
+                        <a class="abtn btn btn-primary" href="" data-toggle="modal" data-target="#omni-dental-patient-app-modal-edit">Confirm</a>
                     {% elif item.status == constant_key.APPOINTMENT_STATUS_DONE %}
-                        <a class="btn btn-primary" href="">View</a>
+                        <a class="abtn btn btn-primary" href="" data-toggle="modal" data-target="#omni-dental-patient-app-modal-edit">View</a>
                     {% endif %}
                 </td>
             </tr>
         {% endfor %}
     </tbody>
 </table>
+    <!--- Patient Appointment schedule Modal Edit -->
+<div class="modal" id="omni-dental-patient-app-modal-edit">
+    <div class="modal-dialog" role="html">
+        <div class="modal-content">
+
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<script type="text/javascript">
+    $(".abtn").click(function( event ) {
+        event.preventDefault();
+
+        $.ajax({
+            url: 'ajax-get-appointment-modal/',
+            data: {
+                'treatment_id': $(this).parent().parent().find(".treatment-id").val(),
+                'data_type': $(this).parent().parent().find(".data-type").val()
+            },
+            dataType: 'html',
+            success: function (data) {
+                    $('.modal-content').html(data)
+
+                    // document.getElementById("lstAppointment").innerHTML = data
+                }
+        });
+
+
+
+        // $('.modal-body').html("<p>dmmmmccccccccccccccccccccccccc</p>")
+    });
+</script>

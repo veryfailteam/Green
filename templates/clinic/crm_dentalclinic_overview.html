@@ -9,7 +9,7 @@
                 <form style="width: 100%;">
                     <div id="search-form" class="form-group input-group">
                         <span class="input-group-addon"><i class="fa fa-search" aria-hidden="true"></i></span>
-                        <input type="text" class="form-control" placeholder="Search name or phone number">
+                        <input id="filter-customer" type="text" class="form-control" placeholder="Search name or phone number">
                     </div>
                 </form>
             </div>
@@ -30,8 +30,8 @@
                                 <a class="btn btn-primary" data-toggle="modal" data-target="#omni-dental-patient-app-modal-new">+ New</a>
                             </div>
                             <div class="col-lg-10 col-md-10 col-sm-10">
-                                <select class="form-control custom-select" style="display: inline;">
-                                    <option>This treatment (default)</option>
+                                <select class="form-control custom-select" id="filter-treament" style="display: inline;">
+                                    <!-- <option>All treatment (default)</option> -->
                                 </select>
                             </div>
                         </div>
@@ -117,6 +117,32 @@
                         </td>
                     </tr> -->
         </div>
+        <script type="text/javascript">
+            $("#filter-treament").change(function(){
+                var $selectval = $(this).val()
+                if ( $selectval == ""){
+                    $("#lstAppointment table tbody tr").show();
+                    return;
+                } else {
+                    $("#lstAppointment table tbody tr").hide().filter(function () {
+                        return this.cells[2].firstElementChild.value == $selectval;
+                    }).show();
+                }
+            });
+
+
+            $("#filter-customer").keyup(function(){
+                var $selectval = $(this).val()
+                if ( $selectval == ""){
+                    $("#appointment-list a").show();
+                    return;
+                } else {
+                    $("#appointment-list a").hide().filter(function () {
+                        return this.children[1].children[0].textContent.toLowerCase().indexOf($selectval) > -1 || this.children[1].children[2].textContent.toLowerCase().indexOf($selectval) > -1;
+                    }).show();
+                }
+            });
+        </script>
     </div>
 </div>
 {% endblock %}

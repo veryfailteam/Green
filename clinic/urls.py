@@ -21,5 +21,6 @@ urlpatterns = [
 
 # For AJAX
     , url(r'^get_appointment_schedule',views.get_appointment_schedule, name='get_appointment_schedule')
+    , url(r'^ajax-get-appointment-modal',views.ajax_get_appointment_modal, name='ajax-get-appointment-modal')
 
 ]

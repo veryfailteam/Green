@@ -393,7 +393,7 @@ tbody td{
 }
 /* ../Patient/Modal Create New */
 .modal-dialog {
-    max-width: 900px;
+    max-width: 900px !important;
 }
 /*#patient-modal-new .input-group-addon:not(:last-child) {
     border-right: 0;
