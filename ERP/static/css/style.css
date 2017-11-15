@@ -208,6 +208,9 @@ textarea{
 .form-control:focus {
     box-shadow: 0 0 0 0;
 }
+.btn{
+    font-size: 13px;
+}
 .btn:focus {
     box-shadow: 0 0 0 0;
 }
@@ -526,4 +529,15 @@ a.nav-link.nav-link-r.active:hover{
     max-width: 350px;
     min-width: 300px;
     margin: 5px auto;
+}
+#row-in-modal .row{
+    max-width: 350px;
+    min-width: 300px;
+    margin: 5px auto;
+    float: right;
+    display: block;
+}
+#row-in-modal{
+    max-width: 360px;
+    float: right;
 }
