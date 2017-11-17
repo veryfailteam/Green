@@ -84,17 +84,12 @@
             <div class="col-lg-3 col-md-3 col-sm-3">
                 <div class="row">
                     <div class="row sidebar-header">
-                        <div class="col-lg-2 col-md-2 col-sm-2">
-                            <img class="hidden-sm-up" src="images/user_avatar.png" style="padding-top: 15px;">
+                        <div class="col-lg-2 col-md-2 col-sm-2" id="patient-avatar">
+                            <img src="images/user_avatar.png" style="padding-top: 15px;">
                         </div>
-                        <div class="col-lg-8 col-md-8 col-sm-8" style="margin-top: 10px; white-space: nowrap; width: 120px; overflow: hidden; text-overflow: ellipsis;">
-                           <b style="margin-top: 15px;"> Mr. Tên em dài quá (26)</b><br/>
+                        <div class="col-lg-8 col-md-8 col-sm-8" style="margin-top: 10px; white-space: nowrap; min-width: 170px; max-width: 250px; overflow: hidden; text-overflow: ellipsis;">
+                           <strong style="margin-top: 15px;"> Mr. Tên em dài quá (26)</strong><br/>
                            <p>Implant X</p>
-                        </div>
-                        <div class="col-lg-2 col-md-2 col-sm-2">
-                            <a href="abc.Completed">
-                                <i class="fa fa-sign-in" aria-hidden="true"></i>
-                            </a>
                         </div>
                     </div>
                     <nav class="nav flex-column sidebar-detail">
@@ -105,13 +100,13 @@
                            <i class="fa fa-certificate" aria-hidden="true" style="float: left;"></i>&nbsp;&nbsp;&nbsp;Clinical Examination <i class="fa fa-angle-right" aria-hidden="true"></i>
                         </a>
                         <a class="nav-link" href="omni-dental-patient-dia.html">
-                           <i class="fa fa-line-chart" aria-hidden="true" style="float: left;"></i>&nbsp;&nbsp;Diagnosis<i class="fa fa-angle-right" aria-hidden="true"></i>
+                           <i class="fa fa-line-chart" aria-hidden="true" style="float: left;"></i>&nbsp;&nbsp;Dental Diagnosis<i class="fa fa-angle-right" aria-hidden="true"></i>
                         </a>
                         <a class="nav-link active" href="omni-dental-patient-tre.html">
-                           <i class="fa fa-puzzle-piece" aria-hidden="true" style="float: left;"></i>&nbsp;&nbsp;Treatment Plan & Enforcement <i class="fa fa-angle-right" aria-hidden="true"></i>
+                           <i class="fa fa-puzzle-piece" aria-hidden="true" style="float: left;"></i>&nbsp;&nbsp;Treatment Plan<i class="fa fa-angle-right" aria-hidden="true"></i>
                         </a>
                         <a class="nav-link" href="omni-dental-patient-inv.html">
-                           <i class="fa fa-file" aria-hidden="true" style="float: left;"></i>&nbsp;&nbsp;&nbsp;Invoice <i class="fa fa-angle-right" aria-hidden="true"></i>
+                           <i class="fa fa-file" aria-hidden="true" style="float: left;"></i>&nbsp;&nbsp;&nbsp;Invoices <i class="fa fa-angle-right" aria-hidden="true"></i>
                         </a>
                         <a class="nav-link" href="omni-dental-patient-pre.html">
                            <i class="fa fa-medkit" aria-hidden="true" style="float: left;"></i>&nbsp;&nbsp;&nbsp;Prescription <i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -132,7 +127,7 @@
             <div class="col-lg-9 col-md-9 col-sm-9" style="border-left: 1px solid #dfdfdf;">
                 <div class="row content-header">
                     <div class="col">
-                        <strong style="min-width: 50px; max-width: 80px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">The treatment (điều trị)</strong>
+                        <strong style="min-width: 50px; max-width: 80px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Treatment plan</strong>
                         <a class="btn btn-primary" data-toggle="modal" data-target="#omni-dental-patient-tre-modal-new" style="margin-left: 10px;">+ New</a>
                     </div>
                     <div class="col">
@@ -148,7 +143,7 @@
                            <tr>
                                 <th style="padding-left: 8px; min-width: 20px; max-width: 30px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Task no.</th>
                                 <th style="padding-left: 0px; min-width: 20px; max-width: 30px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">After</th>
-                                <th style="padding-left: 0px; min-width: 60px; max-width: 80px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Completed time</th>
+                                <th style="padding-left: 0px; min-width: 60px; max-width: 80px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Cmplted time</th>
                                 <th style="padding-left: 0px; min-width: 230px; max-width: 250px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Task detail</th>
                                 <th style="padding-left: 0px; min-width: 20px; max-width: 30px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Position</th>
                                 <th style="ppadding-left: 0px; min-width: 60px; max-width: 80px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Completed by</th>
@@ -184,14 +179,21 @@
                     <div class="container-fluid" style="background-color: #ddffdd; /*border-left: 6px solid #4CAF50; margin: 0px 10px;*/ ">
                         <h6 style="padding: 10px 0px 0px 0px;">Case 1: [Treatment name]</h6>
                         <div style="background-color: #FFF; border-radius: 5px; margin: 10px 0px; padding: 10px;">
-                            <span>Đây là kế hoạch điều trị ở mức chi tiết, viết ra. Ghi chú cho Hiến: Khi active plan mới bắt đầu đc chuyển status của các task. Khi đã chuyển status một task nào đó rồi thì ko thể de-active đc nữa. Cùng lúc chỉ có thể active 1 plan duy nhất.</span>
+                            <span>Đây là kế hoạch điều trị ở mức chi tiết, viết ra. Ghi chú cho Hiến: Khi active plan mới bắt đầu đc chuyển status của các task. Khi đã chuyển status một task nào đó rồi thì ko thể de-active đc nữa. Cùng lúc chỉ cho active 1 plan.</span>
                         </div>
                     </div>
                     <div style="background-color: #eee; width: 100%; margin: 10px; padding: 0.5px;"></div>
                     <div class="container">
                         <div style="float: right;">
                             <button type="button" class="btn btn-danger">De-active this plan</button>
-                            <button type="button" class="btn btn-primary" style="width: 70px;">Edit</button>
+                            <button type="button" data-toggle="modal" data-target="#omni-dental-patient-tre-modal-edit" class="btn btn-primary" style="width: 70px;">Edit</button>
+                        </div>
+                    </div>
+                    <div style="background-color: #eee; width: 100%; margin: 10px; padding: 0.5px;"></div>
+                    <div class="container">
+                        <div class="alert alert-info alert-dismissable" style="margin-bottom: 0px; margin-top: 20px;">
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            <strong>Next update: v1.0.5: </strong>(1) In ra treatment plan (2) Gửi plan qua email cho khách hàng<br/>
                         </div>
                     </div>
                     <!-- <div class="container-fluid" id="cashbook-content">
@@ -209,7 +211,7 @@
     <footer id="main-footer">
         <a>Cloud Dental CRM v.1.0.3 (alpha 1) @ 2017. All rights reserved.</a>
     </footer>
-    <!--- Patient Prescription Modal New -->
+    <!--- Patient Treatement Modal New -->
     <div class="modal fade" id="omni-dental-patient-tre-modal-new">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -223,9 +225,8 @@
                 <div class="modal-body">
                     <div>
                         <a class="navbar-brand" href="#" style="color: #2196f3"><strong>Nha khoa GTGT</strong></a><br/>
-                        <span>Adr. 128h Pham Van Hai, P.2, Tan Binh</span><br/>
-                        <a>Hotline: 0902.886.862 (Dr. Luong)</a><br/>
-                        <p>At date: 11/11/2017 00:15 pm</p>
+                        <span>Adr. 128h Phạm Văn Hai, P.2, Tân Bình</span><br/>
+                        <p>Hotline: 0902.886.862 (Dr. Lương)</p><br/>
                     </div>
                     <div class="table">
                         <table class="table table-responsive-md table-striped table-hover">
@@ -264,24 +265,29 @@
                         <div class="row">
                             <div class="input-group mb-2 mb-sm-0">
                                 <div class="input-group-addon"><i class="fa fa-at"></i></div>
-                                <input type="text" class="form-control" placeholder="Discount (%) (giam gia)">
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="input-group mb-2 mb-sm-0">
-                                <div class="input-group-addon"><i class="fa fa-at"></i></div>
-                                <input type="text" class="form-control" placeholder="Sub total (tong cong)" disabled>
+                                <input type="text" class="form-control" placeholder="Sub total (tổng cộng)" disabled>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-group mb-2 mb-sm-0">
                                 <div class="input-group-addon"><i class="fa fa-at"></i></div>
-                                <input type="text" class="form-control" placeholder="Grand total (thanh tien)" disabled>
+                                <input type="text" class="form-control" placeholder="VAT (%) (Thuế)">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-group mb-2 mb-sm-0">
+                                <div class="input-group-addon"><i class="fa fa-at"></i></div>
+                                <input type="text" class="form-control" placeholder="Discount (%) (giảm giá)">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-group mb-2 mb-sm-0">
+                                <div class="input-group-addon"><i class="fa fa-at"></i></div>
+                                <input type="text" class="form-control" placeholder="Grand total (thành tiền)" disabled>
                             </div>
                         </div>
                     </div>
-                    <div class="email & print">
+                    <!-- <div class="email & print">
                         <form class="row">
                             <div class="col row form-group">
                                 <label for="inputEmail3" class="col-sm-2 form-control-label">Send to email</label>
@@ -303,7 +309,7 @@
                                 </div>
                             </div>
                         </form>
-                    </div>
+                    </div> -->
                     <div class="notes">
                         <textarea class="form-control" placeholder="Treatment plan detail (in words).."></textarea>
                     </div>
@@ -315,7 +321,116 @@
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
-    <!--- Patient Appointment schedule Modal Edit -->
+    <!--- Patient Treatement Modal Edit -->
+    <div class="modal fade" id="omni-dental-patient-tre-modal-edit">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><strong style="color: tomato;">Create new treatment plan for Mr. Nguyen Quoc Anh</strong></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <a class="navbar-brand" href="#" style="color: #2196f3"><strong>Nha khoa GTGT</strong></a><br/>
+                        <span>Adr. 128h Phạm Văn Hai, P.2, Tân Bình</span><br/>
+                        <p>Hotline: 0902.886.862 (Dr. Lương)</p><br/>
+                    </div>
+                    <div class="table">
+                        <table class="table table-responsive-md table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th style="padding-left: 8px; min-width: 30px; max-width: 40px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Task no.</th>
+                                    <th style="padding-left: 0px; min-width: 30px; max-width: 40px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">After</th>
+                                    <th style="padding-left: 0px; min-width: 30px; max-width: 40px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Position</th>
+                                    <th style="padding-left: 0px; min-width: 180px; max-width: 200px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Task detail</th>
+                                    <th style="padding-left: 8px; min-width: 30px; max-width: 40px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Unit price</th>
+                                    <th style="padding-left: 0px; min-width: 30px; max-width: 40px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Qty</th>
+                                    <th style="padding-left: 0px; min-width: 30px; max-width: 40px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Amount</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="padding-left: 8px; min-width: 30px; max-width: 40px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><input type="text" class="form-control" style="" placeholder="Number"></td>
+                                    <td style="padding-left: 0px; min-width: 30px; max-width: 40px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;""><input type="text" class="form-control" style="" placeholder="Number"></td>
+                                    <td style="padding-left: 0px; min-width: 30px; max-width: 40px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><input type="text" class="form-control" style="" placeholder="Vị trí"></td>
+                                    <td style="padding-left: 0px; min-width: 180px; max-width: 200px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><input type="text" class="form-control" style="" placeholder="Chi tiết task"></td>
+                                    <td style="padding-left: 8px; min-width: 30px; max-width: 40px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><input type="text" class="form-control" style="" placeholder="Đơn giá"></td>
+                                    <td style="padding-left: 0px; min-width: 30px; max-width: 40px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;""><input type="text" class="form-control" style="" placeholder="Số lượng"></td>
+                                    <td style="padding-left: 0px; min-width: 30px; max-width: 40px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><input type="text" class="form-control" style="" placeholder="Thành tiền"></td>
+                                    <td>
+                                        <button type="button" class="close" data-dismiss="" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                            <span class="sr-only">Close</span>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="row-in-modal">
+                        <div class="row">
+                            <div class="input-group mb-2 mb-sm-0">
+                                <div class="input-group-addon"><i class="fa fa-at"></i></div>
+                                <input type="text" class="form-control" placeholder="Sub total (tổng cộng)" disabled>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-group mb-2 mb-sm-0">
+                                <div class="input-group-addon"><i class="fa fa-at"></i></div>
+                                <input type="text" class="form-control" placeholder="VAT (%) (Thuế)">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-group mb-2 mb-sm-0">
+                                <div class="input-group-addon"><i class="fa fa-at"></i></div>
+                                <input type="text" class="form-control" placeholder="Discount (%) (giảm giá)">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-group mb-2 mb-sm-0">
+                                <div class="input-group-addon"><i class="fa fa-at"></i></div>
+                                <input type="text" class="form-control" placeholder="Grand total (thành tiền)" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="email & print">
+                        <form class="row">
+                            <div class="col row form-group">
+                                <label for="inputEmail3" class="col-sm-2 form-control-label">Send to email</label>
+                                <div class="col-sm-10">
+                                    <div class="checkbox">
+                                        <input type="checkbox"> Yes
+                                        <input type="email" class="form-control" id="inputEmail3" placeholder="ducthinh2012@gmail.com">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col row form-group">
+                                <label class="col-sm-2">Print now?</label>
+                                <div class="col-sm-10">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Yes (with default printer)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div> -->
+                    <div class="notes">
+                        <textarea class="form-control" placeholder="Treatment plan detail (in words).."></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>

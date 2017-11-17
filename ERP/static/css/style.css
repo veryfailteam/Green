@@ -234,6 +234,13 @@ textarea{
 .form-group{
     vertical-align: middle;
 }
+@media (max-width: 760px)
+{
+    #patient-avatar
+    {
+        display: none;
+    }
+}
 /* Table */
 
 thead{
@@ -319,11 +326,11 @@ tbody td{
 
 /* ../Patient/Sidebar */
 #patient-content .sidebar-header{
-    padding: 0;
+    padding: auto;
     width: 100%;
     border-bottom: 1px solid #dfdfdf;
     margin: 0;
-    height: 60px;
+    max-height: 60px;
 }
 #patient-content .sidebar-header i{
     -webkit-transform: rotate(180deg);
@@ -333,7 +340,7 @@ tbody td{
     transform: rotate(180deg);
     float: right;
     margin-top: 25px;
-    margin-right: auto;
+    margin-right: 0px;
 }
 #patient-content .sidebar-detail{
     width: 100%;
@@ -541,3 +548,4 @@ a.nav-link.nav-link-r.active:hover{
     max-width: 360px;
     float: right;
 }
+

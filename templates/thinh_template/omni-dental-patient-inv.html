@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Omni-channel - Patient - Prescription | Nha khoa GTGT | Cloud Dental ERP v1.0.3</title>
+    <title>Omni-channel - Patient - Invoices | Nha khoa GTGT | Cloud Dental ERP v1.0.3</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src="https://use.fontawesome.com/8acd7bac45.js"></script>
@@ -105,10 +105,10 @@
                         <a class="nav-link" href="omni-dental-patient-tre.html">
                            <i class="fa fa-puzzle-piece" aria-hidden="true" style="float: left;"></i>&nbsp;&nbsp;Treatment Plan<i class="fa fa-angle-right" aria-hidden="true"></i>
                         </a>
-                        <a class="nav-link" href="omni-dental-patient-inv.html">
+                        <a class="nav-link active" href="omni-dental-patient-inv.html">
                            <i class="fa fa-file" aria-hidden="true" style="float: left;"></i>&nbsp;&nbsp;&nbsp;Invoices <i class="fa fa-angle-right" aria-hidden="true"></i>
                         </a>
-                        <a class="nav-link active" href="omni-dental-patient-pre.html">
+                        <a class="nav-link" href="omni-dental-patient-pre.html">
                            <i class="fa fa-medkit" aria-hidden="true" style="float: left;"></i>&nbsp;&nbsp;&nbsp;Prescription <i class="fa fa-angle-right" aria-hidden="true"></i>
                         </a>
                         <a class="nav-link" href="omni-dental-patient-doc.html">
@@ -127,13 +127,14 @@
             <div class="col-lg-9 col-md-9 col-sm-9" style="border-left: 1px solid #dfdfdf;">
                 <div class="row content-header">
                     <div class="col">
-                        <strong style="min-width: 50px; max-width: 80px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Prescripion (toa thuốc)</strong>
-                        <a class="btn btn-primary" data-toggle="modal" data-target="#omni-dental-patient-pre-modal-new" style="margin-left: 10px;">+ New</a>
+                        <strong style="min-width: 50px; max-width: 80px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Invoices (Chứng từ - HĐ)</strong>
+                        <!-- <a class="btn btn-primary" data-toggle="modal" data-target="#omni-dental-patient-pre-modal-new" style="margin-left: 10px;">+ New</a> -->
+                        <a class="btn btn-primary" data-toggle="tooltip" title="Sẽ mở trang để tạo phiếu thu mới cho ĐIỀU TRỊ NÀY" style="margin-left: 10px;">+ New</a>
                     </div>
                     <div class="col">
                         <select class="form-control custom-select" style="display: inline;">
-                            <option>This treatment (default)</option>
-                            <option>All the treatments</option>
+                            <option>All the treatments (default)</option>
+                            <option>This treatment</option>
                         </select>
                     </div>
                 </div>
@@ -141,32 +142,32 @@
                     <table class="table table-responsive-md table-striped table-hover">
                         <thead>
                            <tr>
-                                <th style="padding-left: 10px; padding-right: 0; white-space: nowrap; max-width: 125px; overflow: hidden; text-overflow: ellipsis;">Appointment Date</th>
-                                <th style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 80px; overflow: hidden; text-overflow: ellipsis;">Creator</th>
+                                <th style="padding-left: 10px; padding-right: 0; white-space: nowrap; max-width: 100px; overflow: hidden; text-overflow: ellipsis;">Receipt vch #</th>
+                                <th style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 100px; overflow: hidden; text-overflow: ellipsis;">Amount</th>
+                                <th style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 100px; overflow: hidden; text-overflow: ellipsis;">Balanced</th>
                                 <th style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 80px; overflow: hidden; text-overflow: ellipsis;">Treatment</th>
-                                <th style="padding-left: 0; ">Notes</th>
+                                <th style="padding-left: 0; ">Doctor/Dentist's Notes</th>
                                 <th></th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td style="padding-right: 0; width: 120px;">10/10/2017 12:00</td>
-                                <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 80px; overflow: hidden; text-overflow: ellipsis;">Ngoc Anh (long text testing)</td>
-                                <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 80px; overflow: hidden; text-overflow: ellipsis;"><a href=""> Implant X<a></td>
-                                <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 350px; overflow: hidden; text-overflow: ellipsis;"> Đây là ghi chú của toa thuốc......</td>
-                                <td style="width: 100px;">
-                                    <a class="btn btn-primary" href="" style="width: 70px;" data-toggle="modal" data-target="#omni-dental-patient-pre-modal-edit">Edit</a>
-                                </td>
+                                <td style="padding-left: 10px; padding-right: 0; white-space: nowrap; max-width: 100px; overflow: hidden; text-overflow: ellipsis;">RV-00001</td>
+                                <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 100px; overflow: hidden; text-overflow: ellipsis;">300,000<sup>vnđ</sup></td>
+                                <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 100px; overflow: hidden; text-overflow: ellipsis;">800,000<sup>vnđ</sup></td>
+                                <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 80px; overflow: hidden; text-overflow: ellipsis;"><a href="">Chỉnh nha XXX<a></td>
+                                <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 350px; overflow: hidden; text-overflow: ellipsis;">Ghi chú của riêng của Dr về thanh toán như các trường hợp ngoại lệ :))))</td>
+                                <td><a class="btn btn-primary" style="width: 70px;" data-toggle="tooltip" title="Sẽ mở trang chỉnh sửa phiếu thu này">Edit</a></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-                <div class="container">
+                <!-- <div class="container">
                     <div class="alert alert-info alert-dismissable" style="margin-bottom: 0px; margin-top: 20px;">
                         <button type="button" class="close" data-dismiss="alert">&times;</button>
                         <strong>Next update: v1.0.5: </strong>(1) In ra toa thuốc với giao diện riêng (2) Gửi plan qua email cho khách hàng<br/>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -175,7 +176,7 @@
         <a>Cloud Dental CRM v.1.0.3 (alpha 1) @ 2017. All rights reserved.</a>
     </footer>
     <!--- Patient Prescription Modal New -->
-    <div class="modal fade" id="omni-dental-patient-pre-modal-new">
+    <!-- <div class="modal fade" id="omni-dental-patient-pre-modal-new">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -269,7 +270,7 @@
                                 </div>
                             </div>
                         </form>
-                    </div> -->
+                    </div>
                     <div class="notes">
                         <textarea class="form-control" placeholder="Write your note.."></textarea>
                     </div>
@@ -278,9 +279,9 @@
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
+            </div>
+        </div>
+    </div>-->
     <!--- Patient Appointment schedule Modal Edit -->
     <div class="modal fade" id="omni-dental-patient-pre-modal-edit">
         <div class="modal-dialog" role="document">
@@ -376,7 +377,7 @@
                                 </div>
                             </div>
                         </form>
-                    </div> -->
+                    </div>
                     <div class="notes">
                         <textarea class="form-control" placeholder="Write your note.."></textarea>
                     </div>
@@ -385,12 +386,17 @@
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
+            </div>
+        </div>
+    </div><!-- /.modal --> -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
+    <script>
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+    </script>
 </body>
 </html>

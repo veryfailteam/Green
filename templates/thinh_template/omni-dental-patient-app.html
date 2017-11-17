@@ -84,17 +84,12 @@
             <div class="col-lg-3 col-md-3 col-sm-3">
                 <div class="row">
                     <div class="row sidebar-header">
-                        <div class="col-lg-2 col-md-2 col-sm-2">
+                        <div class="col-lg-2 col-md-2 col-sm-2" id="patient-avatar">
                             <img src="images/user_avatar.png" style="padding-top: 15px;">
                         </div>
-                        <div class="col-lg-8 col-md-8 col-sm-8" style="margin-top: 10px; white-space: nowrap; width: 120px; overflow: hidden; text-overflow: ellipsis;">
-                           <b style="margin-top: 15px;"> Mr. Tên em dài quá (26)</b><br/>
+                        <div class="col-lg-8 col-md-8 col-sm-8" style="margin-top: 10px; white-space: nowrap; min-width: 170px; max-width: 250px; overflow: hidden; text-overflow: ellipsis;">
+                           <strong style="margin-top: 15px;"> Mr. Tên em dài quá (26)</strong><br/>
                            <p>Implant X</p>
-                        </div>
-                        <div class="col-lg-2 col-md-2 col-sm-2">
-                            <a href="abc.com">
-                                <i class="fa fa-sign-in" aria-hidden="true"></i>
-                            </a>
                         </div>
                     </div>
                     <nav class="nav flex-column sidebar-detail">
@@ -105,13 +100,13 @@
                            <i class="fa fa-certificate" aria-hidden="true" style="float: left;"></i>&nbsp;&nbsp;&nbsp;Clinical Examination <i class="fa fa-angle-right" aria-hidden="true"></i>
                         </a>
                         <a class="nav-link" href="omni-dental-patient-dia.html">
-                           <i class="fa fa-line-chart" aria-hidden="true" style="float: left;"></i>&nbsp;&nbsp;Diagnosis<i class="fa fa-angle-right" aria-hidden="true"></i>
+                           <i class="fa fa-line-chart" aria-hidden="true" style="float: left;"></i>&nbsp;&nbsp;Dental Diagnosis<i class="fa fa-angle-right" aria-hidden="true"></i>
                         </a>
                         <a class="nav-link" href="omni-dental-patient-tre.html">
-                           <i class="fa fa-puzzle-piece" aria-hidden="true" style="float: left;"></i>&nbsp;&nbsp;Treatment Plan & Enforcement <i class="fa fa-angle-right" aria-hidden="true"></i>
+                           <i class="fa fa-puzzle-piece" aria-hidden="true" style="float: left;"></i>&nbsp;&nbsp;Treatment Plan<i class="fa fa-angle-right" aria-hidden="true"></i>
                         </a>
                         <a class="nav-link" href="omni-dental-patient-inv.html">
-                           <i class="fa fa-file" aria-hidden="true" style="float: left;"></i>&nbsp;&nbsp;&nbsp;Invoice <i class="fa fa-angle-right" aria-hidden="true"></i>
+                           <i class="fa fa-file" aria-hidden="true" style="float: left;"></i>&nbsp;&nbsp;&nbsp;Invoices <i class="fa fa-angle-right" aria-hidden="true"></i>
                         </a>
                         <a class="nav-link" href="omni-dental-patient-pre.html">
                            <i class="fa fa-medkit" aria-hidden="true" style="float: left;"></i>&nbsp;&nbsp;&nbsp;Prescription <i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -131,21 +126,15 @@
             </div>
             <div class="col-lg-9 col-md-9 col-sm-9" style="border-left: 1px solid #dfdfdf;">
                 <div class="row content-header">
-                    <div class="col-lg-5 col-md-5 col-sm-5">
-                        <b style="white-space: nowrap; max-width: 80px; overflow: hidden; text-overflow: ellipsis;">Appointment Schedule</b>
+                    <div class="col">
+                        <strong style="min-width: 50px; max-width: 80px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Appointment schedule</strong>
+                        <a class="btn btn-primary" data-toggle="modal" data-target="#omni-dental-patient-app-modal-new" style="margin-left: 10px;">+ New</a>
                     </div>
-                    <div class="col-lg-7 col-md-7 col-sm-7">
-                        <div class="row">
-                            <div class="col-lg-2 col-md-2 col-sm-2" style="padding-top: 2px;">
-                                <a class="btn btn-primary" href="" data-toggle="modal" data-target="#omni-dental-patient-app-modal-new">+ New</a>
-                            </div>
-                            <div class="col-lg-10 col-md-10 col-sm-10">
-                                <select class="form-control custom-select" style="display: inline;">
-                                    <option>This treatment (default)</option>
-                                    <option>All the treatments</option>
-                                </select>
-                            </div>
-                        </div>
+                    <div class="col">
+                        <select class="form-control custom-select" style="display: inline;">
+                            <option>This treatment (default)</option>
+                            <option>All the treatments</option>
+                        </select>
                     </div>
                 </div>
                 <div class="row content-detail">
@@ -153,8 +142,8 @@
                         <thead>
                            <tr>
                                 <th style="padding-left: 10px; padding-right: 0; white-space: nowrap; max-width: 123px; overflow: hidden; text-overflow: ellipsis;">Appointment Date</th>
-                                <th style="padding-left: 0; padding-right: 0;">Doctor</th>
-                                <th style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 106px; overflow: hidden; text-overflow: ellipsis;">Treatment Name</th>
+                                <th style="padding-left: 0; padding-right: 0;">Creator</th>
+                                <th style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 106px; overflow: hidden; text-overflow: ellipsis;">Treatment</th>
                                 <th style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 60px; overflow: hidden; text-overflow: ellipsis;">Task List</th>
                                 <th style="padding-left: 0; padding-right: 0;">Notes</th>
                                 <th></th>
@@ -164,7 +153,7 @@
                             <tr>
                                 <td style="padding-right: 0; width: 130px;">10/10/2017 12:00</td>
                                 <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 80px; overflow: hidden; text-overflow: ellipsis;">Ngoc Anh (long text testing)</td>
-                                <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 80px; overflow: hidden; text-overflow: ellipsis;">Implant X (long text testing)</td>
+                                <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 80px; overflow: hidden; text-overflow: ellipsis;"><a href=""> Implant X (long text testing)<a></td>
                                 <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 80px; overflow: hidden; text-overflow: ellipsis;">1.1, 1.2, 1.3 (long text testing)</td>
                                 <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 200px; overflow: hidden; text-overflow: ellipsis;"> This is a long note that you have ever seen befored bla bla bla bla bla bla bla bla bla(long text testing)</td>
                                 <td style="min-width: 160px;">
@@ -175,7 +164,7 @@
                             <tr>
                                 <td style="padding-right: 0;">08/10/2017 11:00</td>
                                 <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 80px; overflow: hidden; text-overflow: ellipsis;">Ngoc Anh</td>
-                                <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 80px; overflow: hidden; text-overflow: ellipsis;">Implant X</td>
+                                <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 80px; overflow: hidden; text-overflow: ellipsis;"><a href=""> Implant X</a></td>
                                 <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 80px; overflow: hidden; text-overflow: ellipsis;">1.1, 1.2, 1.3</td>
                                 <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 200px; overflow: hidden; text-overflow: ellipsis;">-</td>
                                 <td>
@@ -186,7 +175,7 @@
                             <tr>
                                 <td style="padding-right: 0;">07/10/2017 12:00</td>
                                 <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 80px; overflow: hidden; text-overflow: ellipsis;">Ngoc Anh</td>
-                                <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 80px; overflow: hidden; text-overflow: ellipsis;">Implant X</td>
+                                <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 80px; overflow: hidden; text-overflow: ellipsis;"><a href=""> Implant X</a></td>
                                 <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 80px; overflow: hidden; text-overflow: ellipsis;">1.1, 1.2, 1.3</td>
                                 <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 200px; overflow: hidden; text-overflow: ellipsis;">/* Đã huỷ: Any > Cancel*/</td>
                                 <td>
@@ -197,7 +186,7 @@
                             <tr>
                                 <td style="padding-right: 0;">06/10/2017 11:00</td>
                                 <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 80px; overflow: hidden; text-overflow: ellipsis;">Ngoc Anh</td>
-                                <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 80px; overflow: hidden; text-overflow: ellipsis;">Implant X</td>
+                                <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 80px; overflow: hidden; text-overflow: ellipsis;"><a href=""> Implant X</a></td>
                                 <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 80px; overflow: hidden; text-overflow: ellipsis;">1.1, 1.2, 1.3</td>
                                 <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 200px; overflow: hidden; text-overflow: ellipsis;">/* Đã xong: checked > done*/</td>
                                 <td>
@@ -207,7 +196,7 @@
                             <tr>
                                 <td style="padding-right: 0; width: 130px;">10/10/2017 12:00</td>
                                 <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 80px; overflow: hidden; text-overflow: ellipsis;">Ngoc Anh (long text testing)</td>
-                                <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 80px; overflow: hidden; text-overflow: ellipsis;">Implant X (long text testing)</td>
+                                <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 80px; overflow: hidden; text-overflow: ellipsis;"><a href=""> Implant X</a></td>
                                 <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 80px; overflow: hidden; text-overflow: ellipsis;">1.1, 1.2, 1.3 (long text testing)</td>
                                 <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 200px; overflow: hidden; text-overflow: ellipsis;"> This is a long note that you have ever seen befored bla bla bla bla bla bla bla bla bla(long text testing)</td>
                                 <td style="min-width: 160px;">
