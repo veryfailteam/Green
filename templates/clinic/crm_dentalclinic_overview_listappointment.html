@@ -16,7 +16,8 @@
                 <td>{{item.assign_name}}</td>
                 <td>
                     <input type="hidden" class="treatment-id" value="{{item.treatment_id}}">
-                    <input type="hidden" class="data-type" value="{{item.treatment_id}}">
+                    <input type="hidden" class="treatmentdetail-date" value="{{item.date}}">
+                    <input type="hidden" class="data-type" value="{{item.data_type}}">
                     {{item.name}}
                 </td>
                 <td>{{item.content}}</td>
@@ -51,25 +52,29 @@
     <!--- Patient Appointment schedule Modal Edit -->
 <div class="modal" id="omni-dental-patient-app-modal-edit">
     <div class="modal-dialog" role="html">
-        <div class="modal-content">
+        <div class="modal-content" id="modal-content">
 
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
+{% csrf_token %}
 <script type="text/javascript">
     $(".abtn").click(function( event ) {
         event.preventDefault();
 
         $.ajax({
+            type: 'POST',
             url: 'ajax-get-appointment-modal/',
             data: {
+                'csrfmiddlewaretoken': $('[name=csrfmiddlewaretoken]').val(),
                 'treatment_id': $(this).parent().parent().find(".treatment-id").val(),
+                'treatmentdetail_date': $(this).parent().parent().find(".treatmentdetail-date").val(),
                 'data_type': $(this).parent().parent().find(".data-type").val()
             },
             dataType: 'html',
             success: function (data) {
-                    $('.modal-content').html(data)
+                    $('#modal-content').html(data)
 
                     // document.getElementById("lstAppointment").innerHTML = data
                 }
