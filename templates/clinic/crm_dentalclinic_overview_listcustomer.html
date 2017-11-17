@@ -5,6 +5,7 @@
         {% else %}
         <a class="nav-link" href="#"  name="{{customer.customer_id}}">
         {% endif %}
+            <input type="hidden" value="{{customer.treatment_id}}">
             <span style="float: left;">
                 <b>{{customer.customer_name}}</b><br/>
                 <p style="margin-bottom: 0;">{{customer.customer_phone_number}}</p>
@@ -55,13 +56,30 @@
     </a> -->
 </nav>
 <script type="text/javascript">
-    $("#appointment-list a").on("click", function(){
-       $("#appointment-list").find(".active").removeClass("active");
-       $(this).addClass("active");
+    $(function() {
+        var $newkey = $("#appointment-list").find(".active").find("input").val()
+        var $el = $("#filter-treament");
+        $el.empty(); // remove old options
+        $el.append($("<option></option>")
+             .attr("value", "").text("All treatment (default)"));
+        $el.append($("<option></option>")
+             .attr("value", $newkey).text("This treatment"));
     });
 
     $("#appointment-list a").on("click", function(){
+        $("#appointment-list").find(".active").removeClass("active");
+        $(this).addClass("active");
+
+        var $newkey = $(this).find("input").val()
+        var $el = $("#filter-treament");
+        $el.empty(); // remove old options
+        $el.append($("<option></option>")
+             .attr("value", "").text("All treatment (default)"));
+        $el.append($("<option></option>")
+             .attr("value", $newkey).text("This treatment"));
+
         $.ajax({
+            // type: 'POST'
             url: 'get_appointment_schedule/',
             data: {
                 'customer_id': this.name
@@ -71,5 +89,6 @@
                     document.getElementById("lstAppointment").innerHTML = data
                 }
         });
+
     });
 </script>

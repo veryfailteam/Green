@@ -23,6 +23,7 @@ def crm_dentalclinic_overview(request):
 
         sql  =      "   SELECT"
         sql +=      "     appointment_id"
+        sql +=      "   , treatment_id"
         sql +=      "   , clinic_customer.customer_id"
         sql +=      "   , customer_name"
         sql +=      "   , customer_phone_number"
@@ -53,69 +54,71 @@ def crm_dentalclinic_overview(request):
         if lstCusToday != []:
             selected_customer = lstCusToday[0]
 
-            sql  =       "(       "
-            sql +=       "    (   "
-            sql +=       "        SELECT  "
-            sql +=       "              appointment_id        AS id   "
-            sql +=       "            , user_name             AS assign_name  "
-            sql +=       "            , appointment_date      AS date "
-            sql +=       "            , appointment_time      AS time "
-            sql +=       "            , treatment_name        AS name "
-            sql +=       "            , appointment_content   AS content  "
-            sql +=       "            , appointment_note      AS note "
-            sql +=       "            , appointment_status    AS status   "
-            sql +=       "            , '1'                   AS type_data "
-            sql +=       "        FROM    "
-            sql +=       "            clinic_appointment  "
-            sql +=       "        INNER JOIN  "
-            sql +=       "                clinic_user "
-            sql +=       "            ON  "
-            sql +=       "                clinic_user.user_id = clinic_appointment.appointment_assign_id  "
-            sql +=       "        INNER JOIN  "
-            sql +=       "                clinic_treatment    "
-            sql +=       "            ON  "
-            sql +=       "                clinic_treatment.treatment_id = clinic_appointment.treatment_id "
-            sql +=       "        WHERE   "
-            sql +=       "                    clinic_appointment.customer_id = '{}'    ".format(selected_customer.customer_id)
-            sql +=       "            AND     clinic_appointment.appointment_status <> '{}'    ".format(CONSTANT_KEY['APPOINTMENT_STATUS_PENDING_PAYMENT'])
-            sql +=       "            AND     appointment_delete_flag = '{}'   ".format(CONSTANT_KEY['DELETE_FLAG_FALSE'])
-            sql +=       "    )   "
-            sql +=       "UNION ALL   "
-            sql +=       "    (   "
-            sql +=       "        SELECT  "
-            sql +=       "              null                                          AS id                   "
-            sql +=       "            , clinic_user.user_name                         AS assign_name                  "
-            sql +=       "            , treatmentdetail_date                          AS date             "
-            sql +=       "            , ''                                            AS time                 "
-            sql +=       "            , treatment_name                                AS name         "
-            sql +=       "            , string_agg(treatmentdetail_no, ', ')          AS content              "
-            sql +=       "            , ''                                            AS note     "
-            sql +=       "            , '6'                                           AS status           "
-            sql +=       "            , '2'                                           AS type_data            "
-            sql +=       "        FROM    "
-            sql +=       "            clinic_treatmentdetail  "
-            sql +=       "        INNER JOIN  "
-            sql +=       "                clinic_treatment    "
-            sql +=       "            ON  "
-            sql +=       "                    clinic_treatment.treatment_id = clinic_treatmentdetail.treatment_id "
-            sql +=       "            AND     clinic_treatment.customer_id = '1'  "
-            sql +=       "        inner join  "
-            sql +=       "                clinic_user "
-            sql +=       "            ON  "
-            sql +=       "                clinic_treatment.user_id  = clinic_user.user_id "
-            sql +=       "        WHERE   "
-            sql +=       "                  clinic_treatmentdetail.treatmentdetail_status = '{}' ".format(CONSTANT_KEY['TREATMENT_STATUS_DONE'])
-            sql +=       "            AND   clinic_treatmentdetail.treatmentdetail_delete_flag = '{}' ".format(CONSTANT_KEY['DELETE_FLAG_FALSE'])
-            sql +=       "        GROUP BY    "
-            sql +=       "              clinic_treatment.treatment_id       "
-            sql +=       "            , assign_name         "
-            sql +=       "            , date,name    "
-            sql +=       "    )   "
-            sql +=       ")   "
-            sql +=       "ORDER BY    "
-            sql +=       "          status ASC    "
-            sql +=       "        , date DESC "
-            sql +=       "        , time ASC  "
+            # sql  =       "(       "
+            # sql +=       "    (   "
+            # sql +=       "        SELECT  "
+            # sql +=       "              appointment_id                      AS id   "
+            # sql +=       "            , user_name                           AS assign_name  "
+            # sql +=       "            , appointment_date                    AS date "
+            # sql +=       "            , appointment_time                    AS time "
+            # sql +=       "            , clinic_treatment.treatment_id       AS treatment_id "
+            # sql +=       "            , treatment_name                      AS name "
+            # sql +=       "            , appointment_content                 AS content  "
+            # sql +=       "            , appointment_note                    AS note "
+            # sql +=       "            , appointment_status                  AS status   "
+            # sql +=       "            , '1'                                 AS type_data "
+            # sql +=       "        FROM    "
+            # sql +=       "            clinic_appointment  "
+            # sql +=       "        INNER JOIN  "
+            # sql +=       "                clinic_user "
+            # sql +=       "            ON  "
+            # sql +=       "                clinic_user.user_id = clinic_appointment.appointment_assign_id  "
+            # sql +=       "        INNER JOIN  "
+            # sql +=       "                clinic_treatment    "
+            # sql +=       "            ON  "
+            # sql +=       "                clinic_treatment.treatment_id = clinic_appointment.treatment_id "
+            # sql +=       "        WHERE   "
+            # sql +=       "                    clinic_appointment.customer_id = '{}'    ".format(selected_customer.customer_id)
+            # sql +=       "            AND     clinic_appointment.appointment_status <> '{}'    ".format(CONSTANT_KEY['APPOINTMENT_STATUS_PENDING_PAYMENT'])
+            # sql +=       "            AND     appointment_delete_flag = '{}'   ".format(CONSTANT_KEY['DELETE_FLAG_FALSE'])
+            # sql +=       "    )   "
+            # sql +=       "UNION ALL   "
+            # sql +=       "    (   "
+            # sql +=       "        SELECT  "
+            # sql +=       "              null                                          AS id                   "
+            # sql +=       "            , clinic_user.user_name                         AS assign_name                  "
+            # sql +=       "            , treatmentdetail_date                          AS date             "
+            # sql +=       "            , ''                                            AS time                 "
+            # sql +=       "            , clinic_treatment.treatment_id                 AS treatment_id                 "
+            # sql +=       "            , treatment_name                                AS name         "
+            # sql +=       "            , string_agg(treatmentdetail_no, ', ')          AS content              "
+            # sql +=       "            , ''                                            AS note     "
+            # sql +=       "            , '6'                                           AS status           "
+            # sql +=       "            , '2'                                           AS type_data            "
+            # sql +=       "        FROM    "
+            # sql +=       "            clinic_treatmentdetail  "
+            # sql +=       "        INNER JOIN  "
+            # sql +=       "                clinic_treatment    "
+            # sql +=       "            ON  "
+            # sql +=       "                    clinic_treatment.treatment_id = clinic_treatmentdetail.treatment_id "
+            # sql +=       "            AND     clinic_treatment.customer_id = '1'  "
+            # sql +=       "        inner join  "
+            # sql +=       "                clinic_user "
+            # sql +=       "            ON  "
+            # sql +=       "                clinic_treatment.user_id  = clinic_user.user_id "
+            # sql +=       "        WHERE   "
+            # sql +=       "                  clinic_treatmentdetail.treatmentdetail_status = '{}' ".format(CONSTANT_KEY['TREATMENT_STATUS_DONE'])
+            # sql +=       "            AND   clinic_treatmentdetail.treatmentdetail_delete_flag = '{}' ".format(CONSTANT_KEY['DELETE_FLAG_FALSE'])
+            # sql +=       "        GROUP BY    "
+            # sql +=       "              clinic_treatment.treatment_id       "
+            # sql +=       "            , assign_name         "
+            # sql +=       "            , date,name    "
+            # sql +=       "    )   "
+            # sql +=       ")   "
+            # sql +=       "ORDER BY    "
+            # sql +=       "          status ASC    "
+            # sql +=       "        , date DESC "
+            # sql +=       "        , time ASC  "
 
             # sql  =      "    SELECT"
             # sql +=      "          appointment_id"
@@ -141,12 +144,12 @@ def crm_dentalclinic_overview(request):
             # sql +=      "    ORDER BY"
             # sql +=      "        CAST   (appointment_date AS DATE) ASC"
             # sql +=      "        ,      appointment_time ASC"
-            with connection.cursor() as cursor:
-                cursor.execute(sql)
-                lstAppointment = namedtuplefetchall(cursor)
+            # with connection.cursor() as cursor:
+            #     cursor.execute(sql)
+            #     lstAppointment = namedtuplefetchall(cursor)
 
 
-
+            lstAppointment = sql_get_appointment_schedule(selected_customer.customer_id)
         context = {
               'user_name' : request.session['user_name']
             , 'user_role' : request.session['user_role']
@@ -179,19 +182,119 @@ def namedtuplefetchall(cursor):
 
 
 
+# ajax function
 def get_appointment_schedule(request):
+    # sql  =       "(       "
+    # sql +=       "    (   "
+    # sql +=       "        SELECT  "
+    # sql +=       "              appointment_id                      AS id   "
+    # sql +=       "            , user_name                           AS assign_name  "
+    # sql +=       "            , appointment_date                    AS date "
+    # sql +=       "            , appointment_time                    AS time "
+    # sql +=       "            , clinic_treatment.treatment_id       AS treatment_id "
+    # sql +=       "            , treatment_name                      AS name "
+    # sql +=       "            , appointment_content                 AS content  "
+    # sql +=       "            , appointment_note                    AS note "
+    # sql +=       "            , appointment_status                  AS status   "
+    # sql +=       "            , '1'                                 AS type_data "
+    # sql +=       "        FROM    "
+    # sql +=       "            clinic_appointment  "
+    # sql +=       "        INNER JOIN  "
+    # sql +=       "                clinic_user "
+    # sql +=       "            ON  "
+    # sql +=       "                clinic_user.user_id = clinic_appointment.appointment_assign_id  "
+    # sql +=       "        INNER JOIN  "
+    # sql +=       "                clinic_treatment    "
+    # sql +=       "            ON  "
+    # sql +=       "                clinic_treatment.treatment_id = clinic_appointment.treatment_id "
+    # sql +=       "        WHERE   "
+    # sql +=       "                    clinic_appointment.customer_id = '{}'    ".format(request.GET['customer_id'])
+    # sql +=       "            AND     clinic_appointment.appointment_status <> '{}'    ".format(CONSTANT_KEY['APPOINTMENT_STATUS_PENDING_PAYMENT'])
+    # sql +=       "            AND     appointment_delete_flag = '{}'   ".format(CONSTANT_KEY['DELETE_FLAG_FALSE'])
+    # sql +=       "    )   "
+    # sql +=       "UNION ALL   "
+    # sql +=       "    (   "
+    # sql +=       "        SELECT  "
+    # sql +=       "              null                                          AS id                   "
+    # sql +=       "            , clinic_user.user_name                         AS assign_name                  "
+    # sql +=       "            , treatmentdetail_date                          AS date             "
+    # sql +=       "            , ''                                            AS time                 "
+    # sql +=       "            , clinic_treatment.treatment_id                 AS treatment_id  "
+    # sql +=       "            , treatment_name                                AS name         "
+    # sql +=       "            , string_agg(treatmentdetail_no, ', ')          AS content              "
+    # sql +=       "            , ''                                            AS note     "
+    # sql +=       "            , '6'                                           AS status           "
+    # sql +=       "            , '2'                                           AS type_data            "
+    # sql +=       "        FROM    "
+    # sql +=       "            clinic_treatmentdetail  "
+    # sql +=       "        INNER JOIN  "
+    # sql +=       "                clinic_treatment    "
+    # sql +=       "            ON  "
+    # sql +=       "                    clinic_treatment.treatment_id = clinic_treatmentdetail.treatment_id "
+    # sql +=       "            AND     clinic_treatment.customer_id = '1'  "
+    # sql +=       "        inner join  "
+    # sql +=       "                clinic_user "
+    # sql +=       "            ON  "
+    # sql +=       "                clinic_treatment.user_id  = clinic_user.user_id "
+    # sql +=       "        WHERE   "
+    # sql +=       "                  clinic_treatmentdetail.treatmentdetail_status = '{}' ".format(CONSTANT_KEY['TREATMENT_STATUS_DONE'])
+    # sql +=       "            AND   clinic_treatmentdetail.treatmentdetail_delete_flag = '{}' ".format(CONSTANT_KEY['DELETE_FLAG_FALSE'])
+    # sql +=       "        GROUP BY    "
+    # sql +=       "              clinic_treatment.treatment_id       "
+    # sql +=       "            , assign_name         "
+    # sql +=       "            , date,name    "
+    # sql +=       "    )   "
+    # sql +=       ")   "
+    # sql +=       "ORDER BY    "
+    # sql +=       "          status ASC    "
+    # sql +=       "        , date DESC "
+    # sql +=       "        , time ASC  "
+
+
+    # with connection.cursor() as cursor:
+    #     cursor.execute(sql)
+    #     lstAppointment = namedtuplefetchall(cursor)
+
+
+    lstAppointment = sql_get_appointment_schedule(request.GET['customer_id'])
+    context = {
+              'user_name' : request.session['user_name']
+            , 'user_role' : request.session['user_role']
+            # , 'lstCusToday' : lstCusToday
+            , 'lstAppointment' : lstAppointment
+            , 'constant_key' : CONSTANT_KEY
+        }
+    return render(request,"clinic/crm_dentalclinic_overview_listappointment.html", context)
+
+
+def ajax_get_appointment_modal(request):
+    if request.method == 'POST':
+        treatment_id = request.POST['treatment-id']
+        data_type = request.POST['data-type']
+
+
+        return render(request,"clinic/crm_dentalclinic_overview_modal_appoinment.html")
+
+    return render(request,"clinic/crm_dentalclinic_overview_modal_appoinment.html")
+
+
+
+# sql query
+def sql_get_appointment_schedule(customer_id):
+
     sql  =       "(       "
     sql +=       "    (   "
     sql +=       "        SELECT  "
-    sql +=       "              appointment_id        AS id   "
-    sql +=       "            , user_name             AS assign_name  "
-    sql +=       "            , appointment_date      AS date "
-    sql +=       "            , appointment_time      AS time "
-    sql +=       "            , treatment_name        AS name "
-    sql +=       "            , appointment_content   AS content  "
-    sql +=       "            , appointment_note      AS note "
-    sql +=       "            , appointment_status    AS status   "
-    sql +=       "            , '1'                   AS type_data "
+    sql +=       "              appointment_id                      AS id   "
+    sql +=       "            , user_name                           AS assign_name  "
+    sql +=       "            , appointment_date                    AS date "
+    sql +=       "            , appointment_time                    AS time "
+    sql +=       "            , clinic_treatment.treatment_id       AS treatment_id "
+    sql +=       "            , treatment_name                      AS name "
+    sql +=       "            , appointment_content                 AS content  "
+    sql +=       "            , appointment_note                    AS note "
+    sql +=       "            , appointment_status                  AS status   "
+    sql +=       "            , '1'                                 AS data_type "
     sql +=       "        FROM    "
     sql +=       "            clinic_appointment  "
     sql +=       "        INNER JOIN  "
@@ -203,7 +306,7 @@ def get_appointment_schedule(request):
     sql +=       "            ON  "
     sql +=       "                clinic_treatment.treatment_id = clinic_appointment.treatment_id "
     sql +=       "        WHERE   "
-    sql +=       "                    clinic_appointment.customer_id = '{}'    ".format(request.GET['customer_id'])
+    sql +=       "                    clinic_appointment.customer_id = '{}'    ".format(customer_id)
     sql +=       "            AND     clinic_appointment.appointment_status <> '{}'    ".format(CONSTANT_KEY['APPOINTMENT_STATUS_PENDING_PAYMENT'])
     sql +=       "            AND     appointment_delete_flag = '{}'   ".format(CONSTANT_KEY['DELETE_FLAG_FALSE'])
     sql +=       "    )   "
@@ -214,18 +317,19 @@ def get_appointment_schedule(request):
     sql +=       "            , clinic_user.user_name                         AS assign_name                  "
     sql +=       "            , treatmentdetail_date                          AS date             "
     sql +=       "            , ''                                            AS time                 "
+    sql +=       "            , clinic_treatment.treatment_id                 AS treatment_id  "
     sql +=       "            , treatment_name                                AS name         "
     sql +=       "            , string_agg(treatmentdetail_no, ', ')          AS content              "
     sql +=       "            , ''                                            AS note     "
     sql +=       "            , '6'                                           AS status           "
-    sql +=       "            , '2'                                           AS type_data            "
+    sql +=       "            , '2'                                           AS data_type            "
     sql +=       "        FROM    "
     sql +=       "            clinic_treatmentdetail  "
     sql +=       "        INNER JOIN  "
     sql +=       "                clinic_treatment    "
     sql +=       "            ON  "
     sql +=       "                    clinic_treatment.treatment_id = clinic_treatmentdetail.treatment_id "
-    sql +=       "            AND     clinic_treatment.customer_id = '1'  "
+    sql +=       "            AND     clinic_treatment.customer_id = '{}'  ".format(customer_id)
     sql +=       "        inner join  "
     sql +=       "                clinic_user "
     sql +=       "            ON  "
@@ -243,17 +347,10 @@ def get_appointment_schedule(request):
     sql +=       "          status ASC    "
     sql +=       "        , date DESC "
     sql +=       "        , time ASC  "
+    sql +=       "        , data_type ASC  "
 
 
     with connection.cursor() as cursor:
         cursor.execute(sql)
         lstAppointment = namedtuplefetchall(cursor)
-
-    context = {
-              'user_name' : request.session['user_name']
-            , 'user_role' : request.session['user_role']
-            # , 'lstCusToday' : lstCusToday
-            , 'lstAppointment' : lstAppointment
-            , 'constant_key' : CONSTANT_KEY
-        }
-    return render(request,"clinic/crm_dentalclinic_overview_listappointment.html", context)
+    return lstAppointment
