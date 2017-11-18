@@ -1,6 +1,7 @@
 /*This is CSS create by Soul - RAG Team */
 /* My note
 color: rgb(9, 79, 113);
+Hong do tuyet dep: #FF457A , #2EBD59
  */
 
 /*Quick makeup*/
@@ -16,8 +17,14 @@ color: rgb(9, 79, 113);
 .subhead{
 
 }
-.img-1{
-    padding: 1rem 6rem;
+.img-md-center{
+    display: block;
+    margin: 1.5rem auto;
+    height: 5rem; width: auto;
+}
+.img-sm{
+    height: 2rem; width: auto;
+    margin: 0.5rem;
 }
 .cl-dblue{
     color: rgb(9, 79, 113);
@@ -26,7 +33,7 @@ color: rgb(9, 79, 113);
     color: #2196F3;
 }
 .cl-green{
-    color:  #2EBD59;
+    color: #2EBD59;
 }
 .cl-yellow{
     color: #FFDA44;
@@ -37,14 +44,14 @@ color: rgb(9, 79, 113);
 .cl-red{
     color: #D80027;
 }
-a{
-    color: #2196F3;
+.cl-white{
+    color: #FFF;
 }
-a:hover{
-    color: #007BFF;
+.fRight{
+    float: right;
 }
-z{
-    font-size: 9px;
+.fLeft{
+    float: left;
 }
 
 /*General makeup*/
@@ -54,26 +61,74 @@ body{
     background-color: #fff;
     color: rgb(51, 51, 51);
 }
+span{
+    color: rgb(85, 85, 85);
+}
+a{
+    color: #2196F3;
+}
+a:hover{
+    color: #007BFF;
+}
+.btn{
+    font-size: 14px;
+}
+.btn-ct-green{
+    border: 2px solid #FFF;
+    background-color: #2EBD59;
+    color: #FFF;
+}
+.btn-ct-green:hover{
+    border: 1px solid #FFF;
+    background-color: #FFF;
+    color: #2EBD59;
+}
 
 /*Custome makeup */
 .header{
     height: 50px;
     background-color: #2EBD59;
-    padding: 15px 0px 15px 40px;
+    padding: 0.9rem 0px 0px 3rem;
     margin: auto;
 }
 .bd-benefit{
     padding: 5rem 3rem 5rem 3rem;
 }
 .bd-introduction{
-    background-color: #FFDA44;
+    background-color: #FF457A;
     padding: 2rem 3rem;
-    margin-top: 0px;
     margin: 0px;
 }
 .bd-feature{
     padding: 5rem 3rem 5rem 3rem;
 }
+.bd-price{
+    padding: 5rem 3rem 5rem 3rem;
+    background-color: #2EBD59;
+}
+.bd-price .row{
+    margin: 0 auto;
+}
+.bd-price .bot-part{
+    background-color: #FFF;
+    margin: 15rem -3rem -5rem -3rem;
+    padding: 0 3rem 5rem 3rem;
+    /*color: #FFF;*/
+}
+.bd-price .pricing-container{
+    display: inline-block;
+    width: 33.3333333333%;
+    /*margin: 0px; ????????*/
+}
+
+
+
+
+
+
+
+
+
 
 
 
