@@ -269,11 +269,16 @@ def get_appointment_schedule(request):
 
 def ajax_get_appointment_modal(request):
     if request.method == 'POST':
-        treatment_id = request.POST['treatment-id']
-        data_type = request.POST['data-type']
+        treatment_id = request.POST['treatment_id']
+        treatmentdetail_date = request.POST['treatmentdetail_date']
+        data_type = request.POST['data_type']
 
+        treatmentdetail =  sql_get_treatmentdetail(treatment_id,treatmentdetail_date)
 
-        return render(request,"clinic/crm_dentalclinic_overview_modal_appoinment.html")
+        context = {
+            'treatmentdetail' : treatmentdetail
+        }
+        return render(request,"clinic/crm_dentalclinic_overview_modal_appoinment.html", context)
 
     return render(request,"clinic/crm_dentalclinic_overview_modal_appoinment.html")
 
@@ -349,8 +354,44 @@ def sql_get_appointment_schedule(customer_id):
     sql +=       "        , time ASC  "
     sql +=       "        , data_type ASC  "
 
-
     with connection.cursor() as cursor:
         cursor.execute(sql)
         lstAppointment = namedtuplefetchall(cursor)
     return lstAppointment
+
+def sql_get_treatmentdetail(treatment_id,treatmentdetail_date):
+    
+    sql  = "       SELECT          "
+    sql += "             customer_name         "
+    sql += "           , treatment_name            "
+    sql += "           , user_name         "
+    sql += "           , treatmentdetail_date          "
+    sql += "           , treatmentdetail_time          "
+    sql += "       FROM            "
+    sql += "           clinic_treatmentdetail          "
+    sql += "       INNER JOIN          "
+    sql += "               clinic_treatment            "
+    sql += "           ON          "
+    sql += "                   clinic_treatment.brand_id       = clinic_treatmentdetail.brand_id           "
+    sql += "               AND clinic_treatment.treatment_id   = clinic_treatmentdetail.treatment_id           "
+    sql += "       INNER JOIN          "
+    sql += "               clinic_customer         "
+    sql += "           ON          "
+    sql += "                   clinic_customer.brand_id    = clinic_treatment.brand_id         "
+    sql += "               AND clinic_customer.customer_id = clinic_treatment.customer_id          "
+    sql += "       INNER JOIN          "
+    sql += "               clinic_user         "
+    sql += "           ON          "
+    sql += "                   clinic_user.brand_id    = clinic_treatmentdetail.brand_id         "
+    sql += "               AND clinic_user.user_id = clinic_treatmentdetail.treatmentdetail_assign_id          "
+    sql += "       WHERE           "
+    sql += "               clinic_treatmentdetail.treatment_id                 = '{}'            ".format(treatment_id)
+    sql += "           AND clinic_treatmentdetail.treatmentdetail_date         = '{}'            ".format(treatmentdetail_date)
+    sql += "           AND clinic_treatmentdetail.treatmentdetail_delete_flag  = '{}'            ".format(CONSTANT_KEY["DELETE_FLAG_FALSE"])
+    sql += "       LIMIT 1            "
+
+    print(sql)
+    with connection.cursor() as cursor:
+        cursor.execute(sql)
+        treatmentdetail = namedtuplefetchall(cursor)
+    return treatmentdetail

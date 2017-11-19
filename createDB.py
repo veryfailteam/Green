@@ -7,6 +7,7 @@ from clinic.models import Appointment
 from clinic.models import Customer
 from clinic.models import User
 from clinic.models import Treatment
+from clinic.models import TreatmentDetail
 
 User.objects.create(brand_id ='1',user_id = '1',user_login_id = 'D001',user_password = '1234',user_role = '1',user_name = 'Trần Trung Hiến',user_dob = '03/09/1991',user_phone_number = '0906858628',user_address = '1079',user_specialize = 'Không có')
 User.objects.create(brand_id ='1',user_id = '2',user_login_id = 'R001',user_password = '1234',user_role = '2',user_name = 'Trần Trung ',user_dob = '03/09/1991',user_phone_number = '0906858628',user_address = '1079',user_specialize = 'Không có')
@@ -39,7 +40,7 @@ Appointment.objects.create(brand_id = "1",user_id = "1",customer_id = "1",treatm
 Treatment.objects.create(brand_id = "1", user_id = "1", customer_id = "1", treatment_id = "1", treatment_name = "treatment_name", treatment_content = "treatment_content", treatment_total_payment = 0, treatment_payment_status = 0, treatment_status = "0", treatment_create_date = "0", treatment_create_by = "0", treatment_update_date = "0", treatment_update_by = "1", treatment_delete_flag = "0")
 
 
-
+TreatmentDetail.objects.create(brand_id = "" ,treatment_id = "" ,treatmentdetail_id = "" ,treatmentdetail_no = "" ,treatmentdetail_date = "" ,treatmentdetail_time = "" ,treatmentdetail_assign_id = "" ,treatmentdetail_content = "" ,treatmentdetail_price  = "" ,treatmentdetail_status = "" ,treatmentdetail_create_date = "" ,treatmentdetail_create_by = "" ,treatmentdetail_update_date = "" ,treatmentdetail_update_by = "" ,treatmentdetail_delete_flag = "")
 
 
 

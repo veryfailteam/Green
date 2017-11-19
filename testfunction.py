@@ -51,19 +51,27 @@
 
 
 SELECT
-    customer_name
-    treatment_name
-    user_name
-    appointment_date
-    appointment_time
-    treatmentdetail_id
-    treatmentdetail_no
-    treatmentdetail_date
-    treatmentdetail_content
-    treatmentdetail_status
+      customer_name
+    , treatment_name
+    , user_name
+    , treatmentdetail_date
+    , treatmentdetail_time
 FROM
-    clinic_appointment
+    clinic_treatmentdetail
 INNER JOIN
+        clinic_treatment
+    ON
+            clinic_treatment.brand_id       = clinic_treatmentdetail.brand_id
+        AND clinic_treatment.treatment_id   = clinic_treatmentdetail.treatment_id
+INNER JOIN
+        clinic_customer
+    ON
+            clinic_customer.brand_id    = clinic_treatment.brand_id
+        AND clinic_customer.customer_id = clinic_treatment.customer_id
+WHERE
+        clinic_treatmentdetail.treatment_id                 = {}
+    AND clinic_treatmentdetail.treatmentdetail_date         = {}   
+    AND clinic_treatmentdetail.treatmentdetail_delete_flag  = {}
 
 
 

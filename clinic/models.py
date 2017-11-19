@@ -104,6 +104,8 @@ class TreatmentDetail(models.Model):
     treatmentdetail_id = models.AutoField(primary_key=True)
     treatmentdetail_no = models.CharField(max_length=10,null=True)
     treatmentdetail_date = models.CharField(max_length=10,null=True)
+    treatmentdetail_time = models.CharField(max_length=5,null=True)
+    treatmentdetail_assign_id = models.IntegerField(null=True)
     treatmentdetail_content = models.CharField(max_length=500,null=True)
     treatmentdetail_price  = models.IntegerField(null=True)
     treatmentdetail_status = models.CharField(max_length=10,null=True)
