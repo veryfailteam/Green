@@ -113,8 +113,8 @@ span{
 .header{
     height: 50px;
     background-color: #2EBD59;
-    padding: 0.9rem 0px 0px 3rem;
-    margin: auto;
+    padding: 0.9rem 0px 0px 2rem;
+    margin: 0;
     position: -webkit-sticky; /*Safari*/
     position: sticky;
     top: 0;
@@ -130,7 +130,7 @@ span{
 }
 .bd-feature{
     padding: 6rem 3rem 6rem 3rem;
-    max-width: 1600px;
+    max-width: 1600px; /* Vi dang dung container fluid */
 }
 .bd-price{
     padding: 6rem 3rem 6rem 3rem;
@@ -167,7 +167,7 @@ span{
         width: 25%;
         float: left;
     }
-    .call{
+    .call-top{
         display: none;
     }
 }
@@ -183,7 +183,7 @@ span{
         width: 25%;
         float: left;
     }
-    .call{
+    .call-top{
         display: none;
     }
 }
@@ -198,6 +198,9 @@ span{
         width: 49.5%;
         display: inline-block;
     }
+    .login-button{
+        display: none;
+    }
 }
 /* ----------- Nhỏ hơn ip6+ ----------- */
 @media screen and (max-width: 414px){
@@ -209,6 +212,9 @@ span{
     .pricing-container{
         float: none;
     }
+    .login-button{
+        display: none;
+    }
 }
 /* ----------- Chống in lậu :D ----------- */
 @media only print{
@@ -218,6 +224,7 @@ span{
 }
 .pricing-container table{
     width: 100%;
+    margin-bottom: 1rem;
 }
 .pricing-container table span{
     font-size: 12px;
@@ -246,11 +253,9 @@ span{
     background-color: #364A4C;
     color: #FFF;
 }
-.alert{
-    padding: 0 1.25rem;
-}
 .bd-bonuss{
-
+    padding: 0 3rem 6rem 3rem;
+}
 }
 
 
