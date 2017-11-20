@@ -1,7 +1,8 @@
 /*This is CSS create by Soul - RAG Team */
 /* My note
-color: rgb(9, 79, 113);
-Hong do tuyet dep: #FF457A , #2EBD59
+Pink: #FF457A , Green: #2EBD59
+Light-black: #0c0704
+Light-gray: #364A4C; -hover: #A9CEDD;
  */
 
 /*Quick makeup*/
@@ -13,21 +14,31 @@ Hong do tuyet dep: #FF457A , #2EBD59
     color: rgb(85, 85,85);
     margin: auto;
     font-size: 1rem !important;
-}
-.subhead{
-
+    font-weight: 500;
 }
 .img-md-center{
+    margin: 2rem auto 1rem;
+    height: 5rem;
+    width: auto;
     display: block;
-    margin: 1.5rem auto;
-    height: 5rem; width: auto;
 }
 .img-sm{
-    height: 2rem; width: auto;
     margin: 0.5rem;
+    height: 2rem;
+    width: auto;
+}
+.img-sm-nm{
+    height: 2rem;
+    width: auto;
+}
+.img-sm-center{
+    margin: 0.5rem;
+    height: 2rem;
+    width: auto;
+    display: block;
 }
 .cl-dblue{
-    color: rgb(9, 79, 113);
+    color: #094F71;
 }
 .cl-blue{
     color: #2196F3;
@@ -47,16 +58,29 @@ Hong do tuyet dep: #FF457A , #2EBD59
 .cl-white{
     color: #FFF;
 }
+.cl-lgrey{
+    color: #364A4C;
+}
 .fRight{
     float: right;
 }
 .fLeft{
     float: left;
 }
+.dIB{
+    display: inline-block;
+}
+.clear-pm{
+    padding: 0px;
+    margin: 0px;
+}
+.clear{
+    clear: both;
+}
 
 /*General makeup*/
 body{
-    font-size: 14px !important;
+    font-size: 15px !important;
     font-weight: 400 !important;
     background-color: #fff;
     color: rgb(51, 51, 51);
@@ -64,24 +88,25 @@ body{
 span{
     color: rgb(85, 85, 85);
 }
-a{
+/*a{
     color: #2196F3;
-}
-a:hover{
+}*/
+/*a:hover{
     color: #007BFF;
-}
+}*/
 .btn{
     font-size: 14px;
 }
 .btn-ct-green{
-    border: 2px solid #FFF;
-    background-color: #2EBD59;
-    color: #FFF;
+    border: 1px solid #2EBD59;
+    background-color: #FFF;
+    color: #2EBD59;
 }
 .btn-ct-green:hover{
     border: 1px solid #FFF;
-    background-color: #FFF;
-    color: #2EBD59;
+    background-color: #FFDA44;
+    color: rgb(85, 85, 85);
+    border-radius: 4px;
 }
 
 /*Custome makeup */
@@ -90,9 +115,13 @@ a:hover{
     background-color: #2EBD59;
     padding: 0.9rem 0px 0px 3rem;
     margin: auto;
+    position: -webkit-sticky; /*Safari*/
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 .bd-benefit{
-    padding: 5rem 3rem 5rem 3rem;
+    padding: 5rem 3rem 6rem 3rem;
 }
 .bd-introduction{
     background-color: #FF457A;
@@ -100,32 +129,129 @@ a:hover{
     margin: 0px;
 }
 .bd-feature{
-    padding: 5rem 3rem 5rem 3rem;
+    padding: 6rem 3rem 6rem 3rem;
+    max-width: 1600px;
 }
 .bd-price{
-    padding: 5rem 3rem 5rem 3rem;
+    padding: 6rem 3rem 6rem 3rem;
     background-color: #2EBD59;
 }
-.bd-price .row{
-    margin: 0 auto;
-}
 .bd-price .bot-part{
+    margin: 15rem -3rem -6rem -3rem;
+    padding: 0 0rem 5rem 0rem;
     background-color: #FFF;
-    margin: 15rem -3rem -5rem -3rem;
-    padding: 0 3rem 5rem 3rem;
-    /*color: #FFF;*/
 }
-.bd-price .pricing-container{
-    display: inline-block;
-    width: 33.3333333333%;
-    /*margin: 0px; ????????*/
+.bot-part .container-fluid{
+    margin: 0;
+    padding: 0;
 }
+.prc2{
+    position: relative;
+}
+#best-choice-icon{
+    position: absolute;
+    top: -31px;
+    right: 20px;
+    z-index: 10;
+    max-width: 59px;
+}
+/* ----------- Supper large screen ----------- */
+@media screen and (min-width: 1366px){
+    .pricing-table{
+        width: 1280px;
+        margin: -10rem auto 0 auto;
+        background-color: #FFF;
+        /*display: block;*/
+    }
+    .pricing-container{
+        width: 25%;
+        float: left;
+    }
+    .call{
+        display: none;
+    }
+}
+/* ----------- Popular desktop screen ----------- */
+@media screen and (min-width: 768px) and (max-width: 1366px){
+    .pricing-table{
+        width: 94%;
+        margin: -10rem auto 0 auto;
+        background-color: #FFF;
+        /*display: block;*/
+    }
+    .pricing-container{
+        width: 25%;
+        float: left;
+    }
+    .call{
+        display: none;
+    }
+}
+/* ----------- iphone 6+ đến ipad ----------- */
+@media screen and (min-width: 414px) and (max-width: 767px){
+    .pricing-table{
+        width: 94%;
+        margin: -10rem auto 0 auto;
+        background-color: #FFF;
+    }
+    .pricing-container{
+        width: 49.5%;
+        display: inline-block;
+    }
+}
+/* ----------- Nhỏ hơn ip6+ ----------- */
+@media screen and (max-width: 414px){
+    .pricing-table{
+        width: 94%;
+        margin: -10rem auto 0 auto;
+        background-color: #FFF;
+    }
+    .pricing-container{
+        float: none;
+    }
+}
+/* ----------- Chống in lậu :D ----------- */
+@media only print{
+    body{
+        display:none;
+    }
+}
+.pricing-container table{
+    width: 100%;
+}
+.pricing-container table span{
+    font-size: 12px;
+    font-style: italic;
+}
+.pricing-container table th, td{
+    border: 1px solid #D6D6D6;
+    text-align: center;
+}
+.pricing-container tr{
+    height: 60px;
+}
+.prc1 tr:last-child{
+    background-color: #094F71;
+    color: #FFF;
+}
+.prc2 tr:last-child{
+    background-color: #2196F3;
+    color: #FFF;
+}
+.prc3 tr:last-child{
+    background-color: #FF457A;
+    color: #FFF;
+}
+.prc4 tr:last-child{
+    background-color: #364A4C;
+    color: #FFF;
+}
+.alert{
+    padding: 0 1.25rem;
+}
+.bd-bonuss{
 
-
-
-
-
-
+}
 
 
 
