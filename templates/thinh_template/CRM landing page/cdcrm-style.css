@@ -1,8 +1,11 @@
-/*This is CSS create by Soul - RAG Team */
+/*Dư dự án thì quăng qua đây: 0902,886,862 */
 /* My note
 Pink: #FF457A , Green: #2EBD59
-Light-black: #0c0704
+Light-black: #0c0704;
 Light-gray: #364A4C; -hover: #A9CEDD;
+Table <td> line: solid #D6D6D6;
+Navi blue: #094F71;
+Shadow: rgba(0, 0, 0, 0.2);
  */
 
 /*Quick makeup*/
@@ -88,12 +91,6 @@ body{
 span{
     color: rgb(85, 85, 85);
 }
-/*a{
-    color: #2196F3;
-}*/
-/*a:hover{
-    color: #007BFF;
-}*/
 .btn{
     font-size: 14px;
 }
@@ -108,42 +105,20 @@ span{
     color: rgb(85, 85, 85);
     border-radius: 4px;
 }
-
 /*Custome makeup */
-.header{
-    height: 50px;
-    background-color: #2EBD59;
-    padding: 0.9rem 0px 0px 2rem;
-    margin: 0;
-    position: -webkit-sticky; /*Safari*/
-    position: sticky;
-    top: 0;
-    z-index: 1;
-}
-.bd-benefit{
-    padding: 5rem 3rem 6rem 3rem;
-}
-.bd-introduction{
-    background-color: #FF457A;
-    padding: 2rem 3rem;
-    margin: 0px;
+.bd-introduction p, h4{
+    color: #FFF; /*#FCEDF2;*/
 }
 .bd-feature{
-    padding: 6rem 3rem 6rem 3rem;
-    max-width: 1600px; /* Vi dang dung container fluid */
-}
-.bd-price{
-    padding: 6rem 3rem 6rem 3rem;
-    background-color: #2EBD59;
+    margin: auto;
 }
 .bd-price .bot-part{
-    margin: 15rem -3rem -6rem -3rem;
-    padding: 0 0rem 5rem 0rem;
+    margin: 12rem 0rem -6rem;
+    padding: 0 0 5rem;
     background-color: #FFF;
 }
 .bot-part .container-fluid{
-    margin: 0;
-    padding: 0;
+    margin: auto;
 }
 .prc2{
     position: relative;
@@ -155,11 +130,49 @@ span{
     z-index: 10;
     max-width: 59px;
 }
+.pricing-container{
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
 /* ----------- Supper large screen ----------- */
 @media screen and (min-width: 1366px){
+    .header{
+        height: 50px;
+        background-color: #2EBD59;
+        padding: 0.9rem 0px 0px 0.8rem;
+        margin: 0;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+    .bd-benefit{
+        padding: 5rem 3rem 6rem;
+    }
+    .bd-introduction{
+        padding: 5rem 3rem;
+        background-color: #2196F3;/*#FF457A;*/
+    }
+    .intro-part{
+        float: left;
+        width: 50%;
+    }
+    .bd-feature{
+        padding: 5rem 3rem 6rem;
+    }
+    .feature-part{
+        width: 33.33%;
+        float: left;
+        padding: 0 0.4rem;
+    }
+    .bd-price{
+        padding: 5rem 0rem 6rem;
+        background-color: #2EBD59;
+    }
     .pricing-table{
-        width: 1280px;
-        margin: -10rem auto 0 auto;
+        width: 100%;
+        max-width: 1280px;
+        margin: -10rem auto 0;
         background-color: #FFF;
         /*display: block;*/
     }
@@ -167,15 +180,80 @@ span{
         width: 25%;
         float: left;
     }
+    .login-button{
+        float: right;
+        padding: 4px 25px;
+        margin-top: -4px;
+    }
     .call-top{
         display: none;
+    }
+    .bd-team{
+    padding: 1rem 3rem 6rem;
+    }
+    .bd-advisor{
+    padding: 1rem 3rem 6rem;
+    }
+    .team-part{
+        width: 50%;
+        margin-bottom: 1rem;
+        padding: 0 0.8rem;
+    }
+    .advisor-part{
+        width: 25%;
+        margin-bottom: 1rem;
+        padding: 0 0.4rem;
+    }
+    .footer-table{
+        max-width: 1366px;
+    }
+    .footer-col{
+        width: 50%;
+        padding: 0rem 0.4rem 1rem;
+        float: left;
     }
 }
 /* ----------- Popular desktop screen ----------- */
 @media screen and (min-width: 768px) and (max-width: 1366px){
+    .header{
+        height: 50px;
+        background-color: #2EBD59;
+        padding: 0.9rem 0px 0px 0.6rem;
+        margin: 0;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+    .bd-benefit{
+        padding: 5rem 3rem 6rem 3rem;
+    }
+    .bd-introduction{
+        padding: 5rem 3rem;
+        /*background-color: #2196F3;/*#FF457A;*/
+
+    }
+    .intro-part{
+        float: left;
+        width: 50%;
+        padding: 1rem 1rem;
+    }
+    .bd-feature{
+        padding: 5rem 3rem 6rem;
+    }
+    .feature-part{
+        width: 33.33%;
+        float: left;
+        padding: 0 0.4rem;
+    }
+    .bd-price{
+        padding: 5rem 0rem 6rem;
+        background-color: #2EBD59;
+        margin: 0;
+    }
     .pricing-table{
-        width: 94%;
-        margin: -10rem auto 0 auto;
+        width: 100%;
+        margin: -10rem auto 0;
         background-color: #FFF;
         /*display: block;*/
     }
@@ -183,37 +261,178 @@ span{
         width: 25%;
         float: left;
     }
+    .login-button{
+        float: right;
+        padding: 4px 25px;
+        margin-top: -4px;
+    }
     .call-top{
         display: none;
+    }
+    .bd-team, .bd-advisor{
+        padding: 0rem 2rem 5rem;
+    }
+    .team-part{
+        width: 50%;
+        margin-bottom: 1rem;
+        padding: 0 0.8rem;
+    }
+    .advisor-part{
+        width: 25%;
+        margin-bottom: 1rem;
+        padding: 0 0.4rem;
+    }
+    .footer-col{
+        width: 50%;
+        padding: 0rem 0.4rem 1rem;
+        float: left;
     }
 }
 /* ----------- iphone 6+ đến ipad ----------- */
 @media screen and (min-width: 414px) and (max-width: 767px){
+    .header{
+        height: 50px;
+        background-color: #2EBD59;
+        padding: 0.9rem 0px 0px 0.4rem;
+        margin: 0;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+    .bd-benefit{
+        padding: 4rem 1rem;
+    }
+    .bd-introduction{
+        padding: 3rem 1.5rem;
+        background-color: #2196F3;/*#FF457A;*/
+    }
+    .intro-part{
+        float: none;
+        width: 100%;
+        padding: 1rem 1rem;
+    }
+    .bd-feature{
+        padding: 4rem 2rem;
+    }
+    .feature-part{
+        width: 33.33%;
+        float: left;
+        padding: 0 0.4rem;
+    }
+    .bd-price{
+        padding: 4rem 0rem;
+        background-color: #2EBD59;
+        margin: 0;
+    }
     .pricing-table{
-        width: 94%;
-        margin: -10rem auto 0 auto;
+        width: 100%;
+        margin: -10rem auto 0;
         background-color: #FFF;
     }
     .pricing-container{
-        width: 49.5%;
-        display: inline-block;
+        width: 50%;
+        float: left;
     }
     .login-button{
         display: none;
+    }
+    .call-top{
+        position: fixed;
+        right: 15px;
+        top: 0px;
+        z-index: 15;
+    }
+    .bd-team, .bd-advisor{
+        padding: 0rem 2rem 4rem;
+    }
+    .team-part{
+        width: 50%;
+        margin-bottom: 1rem;
+        padding: 0 0.2rem;
+    }
+    .advisor-part{
+        width: 50%;
+        margin-bottom: 1rem;
+        padding: 0 0.2rem;
+    }
+    .footer-col{
+        width: 100%;
+        padding: 0rem 0.4rem 1rem;
+        float: none;
     }
 }
 /* ----------- Nhỏ hơn ip6+ ----------- */
 @media screen and (max-width: 414px){
+    .header{
+        height: 50px;
+        background-color: #2EBD59;
+        padding: 0.9rem 0.5rem 0.4rem;
+        margin: 0;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+    .bd-benefit{
+        padding: 3rem 0.4rem;
+    }
+    .bd-introduction{
+        padding: 3rem 0.4rem;
+        background-color: #2196F3;/*#FF457A;*/
+    }
+    .intro-part{
+        float: none;
+        width: 100%;
+        padding: 0rem 0.4rem;
+    }
+    .bd-feature{
+        padding: 3rem 0.4rem;
+    }
+    .feature-part{
+        width: 100%;
+        float: none;
+        padding: 0 0.4rem;
+    }
+    .bd-price{
+        padding: 3rem 0rem;
+        background-color: #2EBD59;
+    }
     .pricing-table{
-        width: 94%;
-        margin: -10rem auto 0 auto;
+        width: 100%;
+        margin: -10rem auto 0;
         background-color: #FFF;
     }
     .pricing-container{
+        width: 100%;
         float: none;
     }
     .login-button{
         display: none;
+    }
+    .call-top{
+        position: fixed;
+        right: 15px;
+        top: 0px;
+        z-index: 15;
+    }
+    .bd-team, .bd-advisor{
+        padding: 0rem 0.4rem 3rem;
+    }
+    .team-part{
+        width: 98%;
+        margin-bottom: 1rem;
+        padding: 0 0.8rem;
+    }
+    .advisor-part{
+        width: 100%;
+        margin-bottom: 1rem;
+        padding: 0 0.8rem;
+    }
+    .footer-col{
+        width: 100%;
+        padding: 0rem 0.4rem 1rem;
+        float: none;
     }
 }
 /* ----------- Chống in lậu :D ----------- */
@@ -222,16 +441,19 @@ span{
         display:none;
     }
 }
+.container::after, .row::after {
+  content: "";
+  clear: both;
+}
 .pricing-container table{
     width: 100%;
-    margin-bottom: 1rem;
 }
 .pricing-container table span{
     font-size: 12px;
     font-style: italic;
 }
 .pricing-container table th, td{
-    border: 1px solid #D6D6D6;
+    border-bottom: 1px solid #D6D6D6;
     text-align: center;
 }
 .pricing-container tr{
@@ -250,20 +472,143 @@ span{
     color: #FFF;
 }
 .prc4 tr:last-child{
-    background-color: #364A4C;
+    background-color: #FFBF00;
     color: #FFF;
 }
-.bd-bonuss{
-    padding: 0 3rem 6rem 3rem;
+.team-card{
+    box-shadow: 0px 0.2rem 0.6rem 0px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
 }
+/*.team-card img{
+    width: 100%;
+    margin: -2rem 0 -2rem 0;
+    padding: -2rem 0 -2rem 0;
+} /* cat hinh nhe */
+.card-detail{
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+}
+.bd-footer{
+    padding: 1rem 2rem 0.6rem;
+    background-color: #364A4C;
+    color: #D1E4E6;
+    width: 100%;
+    height: auto;
+    /*position: relative;*/
+}
+.bd-footer b{
+    color: #EDF4F5;
+}
+.footer-table{
+    width: 100%;
+    max-width: 1280px;
+    margin: auto;
+}
+.contact-button{
+    padding: 0rem 1rem;
+    background-color: #FFF;
+    color: #364A4C;
+    text-align: left;
+    border-radius: 4px;
+    margin: 0.5rem 0;
+}
+.col2{
+    padding: 0;
+    margin: auto;
+}
+.footer-table{
+    width: 100%;
 }
 
+/* Messenger button */
+.messenger-button {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 50;
+}
+.messenger-button a{
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    color: #FFF;
+    background: /*#004A7F*/ #2196F3 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAgCAYAAAAFQMh/AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAvNJREFUeNq8l1tIVFEUhv+5qE1UMmaCJF0JCSuxopewJ6mQLkQXuj1ED9FDBEV2sYeop4KS6CGRQCyzoLLAB0kki7CMLmZh053Sxiyh0DRzHHT3r84ZiPHMmT0y44LPc2b2dv977b3WXnscSilo2BSygqwkC0kWmWC29ZEO0kzqyG3SFXVEEbZhBjlN2pW++UkJmWU3tp3ofvJTjd66SRFx6AqnkpsqflZD0qIJe8lDFX97TNIjCSeROpU4u0OSrYRPqMTbyZCew0yneWY6JCGxNkQWkxan+cWRMRAVc5Gj8iIez+bzJRmPsbEAyRWP18cq2vRRr19nD9AbGPF1CtkgwstjEb1wH9hbBVQ2Re7zJ2j0e/Ae8FhvYIEI5+iKVj8DLjYCkzxA2V2g6tHIPvU+YFsZD+tfXEqGkdtpOdRcN/+k64g2vAbO1XOd6IGLg43js7TBeN+8hGH6BajgpO69AQoXAMWrGECRh5sswRW1PDW3AYeucwkH8W+0ZLfhydAwP/JzzlTAx/r0g3VqWTZwaiMn6LYfUxZi0K7DBxa44mqgu98Q2MeIyJgIDAQNb8VaOLF+jpI3HTi+LrqoaIrH/DdMs2rt6AZ2VRhe7VgKrMmjt8zEd9+5Atfo4W9jyWUSmanA2a3GU8P8IlzDl9VWqXDsFpCdCezMB7xhCff2G3CQ4l29DBJeCUq2AHMytJOjVs7N3eEHal9AqRtPlWrtsD94fV+V2nSepedTzGf2HvGYPqGVpIWmE+SJmuTSm7rkrCe2w7ZHUljCo5Nc/r9FV1TME/sJf0XCJ1SdskyvUxN8TjMiMJ+0hc4VPzkwBgXisIha3TJLE3gJKLe7c7lIVQJEr5pXK9tbZn6cReVe7gzXsaodKXHaz1dkrRk7w+GN7jgHj6TIE1JOKkl/pI66wgPkDPlMFpGZxGu2sfKinTwnjVIz9KY4co8LwvaoluRG+Y0VM1Z7HKrfcrPaTgrJi3gntDuC8CVSpPVzc5T2V4ABAMltT/3nScyOAAAAAElFTkSuQmCC+thietkewebsitelienhe0902886862) center no-repeat;
+    background-size: 20px 20px;
+    -webkit-animation: copy-di-ban-oi 2000ms infinite;
+    -moz-animation: roi-khi-lam-du-an-lon 2000ms infinite;
+    -o-animation: nho-lien-he-team-minh 2000ms infinite;
+    animation: lam-chung 2000ms infinite
+}
 
+@-webkit-keyframes copy-di-ban-oi{
+    0%{
+        background-color: #004A7F;
+        -webkit-box-shadow: 0 0 3px #004A7F;
+    }
 
+    50%{
+        background-color: #0094FF;
+        -webkit-box-shadow: 0 0 10px #0094FF;
+    }
 
+    100%{
+        background-color: #004A7F;
+        -webkit-box-shadow: 0 0 3px #004A7F;
+    }
+}
 
+@-moz-keyframes roi-khi-lam-du-an-lon{
+    0%{
+        background-color: #004A7F;
+        -moz-box-shadow: 0 0 3px #004A7F;
+    }
 
+    50%{
+        background-color: #0094FF;
+        -moz-box-shadow: 0 0 10px #0094FF;
+    }
 
+    100%{
+        background-color: #004A7F;
+        -moz-box-shadow: 0 0 3px #004A7F;
+    }
+}
+
+@-o-keyframes nho-lien-he-team-minh{
+    0%{
+        background-color: #004A7F;
+        box-shadow: 0 0 3px #004A7F;
+    }
+
+    50%{
+        background-color: #0094FF;
+        box-shadow: 0 0 10px #0094FF;
+    }
+
+    100%{
+        background-color: #004A7F;
+        box-shadow: 0 0 3px #004A7F;
+    }
+}
+@keyframes lam-chung{
+    0%{
+        background-color: #2196F3; /*#004A7F;*/
+        box-shadow: 0 0 3px #2196F3; /*#004A7F;*/
+    }
+
+    50%{
+        background-color: #0094FF;
+        box-shadow: 0 0 30px #0094FF;
+    }
+
+    100%{
+        background-color: #2196F3; /*#004A7F;*/
+        box-shadow: 0 0 3px #2196F3; /*#004A7F;*/
+    }
+}
+/* End */
 
 
 
