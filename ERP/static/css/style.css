@@ -180,6 +180,9 @@
     color: #212121;
     }
 
+.fuzzy{
+    opacity: 0.5;
+}
 
 /*Thinh-CSS*/
 /* Main CSS for Dental Clinic ERP */
@@ -548,4 +551,5 @@ a.nav-link.nav-link-r.active:hover{
     max-width: 360px;
     float: right;
 }
+
 
