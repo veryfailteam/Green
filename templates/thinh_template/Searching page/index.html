@@ -6,30 +6,304 @@
         <!-- Meta tag -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1.0, user-scalable=0" />
-        <meta name="Description" content="Quản lý phòng khám nha khoa: Bệnh án điện tử, lịch hẹn thông minh, công nợ. Đặc biệt, tìm kiếm khách hàng tự động ngay cả khi bạn đang ngủ!">
-        <meta name="keywords" content="phần mềm quản lý nha khoa, quan ly phong kham, dental crm, cloud dental crm 2018, phòng khám nha khoa">
-        <meta name="google-site-verification" content="snyJf5QySb4tFfA_0Qz8kbCjFOqL2y6rZfZ0Mk-kRQY" />
+        <meta name="Description" content="Tìm kiếm nha khoa gần nhà: Giúp tìm phòng khám nha khoa theo nhu cầu, theo giá, theo uy tín, được yêu thích nhiều đầu tiên tại Việt Nam.">
+        <meta name="keywords" content="Tìm nha khoa, phòng khám nha khoa, nha khoa uy tín, nha khoa giá rẻ, nha khoa tp ">
+        <meta name="google-site-verification" content="L6zyN7Qtd8H64XKOeMg6Okccj2AWzd3Mpex5ucruIws" />
         <meta name="robots" content="index,nofollow">
         <meta name="googlebot" content="index,follow" />
         <meta name="canonical" content="http://clouddentalcrm.com">
-        <title>Phần mềm quản lý nha khoa Cloud Dental CRM v1.0.3 (2018)</title>
+        <title>Tìm phòng nha khoa, cơ sở nha khoa giá rẻ, nha khoa uy tín 2018</title>
         <!--/.Meta tag -->
         <!-- Chèn thêm một đoạn code dữ liệu có cấu trúc nữa ở đây -->
         <!--/.Structure data -->
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="cdcrm-style.css">
+        <link rel="stylesheet" type="text/css" href="main-search.css">
     </head>
-    <body class="bd-homepage">
-        <header class="header">
-            <div class="container">
-                <div>
-                    <a href="http://clouddentalcrm.com" style="color: #FFF;"><strong>Cloud Dental CRM</strong></a>
-                    <span style="color: #FFF; font-size: 9px;">Việt Nam</span>
-                    <a class="btn btn-ct-green login-button" href="http://app.clouddentalcrm.com" target="_blank">Đăng nhập</a>
-                    <a href="tel:+84902886862"> <img src="a/img/phone.gif" class="img-sm call-top"></a>
+    <body class="homepage">
+        <header class="hp-header">
+            <a href="http://clouddentalcrm.com" style="color: #FFF;"><strong>TimNhaKhoa.com</strong></a>
+            <span style="color: #FFF;"><sup>2018</sup></span>
+            <a class="btn btn-ct-blue login-button" href="http://app.clouddentalcrm.com" target="_blank">Đăng nhập</a>
+            <a href="tel:+84902886862"> <img src="assets/img/phone.gif" class="img-sm call-top"></a>
+        </header>
+        <div class="hp-searchbar">
+            <div class="input-group">
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="assets/img/location.svg" class="img-sm-nm" style="height: 15px;">
+                        Hồ Chí Minh
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Hà Nội</a>
+                        <a class="dropdown-item" href="#">Đà Nẵng</a>
+                        <a class="dropdown-item" href="#">Cần Thơ</a>
+                        <a class="dropdown-item" href="#">Hải Phòng</a>
+                    </div>
+                </div>
+                <input type="text" class="form-control" aria-label="#" placeholder="Nhập tên nha khoa (ấn enter để tìm)">
+            </div>
+        </div>
+        <div class="hp-quicksearch by-demand">
+            <h5 class="cl-red">Tìm nhanh theo nhu cầu</h5>
+            <div class="part-demand">
+                <a class="Qsearch-link" href="#">
+                    <div class="Qsearch-select">
+                        Nhổ răng
+                        <i class="fa fa-search"></i>
+                    </div>
+                </a>
+                <a class="Qsearch-link" href="#">
+                    <div class="Qsearch-select">
+                        Tẩy trắng răng - lấy vôi
+                        <i class="fa fa-search"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="part-demand">
+                <a class="Qsearch-link" href="#">
+                    <div class="Qsearch-select">
+                        Khử mùi hơi thở
+                        <i class="fa fa-search"></i>
+                    </div>
+                </a>
+                <a class="Qsearch-link" class="Qsearch-link" href="#">
+                    <div class="Qsearch-select">
+                        Làm đẹp thẩm mỹ (P/T)
+                        <i class="fa fa-search"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="part-demand">
+                <a class="Qsearch-link" href="#">
+                    <div class="Qsearch-select">
+                        Trồng răng (cấy ghép implant)
+                        <i class="fa fa-search"></i>
+                    </div>
+                </a>
+                <a class="Qsearch-link" href="#">
+                    <div class="Qsearch-select">
+                        Làm răng sứ
+                        <i class="fa fa-search"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="clear"></div><!-- Xoá sạch tội lỗi của UI dev -->
+        <div class="hp-quicksearch by-location">
+            <div>
+                <h5 class="cl-blue" style="display: inline-block;">Tìm nhanh theo vị trí</h5>
+                <span style="float: right; font-size: 12px; font-style: italic;">
+                <i class="fa fa-location-arrow" style="padding-right: 0.5rem"></i>Bạn đang ở vị trí: 1A Út Tích, Phường 1, Quận Tân Bình, Hồ Chí Minh</span>
+            </div>
+            <div class="part-location">
+                <a class="Qsearch-link" href="#">
+                    <div class="Qsearch-select">
+                        Quận 1
+                        <i class="fa fa-search"></i>
+                    </div>
+                </a>
+                <a class="Qsearch-link" href="#">
+                    <div class="Qsearch-select">
+                        Quận 2
+                        <i class="fa fa-search"></i>
+                    </div>
+                </a>
+                <a class="Qsearch-link" href="#">
+                    <div class="Qsearch-select">
+                        Quận 3
+                        <i class="fa fa-search"></i>
+                    </div>
+                </a>
+                <a class="Qsearch-link" href="#">
+                    <div class="Qsearch-select">
+                        Quận 4
+                        <i class="fa fa-search"></i>
+                    </div>
+                </a>
+                <a class="Qsearch-link" href="#">
+                    <div class="Qsearch-select">
+                        Quận 5
+                        <i class="fa fa-search"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="part-location">
+                <a class="Qsearch-link" href="#">
+                    <div class="Qsearch-select">
+                        Quận 6
+                        <i class="fa fa-search"></i>
+                    </div>
+                </a>
+                <a class="Qsearch-link" href="#">
+                    <div class="Qsearch-select">
+                        Quận 7
+                        <i class="fa fa-search"></i>
+                    </div>
+                </a>
+                <a class="Qsearch-link" href="#">
+                    <div class="Qsearch-select">
+                        Quận 8
+                        <i class="fa fa-search"></i>
+                    </div>
+                </a>
+                <a class="Qsearch-link" href="#">
+                    <div class="Qsearch-select">
+                        Quận 9
+                        <i class="fa fa-search"></i>
+                    </div>
+                </a>
+                <a class="Qsearch-link" href="#">
+                    <div class="Qsearch-select">
+                        Quận 10
+                        <i class="fa fa-search"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="part-location">
+                <a class="Qsearch-link" href="#">
+                    <div class="Qsearch-select">
+                        Quận 11
+                        <i class="fa fa-search"></i>
+                    </div>
+                </a>
+                <a class="Qsearch-link" href="#">
+                    <div class="Qsearch-select">
+                        Quận 12
+                        <i class="fa fa-search"></i>
+                    </div>
+                </a>
+                <a class="Qsearch-link" href="#">
+                    <div class="Qsearch-select">
+                        Phú Nhuận
+                        <i class="fa fa-search"></i>
+                    </div>
+                </a>
+                <a class="Qsearch-link" href="#">
+                    <div class="Qsearch-select">
+                        Bình Thạnh
+                        <i class="fa fa-search"></i>
+                    </div>
+                </a>
+                <a class="Qsearch-link" href="#">
+                    <div class="Qsearch-select">
+                        Tân Bình
+                        <i class="fa fa-search"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="part-location">
+                <a class="Qsearch-link" href="#">
+                    <div class="Qsearch-select">
+                        Gò Vấp
+                        <i class="fa fa-search"></i>
+                    </div>
+                </a>
+                <a class="Qsearch-link" href="#">
+                    <div class="Qsearch-select">
+                        Tân Phú
+                        <i class="fa fa-search"></i>
+                    </div>
+                </a>
+                <a class="Qsearch-link" href="#">
+                    <div class="Qsearch-select">
+                        Thủ Đức
+                        <i class="fa fa-search"></i>
+                    </div>
+                </a>
+                <a class="Qsearch-link" href="#">
+                    <div class="Qsearch-select">
+                        Bình Tân
+                        <i class="fa fa-search"></i>
+                    </div>
+                </a>
+                <a class="Qsearch-link" href="#">
+                    <div class="Qsearch-select">
+                        Củ Chi
+                        <i class="fa fa-search"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="part-location">
+                <a class="Qsearch-link" href="#">
+                    <div class="Qsearch-select">
+                        Hóc Môn
+                        <i class="fa fa-search"></i>
+                    </div>
+                </a>
+                <a class="Qsearch-link" href="#">
+                    <div class="Qsearch-select">
+                        Nhà Bè
+                        <i class="fa fa-search"></i>
+                    </div>
+                </a>
+                <a class="Qsearch-link" href="#">
+                    <div class="Qsearch-select">
+                        Bình Chánh
+                        <i class="fa fa-search"></i>
+                    </div>
+                </a>
+                <a class="Qsearch-link" href="#">
+                    <div class="Qsearch-select">
+                        Cần Giờ
+                        <i class="fa fa-search"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="clear"></div> <!-- Xoá sạch tội lỗi của UI dev -->
+        <div class="hp-advertising"></div> <!-- Jan 2018 sẽ làm cái này -->
+        <div class="hp-introduction">
+            TimNhaKhoa.com là mạng tìm kiếm, đánh giá dịch vụ nha khoa chuyên nghiệp <b>đầu tiên</b> tại Việt Nam. Chúng tôi giúp bạn tìm kiếm một địa chỉ nha khoa phù hợp về giá cả, dư dả về chuyên môn hoặc đơn giản là gần nhà bạn nhất. Các <b>đánh giá</b> (reviews) trên hệ thống đến <b>từ những khách hàng thực đã đến phòng khám</b> nhằm mang lại một cái nhìn <b>trung thực</b> bên cạnh những thông tin tổng quan mà chúng tôi cung cấp. Bạn có thể <b>xem trước giá</b>, <b>đặt lịch hẹn trực tuyến</b> với các phòng khám có sử dụng hệ thống quản lý phòng khám nha khoa hiện đại (VD: clouddentalcrm.com,..) Chúc bạn một ngày an lành.
+        </div>
+        <div class="hp-footer">
+            <div class="footer-content">
+                <div class="footer-part">
+                    <h6>Danh sách những nha khoa uy tín:</h6>
+                    • <a href="http://nhakhoagtgt.com">Nha khoa GTGT Tân Bình</a><br />
+                    • Đang cập nhật thêm..
+                </div>
+                <div class="footer-part">
+                    <a href="tel:+84902886862">
+                        <div class="contact-button">
+                            <img src="assets/img/loader-phone.gif" class="img-sm clear">
+                            Đưa nha khoa lên đây FREE (0902.886.862)
+                        </div>
+                    </a><!--
+                    <a href="tel:+84902886862">
+                        <div class="contact-button">
+                            <img src="assets/img/loader-phone.gif" class="img-sm clear">
+                            Thương hiệu Digital FREE (0902.886.862)
+                        </div>
+                    </a> -->
+                    <div class="messenger-button">
+                        <a href="https://m.me/eragon.hoangducthinh" target="_blank"></a>
+                    </div>
                 </div>
             </div>
-        </header>
+            <div class="clear"></div>
+            <div style="border-bottom: 1px solid #EDF4F5; margin: 0.4rem 0rem;"></div>
+            <div class="copyright">© 2018 - TimNhaKhoa.com</div>
+        </div>
+
+
+
+
     </body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <!-- <script src="/js/script.js"></script> -->
+    <!-- <script src="/js/fb-comments.js"></script> -->
+    <script src="https://use.fontawesome.com/8acd7bac45.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </html>
+
+
+
+
+
+
+

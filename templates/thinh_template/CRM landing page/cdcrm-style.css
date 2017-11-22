@@ -231,7 +231,6 @@ span{
     .bd-introduction{
         padding: 5rem 3rem;
         /*background-color: #2196F3;/*#FF457A;*/
-
     }
     .intro-part{
         float: left;
@@ -495,7 +494,6 @@ span{
     color: #D1E4E6;
     width: 100%;
     height: auto;
-    /*position: relative;*/
 }
 .bd-footer b{
     color: #EDF4F5;
@@ -516,9 +514,6 @@ span{
 .col2{
     padding: 0;
     margin: auto;
-}
-.footer-table{
-    width: 100%;
 }
 
 /* Messenger button */
