@@ -49,7 +49,7 @@
 
 
 
-
+"""
 SELECT
       customer_name
     , treatment_name
@@ -70,8 +70,64 @@ INNER JOIN
         AND clinic_customer.customer_id = clinic_treatment.customer_id
 WHERE
         clinic_treatmentdetail.treatment_id                 = {}
-    AND clinic_treatmentdetail.treatmentdetail_date         = {}   
+    AND clinic_treatmentdetail.treatmentdetail_date         = {}
     AND clinic_treatmentdetail.treatmentdetail_delete_flag  = {}
+"""
+
+"""
+sql = "        SELECT             "
+sql += "              user_id              "
+sql += "            , user_name                "
+sql += "            , user_dob             "
+sql += "            , user_phone_number                "
+sql += "            , user_address             "
+sql += "            , user_specialize              "
+sql += "        FROM               "
+sql += "            clinic_user                "
+sql += "        WHERE              "
+sql += "                clinic_user.user_role           = '{}'             "
+sql += "            AND clinic_user.user_delete_flag    = '{}'             "
+"""
+
+"""
+sql  = "       SELECT      "
+sql += "             treatmentdetail_id        "
+sql += "           , treatmentdetail_no        "
+sql += "           , treatmentdetail_date      "
+sql += "           , treatmentdetail_content       "
+sql += "           , treatmentdetail_status        "
+sql += "       FROM        "
+sql += "           clinic_treatmentdetail      "
+sql += "       WHERE       "
+sql += "               clinic_treatmentdetail.treatment_id = '{}'      "
+sql += "           AND clinic_treatmentdetail.treatmentdetail_delete_flag = '{}'       "
+"""
+
+"""
+sql  = "       SELECT      "
+sql += "           appointment_id      "
+sql += "           , treatment_name        "
+sql += "           , appointment_assign_id     "
+sql += "           , appointment_date      "
+sql += "           , appointment_time      "
+sql += "       FROM        "
+sql += "           clinic_appointment      "
+sql += "       INNER JOIN      "
+sql += "               clinic_treatment        "
+sql += "           ON      "
+sql += "                   clinic_treatment.brand_id       = clinic_appointment.brand_id       "
+sql += "               AND clinic_treatment.treatment_id   = clinic_appointment.treatment_id       "
+sql += "       WHERE       "
+sql += "           clinic_appointment.appointment_id = '{}'        "
+"""
+
+sql  = "       SELECT  "
+sql += "           treatmentdetail_id  "
+sql += "       FROM    "
+sql += "           clinic_appointmentdetail    "
+sql += "       WHERE   "
+sql += "           clinic_appointmentdetail.appointment_id = '{}'  "
+
 
 
 

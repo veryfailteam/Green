@@ -117,6 +117,7 @@
                         </td>
                     </tr> -->
         </div>
+        {% csrf_token %}
         <script type="text/javascript">
             $("#filter-treament").change(function(){
                 var $selectval = $(this).val()
@@ -141,6 +142,31 @@
                         return this.children[1].children[0].textContent.toLowerCase().indexOf($selectval) > -1 || this.children[1].children[2].textContent.toLowerCase().indexOf($selectval) > -1;
                     }).show();
                 }
+            });
+
+            $("#lstAppointment").on('click', '.abtn',function( event ) {
+                $.ajax({
+                    type: 'POST',
+                    url: 'ajax-get-appointment-modal/',
+                    data: {
+                          'csrfmiddlewaretoken': $('[name=csrfmiddlewaretoken]').val()
+                        , 'appointment_id': $(this).parent().find("input[name=appointment-id]").val()
+                        , 'treatment_id': $(this).parent().parent().find(".treatment-id").val()
+                        , 'treatmentdetail_date': $(this).parent().parent().find(".treatmentdetail-date").val()
+                        , 'data_type': $(this).parent().parent().find(".data-type").val()
+                        , 'action': $(this).attr('name')
+
+                    },
+                    async: false,
+                    dataType: 'html',
+                    success: function (data) {
+                            $('#modal-content').html(data)
+                        },
+                    error: function(){
+                        $('#modal-content').html("<p>dmm tao load khong duoc</p>")
+                    }
+
+                });
             });
         </script>
     </div>
