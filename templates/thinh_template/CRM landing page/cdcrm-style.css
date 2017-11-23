@@ -288,7 +288,7 @@ span{
     }
 }
 /* ----------- iphone 6+ đến ipad ----------- */
-@media screen and (min-width: 414px) and (max-width: 767px){
+@media screen and (min-width: 480px) and (max-width: 767px){
     .header{
         height: 50px;
         background-color: #2EBD59;
@@ -362,7 +362,7 @@ span{
     }
 }
 /* ----------- Nhỏ hơn ip6+ ----------- */
-@media screen and (max-width: 414px){
+@media screen and (max-width: 479px){
     .header{
         height: 50px;
         background-color: #2EBD59;
