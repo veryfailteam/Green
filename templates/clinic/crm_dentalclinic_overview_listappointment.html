@@ -15,34 +15,36 @@
                 <td>{{item.date}} {{item.time}}</td>
                 <td>{{item.assign_name}}</td>
                 <td>
-                    <input type="hidden" class="treatment-id" value="{{item.treatment_id}}">
-                    <input type="hidden" class="treatmentdetail-date" value="{{item.date}}">
-                    <input type="hidden" class="data-type" value="{{item.data_type}}">
                     {{item.name}}
                 </td>
                 <td>{{item.content}}</td>
                 <td>{{item.note}}</td>
                 <td>
+                    <input type="hidden" name="appointment-id" value="{{item.id}}">
+                    <input type="hidden" class="treatment-id" value="{{item.treatment_id}}">
+                    <input type="hidden" class="treatmentdetail-date" value="{{item.date}}">
+                    <input type="hidden" class="data-type" value="{{item.data_type}}">
+
                     {% if item.status == constant_key.APPOINTMENT_STATUS_ACTIVE and user_role != constant_key.ROLE_RECEPTION %}
-                        <a class="abtn btn btn-primary" href="" data-toggle="modal" data-target="#omni-dental-patient-app-modal-edit">Done</a>
+                        <a class="abtn btn btn-primary" href="" data-toggle="modal" data-target="#omni-dental-patient-app-modal-edit" name="done">Done</a>
                         <!-- <a class="btn btn-light" href="">Edit</a> -->
                     {% elif item.status == constant_key.APPOINTMENT_STATUS_ACTIVE %}
-                        <a class="abtn btn btn-primary" href="" data-toggle="modal" data-target="#omni-dental-patient-app-modal-edit">View</a>
+                        <a class="abtn btn btn-primary" href="" data-toggle="modal" data-target="#omni-dental-patient-app-modal-edit" name="view">View</a>
                     {% elif item.status == constant_key.APPOINTMENT_STATUS_CHECKED and user_role == constant_key.ROLE_RECEPTION %}
-                        <a class="abtn btn btn-primary" href="" data-toggle="modal" data-target="#omni-dental-patient-app-modal-edit">View</a>
+                        <a class="abtn btn btn-primary" href="" data-toggle="modal" data-target="#omni-dental-patient-app-modal-edit" name="view">View</a>
                     {% elif item.status == constant_key.APPOINTMENT_STATUS_CHECKED%}
-                        <a class="abtn btn btn-primary" href="" data-toggle="modal" data-target="#omni-dental-patient-app-modal-edit">Active</a>
-                        <a class="abtn btn btn-primary" href="" data-toggle="modal" data-target="#omni-dental-patient-app-modal-edit">View</a>
+                        <a class="abtn btn btn-primary" href="" data-toggle="modal" data-target="#omni-dental-patient-app-modal-edit" name="active">Active</a>
+                        <a class="abtn btn btn-primary" href="" data-toggle="modal" data-target="#omni-dental-patient-app-modal-edit" name="view">View</a>
                     {% elif item.status == constant_key.APPOINTMENT_STATUS_ON_WAY%}
-                        <a class="abtn btn btn-primary" href="" data-toggle="modal" data-target="#omni-dental-patient-app-modal-edit">Checked</a>
-                        <a class="abtn btn btn-primary" href="" data-toggle="modal" data-target="#omni-dental-patient-app-modal-edit">Edit</a>
+                        <a class="abtn btn btn-primary" href="" data-toggle="modal" data-target="#omni-dental-patient-app-modal-edit" name="checked">Checked</a>
+                        <a class="abtn btn btn-primary" href="" data-toggle="modal" data-target="#omni-dental-patient-app-modal-edit" name="edit">Edit</a>
                     {% elif item.status == constant_key.APPOINTMENT_STATUS_BOOKED%}
-                        <a class="abtn btn btn-primary" href="" data-toggle="modal" data-target="#omni-dental-patient-app-modal-edit">On way</a>
-                        <a class="abtn btn btn-primary" href="" data-toggle="modal" data-target="#omni-dental-patient-app-modal-edit">Edit</a>
+                        <a class="abtn btn btn-primary" href="" data-toggle="modal" data-target="#omni-dental-patient-app-modal-edit" name="onway">On way</a>
+                        <a class="abtn btn btn-primary" href="" data-toggle="modal" data-target="#omni-dental-patient-app-modal-edit" name="edit">Edit</a>
                     {% elif item.status == constant_key.APPOINTMENT_STATUS_FOLLOW %}
-                        <a class="abtn btn btn-primary" href="" data-toggle="modal" data-target="#omni-dental-patient-app-modal-edit">Confirm</a>
+                        <a class="abtn btn btn-primary" href="" data-toggle="modal" data-target="#omni-dental-patient-app-modal-edit" name="confirm">Confirm</a>
                     {% elif item.status == constant_key.APPOINTMENT_STATUS_DONE %}
-                        <a class="abtn btn btn-primary" href="" data-toggle="modal" data-target="#omni-dental-patient-app-modal-edit">View</a>
+                        <a class="abtn btn btn-primary" href="" data-toggle="modal" data-target="#omni-dental-patient-app-modal-edit" name="view">View</a>
                     {% endif %}
                 </td>
             </tr>
@@ -58,30 +60,3 @@
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
-{% csrf_token %}
-<script type="text/javascript">
-    $(".abtn").click(function( event ) {
-        event.preventDefault();
-
-        $.ajax({
-            type: 'POST',
-            url: 'ajax-get-appointment-modal/',
-            data: {
-                'csrfmiddlewaretoken': $('[name=csrfmiddlewaretoken]').val(),
-                'treatment_id': $(this).parent().parent().find(".treatment-id").val(),
-                'treatmentdetail_date': $(this).parent().parent().find(".treatmentdetail-date").val(),
-                'data_type': $(this).parent().parent().find(".data-type").val()
-            },
-            dataType: 'html',
-            success: function (data) {
-                    $('#modal-content').html(data)
-
-                    // document.getElementById("lstAppointment").innerHTML = data
-                }
-        });
-
-
-
-        // $('.modal-body').html("<p>dmmmmccccccccccccccccccccccccc</p>")
-    });
-</script>

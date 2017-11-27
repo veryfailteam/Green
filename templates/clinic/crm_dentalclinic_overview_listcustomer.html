@@ -79,12 +79,14 @@
              .attr("value", $newkey).text("This treatment"));
 
         $.ajax({
-            // type: 'POST'
+            type: 'POST',
             url: 'get_appointment_schedule/',
             data: {
+                'csrfmiddlewaretoken': $('[name=csrfmiddlewaretoken]').val(),
                 'customer_id': this.name
             },
             dataType: 'html',
+            // async: false,
             success: function (data) {
                     document.getElementById("lstAppointment").innerHTML = data
                 }

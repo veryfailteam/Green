@@ -80,6 +80,19 @@ class Appointment(models.Model):
     appointment_update_date = models.CharField(max_length=10,null=True)
     appointment_update_by = models.CharField(max_length=8,null=True)
     appointment_delete_flag = models.CharField(max_length=1,null=True)
+
+class AppointmentDetail():
+    brand_id = models.IntegerField(null=True)
+    treatment_id = models.IntegerField(null=True)
+    appointment_id = models.IntegerField(null=True)
+    treatmentdetail_id = models.IntegerField(null=True)
+    appointmentdetail_id = models.AutoField(primary_key=True)
+    appointmentdetail_create_date = models.CharField(max_length=10,null=True)
+    appointmentdetail_create_by = models.CharField(max_length=8,null=True)
+    appointmentdetail_update_date = models.CharField(max_length=10,null=True)
+    appointmentdetail_update_by = models.CharField(max_length=8,null=True)
+    appointmentdetail_delete_flag = models.CharField(max_length=1,null=True)
+
 #   def __str__(self):
 #    return self.userID
 class Treatment(models.Model):

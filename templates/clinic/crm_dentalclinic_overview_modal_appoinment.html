@@ -1,5 +1,9 @@
         <div class="modal-header">
-            <h5 class="modal-title"><strong style="color: tomato;">Edit appointment for {{treatmentdetail.customer_name}}</strong></h5>
+            <h5 class="modal-title">
+                <strong style="color: tomato;">
+                    {% if view_modal_mode == constant_key.VIEW_MODAL_MODE_TREATMENT %} Treatment {% else %} Appointment {% endif %} for {{main_info.customer_name}}
+                </strong>
+            </h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 <span class="sr-only">Close</span>
@@ -11,15 +15,20 @@
                     <div class="row">
                         <div class="input-group mb-2 mb-sm-0">
                             <div class="input-group-addon"><i class="fa fa-puzzle-piece"></i></div>
-                            <input type="text" class="form-control" style="" placeholder="Implant X" disabled="">
+                            <input type="text" class="form-control" style="" value="{{main_info.name}}"  disabled="">
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-group mb-2 mb-sm-0">
                             <div class="input-group-addon"><i class="fa fa-user"></i></div>
                             <select class="form-control custom-select" id="exampleFormControlSelect1">
-                               <option>Dr. Ngọc Anh</option>
-                               <option>Dr. Thien Luong</option>
+                                {% for item in lst_user %}
+                                    {% if item.user_id == main_info.assign_id %}
+                                        <option selected>{{item.user_name}}</option>
+                                    {% else %}
+                                        <option>{{item.user_name}}</option>
+                                    {% endif %}
+                                {% endfor %}
                             </select>
                         </div>
                     </div>
@@ -27,7 +36,7 @@
                         <div class="input-group mb-2 mb-sm-0">
                             <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
                             <select class="form-control custom-select" id="exampleFormControlSelect1">
-                               <option>12/10/2017</option>
+                               <option>{{main_info.date}}</option>
                             </select>
                         </div>
                     </div>
@@ -35,9 +44,9 @@
                         <div class="input-group mb-2 mb-sm-0">
                             <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
                             <select class="form-control custom-select" id="exampleFormControlSelect1">
-                               <option>Morning</option>
-                               <option>Afternoon</option>
-                               <option>Evening</option>
+                               <option {% if main_info.time < "13:00" %} selected {% endif %}>Morning</option>
+                               <option {% if main_info.time >= "13:00" and main_info.time < "18:00"  %} selected {% endif %}>Afternoon</option>
+                               <option {% if main_info.time >= "18:00" %} selected {% endif %}>Evening</option>
                             </select>
                         </div>
                     </div>
@@ -108,107 +117,55 @@
                                 <tr>
                                     <th scope="col"></th>
                                     <th scope="col">No.</th>
-                                    <th scope="col">After</th>
+                                    <!-- <th scope="col">After</th> -->
                                     <th scope="col">At date</th>
-                                    <th scope="col">Position</th>
+                                    <!-- <th scope="col">Position</th> -->
                                     <th scope="col">Tasks</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>
-                                        <label class="form-check-label" style="margin-bottom: 20px;">
-                                            <input type="checkbox" class="form-check-input" value="">
-                                        </label>
-                                    </td>
-                                    <td style="vertical-align: middle;text-align: center;">1.1</td>
-                                    <td style="vertical-align: middle;text-align: center;">-</td>
-                                    <td style="vertical-align: middle;text-align: center;">10/10/2017</td>
-                                    <td style="vertical-align: middle;text-align: center;">41</td>
-                                    <td style="vertical-align: middle;width:40%;">
-                                      Nhổ răng
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <label class="form-check-label" style="margin-bottom: 20px;">
-                                            <input type="checkbox" class="form-check-input" value="">
-                                        </label>
-                                    </td>
-                                    <td style="vertical-align: middle;text-align: center;">1.2</td>
-                                    <td style="vertical-align: middle;text-align: center;">-</td>
-                                     <td style="vertical-align: middle;text-align: center;">10/10/2017</td>
-                                    <td style="vertical-align: middle;text-align: center;">UD</td>
-                                    <td style="vertical-align: middle;width:40%;">
-                                      Cạo vôi và đánh bóng
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <label class="form-check-label" style="margin-bottom: 20px;">
-                                            <input type="checkbox" class="form-check-input" value="">
-                                        </label>
-                                    </td>
-                                    <td style="vertical-align: middle;text-align: center;">1.3</td>
-                                    <td style="vertical-align: middle;text-align: center;">-</td>
-                                    <td style="vertical-align: middle;text-align: center;">10/10/2017</td>
-                                    <td style="vertical-align: middle;text-align: center;">41</td>
-                                    <td style="vertical-align: middle;width:40%;">
-                                      Cắt chỉ
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <label class="form-check-label" style="margin-bottom: 20px;">
-                                            <input type="checkbox" class="form-check-input" value="">
-                                        </label>
-                                    </td>
-                                    <td style="vertical-align: middle;text-align: center;">2.1</td>
-                                    <td style="vertical-align: middle;text-align: center;">1</td>
-                                    <td style="vertical-align: middle;text-align: center;">-</td>
-                                    <td style="vertical-align: middle;text-align: center;">32</td>
-                                     <td style="vertical-align: middle;width:40%;">
-                                      xxx
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <label class="form-check-label" style="margin-bottom: 20px;">
-                                            <input type="checkbox" class="form-check-input" value="">
-                                        </label>
-                                    </td>
-                                    <td style="vertical-align: middle;text-align: center;">2.2</td>
-                                    <td style="vertical-align: middle;text-align: center;">1.1</td>
-                                    <td style="vertical-align: middle;text-align: center;">-</td>
-                                    <td style="vertical-align: middle;text-align: center;">32</td>
-                                    <td style="vertical-align: middle;width:40%;">
-                                          Implant X
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <label class="form-check-label" style="margin-bottom: 20px;">
-                                            <input type="checkbox" class="form-check-input" value="">
-                                        </label>
-                                    </td>
-                                    <td style="vertical-align: middle;text-align: center;">2.3</td>
-                                    <td style="vertical-align: middle;text-align: center;">1</td>
-                                    <td style="vertical-align: middle;text-align: center;">-</td>
-                                    <td style="vertical-align: middle;text-align: center;">32</td>
-                                    <td style="vertical-align: middle;width:40%;">
-                                      xxx
-                                    </td>
-                                </tr>
+                                {% for item in lst_treatmentdetail %}
+                                    {% if view_modal_mode == constant_key.VIEW_MODAL_MODE_TREATMENT or view_modal_mode == constant_key.VIEW_MODAL_MODE_APPOINTMENT and item.treatmentdetail_id in appointmentdetails %}
+                                        <tr class="focus">
+                                    {% else %}
+                                        <tr class="fuzzy">
+                                    {% endif %}
+                                        <td>
+                                            {% if item.treatmentdetail_status == constant_key.TREATMENT_STATUS_DONE %}
+                                                <label class="form-check-label" style="margin-bottom: 20px;">
+                                                    <input type="checkbox" class="form-check-input" checked>
+                                                </label>
+                                            {% else %}
+                                                <label class="form-check-label" style="margin-bottom: 20px;">
+                                                    <input type="checkbox" class="form-check-input">
+                                                </label>
+                                            {% endif %}
+                                        </td>
+                                        <td style="vertical-align: middle;text-align: center;">{{item.treatmentdetail_no}}</td>
+                                        <!-- <td style="vertical-align: middle;text-align: center;">-</td> -->
+                                        <td style="vertical-align: middle;text-align: center;">{{item.treatmentdetail_date}}</td>
+                                        <!-- <td style="vertical-align: middle;text-align: center;">41</td> -->
+                                        <td style="vertical-align: middle;width:40%;">
+                                          {{item.treatmentdetail_content}}
+                                        </td>
+                                    </tr>
+                                {% endfor %}
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container" style="margin-bottom: 20px;">
-            <textarea class="form-control" placeholder="Write your note.."></textarea>
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
+        {% if view_modal_mode == constant_key.VIEW_MODAL_MODE_TREATMENT %}
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        {% else %}
+            <div class="container" style="margin-bottom: 20px;">
+                <textarea class="form-control" placeholder="Write your note.."></textarea>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        {% endif %}

@@ -1,0 +1,384 @@
+/*
+This CSS for internal projects of rocketagegroup.com
+Feel Free to use it
+We are proud of making awesome product from Saigon - vietnam
+*/
+/* Color:
+Blue: 2196F3;
+dBlue: #094F71;
+naviblue:#094F71;
+Green: #2EBD59;
+Orange: #F37338;
+Yellow: #FFDA44;
+Violet: #933EC5;
+Red: #D80027;
+Secondary: #868E96;
+Line: #D6D6D6;
+Light-grey: #364A4C; -hover: #A9CEDD;
+Light-black: #0C0704;
+/*Quick makeup*/
+.subtext{
+    color: #555555;
+    margin: auto;
+}
+.subtext-500{
+    color: #555555;
+    margin: auto;
+    font-weight: 500;
+}
+.subtext-ita{
+    color: #555555;
+    margin: auto;
+    font-style: italic;
+}
+.subtext-500ita{
+    color: #555555;
+    margin: auto;
+    font-weight: 500;
+    font-style: italic;
+}
+.img-sm{
+    height: 1rem;
+    width: auto;
+    margin: 0 0.2rem;
+}
+.img-md{
+    height: 2rem;
+    width: auto;
+    margin: 0 0.2rem;
+}
+.img-lg{
+    height: 5rem;
+    width: auto;
+    margin: 0 0.2rem;
+}
+.img-sm-center{
+    height: 1rem;
+    width: auto;
+    margin: 0 0.2rem;
+    display: block;
+}
+.img-md-center{
+    height: 2rem;
+    width: auto;
+    margin: 0 0.2rem;
+    display: block;
+}
+.img-lg-center{
+    height: 5rem;
+    width: auto;
+    margin: 0 0.2rem;
+    display: block;
+}
+.blue{
+    color: #2196F3;
+}
+.dblue{
+    color: #094F71;
+}
+.naviblue{
+    color: #094F71;
+}
+.green{
+    color: #2EBD59;
+}
+.pink{
+    color: #FF457A;
+}
+.orange{
+    color: #F37338;
+}
+.yellow{
+    color: #FFDA44;
+}
+.violet{
+    color: #933EC5;
+}
+.red{
+    color: #D80027;
+}
+.scd{
+    color: #868E96;
+}
+.line{
+    color: #D6D6D6;
+}
+.lgrey{
+    color: #364A4C;
+}
+.lgrey-hover{
+    color: #A9CEDD;
+}
+.lblack{
+    color: #0C0704;
+}
+.sub{
+    color: #555555;
+}
+.clear{
+    clear: both;
+    content: "";
+}
+.clear-pm{
+    padding: 0px;
+    margin: 0px;
+}
+.di{
+    display: inline;
+}
+.db{
+    display: block
+}
+.dib{
+    display: inline-block;
+}
+/* Your style */
+a.dropdown-item:hover{
+    color: #FFF;
+    background-color: #2196F3;
+}
+/*a:hover{
+    padding: 0.2rem 0.6rem;
+    color: #FFF;
+    background-color: #2196F3;
+    text-decoration: none;
+    border-radius: 4px;
+    margin: 0;
+}*/
+.btn-blue{
+    border: 1px solid #2196F3;
+    background-color: #FFF;
+    color: #2196F3;
+}
+.btn-blue:hover{
+    border: 1px solid #FFF;
+    background-color: #FFDA44;
+    color: #555555;
+    border-radius: 4px;
+}
+
+/* ----------- Supper large screen ----------- */
+@media screen and (min-width: 1366px){
+    body{
+        font-size: 15px !important;
+        font-weight: 400 !important;
+        background-color: #FFF;
+        color: #555555;
+    }
+    a{
+        font-size: 15px;
+    }
+    .btn{
+        font-size: 14px;
+    }
+    .form-control{
+        font-size: 14px;
+    }
+    .breadcrumb{
+        font-size: 14px;
+    }
+    .breadcrumb a{
+        font-size: 14px;
+    }
+    .All-the-main-class-is-here{
+        padding: 12rem;
+        margin: auto;
+    }
+}
+
+/* ----------- Popular desktop screen ----------- */
+@media screen and (min-width: 768px) and (max-width: 1365px){
+    body{
+        font-size: 15px !important;
+        font-weight: 400 !important;
+        background-color: #FFF;
+        color: #555555;
+    }
+    a{
+        font-size: 15px;
+    }
+    .btn{
+        font-size: 14px;
+    }
+    .form-control{
+        font-size: 14px;
+    }
+    .breadcrumb{
+        font-size: 13px;
+    }
+    .breadcrumb a{
+        font-size: 13px;
+    }
+}
+
+/* ----------- iphone 6+ đến ipad ----------- */
+@media screen and (min-width: 480px) and (max-width: 767px){
+    body{
+        font-size: 14px !important;
+        font-weight: 400 !important;
+        background-color: #FFF;
+        color: #555555;
+    }
+    a{
+        font-size: 14px;
+    }
+    .btn{
+        font-size: 13px;
+    }
+    .form-control{
+        font-size: 13px;
+    }
+    .breadcrumb{
+        font-size: 13px;
+    }
+    .breadcrumb a{
+        font-size: 13px;
+    }
+}
+
+/* ----------- Nhỏ hơn ip6+ ----------- */
+@media screen and (max-width: 479px){
+    body{
+        font-size: 13px !important;
+        font-weight: 400 !important;
+        background-color: #FFF;
+        color: #555555;
+    }
+    a{
+        font-size: 13px;
+    }
+    .btn{
+        font-size: 12px;
+    }
+    .form-control{
+        font-size: 12px;
+    }
+    .breadcrumb{
+        font-size: 12px;
+    }
+    .breadcrumb a{
+        font-size: 12px;
+    }
+}
+
+/* End */
+
+.messenger-button {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 50;
+}
+.messenger-button a{
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    color: #FFF;
+    background: #2196F3 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAgCAYAAAAFQMh/AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAvNJREFUeNq8l1tIVFEUhv+5qE1UMmaCJF0JCSuxopewJ6mQLkQXuj1ED9FDBEV2sYeop4KS6CGRQCyzoLLAB0kki7CMLmZh053Sxiyh0DRzHHT3r84ZiPHMmT0y44LPc2b2dv977b3WXnscSilo2BSygqwkC0kWmWC29ZEO0kzqyG3SFXVEEbZhBjlN2pW++UkJmWU3tp3ofvJTjd66SRFx6AqnkpsqflZD0qIJe8lDFX97TNIjCSeROpU4u0OSrYRPqMTbyZCew0yneWY6JCGxNkQWkxan+cWRMRAVc5Gj8iIez+bzJRmPsbEAyRWP18cq2vRRr19nD9AbGPF1CtkgwstjEb1wH9hbBVQ2Re7zJ2j0e/Ae8FhvYIEI5+iKVj8DLjYCkzxA2V2g6tHIPvU+YFsZD+tfXEqGkdtpOdRcN/+k64g2vAbO1XOd6IGLg43js7TBeN+8hGH6BajgpO69AQoXAMWrGECRh5sswRW1PDW3AYeucwkH8W+0ZLfhydAwP/JzzlTAx/r0g3VqWTZwaiMn6LYfUxZi0K7DBxa44mqgu98Q2MeIyJgIDAQNb8VaOLF+jpI3HTi+LrqoaIrH/DdMs2rt6AZ2VRhe7VgKrMmjt8zEd9+5Atfo4W9jyWUSmanA2a3GU8P8IlzDl9VWqXDsFpCdCezMB7xhCff2G3CQ4l29DBJeCUq2AHMytJOjVs7N3eEHal9AqRtPlWrtsD94fV+V2nSepedTzGf2HvGYPqGVpIWmE+SJmuTSm7rkrCe2w7ZHUljCo5Nc/r9FV1TME/sJf0XCJ1SdskyvUxN8TjMiMJ+0hc4VPzkwBgXisIha3TJLE3gJKLe7c7lIVQJEr5pXK9tbZn6cReVe7gzXsaodKXHaz1dkrRk7w+GN7jgHj6TIE1JOKkl/pI66wgPkDPlMFpGZxGu2sfKinTwnjVIz9KY4co8LwvaoluRG+Y0VM1Z7HKrfcrPaTgrJi3gntDuC8CVSpPVzc5T2V4ABAMltT/3nScyOAAAAAElFTkSuQmCC+thietkewebsitelienhe0902886862) center no-repeat;
+    background-size: 20px 20px;
+    -webkit-animation: copy-di-ban-oi 2000ms infinite;
+    -moz-animation: roi-khi-lam-du-an-lon 2000ms infinite;
+    -o-animation: nho-lien-he-team-minh 2000ms infinite;
+    animation: lam-chung 2000ms infinite;
+}
+
+@-webkit-keyframes copy-di-ban-oi{
+    0%{
+        background-color: #004A7F;
+        -webkit-box-shadow: 0 0 3px #004A7F;
+    }
+
+    50%{
+        background-color: #0094FF;
+        -webkit-box-shadow: 0 0 10px #0094FF;
+    }
+
+    100%{
+        background-color: #004A7F;
+        -webkit-box-shadow: 0 0 3px #004A7F;
+    }
+}
+
+@-moz-keyframes roi-khi-lam-du-an-lon{
+    0%{
+        background-color: #004A7F;
+        -moz-box-shadow: 0 0 3px #004A7F;
+    }
+
+    50%{
+        background-color: #0094FF;
+        -moz-box-shadow: 0 0 10px #0094FF;
+    }
+
+    100%{
+        background-color: #004A7F;
+        -moz-box-shadow: 0 0 3px #004A7F;
+    }
+}
+
+@-o-keyframes nho-lien-he-team-minh{
+    0%{
+        background-color: #004A7F;
+        box-shadow: 0 0 3px #004A7F;
+    }
+
+    50%{
+        background-color: #0094FF;
+        box-shadow: 0 0 10px #0094FF;
+    }
+
+    100%{
+        background-color: #004A7F;
+        box-shadow: 0 0 3px #004A7F;
+    }
+}
+@keyframes lam-chung{
+    0%{
+        background-color: #2196F3; /*#004A7F;*/
+        box-shadow: 0 0 3px #2196F3; /*#004A7F;*/
+    }
+
+    50%{
+        background-color: #0094FF;
+        box-shadow: 0 0 30px #0094FF;
+    }
+
+    100%{
+        background-color: #2196F3; /*#004A7F;*/
+        box-shadow: 0 0 3px #2196F3; /*#004A7F;*/
+    }
+}
+/* End */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
