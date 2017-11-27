@@ -39,6 +39,9 @@ Appointment.objects.create(brand_id = "1",user_id = "1",customer_id = "2",treatm
 Appointment.objects.create(brand_id = "1",user_id = "1",customer_id = "2",treatment_id = "7",appointment_id = "7",appointment_date = "04-11-2017",appointment_time = "10:00",appointment_content = "uh",appointment_assign_id = "1",appointment_estimated_time = "60",appointment_estimated_difficulty = "1",appointment_status = "6",appointment_note = "nothing",appointment_create_date = "02-11-2017",appointment_create_by = "1",appointment_update_date = "02-11-2017",appointment_update_by = "1",appointment_delete_flag = "0")
 Appointment.objects.create(brand_id = "1",user_id = "1",customer_id = "2",treatment_id = "2",appointment_id = "2",appointment_date = "11-11-2017",appointment_time = "10:00",appointment_content = "uh",appointment_assign_id = "1",appointment_estimated_time = "60",appointment_estimated_difficulty = "1",appointment_status = "1",appointment_note = "nothing",appointment_create_date = "02-11-2017",appointment_create_by = "1",appointment_update_date = "02-11-2017",appointment_update_by = "1",appointment_delete_flag = "0")
 
+
+
+
 Treatment.objects.create(brand_id = "1", user_id = "1", customer_id = "1", treatment_id = "1", treatment_name = "treatment_name", treatment_content = "treatment_content", treatment_total_payment = 0, treatment_payment_status = 0, treatment_status = "0", treatment_create_date = "0", treatment_create_by = "0", treatment_update_date = "0", treatment_update_by = "1", treatment_delete_flag = "0")
 
 
