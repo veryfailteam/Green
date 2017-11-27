@@ -81,7 +81,7 @@ class Appointment(models.Model):
     appointment_update_by = models.CharField(max_length=8,null=True)
     appointment_delete_flag = models.CharField(max_length=1,null=True)
 
-class AppointmentDetail():
+class AppointmentDetail(models.Model):
     brand_id = models.IntegerField(null=True)
     treatment_id = models.IntegerField(null=True)
     appointment_id = models.IntegerField(null=True)
