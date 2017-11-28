@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Omni-channel - Patient - Appointment Schedule | Nha khoa GTGT | Cloud Dental ERP v1.0.3</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://use.fontawesome.com/8acd7bac45.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../../../ERP/static/css/style.css">
+</head>
+<body>
+    <header>
+        <!--- First menu -->
+        <div class="container">
+            <nav class="navbar navbar-expand-md navbar-light bg-white" style="max-height: 50px;">
+                <a class="navbar-brand" href="#" style="color: #2196f3">Nha khoa GTGT <sup>CN Phạm Văn Hai</sup></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="omni-channel.html">Omni-Channel <sup>TM</sup></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="calendar.html">Calendar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cashbook-rec.html">Cash Book</a>
+                        </li>
+                        <!--
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Inventory</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Human Resource</a>
+                        </li>
+                    -->
+                    </ul>
+                    <ul class="navbar-text">
+                        <li class="nav-item">
+                            <a href="">
+                            <img src="images/messenger_icon.png" style="height: 30px;" />
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="">
+                            <img src="images/ring_icon.png" style="height: 30px;" />
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="">
+                            <img src="images/user_icon.png" style="height: 30px;" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!--- Second menu -->
+        <div class="container-fluid" id="second_menu">
+            <div class="container">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Dental Clinic</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Center</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#">Open Channel</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Order Management</a>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!--- Main body -->
+    <div class="container-fluid" id="patient-content">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="row">
+                    <div class="row sidebar-header">
+                        <div class="col-lg-2 col-md-2 col-sm-2" id="patient-avatar">
+                            <img src="images/user_avatar.png" style="padding-top: 15px;">
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-8" style="margin-top: 10px; white-space: nowrap; min-width: 170px; max-width: 250px; overflow: hidden; text-overflow: ellipsis;">
+                           <strong style="margin-top: 15px;"> Mr. Tên em dài quá (26)</strong><br/>
+                           <p>Implant X</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-9" style="border-left: 1px solid #dfdfdf;">
+                <div class="row content-header">
+                    <div class="col">
+                        <strong style="min-width: 50px; max-width: 80px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Create new customer</strong>
+                        <a class="btn btn-primary" data-toggle="modal" data-target="#omni-contact-app-modal-new" style="margin-left: 10px;">+ New</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Footer -->
+    <!--- Patient Appointment schedule Modal New -->
+    <div class="modal fade" id="omni-contact-app-modal-new">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><strong style="color: tomato;">Create new customer</strong></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="modal-new-input">
+                        <div class="row">
+                            <div class="input-group mb-2 mb-sm-0">
+                                <div class="input-group-addon"><i class="fa fa-user"></i></div>
+                                <input type="text" class="form-control" style="" placeholder="Họ & tên đệm *">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-group mb-2 mb-sm-0">
+                                <div class="input-group-addon"><i class="fa fa-info-circle"></i></div>
+                                <input type="text" class="form-control" style="" placeholder="Tên đệm & tên *">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-group mb-2 mb-sm-0">
+                                <div class="input-group-addon"><i class="fa fa-info-circle"></i></div>
+                                <input type="text" class="form-control" style="" placeholder="Số điện thoại chính *">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-group mb-2 mb-sm-0">
+                                <div class="input-group-addon"><i class="fa fa-info-circle"></i></div>
+                                <input type="text" class="form-control" style="" placeholder="Số điện thoại phụ">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-group mb-2 mb-sm-0">
+                                <div class="input-group-addon"><i class="fa fa-info-circle"></i></div>
+                                <select class="form-control custom-select" id="exampleFormControlSelect1">
+                                   <option>Chọn giới tính *</option>
+                                   <option>Nam</option>
+                                   <option>Nữ</option>
+                                   <option>Khác (có phẩu thuật cơ thể)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-group mb-2 mb-sm-0">
+                                <div class="input-group-addon"><i class="fa fa-info-circle"></i></div>
+                                <input type="text" class="form-control" style="" placeholder="Thư điện tử (email)">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-group mb-2 mb-sm-0">
+                                <div class="input-group-addon"><i class="fa fa-info-circle"></i></div>
+                                <select class="form-control custom-select" id="exampleFormControlSelect1">
+                                   <option>Nguồn khách hàng *</option>
+                                   <option>Vãng lai</option>
+                                   <option>Bác sỹ A</option>
+                                   <option>Rocket Age Group</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-group mb-2 mb-sm-0">
+                                <div class="input-group-addon"><i class="fa fa-info-circle"></i></div>
+                                <select class="form-control custom-select" id="exampleFormControlSelect1">
+                                   <option selected="">Bình thường (loại khách hàng)</option>
+                                   <option>Thân thiết 1 (5%)</option>
+                                   <option>Thân thiết 2 (10%)</option>
+                                </select>
+                            </div>
+                        </div>
+                    <div>
+                    <textarea class="form-control" placeholder="Ghi chú khác về người này.."></textarea>
+                </div>
+            </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
