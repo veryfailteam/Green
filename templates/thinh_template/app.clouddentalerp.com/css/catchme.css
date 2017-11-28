@@ -5,10 +5,8 @@ We are proud of making awesome product from Saigon - vietnam
 */
 /* Color:
 Blue: 2196F3;
-dBlue: #094F71;
-naviblue: #094F71;
+naviblue:#094F71;
 Green: #2EBD59;
-Pink: ;
 Orange: #F37338;
 Yellow: #FFDA44;
 Violet: #933EC5;
@@ -27,18 +25,12 @@ Light-black: #0C0704;
     margin: auto;
     font-weight: 500;
 }
-.subtext-500-center{
-    color: #555555;
-    margin: auto;
-    font-weight: 500;
-    text-align: center;
-}
 .subtext-ita{
     color: #555555;
     margin: auto;
     font-style: italic;
 }
-.subtext-500-ita{
+.subtext-500ita{
     color: #555555;
     margin: auto;
     font-weight: 500;
@@ -46,37 +38,43 @@ Light-black: #0C0704;
 }
 .img-sm{
     height: 1rem;
-    margin: auto 0.2rem;
+    width: auto;
+    margin: 0 0.2rem;
 }
 .img-md{
     height: 2rem;
-    margin: auto /*0.2rem*/;
+    width: auto;
+    margin: 0 0.2rem;
 }
 .img-lg{
     height: 5rem;
-    margin: auto /*0.2rem*/;
+    width: auto;
+    margin: 0 0.2rem;
 }
 .img-sm-center{
     height: 1rem;
+    width: auto;
     margin: auto;
     display: block;
 }
 .img-md-center{
     height: 2rem;
+    width: auto;
     margin: auto;
     display: block;
 }
 .img-lg-center{
     height: 5rem;
+    width: auto;
     margin: auto;
     display: block;
 }
 .blue{
     color: #2196F3;
 }
-.dblue{
+/*.dblue{
     color: #094F71;
-}
+}*/
 .naviblue{
     color: #094F71;
 }
@@ -86,7 +84,7 @@ Light-black: #0C0704;
 .pink{
     color: #FF457A;
 }
-.orage{
+.orange{
     color: #F37338;
 }
 .yellow{
@@ -118,6 +116,7 @@ Light-black: #0C0704;
 }
 .clear{
     clear: both;
+    content: "";
 }
 .clear-pm{
     padding: 0px;
@@ -156,10 +155,6 @@ a.dropdown-item:hover{
     color: #555555;
     border-radius: 4px;
 }
-h2, h3, h4{
-    text-align: center;
-    color: #094F71;
-}
 
 /* ----------- Supper large screen ----------- */
 @media screen and (min-width: 1366px){
@@ -188,7 +183,6 @@ h2, h3, h4{
         padding: 12rem;
         margin: auto;
     }
-
 }
 
 /* ----------- Popular desktop screen ----------- */
@@ -209,11 +203,17 @@ h2, h3, h4{
         font-size: 14px;
     }
     .breadcrumb{
-        font-size: 14px;
+        font-size: 13px;
+    }
+    .breadcrumb a{
+        font-size: 13px;
+    }
+    .body{
+        position: relative;
     }
     .header{
-        background-color: #F37338;
         height: 50px;
+        background-color: #2EBD59;
         position: sticky;
         position: -webkit-sticky;
         top: 0;
@@ -224,143 +224,38 @@ h2, h3, h4{
         color: #FFF;
         display: inline-block;
     }
-    .booking-button{
+    .header .user-panel{
         float: right;
-        margin: 0.7rem 4rem;
-        padding: 0.1rem 1.5rem;
-        border: 1px solid #FFF;
-        border-radius: 4px;
-        background-color: #FFF;
-        color: #F37338;
+        padding: 0.9rem 4rem;
     }
-    .booking-button:hover{
-        text-decoration: none;
-        background-color: #F37338;
+    .header .user-panel a{
+        margin: 0 0.4rem;
         color: #FFF;
     }
-    .introduction{
+    .header .user-panel a:hover{
+        color: yellow;
+    }
+    .feature{
+        margin: auto;
+        padding: 5rem 4rem;
         width: 100%;
-        margin: auto;
-        padding: 5rem 3rem;
+        text-align: center;
     }
-    .introduction div{
-        margin: auto;
-    }
-    .introduction .part{
-        float: left;
-        width: 33%;
-        padding: 1rem;
-        margin: 1rem auto 0;
-    }
-    .introduction h5{
-        color: #F37338;
-    }
-    .takealook{
-        background-color: #F37338;
-        padding: 2rem 3rem;
-        margin: auto;
-    }
-    .takealook .part{
+    .feature .part{
+        width: 20%;
         float: left;
         padding: 1rem;
-        width: 50%;
-        margin: auto;
+        border: 1px solid #868E96;
+        margin: 1rem;
     }
-    .takealook p{
+    /*.footer{
+        padding: 2rem 4rem;
+        background-color: #868E96;
         color: #FFF;
-    }
-    .takealook h4{
-        color: #FFF;
-    }
-    .service{
-        width: 100%;
-        margin: auto;
-        padding: 5rem 3rem;
-    }
-    .service div{
-        margin: auto;
-    }
-    .service .part{
-        float: left;
-        width: 33.33%;
-        padding: 1.5rem 0.5rem 0;
-    }
-    .service h5{
-        display: inline;
-    }
-    .service a{
-        text-decoration: none;
-    }
-    .price{
-        background-color: #F37338;
-        padding: 5rem 3rem 0rem;
-        margin: auto;
-        color: #FFF;
-    }
-    .price p{
-        color: #FFF;
-    }
-    .price h4{
-        color: #FFF;
-    }
-    .price a{
-        text-decoration: none;
-        color: #094F71;
-    }
-    .price .part{
-        background-color: #FFF;
-        padding: 5rem 3rem;
-        margin: 15rem -3rem 5rem;
-    }
-    .team {
-        padding: 5rem 3rem;
-        margin: auto;
-    }
-    .team .top-part{
-        padding-bottom: 2rem;
-    }
-    .team .bot-part{
-        float: left;
-        padding: 1rem;
-        width: 50%;
-    }
-    .team .card{
-    box-shadow: 0px 0.2rem 0.6rem 0px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    border-top-right-radius: 6px;
-    border-top-left-radius: 6px;
-    }
-    .team .card-detail{
-        padding: 0.5rem 0.5rem 0.5rem 1rem;
-    }
-    .footer{
-        padding: 0 3rem 0.5rem;
-        margin: auto;
-        background-color: #094F71;
-        color: #D1E4E6;
-        margin-top: 5rem;
-    }
-    .footer .part{
-        float: left;
-        width: 50%;
-        padding: 1rem;
-    }
-    .footer a{
-        color: #D1E4E6;
-    }
-    .footer a:hover{
-        color: #A9CEDD;
-        text-decoration: none;
-    }
-    .footer .contact-button{
-        padding: 0.5rem;
-        background-color: #FFF;
-        color: #364A4C;
-        text-align: left;
-        border-radius: 4px;
-        margin: 1rem 0;
-    }
-
+        position: fixed;
+        bottom: 0px;
+        width: 100%
+    }*/
 }
 
 /* ----------- iphone 6+ đến ipad ----------- */
