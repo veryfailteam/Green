@@ -125,13 +125,13 @@
                             </thead>
                             <tbody>
                                 {% for item in lst_treatmentdetail %}
-                                    {% if view_modal_mode == constant_key.VIEW_MODAL_MODE_TREATMENT or view_modal_mode == constant_key.VIEW_MODAL_MODE_APPOINTMENT and item.treatmentdetail_id in appointmentdetails %}
+                                    {% if view_modal_mode == constant_key.VIEW_MODAL_MODE_TREATMENT or view_modal_mode == constant_key.VIEW_MODAL_MODE_APPOINTMENT and item.treatmentdetail_id in selected_task %}
                                         <tr class="focus">
                                     {% else %}
                                         <tr class="fuzzy">
                                     {% endif %}
                                         <td>
-                                            {% if item.treatmentdetail_status == constant_key.TREATMENT_STATUS_DONE %}
+                                            {% if item.treatmentdetail_status == constant_key.TREATMENT_STATUS_DONE or view_modal_mode == constant_key.VIEW_MODAL_MODE_APPOINTMENT and item.treatmentdetail_id in selected_task%}
                                                 <label class="form-check-label" style="margin-bottom: 20px;">
                                                     <input type="checkbox" class="form-check-input" checked>
                                                 </label>
@@ -156,7 +156,7 @@
                 </div>
             </div>
         </div>
-        {% if view_modal_mode == constant_key.VIEW_MODAL_MODE_TREATMENT %}
+        {% if view_modal_mode == constant_key.VIEW_MODAL_MODE_TREATMENT or view_modal_mode == constant_key.VIEW_MODAL_MODE_APPOINTMENT and action == constant_key.FUNCTION_NAME_VIEW %}
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
