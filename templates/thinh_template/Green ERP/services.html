@@ -12,7 +12,7 @@
         <meta name="robots" content="index,nofollow">
         <meta name="googlebot" content="index,follow" />
         <meta name="canonical" content="">
-        <title>Cloud Clinic ERP v1.0.1 (2018) - Treasury : Liabilities</title>
+        <title>Cloud Clinic ERP v1.0.1 (2018) - Services</title>
         <!--/.Meta tag -->
         <!-- Chèn thêm một đoạn code dữ liệu có cấu trúc nữa ở đây -->
         <!--/.Structure data -->
@@ -23,7 +23,7 @@
     <body class="body">
         <!-- Xem như đã bỏ qua màn hình đăng nhập -->
         <div class="header">
-            <a href="index.html"><div class="brand"><i class="fa fa-angle-left" style="margin-right: 1rem"></i> Back |:: <strong>Treasury</strong> <img src="assets/img/changing-money-2.svg" class="img-sm-center" style="display: inline-block;"></div></a>
+            <a href="index.html"><div class="brand"><i class="fa fa-angle-left" style="margin-right: 1rem"></i> Back |:: <strong>Services</strong> <img src="assets/img/service-2.svg" class="img-sm-center" style="display: inline-block;"></div></a>
             <div class="user-panel">
                 <a href="http://gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
                 <a href="http://m.me" target="_blank"><i class="fa fa-telegram"></i></a>
@@ -39,25 +39,34 @@
             <div class="part left-part">
                 <ul class="nav nav-pills">
                     <li class="nav-item">
-                        <a href="treasury-receivables.html" class="nav-link">Receivables</a>
+                        <a href="#" class="nav-link active">Booking</a>
                     </li>
                     <li class="nav-item">
-                        <a href="treasury-liabilities.html" class="nav-link active">Liabilities</a>
+                        <a href="#" class="nav-link">Dental</a>
                     </li>
                     <li class="nav-item">
-                        <a href="treasury-account.html" class="nav-link">Account Management</a>
+                        <a href="#" class="nav-link">Dermatology</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#  " class="nav-link">Spa</a>
                     </li>
                 </ul>
             </div>
             <div class="part right-part">
-                <div class="filter show-revenue">
-                    <strong>Expenses:</strong><span>&nbsp;250,000 <sup>vnđ</sup></span>
+                <!-- <div class="filter show-revenue">
+                    <strong>Revenues:</strong><span>&nbsp;900,000 <sup>vnđ</sup></span>
+                </div> -->
+                <div class="filter">
+                    <select class="form-control custom-select">
+                        <option>Chi nhánh PVH</option>
+                        <option>Chi nhánh LVS</option>
+                    </select>
                 </div>
                 <div class="filter">
                     <select class="form-control custom-select">
                         <option>Today (default)</option>
-                        <option>This week</option>
-                        <option>This month</option>
+                        <option>Last week</option>
+                        <option>Last month</option>
                         <option>Previous 3 months</option>
                         <option>Previous 6 months</option>
                         <option>Previous 1 year</option>
@@ -69,7 +78,7 @@
         <div class="announcement">
             <div class="alert alert-warning alert-dismissable fade show" style="margin-bottom: 0px;">
                 <button type="button" class="close" data-dismiss="alert">&times;</button>
-                <strong>Hướng dẫn: </strong>Lưu giữ chứng từ cẩn thận vào các folder giấy để tìm lại khi quyết toán thuế
+                <strong>@Jos: </strong>Chứa tất cả lịch hẹn của phòng khám này
             </div>
         </div>
         <div class="clear"></div>
@@ -78,36 +87,46 @@
                 <table class="table table-responsive table-striped table-hover" style="border-bottom: 1px solid #dfdfdf">
                     <thead>
                        <tr>
-                            <th style="padding-left: 8px; min-width: 80px; max-width: 90px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Voucher #</th>
+                            <th style="padding-left: 8px; min-width: 80px; max-width: 90px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Customer name</th>
                             <th style="padding-left: 0px; min-width: 80px; max-width: 90px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Amount</th>
                             <th style="padding-left: 0px; min-width: 100px; max-width: 100px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Record date/time</th>
-                            <th style="padding-left: 0px; min-width: 80px; max-width: 90px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Attached </th>
-                            <th style="padding-left: 0px; min-width: 100px; max-width: 150px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Pay for</th>
-                            <th style="padding-left: 0px; min-width: 80px; max-width: 150px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Deduction Acc</th>
+                            <th style="padding-left: 0px; min-width: 80px; max-width: 90px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Invoice #</th>
+                            <th style="padding-left: 0px; min-width: 100px; max-width: 150px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Paid by</th>
+                            <th style="padding-left: 0px; min-width: 80px; max-width: 150px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Received Acc</th>
                             <th style="padding-left: 0px; min-width: 100px; max-width: 150px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Act by</th>
                             <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td style="padding-left: 8px; min-width: 80px; max-width: 90px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">PV-00001</td>
-                            <td style="padding-left: 0px; min-width: 80px; max-width: 90px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">50,000 <sup>vnđ</sup></td>
-                            <td style="padding-left: 0px; min-width: 100px; max-width: 100px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">08/11/2017 11:45</td>
-                            <td style="padding-left: 0px; min-width: 80px; max-width: 90px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><a href="#" title="link toi FOLDER image"> PE01737668</a></td>
-                            <td style="padding-left: 0px; min-width: 100px; max-width: 150px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Điện lực TPHCM</td>
-                            <td style="padding-left: 0px; min-width: 80px; max-width: 150px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Quỹ tiền mặt</td>
-                            <td style="padding-left: 0px; min-width: 100px; max-width: 150px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Xuân tiểu thơ</td>
-                            <td><a class="btn btn-outline-success" href="" style="width: 130px;" data-toggle="modal" data-target="#modal-liabilities" >Record payment</a></td>
+                            <td style="padding-left: 8px; min-width: 80px; max-width: 90px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Yến Vân</td>
+                            <td style="padding-left: 0px; min-width: 80px; max-width: 90px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">300,000 <sup>vnđ</sup></td>
+                            <td style="padding-left: 0px; min-width: 100px; max-width: 100px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">-</td>
+                            <td style="padding-left: 0px; min-width: 80px; max-width: 90px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><a href=""> INV-00001</a></td>
+                            <td style="padding-left: 0px; min-width: 100px; max-width: 150px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Ngô Bảo Châu</td>
+                            <td style="padding-left: 0px; min-width: 80px; max-width: 150px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">-</td>
+                            <td style="padding-left: 0px; min-width: 100px; max-width: 150px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">-</td>
+                            <td><a class="btn btn-outline-success" href="" style="width: 130px;" data-toggle="modal" data-target="#modal-receivables" >Record payment</a></td>
                         </tr>
                         <tr>
-                            <td style="padding-left: 8px; min-width: 80px; max-width: 90px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">PV-00002</td>
-                            <td style="padding-left: 0px; min-width: 80px; max-width: 90px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">200,000 <sup>vnđ</sup></td>
+                            <td style="padding-left: 8px; min-width: 80px; max-width: 90px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">RV-00002</td>
+                            <td style="padding-left: 0px; min-width: 80px; max-width: 90px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">300,000 <sup>vnđ</sup></td>
                             <td style="padding-left: 0px; min-width: 100px; max-width: 100px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">08/11/2017 11:45</td>
-                            <td style="padding-left: 0px; min-width: 80px; max-width: 90px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><a href="#" title="link toi FOLDER image">Hoá đơn bán lẻ</a></td>
-                            <td style="padding-left: 0px; min-width: 100px; max-width: 150px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Lab Ngọc Lan</td>
-                            <td style="padding-left: 0px; min-width: 80px; max-width: 150px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">ACB</td>
-                            <td style="padding-left: 0px; min-width: 100px; max-width: 150px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Hoài An</td>
-                            <td><a class="btn btn-outline-secondary disabled" href="" style="width: 130px;" data-toggle="modal" data-target="#modal-liabilities" >Ver 1.0.4</a></td>
+                            <td style="padding-left: 0px; min-width: 80px; max-width: 90px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><a href=""> INV-00002</a></td>
+                            <td style="padding-left: 0px; min-width: 100px; max-width: 150px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Ngô Bảo Châu</td>
+                            <td style="padding-left: 0px; min-width: 80px; max-width: 150px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Quỹ tiền mặt</td>
+                            <td style="padding-left: 0px; min-width: 100px; max-width: 150px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Em tên Chi</td>
+                            <td><a class="btn btn-outline-success" href="" style="width: 130px;" data-toggle="modal" data-target="#modal-receivables" >Record payment</a></td>
+                        </tr>
+                        <tr>
+                            <td style="padding-left: 8px; min-width: 80px; max-width: 90px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">RV-00001</td>
+                            <td style="padding-left: 0px; min-width: 80px; max-width: 90px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">300,000 <sup>vnđ</sup></td>
+                            <td style="padding-left: 0px; min-width: 100px; max-width: 100px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">08/11/2017 11:45</td>
+                            <td style="padding-left: 0px; min-width: 80px; max-width: 90px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><a href=""> INV-00001 *</a></td>
+                            <td style="padding-left: 0px; min-width: 100px; max-width: 150px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Ngô Bảo Châu</td>
+                            <td style="padding-left: 0px; min-width: 80px; max-width: 150px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Quỹ tiền mặt</td>
+                            <td style="padding-left: 0px; min-width: 100px; max-width: 150px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Em tên Chi</td>
+                            <td><a class="btn btn-outline-success" href="" style="width: 130px;" data-toggle="modal" data-target="#modal-receivables" >Record payment</a></td>
                         </tr>
                     </tbody>
                 </table>
@@ -130,7 +149,10 @@
             Support: <i class="fa fa-question-circle cl-blue" data-toggle="tooltip" data-placement="top" title="If you have trouble in operation / process / commerce or contract, please contact to 0902.886.862 (Henry - Thịnh). For technical problems such as 'bug, crash, machine stop working...' please contact 0906.858.628 (Jos - Hiến)"></i>  0902.886.862 - 0906.858.628
         </span>
     </div>
-    <div class="modal" id="modal-liabilities">
+        <!-- <div class="screen-lock">
+            <img src="assets/img/shield.svg" class="img-md-center">
+        </div> -->
+    <div class="modal" id="modal-receivables">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -149,26 +171,26 @@
                                 <div class="row">
                                     <div class="input-group mb-2 mb-sm-0">
                                         <div class="input-group-addon"><i class="fa fa-code"></i></div>
-                                        <input type="text" class="form-control" style="" placeholder="PV-0000" disabled>
+                                        <input type="text" class="form-control" style="" placeholder="RV-00005" disabled>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="input-group mb-2 mb-sm-0">
                                         <div class="input-group-addon"><i class="fa fa-money"></i></div>
-                                        <input type="text" class="form-control" placeholder="Amount ? * ">
+                                        <input type="text" class="form-control" placeholder="300,000                                                 (vnđ)" disabled>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="input-group mb-2 mb-sm-0">
                                         <div class="input-group-addon"><i class="fa fa-code"></i></div>
-                                        <input type="text" class="form-control" style="" placeholder="Điện lực HCM" disabled>
+                                        <input type="text" class="form-control" style="" placeholder="Ngô Bảo Châu" disabled>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="input-group mb-2 mb-sm-0">
                                         <div class="input-group-addon"><i class="fa fa-credit-card"></i></div>
                                         <select class="form-control custom-select" >
-                                        <option selected>Deduction account? *</option>
+                                        <option selected>Receiving account? *</option>
                                         <option value="1">Cash-00001 (Xuân tiểu thư)</option>
                                         <option value="2">Not permited</option>
                                         <option value="3">Chỉ được thu tiền vào TK mình qly (acc manager)</option>
@@ -176,27 +198,17 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6" id="modalbody-rc">
-                            <div class="row" style="background-color: #d1ecf1; border-left: 6px solid #0c5460; padding: 10px; color: #0c5460">
-                                <span>All the relatived invoices / notes</span>
-                            </div>
-                            <div class="row">
-                                <div class="input-group mb-2 mb-sm-0">
-                                    <div class="input-group-addon"><i class="fa fa-code"></i></div>
-                                    <input type="text" class="form-control" placeholder="Number of invoice *">
+                            <div class="col-lg-6 col-md-6 col-sm-6" id="modal-body-rc">
+                                <div class="row" style="background-color: #d1ecf1; border-left: 6px solid #0c5460; padding: 10px; color: #0c5460">
+                                    <span>E-invoice</span>
+                                </div>
+                                <div class="row">
+                                    <div class="input-group mb-2 mb-sm-0">
+                                        <div class="input-group-addon"><i class="fa fa-code"></i></div>
+                                        <input type="text" class="form-control" placeholder="Enter email to receive E-invoice">
+                                    </div>
                                 </div>
                             </div>
-                            <div class="row" style="background-color: #ffffcc; border-left: 6px solid #ffeb3b; padding: 10px;">
-                                <div class="form-group">
-                                    <label for="custom-file">Upload attached Invoice *</label>
-                                    <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
-                                    <small id="fileHelp" class="form-text text-muted">Bạn chỉ được tải lên tối đa 5 chứng từ</small>
-                                </div>
-                            </div>
-                            <div class="row" style="background-color: #ffffcc; border-left: 6px solid #ffeb3b; padding: 10px;">
-                                <small id="fileHelp" class="form-text text-muted">Chỗ này quản lý các file đã upload lên (xoá, replace,...)</small>
-                            </div>
-                        </div>
                         </div>
                         <div class="container" style="width: 90%">
                             <textarea class="form-control" placeholder="Write your note.."></textarea>
@@ -208,10 +220,7 @@
                     </div>
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-    <!-- <div class="screen-lock">
-        <img src="assets/img/shield.svg" class="img-md-center">
-    </div> -->
+        </div><!-- /.modal -->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

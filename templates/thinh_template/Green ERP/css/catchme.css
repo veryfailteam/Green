@@ -6,7 +6,7 @@ We are proud of making awesome product from Saigon - vietnam
 /* Color:
 Blue: 2196F3;
 naviblue: #094F71;
-Green: #2EBD59;
+Green: #2EBD59; - #8FBD9D;
 Orange: #F37338;
 Yellow: #FFDA44;
 Violet: #933EC5;
@@ -144,6 +144,12 @@ a.dropdown-item:hover{
     border-radius: 4px;
     margin: 0;
 }*/
+.btn{
+    background-color: #FFF;
+}
+.btn-outline{
+    background-color: #FFF;
+}
 .btn-blue{
     border: 1px solid #2196F3;
     background-color: #FFF;
@@ -166,12 +172,16 @@ a.dropdown-item:hover{
     color: #FFF !important;
     border-radius: 4px;
 }
-.btn:focus{
-}
-/*.input-group-addon{
+.input-group-addon{
     color: #FFF;
     background-color: #2EBD59;
-}*/
+}
+.custom-select{
+    border-color: #FFDA44;
+}
+.custom-select:focus{
+    border-color: #2EBD59;
+}
 a{
     color: #8FBD9D;
 }
