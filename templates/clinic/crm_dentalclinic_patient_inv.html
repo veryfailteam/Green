@@ -1,0 +1,110 @@
+<div class="row content-header">
+    <div class="col">
+        <strong style="min-width: 50px; max-width: 80px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Invoices (Chứng từ - HĐ)</strong>
+        <!-- <a class="btn btn-primary" data-toggle="modal" data-target="#omni-dental-patient-pre-modal-new" style="margin-left: 10px;">+ New</a> -->
+        <a class="btn btn-primary" data-toggle="tooltip" title="Sẽ mở trang để tạo phiếu thu mới cho ĐIỀU TRỊ NÀY" style="margin-left: 10px;">+ New</a>
+    </div>
+    <div class="col">
+        <select class="form-control custom-select" style="display: inline;">
+            <option>All the treatments (default)</option>
+            <option>This treatment</option>
+        </select>
+    </div>
+</div>
+<div class="row content-detail">
+    <table class="table table-responsive-md table-striped table-hover">
+        <thead>
+           <tr>
+                <th style="padding-left: 10px; padding-right: 0; white-space: nowrap; max-width: 100px; overflow: hidden; text-overflow: ellipsis;">Receipt vch #</th>
+                <th style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 100px; overflow: hidden; text-overflow: ellipsis;">Amount</th>
+                <th style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 100px; overflow: hidden; text-overflow: ellipsis;">Balanced</th>
+                <th style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 80px; overflow: hidden; text-overflow: ellipsis;">Treatment</th>
+                <th style="padding-left: 0; ">Doctor/Dentist's Notes</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="padding-left: 10px; padding-right: 0; white-space: nowrap; max-width: 100px; overflow: hidden; text-overflow: ellipsis;">RV-00001</td>
+                <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 100px; overflow: hidden; text-overflow: ellipsis;">300,000<sup>vnđ</sup></td>
+                <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 100px; overflow: hidden; text-overflow: ellipsis;">800,000<sup>vnđ</sup></td>
+                <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 80px; overflow: hidden; text-overflow: ellipsis;"><a href="">Chỉnh nha XXX<a></td>
+                <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 350px; overflow: hidden; text-overflow: ellipsis;">Ghi chú của riêng của Dr về thanh toán như các trường hợp ngoại lệ :))))</td>
+                <td><a class="btn btn-primary" style="width: 70px;" data-toggle="tooltip" title="Sẽ mở trang chỉnh sửa phiếu thu này">Edit</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<footer id="main-footer">
+    <a>Cloud Dental CRM v.1.0.3 (alpha 1) @ 2017. All rights reserved.</a>
+</footer>
+<div class="modal fade" id="omni-dental-patient-pre-modal-edit">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"><strong style="color: tomato;">Edit prescription for Mr. Nguyen Quoc Anh</strong></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <a class="navbar-brand" href="#" style="color: #2196f3"><strong>Nha khoa GTGT</strong></a><br/>
+                    <span>Adr. 128h Pham Van Hai, P.2, Tan Binh</span><br/>
+                    <a>Hotline: 0902.886.862 (Dr. Luong)</a><br/>
+                    <p>Created by: Dr. Ngoc Anh - 11/11/2017 00:15 pm</p>
+                </div>
+                <div class="table">
+                    <table class="table table-responsive-sm table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th style="padding-left: 8px; min-width: 160px; max-width: 200px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                                    Drug name
+                                </th>
+                                <th style="padding-left: 0px; min-width: 60px; max-width: 80px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Unit</th>
+                                <th style="padding-left: 0px; min-width: 50px; max-width: 60px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Unit/times</th>
+                                <th style="padding-left: 0px; min-width: 50px; max-width: 60px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Times/day</th>
+                                <th style="padding-left: 0px; min-width: 60px; max-width: 80px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Mode</th>
+                                <th style="padding-left: 0px; min-width: 60px; max-width: 80px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">At</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="padding-left: 8px; min-width: 160px; max-width: 200px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                                        <input type="text" class="form-control" style="" placeholder="Klamentin 1 (auto complete)"></td>
+                                <td style="padding-left: 0px; min-width: 60px; max-width: 80px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;""><input type="text" class="form-control" style="" placeholder="Viên"></td>
+                                <td style="padding-left: 0px; min-width: 50px; max-width: 60px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><input type="text" class="form-control" style="" placeholder="1"></td>
+                                <td style="padding-left: 0px; min-width: 50px; max-width: 60px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><input type="text" class="form-control" style="" placeholder="1"></td>
+                                <td style="padding-left: 0px; min-width: 60px; max-width: 80px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><input type="text" class="form-control" style="" placeholder="Uống"></td>
+                                <td style="padding-left: 0px; min-width: 60px; max-width: 80px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;""><input type="text" class="form-control" style="" placeholder="Sau khi ăn"></td>
+                                <td>
+                                    <button type="button" class="close" data-dismiss="" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                        <span class="sr-only">Close</span>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding-left: 8px; min-width: 160px; max-width: 200px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                                        <input type="text" class="form-control" style="" placeholder="(Tự thêm dòng mới khi điền dữ liệu)"></td>
+                                <td style="padding-left: 0px; min-width: 60px; max-width: 80px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;""><input type="text" class="form-control" style="" placeholder="-"></td>
+                                <td style="padding-left: 0px; min-width: 50px; max-width: 60px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><input type="text" class="form-control" style="" placeholder="-"></td>
+                                <td style="padding-left: 0px; min-width: 50px; max-width: 60px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><input type="text" class="form-control" style="" placeholder="-"></td>
+                                <td style="padding-left: 0px; min-width: 60px; max-width: 80px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><input type="text" class="form-control" style="" placeholder="-"></td>
+                                <td style="padding-left: 0px; min-width: 60px; max-width: 80px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;""><input type="text" class="form-control" style="" placeholder="-"></td>
+                                <td>
+                                    <button type="button" class="close" data-dismiss="" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                        <span class="sr-only">Close</span>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

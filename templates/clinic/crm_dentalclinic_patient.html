@@ -2,123 +2,76 @@
 
 
 {% block body %}
+{% csrf_token %}
 <div class="row main-content">
     <div class="col-lg-3 col-md-3 col-sm-3" id="left-pattern" style="background: #FFFFFF;">
         <div class="row"  >
-            <div class="row customer-filter">
-                <form style="width: 100%;">
-                    <div id="search-form" class="form-group input-group">
-                        <span class="input-group-addon"><i class="fa fa-search" aria-hidden="true"></i></span>
-                        <input id="filter-customer" type="text" class="form-control" placeholder="Search name or phone number">
-                    </div>
-                </form>
+            <div class="row sidebar-header">
+                <div class="col-lg-2 col-md-2 col-sm-2" id="patient-avatar">
+                    <img src="images/user_avatar.png" style="padding-top: 15px;">
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-8" style="margin-top: 10px; white-space: nowrap; max-width: 350px; overflow: hidden; text-overflow: ellipsis;">
+                   <span><strong style="margin-top: 15px;">{{treatment_info.customer_name}}</strong></span><br/>
+                   <p>{{treatment_info.treatment_name}}</p>
+                </div>
             </div>
-
-
-
-
+            <nav class="nav flex-column sidebar-detail" id="list-of-function">
+                <a class="nav-link active" name="Medical-History/" >
+                   <i class="fa fa-heart" aria-hidden="true" style="float: left;"></i>&nbsp;&nbsp;Prehistory & Medical History <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+                <a class="nav-link" name="Clinical/">
+                   <i class="fa fa-certificate" aria-hidden="true" style="float: left;"></i>&nbsp;&nbsp;&nbsp;Clinical Examination <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+                <a class="nav-link" name="Diagnosis/">
+                   <i class="fa fa-line-chart" aria-hidden="true" style="float: left;"></i>&nbsp;&nbsp;Dental Diagnosis<i class="fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+                <a class="nav-link" name="Treatment-Plan/">
+                   <i class="fa fa-puzzle-piece" aria-hidden="true" style="float: left;"></i>&nbsp;&nbsp;Treatment Plan<i class="fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+                <a class="nav-link" name="Invoices/">
+                   <i class="fa fa-file" aria-hidden="true" style="float: left;"></i>&nbsp;&nbsp;&nbsp;Invoices <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+                <a class="nav-link" name="Prescripion/">
+                   <i class="fa fa-medkit" aria-hidden="true" style="float: left;"></i>&nbsp;&nbsp;&nbsp;Prescription <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+                <a class="nav-link" name="Document&Data-Storage/">
+                   <i class="fa fa-database" aria-hidden="true" style="float: left;"></i>&nbsp;&nbsp;&nbsp;Document & Data storage <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+                <a class="nav-link" name="Appointment-Schedule/">
+                    <i class="fa fa-calendar" aria-hidden="true" style="float: left;"></i>&nbsp;&nbsp;&nbsp;Appointment Schedule <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+                <!-- Để cân nhắc làm sau vì trùng với các tab khác
+                <a class="nav-link" href="#">
+                   <i class="fa fa-info-circle" aria-hidden="true" style="float: left;"></i>&nbsp;&nbsp;&nbsp;Personal information <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </a> -->
+            </nav>
         </div>
     </div>
     <div class="col-lg-9 col-md-9 col-sm-9" style="border-left: 1px solid #dfdfdf;" id="patient-content">
-                <div class="row content-header">
-                    <div class="col-lg-5 col-md-5 col-sm-5">
-                        <b style="white-space: nowrap; max-width: 80px; overflow: hidden; text-overflow: ellipsis;">Patient Appointment Schedule</b>
-                    </div>
-                    <div class="col-lg-7 col-md-7 col-sm-7">
-                        <div class="row">
-                            <div class="col-lg-2 col-md-2 col-sm-2" style="padding-top: 2px;">
-                                <a class="btn btn-primary" data-toggle="modal" data-target="#omni-dental-patient-app-modal-new">+ New</a>
-                            </div>
-                            <div class="col-lg-10 col-md-10 col-sm-10">
-                                <select class="form-control custom-select" id="filter-treament" style="display: inline;">
-                                    <!-- <option>All treatment (default)</option> -->
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    <!-- <div class="col-lg-9 col-md-9 col-sm-9" id="right-pattern">
-        <div class="row schedule">
-            <div class="col-lg-5 col-md-5 col-sm-5" style="margin-top: 10px;">
-                <b>Patient Appointment Schedule</b>
-            </div>
-            <div class="col-lg-7 col-md-7 col-sm-7">
-                <div class="row" style="height: 35px;">
-                    <div class="col-lg-1 col-md-1">
-                        <a class="btn btn-primary" href="#">
-                            <i class="fa fa-plus" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                    <div class="col-lg-10 col-md-6">
-                        <select class="form-control" style="display: inline; height: 35px;">
-                            <option>This treatment (default)</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <div id="lstAppointment" class="row content-detail">
-        <!-- <div id="lstAppointment" class="row list"> -->
-
-
-
-                    <!-- {% for item in lstAppointment %}
-                        <tr>
-                            <td>{{item.date}} {{item.time}}</td>
-                            <td>{{item.assign_name}}</td>
-                            <td>{{item.name}}</td>
-                            <td>{{item.content}}</td>
-                            <td>{{item.note}}</td>
-                            <td>
-                                {% if item.status == constant_key.APPOINTMENT_STATUS_ACTIVE and user_role != constant_key.ROLE_RECEPTION %}
-                                    <a class="btn btn-primary" href="">Done</a>
-
-                                {% elif item.status == constant_key.APPOINTMENT_STATUS_ACTIVE %}
-                                    <a class="btn btn-primary" href="">View</a>
-                                {% elif item.status == constant_key.APPOINTMENT_STATUS_CHECKED and user_role == constant_key.ROLE_RECEPTION %}
-                                    <a class="btn btn-primary" href="">View</a>
-                                {% elif item.status == constant_key.APPOINTMENT_STATUS_CHECKED%}
-                                    <a class="btn btn-primary" href="">Active</a>
-                                    <a class="btn btn-primary" href="">View</a>
-                                {% elif item.status == constant_key.APPOINTMENT_STATUS_ON_WAY%}
-                                    <a class="btn btn-primary" href="">Checked</a>
-                                    <a class="btn btn-primary" href="">Edit</a>
-                                {% elif item.status == constant_key.APPOINTMENT_STATUS_BOOKED%}
-                                    <a class="btn btn-primary" href="">On way</a>
-                                    <a class="btn btn-primary" href="">Edit</a>
-                                {% elif item.status == constant_key.APPOINTMENT_STATUS_FOLLOW %}
-                                    <a class="btn btn-primary" href="">Confirm</a>
-                                {% elif item.status == constant_key.APPOINTMENT_STATUS_DONE %}
-                                    <a class="btn btn-primary" href="">View</a>
-                                {% endif %}
-                            </td>
-                        </tr>
-                    {% endfor %} -->
-                    <!-- <tr>
-                        <td>10/10/2017 12:00</td>
-                        <td>Ngoc Anh</td>
-                        <td>Implant X</td>
-                        <td>1.1,1.2,1.3</td>
-                        <td>-</td>
-                        <td>
-                            <a class="btn btn-light" href="">Done</a>
-                            <a class="btn btn-light" href="">Edit</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>10/10/2017 12:00</td>
-                        <td>Ngoc Anh</td>
-                        <td>Cleaning with flour</td>
-                        <td>1.1,1.2,1.3</td>
-                        <td>-</td>
-                        <td>
-                            <a class="btn btn-primary" href="">Onway</a>
-                            <a class="btn btn-primary" href="">Edit</a>
-                        </td>
-                    </tr> -->
+        <div id="left-content">
+            {% include 'clinic/crm_dentalclinic_patient_med.html' %}
         </div>
-        {% csrf_token %}
-
     </div>
 </div>
+<script type="text/javascript">
+
+    $("#list-of-function a").on("click", function(event){
+        $("#list-of-function").find(".active").removeClass("active");
+        $(this).addClass("active");
+
+        $.ajax({
+            type: 'POST',
+            url: this.name,
+            data: {
+                'csrfmiddlewaretoken': $('[name=csrfmiddlewaretoken]').val(),
+            },
+            dataType: 'html',
+            // async: false,
+            success: function (data) {
+                    $("#left-content").html(data)
+                }
+        });
+        event.preventDefault();
+    });
+</script>
 {% endblock %}
