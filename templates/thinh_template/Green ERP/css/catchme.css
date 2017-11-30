@@ -155,6 +155,52 @@ a.dropdown-item:hover{
     color: #555555;
     border-radius: 4px;
 }
+.btn-outline-danger{
+    border: 1px solid #FF457A;
+    background-color: #FFF;
+    color: #FF457A !important;
+}
+.btn-outline-danger:hover{
+    border: 1px solid #FFF;
+    background-color: #FF457A;
+    color: #FFF !important;
+    border-radius: 4px;
+}
+a{
+    color: #8FBD9D;
+}
+a:hover{
+    color: #2EBD59;
+    text-decoration: none;
+}
+.modal-dialog {
+    max-width: 900px !important;
+}
+#modal-body .row{
+    width: auto;
+    margin: 15px auto;
+}
+#modal-body-lc{
+    max-width: 350px;
+    min-width: 300px;
+    margin: 5px auto;
+}
+#modal-body-rc{
+    max-width: 350px;
+    min-width: 300px;
+    margin: 5px auto;
+}
+#row-in-modal .row{
+    max-width: 350px;
+    min-width: 300px;
+    margin: 5px auto;
+    float: right;
+    display: block;
+}
+#row-in-modal{
+    max-width: 360px;
+    float: right;
+}
 
 
 /* ----------- Supper large screen ----------- */
@@ -175,10 +221,10 @@ a.dropdown-item:hover{
         font-size: 14px;
     }
     .breadcrumb{
-        font-size: 14px;
+        font-size: 13px;
     }
     .breadcrumb a{
-        font-size: 14px;
+        font-size: 13px;
     }
     .All-the-main-class-is-here{
         padding: 12rem;
@@ -189,25 +235,25 @@ a.dropdown-item:hover{
 /* ----------- Popular desktop screen ----------- */
 @media screen and (min-width: 768px) and (max-width: 1365px){
     body{
-        font-size: 15px !important;
+        font-size: 14px !important;
         font-weight: 400 !important;
         background-color: #FFF;
         color: #555555;
     }
     a{
-        font-size: 15px;
+        font-size: 14px;
     }
     .btn{
-        font-size: 14px;
+        font-size: 13px;
     }
     .form-control{
-        font-size: 14px;
+        font-size: 13px;
     }
     .breadcrumb{
-        font-size: 13px;
+        font-size: 12px;
     }
     .breadcrumb a{
-        font-size: 13px;
+        font-size: 12px;
     }
     .body{
         position: relative;
@@ -281,10 +327,19 @@ a.dropdown-item:hover{
     }
     .second-menu{
         margin: auto;
-        padding: 0.8rem 4rem;
+        padding: 0 4rem;
         width: 100%;
-        text-align: center;
         display: inline-block;
+    }
+    .second-menu .part{
+        display: inline-block;
+        padding: 0.6rem 0;
+    }
+    .second-menu .filter{
+        display: inline-block;
+    }
+    .second-menu .right-part{
+        float: right;
     }
     .second-menu .nav-link{
         height: 30px;
@@ -303,13 +358,59 @@ a.dropdown-item:hover{
     .second-menu a.nav-link:hover{
         color: #2EBD59;
     }
-    .footer{
-        padding: 2rem 4rem;
-        margin: 5rem auto 0;
-        background-color: #2EBD59;
+    .announcement{
+        padding: 0.5rem 4rem;
+    }
+    .treasury-table{
+        padding: 0 4rem;
+    }
+    .table-list{
+        padding: auto;
+    }
+    .table-list thead{
+        background: #2EBD59;
         color: #FFF;
-        object-position: bottom;
-        width: 100%
+    }
+    .table-list td, th{
+        vertical-align: middle;
+    }
+    .table-list td, th{
+        height: 50px;
+        padding: 0;
+    }
+    .table-list th{
+        padding-right: 0px;
+    }
+    .table-list a{
+        color: #2EBD59;
+    }
+    .table-list a.btn.btn-primary{
+        background-color: #FFF;
+        border-color: #2EBD59;
+    }
+    .table-list a.btn.btn-primary:hover{
+        background-color: #2EBD59;
+        border-color: #2EBD59;
+    }
+    .split-page{
+        padding: 0.5rem 4rem;
+        float: right;
+    }
+    .split-page .page-link{
+        color: #2EBD59;
+    }
+    .split-page .page-item.active .page-link{
+        background-color: #FFDA44;
+        border-color: #FFDA44;
+        color: #555555;
+    }
+    .footer{
+        padding: 0.5rem 4rem;
+        margin: 10rem auto 0;
+        width: 100%;
+    }
+    .footer .line{
+        border: 1px solid #D6D6D6;
     }
 }
 
@@ -331,10 +432,10 @@ a.dropdown-item:hover{
         font-size: 13px;
     }
     .breadcrumb{
-        font-size: 13px;
+        font-size: 12px;
     }
     .breadcrumb a{
-        font-size: 13px;
+        font-size: 132px;
     }
 }
 
@@ -370,6 +471,7 @@ a.dropdown-item:hover{
     right: 20px;
     bottom: 20px;
     z-index: 50;
+    background-image: url(assets/img/shield.svg);
 }
 .messenger-button a{
     display: block;
@@ -377,12 +479,14 @@ a.dropdown-item:hover{
     height: 40px;
     border-radius: 50px;
     color: #FFF;
-    background: #2196F3 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAgCAYAAAAFQMh/AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAvNJREFUeNq8l1tIVFEUhv+5qE1UMmaCJF0JCSuxopewJ6mQLkQXuj1ED9FDBEV2sYeop4KS6CGRQCyzoLLAB0kki7CMLmZh053Sxiyh0DRzHHT3r84ZiPHMmT0y44LPc2b2dv977b3WXnscSilo2BSygqwkC0kWmWC29ZEO0kzqyG3SFXVEEbZhBjlN2pW++UkJmWU3tp3ofvJTjd66SRFx6AqnkpsqflZD0qIJe8lDFX97TNIjCSeROpU4u0OSrYRPqMTbyZCew0yneWY6JCGxNkQWkxan+cWRMRAVc5Gj8iIez+bzJRmPsbEAyRWP18cq2vRRr19nD9AbGPF1CtkgwstjEb1wH9hbBVQ2Re7zJ2j0e/Ae8FhvYIEI5+iKVj8DLjYCkzxA2V2g6tHIPvU+YFsZD+tfXEqGkdtpOdRcN/+k64g2vAbO1XOd6IGLg43js7TBeN+8hGH6BajgpO69AQoXAMWrGECRh5sswRW1PDW3AYeucwkH8W+0ZLfhydAwP/JzzlTAx/r0g3VqWTZwaiMn6LYfUxZi0K7DBxa44mqgu98Q2MeIyJgIDAQNb8VaOLF+jpI3HTi+LrqoaIrH/DdMs2rt6AZ2VRhe7VgKrMmjt8zEd9+5Atfo4W9jyWUSmanA2a3GU8P8IlzDl9VWqXDsFpCdCezMB7xhCff2G3CQ4l29DBJeCUq2AHMytJOjVs7N3eEHal9AqRtPlWrtsD94fV+V2nSepedTzGf2HvGYPqGVpIWmE+SJmuTSm7rkrCe2w7ZHUljCo5Nc/r9FV1TME/sJf0XCJ1SdskyvUxN8TjMiMJ+0hc4VPzkwBgXisIha3TJLE3gJKLe7c7lIVQJEr5pXK9tbZn6cReVe7gzXsaodKXHaz1dkrRk7w+GN7jgHj6TIE1JOKkl/pI66wgPkDPlMFpGZxGu2sfKinTwnjVIz9KY4co8LwvaoluRG+Y0VM1Z7HKrfcrPaTgrJi3gntDuC8CVSpPVzc5T2V4ABAMltT/3nScyOAAAAAElFTkSuQmCC+thietkewebsitelienhe0902886862) center no-repeat;
+    background-image: url(assets/img/shield.svg);
+    background-repeat: no-repeat;
     background-size: 20px 20px;
     -webkit-animation: copy-di-ban-oi 2000ms infinite;
     -moz-animation: roi-khi-lam-du-an-lon 2000ms infinite;
     -o-animation: nho-lien-he-team-minh 2000ms infinite;
     animation: lam-chung 2000ms infinite;
+    z-index: 1000;
 }
 
 @-webkit-keyframes copy-di-ban-oi{
