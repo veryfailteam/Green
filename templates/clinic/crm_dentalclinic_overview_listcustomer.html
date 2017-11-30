@@ -44,6 +44,15 @@
             </span>
         </a>
     {% endfor %}
+    {% for customer in all_customer%}
+        <a class="nav-link" href="#"  name="{{customer.customer_id}}">
+            <input type="hidden" value="">
+            <span style="float: left;">
+                <b>{{customer.customer_name}}</b><br/>
+                <p style="margin-bottom: 0;">{{customer.customer_phone_number}}</p>
+            </span>
+        </a>
+    {% endfor %}
     <!-- <a class="nav-link" href="#">
         <span style="float: left;">
             <b>Ms. Cao Kỳ Duyên</b><br/>
@@ -66,7 +75,7 @@
              .attr("value", $newkey).text("This treatment"));
     });
 
-    $("#appointment-list a").on("click", function(){
+    $("#appointment-list a").on("click", function(event){
         $("#appointment-list").find(".active").removeClass("active");
         $(this).addClass("active");
 
@@ -80,7 +89,7 @@
 
         $.ajax({
             type: 'POST',
-            url: 'get_appointment_schedule/',
+            url: 'get-appointment-schedule/',
             data: {
                 'csrfmiddlewaretoken': $('[name=csrfmiddlewaretoken]').val(),
                 'customer_id': this.name
@@ -91,6 +100,6 @@
                     document.getElementById("lstAppointment").innerHTML = data
                 }
         });
-
+        event.preventDefault();
     });
 </script>

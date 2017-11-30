@@ -23,17 +23,25 @@ class User(models.Model):
 class Customer(models.Model):
     brand_id = models.IntegerField(null=True)
     customer_id = models.AutoField(primary_key=True)
+    customer_last_name = models.CharField(max_length=32,null=True)
     customer_name = models.CharField(max_length=32,null=True)
     customer_sex = models.CharField(max_length=32,null=True)
     customer_dob = models.CharField(max_length=10,null=True)
     customer_job = models.CharField(max_length=500,null=True)
     customer_company = models.CharField(max_length=500,null=True)
     customer_phone_number = models.CharField(max_length=11,null=True)
+    customer_additional_phone_number = models.CharField(max_length=11,null=True)
     customer_email = models.CharField(max_length=200,null=True)
     customer_address = models.TextField(null=True)
     customer_source = models.CharField(max_length=500,null=True)
     customer_fingerprint = models.TextField(max_length=500,null=True)
-
+    customer_type = models.CharField(max_length=2,null=True)
+    customer_note = models.TextField(max_length=500,null=True)
+    customer_create_date = models.CharField(max_length=10,null=True)
+    customer_create_by = models.CharField(max_length=8,null=True)
+    customer_update_date = models.CharField(max_length=10,null=True)
+    customer_update_by = models.CharField(max_length=8,null=True)
+    customer_delete_flag = models.CharField(max_length=1,null=True)
 #   medical_biography = models.TextField(max_length=500,null=True)#sẽ bỏ cái này
 #   def __str__(self):
 #    return self.customer_name

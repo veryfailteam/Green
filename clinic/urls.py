@@ -20,7 +20,10 @@ urlpatterns = [
 
 
 # For AJAX
-    , url(r'^get_appointment_schedule',views.get_appointment_schedule, name='get_appointment_schedule')
+    , url(r'^get-appointment-schedule',views.get_appointment_schedule, name='get-appointment-schedule')
     , url(r'^ajax-get-appointment-modal',views.ajax_get_appointment_modal, name='ajax-get-appointment-modal')
+    , url(r'^ajax-change-status-appointment',views.ajax_change_status_appointment, name='ajax-change-status-appointment')
 
+# For Function
+    , url(r'^create-new-customer',views.create_new_customer, name='create-new-customer')
 ]
