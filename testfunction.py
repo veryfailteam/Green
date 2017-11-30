@@ -157,6 +157,39 @@ sql += "           clinic_appointment.appointment_id = '{}'        "
 # sql += "            clinic_customer     "
 
 
+sql  = "        SELECT      "
+sql += "              customer_name     "
+sql += "            , treatment_name        "
+sql += "            , treatment_content         "
+sql += "            , treatment_total_payment       "
+sql += "            , treatment_payment_status      "
+sql += "            , treatment_status      "
+sql += "            , treatment_create_date         "
+sql += "            , treatment_create_by       "
+sql += "            , treatment_update_date         "
+sql += "            , treatment_update_by       "
+sql += "        FROM        "
+sql += "            clinic_treatment        "
+sql += "        INNER JOIN      "
+sql += "                clinic_customer     "
+sql += "            ON      "
+sql += "                clinic_customer.customer_id = clinic_treatment.customer_id      "
+sql += "        WHERE       "
+sql += "            clinic_treatment.treatment_id = '{}'        "
+
+
+customer_id
+treatment_id
+treatment_name
+treatment_content
+treatment_total_payment
+treatment_payment_status
+treatment_status
+treatment_create_date
+treatment_create_by
+treatment_update_date
+treatment_update_by
+treatment_delete_flag
 
 
 

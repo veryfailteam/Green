@@ -15,6 +15,7 @@ LOGGER = logging.getLogger("ERP")
 CURRENT_DATE = datetime.date.today().strftime('%d-%m-%Y')
 
 
+# Render view
 def crm_dentalclinic_overview(request):
     if request.session.has_key('user_name'):
         user_id = request.session['user_id']
@@ -43,6 +44,18 @@ def crm_dentalclinic_overview(request):
     else:
         return HttpResponseRedirect('/login/')
     # return render(request,"clinic/crm_dentalclinic_overview.html")
+
+def crm_dentalclinic_patient(request):
+    treatment_id = request.GET['treatment_id']
+    treatment_info = sql_select_treatment(treatment_id)
+    context = {
+          'user_name' : request.session['user_name']
+        , 'user_role' : request.session['user_role']
+        , 'treatment_info': treatment_info[0]
+    }
+    return render(request,"clinic/crm_dentalclinic_patient.html",context)
+
+
 
 def crm_contactcenter_overview(request):
     return render(request,"clinic/crm_contactcenter_overview.html")
@@ -218,6 +231,29 @@ def ajax_change_status_appointment(request):
     return render(request,"error.html")
 
 
+def ajax_crm_dentalclinic_patient_med(request):
+    return render(request,"clinic/crm_dentalclinic_patient_med.html")
+
+def ajax_crm_dentalclinic_patient_cli(request):
+    return render(request,"clinic/crm_dentalclinic_patient_cli.html")
+
+def ajax_crm_dentalclinic_patient_dia(request):
+    return render(request,"clinic/crm_dentalclinic_patient_dia.html")
+
+def ajax_crm_dentalclinic_patient_tre(request):
+    return render(request,"clinic/crm_dentalclinic_patient_tre.html")
+
+def ajax_crm_dentalclinic_patient_inv(request):
+    return render(request,"clinic/crm_dentalclinic_patient_inv.html")
+
+def ajax_crm_dentalclinic_patient_pre(request):
+    return render(request,"clinic/crm_dentalclinic_patient_pre.html")
+
+def ajax_crm_dentalclinic_patient_doc(request):
+    return render(request,"clinic/crm_dentalclinic_patient_doc.html")
+
+def ajax_crm_dentalclinic_patient_app(request):
+    return render(request,"clinic/crm_dentalclinic_patient_app.html")
 
 
 # sql query
@@ -524,3 +560,28 @@ def sql_insert_new_customer(brand_id, customer_last_name = '', customer_name = '
     with connection.cursor() as cursor:
         cursor.execute(sql)
         return cursor
+
+def sql_select_treatment(treatment_id):
+    sql  = "        SELECT      "
+    sql += "              customer_name     "
+    sql += "            , treatment_name        "
+    sql += "            , treatment_content         "
+    sql += "            , treatment_total_payment       "
+    sql += "            , treatment_payment_status      "
+    sql += "            , treatment_status      "
+    sql += "            , treatment_create_date         "
+    sql += "            , treatment_create_by       "
+    sql += "            , treatment_update_date         "
+    sql += "            , treatment_update_by       "
+    sql += "        FROM        "
+    sql += "            clinic_treatment        "
+    sql += "        INNER JOIN      "
+    sql += "                clinic_customer     "
+    sql += "            ON      "
+    sql += "                clinic_customer.customer_id = clinic_treatment.customer_id      "
+    sql += "        WHERE       "
+    sql += "            clinic_treatment.treatment_id = '{}'        ".format(treatment_id)
+    with connection.cursor() as cursor:
+        cursor.execute(sql)
+        treatment_info = namedtuplefetchall(cursor)
+        return treatment_info
