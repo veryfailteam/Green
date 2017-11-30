@@ -15,7 +15,7 @@
                 <td>{{item.date}} {{item.time}}</td>
                 <td>{{item.assign_name}}</td>
                 <td>
-                    {{item.name}}
+                    <a href="{% url 'clinic:CRM-DentalClinic-Patient' %}">{{item.name}}</a>
                 </td>
                 <td>{{item.content}}</td>
                 <td>{{item.note}}</td>
