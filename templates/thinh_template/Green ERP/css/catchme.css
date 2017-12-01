@@ -1,12 +1,14 @@
 /*
 This CSS for internal projects of rocketagegroup.com
 Feel Free to use it
-We are proud of making awesome product from Saigon - vietnam
+We are proud of making global awesome product from Saigon (Peace of South East Asia) - VietNam
 */
-/* Color:
+
+/* ----------- Quick color ----------- */
+/*Color:
 Blue: 2196F3;
 naviblue: #094F71;
-Green: #2EBD59; - #8FBD9D;
+Green: #2EBD59; - #69BF83;
 Orange: #F37338;
 Yellow: #FFDA44;
 Violet: #933EC5;
@@ -14,8 +16,9 @@ Red: #D80027;
 Secondary: #868E96;
 Line: #D6D6D6;
 Light-grey: #364A4C; -hover: #A9CEDD;
-Light-black: #0C0704;
-/*Quick makeup*/
+Light-black: #0C0704;*/
+
+/* ----------- Quick make up ----------- */
 .subtext{
     color: #555555;
     margin: auto;
@@ -131,7 +134,43 @@ Light-black: #0C0704;
 .dib{
     display: inline-block;
 }
-/* Your style */
+/* ----------- Ellipsis----------- */
+.ell{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.ell-max150{
+    max-width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.ell-max200{
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.ell-max250{
+    max-width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.ell-0{
+    padding-left: 0px !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.ell-8{
+    padding-left: 8px !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/* ----------- Your style ----------- */
 a.dropdown-item:hover{
     color: #FFF;
     background-color: #2196F3;
@@ -150,25 +189,25 @@ a.dropdown-item:hover{
 .btn-outline{
     background-color: #FFF;
 }
-.btn-blue{
+.btn-outline-blue{
     border: 1px solid #2196F3;
     background-color: #FFF;
     color: #2196F3;
 }
-.btn-blue:hover{
+.btn-outline-blue:hover{
     border: 1px solid #FFF;
-    background-color: #FFDA44;
-    color: #555555;
+    background-color: #2196F3;
+    color: #FFF;
     border-radius: 4px;
 }
 .btn-outline-danger{
-    border: 1px solid #FF457A;
+    border: 1px solid #D80027;
     background-color: #FFF;
-    color: #FF457A !important;
+    color: #D80027 !important;
 }
 .btn-outline-danger:hover{
     border: 1px solid #FFF;
-    background-color: #FF457A;
+    background-color: #D80027;
     color: #FFF !important;
     border-radius: 4px;
 }
@@ -183,12 +222,13 @@ a.dropdown-item:hover{
     border-color: #2EBD59;
 }
 a{
-    color: #8FBD9D;
+    color: #69BF83;
 }
 a:hover{
     color: #2EBD59;
     text-decoration: none;
 }
+/* ----------- modal */
 .modal-dialog {
     max-width: 900px !important;
 }
@@ -217,6 +257,154 @@ a:hover{
     max-width: 360px;
     float: right;
 }
+.body{
+        position: relative;
+    }
+/* ----------- @header */
+    .header{
+        height: 50px;
+        background-color: #2EBD59;
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0;
+        z-index: 1;
+    }
+    .header .user-panel a{
+        color: #FFF;
+    }
+    .header .user-panel i{
+        margin: 0 0.4rem;
+    }
+/* ----------- @second-menu at treatment*/
+    .second-menu .treatment-name{
+        background-color: #69BF83;
+        border-radius: 4px;
+        padding: .2rem .4rem;
+        color: #FFF !important;
+        vertical-align: middle;
+
+    }
+/* ----------- @second-menu */
+    .second-menu .part{
+        display: inline-block;
+        padding: 0.6rem 0;
+    }
+    .second-menu .filter{
+        display: inline-block;
+    }
+    .second-menu .right-part{
+        float: right;
+    }
+    .second-menu .nav-link{
+        height: 30px;
+        padding: 0.25rem 0.5rem;
+    }
+    .second-menu a.nav-link.active{
+        background-color: #FFDA44;
+        color: #555555;
+    }
+    .second-menu a.nav-link.active:hover{
+        color: #555555;
+    }
+    .second-menu a.nav-link{
+        color: #69BF83;
+    }
+    .second-menu a.nav-link:hover{
+        color: #2EBD59;
+    }
+/* ----------- @feature */
+    .feature .part:hover{
+        border: 1px solid #2EBD59;
+        box-shadow: 0 0.8rem 1rem #FF457A;
+        transform: translateY(-0.3333rem);
+    }
+    .nav-item{
+        margin: auto;
+    }
+    .feature .go{
+        width: 101%;
+        height: 40px;
+        border: 1px solid #2EBD59;
+        color: #2EBD59;
+        position: absolute;
+        bottom: 0;
+        padding: 0.5rem 0;
+        margin: -1px;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
+    .feature i{
+        color: #FFF;
+    }
+    .feature .go:hover{
+        background-color: #2EBD59;
+        color: #FFF;
+    }
+    .feature i:hover{
+        color: #FFF;
+    }
+/* ----------- @treasury-table or table */
+    .table-list{
+        padding: auto;
+    }
+    .table-list thead{
+        background: #2EBD59;
+        color: #FFF;
+    }
+    .table-list td, th{
+        vertical-align: middle;
+    }
+    .table-list td, th{
+        height: 50px;
+        padding: 0;
+    }
+    .table-list th{
+        padding-right: 0px;
+    }
+    .table-list span{
+        border: 1px solid #2EBD59;
+        background-color: #FFF;
+        padding: 0.4rem 1rem;
+        border-radius: 4px;
+    }
+    .table-list a{
+        color: #2EBD59;
+    }
+    .table-list a.btn.b{
+        background-color: #FFF;
+        border-color: #2EBD59;
+    }
+    .table-list a.btn.b:hover{
+        background-color: #2EBD59;
+        border-color: #2EBD59;
+    }
+/* ----------- @split-page */
+    .split-page .page-link{
+        color: #2EBD59;
+    }
+    .split-page .page-item.active .page-link{
+        background-color: #FFDA44;
+        border-color: #FFDA44;
+        color: #555555;
+    }
+/* ----------- @footer */
+    .line{
+        border: 1px solid #D6D6D6;
+        margin-top: 3rem;
+    }
+/* ----------- @welcome-mess */
+    .welcome-mess{
+        padding: 0.5rem 3rem;
+        text-align: center;
+    }
+/* ----------- @treatment-plan-inword */
+    .treatment-plan-inword{
+        padding: 0rem 0.5rem;
+    }
+/* ----------- @Name of main class */
+/* ----------- @Name of main class */
+/* ----------- @Name of main class */
+/* ----------- @Name of main class */
 
 /* ----------- mHD screen ----------- */
 @media screen and (min-width: 1600px){
@@ -241,31 +429,14 @@ a:hover{
     .breadcrumb a{
         font-size: 13px;
     }
-    .body{
-        position: relative;
-    }
-    .header{
-        height: 50px;
-        background-color: #2EBD59;
-        position: sticky;
-        position: -webkit-sticky;
-        top: 0;
-        z-index: 1;
-    }
     .header .brand{
-        padding: 0.9rem 15rem;
+        padding: 0.9rem .6rem 0 15rem;
         color: #FFF;
         display: inline-block;
     }
     .header .user-panel{
         float: right;
-        padding: 0.6rem 15rem;
-    }
-    .header .user-panel a{
-        color: #FFF;
-    }
-    .header .user-panel i{
-        margin: 0 0.4rem;
+        padding: 0.6rem 15rem 0 0.6rem;
     }
     .feature{
         margin: auto;
@@ -284,65 +455,11 @@ a:hover{
         padding-top: 0.5rem;
         border-radius: 4px;
     }
-    .feature .part:hover{
-        border: 1px solid #2EBD59;
-        box-shadow: 0 0.8rem 1rem #FF457A;
-        transform: translateY(-0.3333rem);
-    }
-    .feature .go{
-        width: 101%;
-        height: 40px;
-        border: 1px solid #2EBD59;
-        color: #2EBD59;
-        position: absolute;
-        bottom: 0;
-        padding: 0.5rem 0;
-        margin: -1px;
-        border-bottom-left-radius: 4px;
-        border-bottom-right-radius: 4px;
-    }
-    .feature i{
-        color: #FFF;
-    }
-    .feature .go:hover{
-        background-color: #2EBD59;
-        color: #FFF;
-    }
-    .feature i:hover{
-        color: #FFF;
-    }
     .second-menu{
         margin: auto;
         padding: 0 15rem;
         width: 100%;
         display: inline-block;
-    }
-    .second-menu .part{
-        display: inline-block;
-        padding: 0.6rem 0;
-    }
-    .second-menu .filter{
-        display: inline-block;
-    }
-    .second-menu .right-part{
-        float: right;
-    }
-    .second-menu .nav-link{
-        height: 30px;
-        padding: 0.25rem 1rem;
-    }
-    .second-menu a.nav-link.active{
-        background-color: #FFDA44;
-        color: #555555;
-    }
-    .second-menu a.nav-link.active:hover{
-        color: #555555;
-    }
-    .second-menu a.nav-link{
-        color: #8FBD9D;
-    }
-    .second-menu a.nav-link:hover{
-        color: #2EBD59;
     }
     .announcement{
         padding: 0.5rem 15rem;
@@ -350,57 +467,18 @@ a:hover{
     .treasury-table{
         padding: 0 15rem;
     }
-    .table-list{
-        padding: auto;
-    }
-    .table-list thead{
-        background: #2EBD59;
-        color: #FFF;
-    }
-    .table-list td, th{
-        vertical-align: middle;
-    }
-    .table-list td, th{
-        height: 50px;
-        padding: 0;
-    }
-    .table-list th{
-        padding-right: 0px;
-    }
-    .table-list a{
-        color: #2EBD59;
-    }
-    .table-list a.btn.b{
-        background-color: #FFF;
-        border-color: #2EBD59;
-    }
-    .table-list a.btn.b:hover{
-        background-color: #2EBD59;
-        border-color: #2EBD59;
-    }
     .split-page{
         padding: 0.5rem 15rem;
         float: right;
-    }
-    .split-page .page-link{
-        color: #2EBD59;
-    }
-    .split-page .page-item.active .page-link{
-        background-color: #FFDA44;
-        border-color: #FFDA44;
-        color: #555555;
     }
     .footer{
         padding: 0.5rem 15rem;
         margin: 10rem auto 0;
         width: 100%;
     }
-    .footer .line{
-        border: 1px solid #D6D6D6;
-    }
 }
 
-/* ----------- Supper large screen ----------- */
+/* ----------- large screen ----------- */
 @media screen and (min-width: 1366px) and (max-width: 1599px){
     body{
         font-size: 15px !important;
@@ -423,31 +501,14 @@ a:hover{
     .breadcrumb a{
         font-size: 13px;
     }
-    .body{
-        position: relative;
-    }
-    .header{
-        height: 50px;
-        background-color: #2EBD59;
-        position: sticky;
-        position: -webkit-sticky;
-        top: 0;
-        z-index: 1;
-    }
     .header .brand{
-        padding: 0.9rem 7rem;
+        padding: 0.9rem .6rem 0 7rem;
         color: #FFF;
         display: inline-block;
     }
     .header .user-panel{
         float: right;
-        padding: 0.6rem 7rem;
-    }
-    .header .user-panel a{
-        color: #FFF;
-    }
-    .header .user-panel i{
-        margin: 0 0.4rem;
+        padding: 0.6rem 7rem 0 0.6rem;
     }
     .feature{
         margin: auto;
@@ -466,33 +527,6 @@ a:hover{
         padding-top: 0.5rem;
         border-radius: 4px;
     }
-    .feature .part:hover{
-        border: 1px solid #2EBD59;
-        box-shadow: 0 0.8rem 1rem #FF457A;
-        transform: translateY(-0.3333rem);
-    }
-    .feature .go{
-        width: 101%;
-        height: 40px;
-        border: 1px solid #2EBD59;
-        color: #2EBD59;
-        position: absolute;
-        bottom: 0;
-        padding: 0.5rem 0;
-        margin: -1px;
-        border-bottom-left-radius: 4px;
-        border-bottom-right-radius: 4px;
-    }
-    .feature i{
-        color: #FFF;
-    }
-    .feature .go:hover{
-        background-color: #2EBD59;
-        color: #FFF;
-    }
-    .feature i:hover{
-        color: #FFF;
-    }
     .second-menu{
         margin: auto;
         padding: 0 7rem;
@@ -503,82 +537,20 @@ a:hover{
         display: inline-block;
         padding: 0.6rem 0;
     }
-    .second-menu .filter{
-        display: inline-block;
-    }
-    .second-menu .right-part{
-        float: right;
-    }
-    .second-menu .nav-link{
-        height: 30px;
-        padding: 0.25rem 1rem;
-    }
-    .second-menu a.nav-link.active{
-        background-color: #FFDA44;
-        color: #555555;
-    }
-    .second-menu a.nav-link.active:hover{
-        color: #555555;
-    }
-    .second-menu a.nav-link{
-        color: #8FBD9D;
-    }
-    .second-menu a.nav-link:hover{
-        color: #2EBD59;
-    }
     .announcement{
         padding: 0.5rem 7rem;
     }
     .treasury-table{
         padding: 0 7rem;
     }
-    .table-list{
-        padding: auto;
-    }
-    .table-list thead{
-        background: #2EBD59;
-        color: #FFF;
-    }
-    .table-list td, th{
-        vertical-align: middle;
-    }
-    .table-list td, th{
-        height: 50px;
-        padding: 0;
-    }
-    .table-list th{
-        padding-right: 0px;
-    }
-    .table-list a{
-        color: #2EBD59;
-    }
-    .table-list a.btn.b{
-        background-color: #FFF;
-        border-color: #2EBD59;
-    }
-    .table-list a.btn.b:hover{
-        background-color: #2EBD59;
-        border-color: #2EBD59;
-    }
     .split-page{
         padding: 0.5rem 7rem;
         float: right;
-    }
-    .split-page .page-link{
-        color: #2EBD59;
-    }
-    .split-page .page-item.active .page-link{
-        background-color: #FFDA44;
-        border-color: #FFDA44;
-        color: #555555;
     }
     .footer{
         padding: 0.5rem 7rem;
         margin: 10rem auto 0;
         width: 100%;
-    }
-    .footer .line{
-        border: 1px solid #D6D6D6;
     }
 }
 
@@ -605,31 +577,14 @@ a:hover{
     .breadcrumb a{
         font-size: 12px;
     }
-    .body{
-        position: relative;
-    }
-    .header{
-        height: 50px;
-        background-color: #2EBD59;
-        position: sticky;
-        position: -webkit-sticky;
-        top: 0;
-        z-index: 1;
-    }
     .header .brand{
-        padding: 0.9rem 3rem;
+        padding: 0.9rem .6rem 0 3rem;
         color: #FFF;
         display: inline-block;
     }
     .header .user-panel{
         float: right;
-        padding: 0.6rem 3rem;
-    }
-    .header .user-panel a{
-        color: #FFF;
-    }
-    .header .user-panel i{
-        margin: 0 0.4rem;
+        padding: 0.6rem 3rem 0 0.6rem;
     }
     .feature{
         margin: auto;
@@ -648,65 +603,11 @@ a:hover{
         padding-top: 0.5rem;
         border-radius: 4px;
     }
-    .feature .part:hover{
-        border: 1px solid #2EBD59;
-        box-shadow: 0 0.8rem 1rem #FF457A;
-        transform: translateY(-0.3333rem);
-    }
-    .feature .go{
-        width: 101%;
-        height: 40px;
-        border: 1px solid #2EBD59;
-        color: #2EBD59;
-        position: absolute;
-        bottom: 0;
-        padding: 0.5rem 0;
-        margin: -1px;
-        border-bottom-left-radius: 4px;
-        border-bottom-right-radius: 4px;
-    }
-    .feature i{
-        color: #FFF;
-    }
-    .feature .go:hover{
-        background-color: #2EBD59;
-        color: #FFF;
-    }
-    .feature i:hover{
-        color: #FFF;
-    }
     .second-menu{
         margin: auto;
         padding: 0 3rem;
         width: 100%;
         display: inline-block;
-    }
-    .second-menu .part{
-        display: inline-block;
-        padding: 0.6rem 0;
-    }
-    .second-menu .filter{
-        display: inline-block;
-    }
-    .second-menu .right-part{
-        float: right;
-    }
-    .second-menu .nav-link{
-        height: 30px;
-        padding: 0.25rem 1rem;
-    }
-    .second-menu a.nav-link.active{
-        background-color: #FFDA44;
-        color: #555555;
-    }
-    .second-menu a.nav-link.active:hover{
-        color: #555555;
-    }
-    .second-menu a.nav-link{
-        color: #8FBD9D;
-    }
-    .second-menu a.nav-link:hover{
-        color: #2EBD59;
     }
     .announcement{
         padding: 0.5rem 3rem;
@@ -714,53 +615,14 @@ a:hover{
     .treasury-table{
         padding: 0 3rem;
     }
-    .table-list{
-        padding: auto;
-    }
-    .table-list thead{
-        background: #2EBD59;
-        color: #FFF;
-    }
-    .table-list td, th{
-        vertical-align: middle;
-    }
-    .table-list td, th{
-        height: 50px;
-        padding: 0;
-    }
-    .table-list th{
-        padding-right: 0px;
-    }
-    .table-list a{
-        color: #2EBD59;
-    }
-    .table-list a.btn.b{
-        background-color: #FFF;
-        border-color: #2EBD59;
-    }
-    .table-list a.btn.b:hover{
-        background-color: #2EBD59;
-        border-color: #2EBD59;
-    }
     .split-page{
         padding: 0.5rem 3rem;
         float: right;
-    }
-    .split-page .page-link{
-        color: #2EBD59;
-    }
-    .split-page .page-item.active .page-link{
-        background-color: #FFDA44;
-        border-color: #FFDA44;
-        color: #555555;
     }
     .footer{
         padding: 0.5rem 3rem;
         margin: 10rem auto 0;
         width: 100%;
-    }
-    .footer .line{
-        border: 1px solid #D6D6D6;
     }
 }
 
@@ -787,31 +649,14 @@ a:hover{
     .breadcrumb a{
         font-size: 11px;
     }
-    .body{
-        position: relative;
-    }
-    .header{
-        height: 50px;
-        background-color: #2EBD59;
-        position: sticky;
-        position: -webkit-sticky;
-        top: 0;
-        z-index: 1;
-    }
     .header .brand{
-        padding: 0.9rem 1.2rem;
+        padding: 0.9rem .6rem 0 1.2rem;
         color: #FFF;
         display: inline-block;
     }
     .header .user-panel{
         float: right;
-        padding: 0.6rem 1.2rem;
-    }
-    .header .user-panel a{
-        color: #FFF;
-    }
-    .header .user-panel i{
-        margin: 0 0.4rem;
+        padding: 0.6rem 1.2rem 0 0.6rem;
     }
     .feature{
         margin: auto;
@@ -820,7 +665,7 @@ a:hover{
         text-align: center;
     }
     .feature .part{
-        max-width: 22%;
+        max-width: 48%;
         width: 320px;
         height: 150px;
         float: left;
@@ -830,65 +675,11 @@ a:hover{
         padding-top: 0.5rem;
         border-radius: 4px;
     }
-    .feature .part:hover{
-        border: 1px solid #2EBD59;
-        box-shadow: 0 0.8rem 1rem #FF457A;
-        transform: translateY(-0.3333rem);
-    }
-    .feature .go{
-        width: 101%;
-        height: 40px;
-        border: 1px solid #2EBD59;
-        color: #2EBD59;
-        position: absolute;
-        bottom: 0;
-        padding: 0.5rem 0;
-        margin: -1px;
-        border-bottom-left-radius: 4px;
-        border-bottom-right-radius: 4px;
-    }
-    .feature i{
-        color: #FFF;
-    }
-    .feature .go:hover{
-        background-color: #2EBD59;
-        color: #FFF;
-    }
-    .feature i:hover{
-        color: #FFF;
-    }
     .second-menu{
         margin: auto;
         padding: 0 1.2em;
         width: 100%;
         display: inline-block;
-    }
-    .second-menu .part{
-        display: inline-block;
-        padding: 0.6rem 0;
-    }
-    .second-menu .filter{
-        display: inline-block;
-    }
-    .second-menu .right-part{
-        float: right;
-    }
-    .second-menu .nav-link{
-        height: 30px;
-        padding: 0.25rem 1rem;
-    }
-    .second-menu a.nav-link.active{
-        background-color: #FFDA44;
-        color: #555555;
-    }
-    .second-menu a.nav-link.active:hover{
-        color: #555555;
-    }
-    .second-menu a.nav-link{
-        color: #8FBD9D;
-    }
-    .second-menu a.nav-link:hover{
-        color: #2EBD59;
     }
     .announcement{
         padding: 0.5rem 1.2rem;
@@ -896,53 +687,14 @@ a:hover{
     .treasury-table{
         padding: 0 1.2rem;
     }
-    .table-list{
-        padding: auto;
-    }
-    .table-list thead{
-        background: #2EBD59;
-        color: #FFF;
-    }
-    .table-list td, th{
-        vertical-align: middle;
-    }
-    .table-list td, th{
-        height: 50px;
-        padding: 0;
-    }
-    .table-list th{
-        padding-right: 0px;
-    }
-    .table-list a{
-        color: #2EBD59;
-    }
-    .table-list a.btn.b{
-        background-color: #FFF;
-        border-color: #2EBD59;
-    }
-    .table-list a.btn.b:hover{
-        background-color: #2EBD59;
-        border-color: #2EBD59;
-    }
     .split-page{
         padding: 0.5rem 1.2rem;
         float: right;
-    }
-    .split-page .page-link{
-        color: #2EBD59;
-    }
-    .split-page .page-item.active .page-link{
-        background-color: #FFDA44;
-        border-color: #FFDA44;
-        color: #555555;
     }
     .footer{
         padding: 0.5rem 1.2rem;
         margin: 10rem auto 0;
         width: 100%;
-    }
-    .footer .line{
-        border: 1px solid #D6D6D6;
     }
 }
 
@@ -969,31 +721,14 @@ a:hover{
     .breadcrumb a{
         font-size: 11px;
     }
-    .body{
-        position: relative;
-    }
-    .header{
-        height: 50px;
-        background-color: #2EBD59;
-        position: sticky;
-        position: -webkit-sticky;
-        top: 0;
-        z-index: 1;
-    }
     .header .brand{
-        padding: 0.9rem .6rem;
+        padding: 0.9rem .6rem 0 .6rem;
         color: #FFF;
         display: inline-block;
     }
     .header .user-panel{
         float: right;
-        padding: 0.6rem .6rem;
-    }
-    .header .user-panel a{
-        color: #FFF;
-    }
-    .header .user-panel i{
-        margin: 0 0.4rem;
+        padding: 0.6rem .6rem 0 0.6rem;
     }
     .feature{
         margin: auto;
@@ -1002,7 +737,7 @@ a:hover{
         text-align: center;
     }
     .feature .part{
-        max-width: 22%;
+        max-width: 100%;
         width: 320px;
         height: 150px;
         float: left;
@@ -1012,65 +747,11 @@ a:hover{
         padding-top: 0.5rem;
         border-radius: 4px;
     }
-    .feature .part:hover{
-        border: 1px solid #2EBD59;
-        box-shadow: 0 0.8rem 1rem #FF457A;
-        transform: translateY(-0.3333rem);
-    }
-    .feature .go{
-        width: 101%;
-        height: 40px;
-        border: 1px solid #2EBD59;
-        color: #2EBD59;
-        position: absolute;
-        bottom: 0;
-        padding: 0.5rem 0;
-        margin: -1px;
-        border-bottom-left-radius: 4px;
-        border-bottom-right-radius: 4px;
-    }
-    .feature i{
-        color: #FFF;
-    }
-    .feature .go:hover{
-        background-color: #2EBD59;
-        color: #FFF;
-    }
-    .feature i:hover{
-        color: #FFF;
-    }
     .second-menu{
         margin: auto;
         padding: 0 .6rem;
         width: 100%;
         display: inline-block;
-    }
-    .second-menu .part{
-        display: inline-block;
-        padding: 0.6rem 0;
-    }
-    .second-menu .filter{
-        display: inline-block;
-    }
-    .second-menu .right-part{
-        float: right;
-    }
-    .second-menu .nav-link{
-        height: 30px;
-        padding: 0.25rem 1rem;
-    }
-    .second-menu a.nav-link.active{
-        background-color: #FFDA44;
-        color: #555555;
-    }
-    .second-menu a.nav-link.active:hover{
-        color: #555555;
-    }
-    .second-menu a.nav-link{
-        color: #8FBD9D;
-    }
-    .second-menu a.nav-link:hover{
-        color: #2EBD59;
     }
     .announcement{
         padding: 0.5rem .6rem;
@@ -1078,177 +759,15 @@ a:hover{
     .treasury-table{
         padding: 0 .6rem;
     }
-    .table-list{
-        padding: auto;
-    }
-    .table-list thead{
-        background: #2EBD59;
-        color: #FFF;
-    }
-    .table-list td, th{
-        vertical-align: middle;
-    }
-    .table-list td, th{
-        height: 50px;
-        padding: 0;
-    }
-    .table-list th{
-        padding-right: 0px;
-    }
-    .table-list a{
-        color: #2EBD59;
-    }
-    .table-list a.btn.b{
-        background-color: #FFF;
-        border-color: #2EBD59;
-    }
-    .table-list a.btn.b:hover{
-        background-color: #2EBD59;
-        border-color: #2EBD59;
-    }
     .split-page{
         padding: 0.5rem .6rem;
         float: right;
-    }
-    .split-page .page-link{
-        color: #2EBD59;
-    }
-    .split-page .page-item.active .page-link{
-        background-color: #FFDA44;
-        border-color: #FFDA44;
-        color: #555555;
     }
     .footer{
         padding: 0.5rem .6rem;
         margin: 10rem auto 0;
         width: 100%;
     }
-    .footer .line{
-        border: 1px solid #D6D6D6;
-    }
 }
 
 /* End */
-
-.messenger-button {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    z-index: 50;
-    background-image: url(assets/img/shield.svg);
-}
-.messenger-button a{
-    display: block;
-    width: 40px;
-    height: 40px;
-    border-radius: 50px;
-    color: #FFF;
-    background-image: url(assets/img/shield.svg);
-    background-repeat: no-repeat;
-    background-size: 20px 20px;
-    -webkit-animation: copy-di-ban-oi 2000ms infinite;
-    -moz-animation: roi-khi-lam-du-an-lon 2000ms infinite;
-    -o-animation: nho-lien-he-team-minh 2000ms infinite;
-    animation: lam-chung 2000ms infinite;
-    z-index: 1000;
-}
-
-@-webkit-keyframes copy-di-ban-oi{
-    0%{
-        background-color: #004A7F;
-        -webkit-box-shadow: 0 0 3px #004A7F;
-    }
-
-    50%{
-        background-color: #0094FF;
-        -webkit-box-shadow: 0 0 10px #0094FF;
-    }
-
-    100%{
-        background-color: #004A7F;
-        -webkit-box-shadow: 0 0 3px #004A7F;
-    }
-}
-
-@-moz-keyframes roi-khi-lam-du-an-lon{
-    0%{
-        background-color: #004A7F;
-        -moz-box-shadow: 0 0 3px #004A7F;
-    }
-
-    50%{
-        background-color: #0094FF;
-        -moz-box-shadow: 0 0 10px #0094FF;
-    }
-
-    100%{
-        background-color: #004A7F;
-        -moz-box-shadow: 0 0 3px #004A7F;
-    }
-}
-
-@-o-keyframes nho-lien-he-team-minh{
-    0%{
-        background-color: #004A7F;
-        box-shadow: 0 0 3px #004A7F;
-    }
-
-    50%{
-        background-color: #0094FF;
-        box-shadow: 0 0 10px #0094FF;
-    }
-
-    100%{
-        background-color: #004A7F;
-        box-shadow: 0 0 3px #004A7F;
-    }
-}
-@keyframes lam-chung{
-    0%{
-        background-color: #2196F3; /*#004A7F;*/
-        box-shadow: 0 0 3px #2196F3; /*#004A7F;*/
-    }
-
-    50%{
-        background-color: #0094FF;
-        box-shadow: 0 0 30px #0094FF;
-    }
-
-    100%{
-        background-color: #2196F3; /*#004A7F;*/
-        box-shadow: 0 0 3px #2196F3; /*#004A7F;*/
-    }
-}
-/* End */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

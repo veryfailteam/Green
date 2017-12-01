@@ -1,0 +1,131 @@
+{% extends 'clinic/crm.html' %}
+
+{% block second-menu%}
+    <div class="container-fluid" id="second_menu">
+        <div class="container row">
+            <div>
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'clinic:CRM-DentalClinic-Overview' %}">Dental Clinic</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'clinic:CRM-ContactCenter-Overview' %}">Contact center</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'clinic:CRM-OpenChannel-Overview' %}">Open channel</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'clinic:CRM-OrderManagement-Overview' %}">Order management</a>
+                </li>
+            </ul>
+            </div>
+            <div style="padding-top: 2px; display: inline-block; margin-right: 0px; float: right;">
+                <a class="btn btn-primary" data-toggle="modal" data-target="#omni-create-new-customer">+ Customer</a>
+            </div>
+        </div>
+
+    </div>
+    <!--- Patient Appointment schedule Modal New -->
+    <div class="modal fade" id="omni-create-new-customer">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><strong style="color: tomato;">Create new customer</strong></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form method="POST" action="{% url 'clinic:create-new-customer' %}">
+                        {% csrf_token %}
+                        <div id="modal-new-input">
+                            <div class="row">
+                                <div class="input-group mb-2 mb-sm-0">
+                                    <div class="input-group-addon"><i class="fa fa-user"></i></div>
+                                    <input type="text" class="form-control" style="" name="customer-last-name" placeholder="Họ & tên đệm *">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-group mb-2 mb-sm-0">
+                                    <div class="input-group-addon"><i class="fa fa-info-circle"></i></div>
+                                    <input type="text" class="form-control" style="" name="customer-first-name" placeholder="Tên đệm & tên *">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-group mb-2 mb-sm-0">
+                                    <div class="input-group-addon"><i class="fa fa-info-circle"></i></div>
+                                    <input type="text" class="form-control" style="" name="customer-main-phone-number" placeholder="Số điện thoại chính *">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-group mb-2 mb-sm-0">
+                                    <div class="input-group-addon"><i class="fa fa-info-circle"></i></div>
+                                    <input type="text" class="form-control" style="" name="customer-additional-phone-number" placeholder="Số điện thoại phụ">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-group mb-2 mb-sm-0">
+                                    <div class="input-group-addon"><i class="fa fa-info-circle"></i></div>
+                                    <select class="form-control custom-select" name="customer-sex" id="exampleFormControlSelect1">
+                                       <option value="">Chọn giới tính *</option>
+                                       <option value="0">Nam</option>
+                                       <option value="1">Nữ</option>
+                                       <option value="2">Khác (có phẩu thuật cơ thể)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-group mb-2 mb-sm-0">
+                                    <div class="input-group-addon"><i class="fa fa-info-circle"></i></div>
+                                    <input type="text" class="form-control" style="" name="customer-email" placeholder="Thư điện tử (email)">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-group mb-2 mb-sm-0">
+                                    <div class="input-group-addon"><i class="fa fa-info-circle"></i></div>
+                                    <input type="text" class="form-control" style="" name="customer-address" placeholder="Địa chỉ lưu trú">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-group mb-2 mb-sm-0">
+                                    <div class="input-group-addon"><i class="fa fa-info-circle"></i></div>
+                                    <select class="form-control custom-select" name="customer-source" id="exampleFormControlSelect1">
+                                       <option value="">Nguồn khách hàng *</option>
+                                       <option value="0">Vãng lai</option>
+                                       <option value="1">Bác sỹ A</option>
+                                       <option value="2">Rocket Age Group</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-group mb-2 mb-sm-0">
+                                    <div class="input-group-addon"><i class="fa fa-info-circle"></i></div>
+                                    <select class="form-control custom-select" id="exampleFormControlSelect1" name="customer-type">
+                                       <option selected="" value="0">Bình thường (loại khách hàng)</option>
+                                       <option value="1">Thân thiết 1 (5%)</option>
+                                       <option value="2">Thân thiết 2 (10%)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div>
+                                <textarea class="form-control" placeholder="Ghi chú khác về người này.." name="customer-note"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <input type="submit" class="btn btn-primary" value="Save changes">
+                        </div>
+                    </form>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+    </div>
+    <!--- Main body -->
+    <div class="container-fluid" id="main-body">
+        {% block body %}
+
+        {% endblock %}
+    </div>
+{% endblock %}

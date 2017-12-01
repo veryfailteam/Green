@@ -1,0 +1,62 @@
+<table class="table table-striped" style="margin-top: -1px;">
+    <thead>
+        <tr>
+            <th scope="col">Appointment date</th>
+            <th scope="col">Doctor</th>
+            <th scope="col">Treatment name</th>
+            <th scope="col">Task list</th>
+            <th scope="col">Notes</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in lstAppointment %}
+            <tr>
+                <td>{{item.date}} {{item.time}}</td>
+                <td>{{item.assign_name}}</td>
+                <td>
+                    <a href="{% url 'clinic:CRM-DentalClinic-Patient'%}?treatment_id={{item.treatment_id}}">{{item.name}}</a>
+                </td>
+                <td>{{item.content}}</td>
+                <td>{{item.note}}</td>
+                <td>
+                    <input type="hidden" name="selected-customer-id" value="{{selected_customer_id}}">
+                    <input type="hidden" name="appointment-id" value="{{item.id}}">
+                    <input type="hidden" class="treatment-id" value="{{item.treatment_id}}">
+                    <input type="hidden" class="treatmentdetail-date" value="{{item.date}}">
+                    <input type="hidden" class="data-type" value="{{item.data_type}}">
+                    {% if item.status == constant_key.APPOINTMENT_STATUS_ACTIVE and user_role != constant_key.ROLE_RECEPTION %}
+                        <a class="fbtn btn btn-primary" href="" name="{{constant_key.FUNCTION_NAME_DONE}}">Done</a>
+                        <!-- <a class="btn btn-light" href="">Edit</a> -->
+                    {% elif item.status == constant_key.APPOINTMENT_STATUS_ACTIVE %}
+                        <a class="abtn btn btn-primary" href="" data-toggle="modal" data-target="#omni-dental-patient-app-modal-edit" name="view">View</a>
+                    {% elif item.status == constant_key.APPOINTMENT_STATUS_CHECKED and user_role == constant_key.ROLE_RECEPTION %}
+                        <a class="abtn btn btn-primary" href="" data-toggle="modal" data-target="#omni-dental-patient-app-modal-edit" name="view">View</a>
+                    {% elif item.status == constant_key.APPOINTMENT_STATUS_CHECKED%}
+                        <a class="fbtn btn btn-primary" href="" name="{{constant_key.FUNCTION_NAME_ACTIVE}}">Active</a>
+                        <a class="abtn btn btn-primary" href="" data-toggle="modal" data-target="#omni-dental-patient-app-modal-edit" name="view">View</a>
+                    {% elif item.status == constant_key.APPOINTMENT_STATUS_ON_WAY%}
+                        <a class="fbtn btn btn-primary" href="" name="{{constant_key.FUNCTION_NAME_CHECKED}}">Checked</a>
+                        <a class="abtn btn btn-primary" href="" data-toggle="modal" data-target="#omni-dental-patient-app-modal-edit" name="edit">Edit</a>
+                    {% elif item.status == constant_key.APPOINTMENT_STATUS_BOOKED%}
+                        <a class="fbtn btn btn-primary" href="" name="{{constant_key.FUNCTION_NAME_ONWAY}}">On way</a>
+                        <a class="abtn btn btn-primary" href="" data-toggle="modal" data-target="#omni-dental-patient-app-modal-edit" name="edit">Edit</a>
+                    {% elif item.status == constant_key.APPOINTMENT_STATUS_FOLLOW %}
+                        <a class="abtn btn btn-primary" href="" data-toggle="modal" data-target="#omni-dental-patient-app-modal-edit" name="confirm">Confirm</a>
+                    {% elif item.status == constant_key.APPOINTMENT_STATUS_DONE %}
+                        <a class="abtn btn btn-primary" href="" data-toggle="modal" data-target="#omni-dental-patient-app-modal-edit" name="view">View</a>
+                    {% endif %}
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+    <!--- Patient Appointment schedule Modal Edit -->
+<div class="modal" id="omni-dental-patient-app-modal-edit">
+    <div class="modal-dialog" role="html">
+        <div class="modal-content" id="modal-content">
+
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
