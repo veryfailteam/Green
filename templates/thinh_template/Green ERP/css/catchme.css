@@ -134,6 +134,24 @@ Light-black: #0C0704;*/
 .dib{
     display: inline-block;
 }
+.w-50{
+    width: 50px !important;
+}
+.w-80{
+    width: 80px;
+}
+.w-100{
+    width: 100px !important;
+}
+.w-130{
+    width: 130px;
+}
+.w-150{
+    width: 150px;
+}
+.w-200{
+    width: 200px;
+}
 /* ----------- Ellipsis----------- */
 .ell{
     white-space: nowrap;
@@ -171,55 +189,89 @@ Light-black: #0C0704;*/
     text-overflow: ellipsis;
 }
 /* ----------- Your style ----------- */
+.standard{
+    vertical-align: middle !important;
+}
 a.dropdown-item:hover{
     color: #FFF;
     background-color: #2196F3;
 }
-/*a:hover{
-    padding: 0.2rem 0.6rem;
+.my-btn{
+    color: #FFF !important;
+    background-color: #69BF83;
+}
+.my-btn{
+    color: #FFF !important;
+    background-color: #69BF83;
+}
+.my-btn:hover{
+    background-color: #2EBD59;
     color: #FFF;
-    background-color: #2196F3;
-    text-decoration: none;
-    border-radius: 4px;
-    margin: 0;
-}*/
-.btn{
-    background-color: #FFF;
 }
-.btn-outline{
-    background-color: #FFF;
+.my-btn-shift{
+    color: #FFF !important;
+    background-color: #2EBD59;
 }
-.btn-outline-blue{
-    border: 1px solid #2196F3;
-    background-color: #FFF;
-    color: #2196F3;
+.my-btn-shift:hover{
+    color: #FFF !important;
+    background-color: #69BF83;
 }
-.btn-outline-blue:hover{
-    border: 1px solid #FFF;
-    background-color: #2196F3;
+.my-btn-outline{
+    background-color: #FFF;
+    color: #2EBD59;
+    border: 1px solid #2EBD59;
+}
+.my-btn-outline:hover{
+    background-color: #2EBD59;
     color: #FFF;
-    border-radius: 4px;
 }
-.btn-outline-danger{
-    border: 1px solid #D80027;
+.my-btn-outline:focus{
+    box-shadow: 0 0 0 3px #2EBD59;
+}
+.my-btn-outline-danger{
+    border: 1px solid #FF457A;
     background-color: #FFF;
-    color: #D80027 !important;
+    color: #FF457A !important;
 }
-.btn-outline-danger:hover{
+.my-btn-outline-danger:hover{
     border: 1px solid #FFF;
-    background-color: #D80027;
+    background-color: #FF457A;
     color: #FFF !important;
     border-radius: 4px;
+}
+.my-btn-outline-danger:focus{
+    box-shadow: 0 0 0 3px rgba(220, 53, 69, .5)
+}
+.my-btn-outline-secondary{
+    border: 1px solid #868E96;
+    background-color: #FFF;
+    color: #868E96 !important;
+}
+.my-btn-outline-secondary:hover{
+    background-color: #868E96;
+    color: #FFF !important;
+    border-radius: 4px;
+}
+.my-btn-outline-secondary:focus{
+    box-shadow: 0 0 0 3px rgba(134, 142, 150, .5)
 }
 .input-group-addon{
     color: #FFF;
     background-color: #2EBD59;
 }
 .custom-select{
-    border-color: #FFDA44;
+    border-color: #2EBD59;
+    color: #555555;
 }
 .custom-select:focus{
-    border-color: #2EBD59;
+    box-shadow: 0 0 0 3px #FFDA44;
+    border-color: #FFDA44;
+}
+.input-group-addon{
+    width: 2.6rem;
+}
+.input-group-addon i{
+    margin: auto;
 }
 a{
     color: #69BF83;
@@ -228,35 +280,71 @@ a:hover{
     color: #2EBD59;
     text-decoration: none;
 }
-/* ----------- modal */
-.modal-dialog {
-    max-width: 900px !important;
+/* ----------- quote */
+.tag-line{
+    border-left: 6px solid #2EBD59;
+    padding: .5rem;
+    padding-bottom: -.5rem;
+    min-height: 35px !important;
 }
-#modal-body .row{
-    width: auto;
-    margin: 15px auto;
+.tag-area{
+    color: #0C5460 !important;
+    border-color: #BEE5EB;
+    padding: .35rem .75rem;
+    background-color: #D1ECF1;
+    border-radius: 4px;
+    height: 35px;
 }
-#modal-body-lc{
-    max-width: 350px;
-    min-width: 300px;
-    margin: 5px auto;
-}
-#modal-body-rc{
-    max-width: 350px;
-    min-width: 300px;
-    margin: 5px auto;
-}
-#row-in-modal .row{
-    max-width: 350px;
-    min-width: 300px;
-    margin: 5px auto;
+.tag-area i{
     float: right;
+    vertical-align: middle;
+    padding-left: 1rem;
+    padding-top: .2rem;
+}
+.tag-area a{
+    color: #0C5460;
+}
+/* ----------- modal */
+.modal-dialog{
+    max-width: 840px;
+}
+.modal-md{
+    max-width: 420px !important;
+}
+.modal-body{
+    padding: 1rem .5rem;
+    width: 100%;
+}
+.modal-body .title{
+    margin: .5rem 0 .25rem;
     display: block;
 }
-#row-in-modal{
-    max-width: 360px;
-    float: right;
+.modal-body .input-group:{
+    box-shadow: 2px 2px 2px #FFDA44;
 }
+.modal-body .custom-select, .form-control{
+    border-color: #69BF83;
+    color: #555555;
+}
+.modal-body .form-control:focus{
+    box-shadow: none;
+    border-color: #FFDA44;
+    border-left-color: #FFF;
+}
+.modal-body .input-group-addon, .custom-select{
+    height: 35px !important;
+}
+.modal-body .form-control:disabled{
+    border-color: #D6D6D6;
+}
+.modal-body textarea.form-control:focus{
+    border-left-color: #FFDA44;
+}
+.modal-backdrop{
+    opacity: 0.85 !important;
+}
+
+/* ----------- @body */
 .body{
         position: relative;
     }
@@ -317,10 +405,10 @@ a:hover{
         border: 1px solid #2EBD59;
         box-shadow: 0 0.8rem 1rem #FF457A;
         transform: translateY(-0.3333rem);
-    }
+    }/*
     .nav-item{
         margin: auto;
-    }
+    }*/
     .feature .go{
         width: 101%;
         height: 40px;
@@ -381,6 +469,7 @@ a:hover{
 /* ----------- @split-page */
     .split-page .page-link{
         color: #2EBD59;
+        border-color: #2EBD59;
     }
     .split-page .page-item.active .page-link{
         background-color: #FFDA44;
@@ -464,6 +553,9 @@ a:hover{
     .announcement{
         padding: 0.5rem 15rem;
     }
+    .standard{
+        padding: 0.2rem 15rem;
+    }
     .treasury-table{
         padding: 0 15rem;
     }
@@ -475,6 +567,18 @@ a:hover{
         padding: 0.5rem 15rem;
         margin: 10rem auto 0;
         width: 100%;
+    }
+    .modal-body .part{
+        width: 50%;
+        padding: .5rem;
+        float: left;
+        margin: auto;
+    }
+    .modal-body .part-2{
+        width: 100%;
+        padding: .5rem;
+        float: left;
+        margin: auto;
     }
 }
 
@@ -540,6 +644,9 @@ a:hover{
     .announcement{
         padding: 0.5rem 7rem;
     }
+    .standard{
+        padding: 0.2rem 7rem;
+    }
     .treasury-table{
         padding: 0 7rem;
     }
@@ -551,6 +658,18 @@ a:hover{
         padding: 0.5rem 7rem;
         margin: 10rem auto 0;
         width: 100%;
+    }
+    .modal-body .part{
+        width: 50%;
+        padding: .5rem;
+        float: left;
+        margin: auto;
+    }
+    .modal-body .part-2{
+        width: 100%;
+        padding: .5rem;
+        float: left;
+        margin: auto;
     }
 }
 
@@ -612,6 +731,9 @@ a:hover{
     .announcement{
         padding: 0.5rem 3rem;
     }
+    .standard{
+        padding: 0.2rem 3rem;
+    }
     .treasury-table{
         padding: 0 3rem;
     }
@@ -623,6 +745,17 @@ a:hover{
         padding: 0.5rem 3rem;
         margin: 10rem auto 0;
         width: 100%;
+    }
+    .modal-body .part{
+        width: 50%;
+        padding: .5rem;
+        float: left;
+        margin: auto;
+    }
+    .modal-body .part-2{
+        width: 100%;
+        padding: .5rem;
+        margin: auto;
     }
 }
 
@@ -684,6 +817,9 @@ a:hover{
     .announcement{
         padding: 0.5rem 1.2rem;
     }
+    .standard{
+        padding: 0.2rem 1.2rem;
+    }
     .treasury-table{
         padding: 0 1.2rem;
     }
@@ -695,6 +831,17 @@ a:hover{
         padding: 0.5rem 1.2rem;
         margin: 10rem auto 0;
         width: 100%;
+    }
+    .modal-body .part{
+        width: 75%;
+        padding: .5rem;
+        float: none;
+        margin: auto;
+    }
+    .modal-body .part-2{
+        width: 100%;
+        padding: .5rem;
+        margin: auto;
     }
 }
 
@@ -756,6 +903,9 @@ a:hover{
     .announcement{
         padding: 0.5rem .6rem;
     }
+    .standard{
+        padding: 0.2rem .6rem;
+    }
     .treasury-table{
         padding: 0 .6rem;
     }
@@ -768,6 +918,18 @@ a:hover{
         margin: 10rem auto 0;
         width: 100%;
     }
+    .modal-body .part{
+        width: 100%;
+        padding: .5rem;
+        float: none;
+        margin: auto;
+    }
+    .modal-body .part-2{
+        width: 100%;
+        padding: .5rem;
+        margin: auto;
+    }
 }
 
 /* End */
+

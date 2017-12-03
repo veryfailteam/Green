@@ -51,9 +51,6 @@
                         <a href="#" class="nav-link active">Treatment</a>
                     </li>
                     <li class="nav-item">
-                        <a href="invoice.html" class="nav-link">Invoice</a>
-                    </li>
-                    <li class="nav-item">
                         <a href="pres.html" class="nav-link">Prescription</a>
                     </li>
                     <li class="nav-item">
@@ -63,28 +60,9 @@
             </div>
         </div>
         <div class="clear"></div>
-        <div class="second-menu">
-            <div class="part right-part">
-                <!-- <div class="filter show-revenue">
-                    <strong>Expenses:</strong><span>&nbsp;250,000 <sup>vnđ</sup></span>
-                </div> -->
-                <div class="filter">
-                    <select class="form-control custom-select">
-                        <option>Today (default)</option>
-                        <option>This week</option>
-                        <option>This month</option>
-                        <option>Previous 3 months</option>
-                        <option>Previous 6 months</option>
-                        <option>Previous 1 year</option>
-                        <option>All times</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-        <div class="clear"></div>
-        <div class="welcome-mess">
+        <div class="welcome-mess" style="margin-top: 3rem;">
             <p class="subtext-500-center" style="max-width: 90%; margin: auto; padding: 1rem" >Chào mừng bạn đến với kế hoạch điều trị. Hãy bắt đầu tạo kế hoạch điều trị đầu tiên của bạn</p>
-            <a class="btn btn-outline-success" href="#" role="button" >Tạo kế hoạch điều trị mới +</a>
+            <a class="btn btn-outline-success" href="#" role="button" data-toggle="modal" data-target="#new-treatment-modal">Tạo kế hoạch điều trị mới +</a>
         </div>
         <!-- <div class="treasury-table">
             <div class="table-list">
@@ -136,7 +114,7 @@
         <!-- <div class="screen-lock">
             <img src="assets/img/shield.svg" class="img-md-center">
         </div> -->
-    <div class="modal" id="modal-receivables">
+    <div class="modal" id="new-treatment-modal">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">

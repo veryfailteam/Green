@@ -45,7 +45,7 @@
                         <a href="treasury-liabilities.html" class="nav-link">Liabilities</a>
                     </li>
                     <li class="nav-item">
-                        <a href="treasury-account.html" class="nav-link active">Account Management</a>
+                        <a href="treasury-account.html" class="nav-link active">Management</a>
                     </li>
                 </ul>
             </div>
@@ -53,12 +53,15 @@
         <div class="announcement">
             <div class="alert alert-info alert-dismissable fade show" style="margin-bottom: 0px;">
                 <button type="button" class="close" data-dismiss="alert">&times;</button>
-                <strong></strong>Chức năng này cho phép nhà quản trị tự thiết lập các loại tài khoản thanh toán để quản lý. Tuy nhiên, hiện tại các loại tài khoản thông dụng sẽ được sử dụng theo thiết lập mặc định để không bị rối. Vui lòng liên hệ <strong>CD-CRM</strong> để thiết lập thêm khi cần.<br />
-                @Jos: User có nhãn "Treasurier" ( thủ quỹ) mới được xem tất cả tài khoản. Ở đây thì "reception" cũng giữ vai trò thủ quỹ.
+                <strong>Ghi chú: </strong> Chức năng này cho phép nhà quản trị tự thiết lập các loại tài khoản thanh toán để quản lý. Tuy nhiên, hiện tại các loại tài khoản thông dụng sẽ được sử dụng theo thiết lập mặc định để không bị rối. Vui lòng liên hệ <strong>CD-CRM</strong> để thiết lập thêm khi cần.<br />
+                <strong>// @Jos Delete after done:</strong> Chỉ treasurier mới được xem tài khoản (phân quyền sâu thì làm sau)
             </div>
         </div>
+        <div class="standard">
+            <a data-toggle="collapse" href="#show"><strong class="tag-area dib">Accounts<i class="fa fa-angle-down"></i></strong></a>
+        </div>
         <div class="clear"></div>
-        <div class="treasury-table">
+        <div class="treasury-table collapse show" id="show">
             <div class="table-list">
                 <table class="table table-responsive table-striped table-hover" style="border-bottom: 1px solid #dfdfdf">
                     <thead>
@@ -78,24 +81,50 @@
                             <td class="ell-0" style="min-width: 100px; max-width: 150px;">Cash-00001</td>
                             <td class="ell-0" style="min-width: 120px; max-width: 150px;">900,000 <sup>vnđ</sup></td>
                             <td class="ell-0" style="min-width: 100px; max-width: 150px;">Phương Thảo</td>
-                            <td class="ell-0" style="min-width: 180px;">
-                                <a class="btn btn-outline-danger" href="" style="width: 80px;" data-toggle="modal" data-target="#modal-trans">Transfer</a>
-                                <a class="btn btn-outline-success" href="" style="width: 80px;" data-toggle="modal" data-target="#modal-edit">Edit</a>
+                            <td class="ell-0 w-200 text-center">
+                                <a class="btn my-btn-outline-danger w-80" href="" data-toggle="modal" data-target="#modal-trans">Transfer</a>
+                                <a class="btn my-btn-outline w-80" href="" data-toggle="modal" data-target="#modal-edit">Edit</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="ell-8" style="min-width: 100px; max-width: 150px;"">Bank account</td>
+                            <td class="ell-0" style="min-width: 100px; max-width: 150px;">Vietcombank (VND)</td>
+                            <td class="ell-0" style="min-width: 100px; max-width: 150px;">Bank-00002</td>
+                            <td class="ell-0" style="min-width: 120px; max-width: 150px;">1,200,000 <sup>vnđ</sup></td>
+                            <td class="ell-0" style="min-width: 100px; max-width: 150px;">Phương Thảo</td>
+                            <td class="ell-0 w-200 text-center">
+                                <a class="btn my-btn-outline-danger w-80" href="" data-toggle="modal" data-target="#modal-trans">Transfer</a>
+                                <a class="btn my-btn-outline w-80" href="" data-toggle="modal" data-target="#modal-edit">Edit</a>
                             </td>
                         </tr>
                         <tr>
                             <td class="ell-8" style="min-width: 100px; max-width: 150px;"">Bank account</td>
                             <td class="ell-0" style="min-width: 100px; max-width: 150px;">ACB (VND)</td>
-                            <td class="ell-0" style="min-width: 100px; max-width: 150px;">Cash-00002</td>
+                            <td class="ell-0" style="min-width: 100px; max-width: 150px;">Bank-00001</td>
                             <td class="ell-0" style="min-width: 120px; max-width: 150px;">12,520,000 <sup>vnđ</sup></td>
-                            <td class="ell-0" style="min-width: 100px; max-width: 150px;">Xuân tiểu thư</td>
-                            <td class="ell-0" style="min-width: 180px;">
-                                <a class="btn btn-outline-danger" href="" style="width: 80px;" data-toggle="modal" data-target="#modal-trans">Transfer</a>
+                            <td class="ell-0" style="min-width: 100px; max-width: 150px;">Ngọc Anh</td>
+                            <td class="ell-0 w-200 text-center">
+                                <a class="btn my-btn-outline-danger w-80" href="" data-toggle="modal" data-target="#modal-trans">Transfer</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="ell-8" style="min-width: 100px; max-width: 150px;"">Gift account</td>
+                            <td class="ell-0" style="min-width: 100px; max-width: 150px;">G (VND)</td>
+                            <td class="ell-0" style="min-width: 100px; max-width: 150px;">Gift-00001</td>
+                            <td class="ell-0" style="min-width: 120px; max-width: 150px;">5,020,000 <sup>vnđ</sup></td>
+                            <td class="ell-0" style="min-width: 100px; max-width: 150px;">Phương Thảo</td>
+                            <td class="ell-0 w-200 text-center">
+                                <a class="btn btn-outline-secondary w-80 disabled" href="" data-toggle="modal" data-target="#modal-trans">Ver 1.0.5</a>
+                                <a class="btn my-btn-outline w-80" href="" data-toggle="modal" data-target="#modal-edit">Edit</a>
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
+        </div>
+        <div class="standard">
+            <a data-toggle="collapse" href="#show2"><strong class="tag-area dib">History of changing<i class="fa fa-angle-down"></i></strong></a><br />
+            <span id="show2" class="collapse show">Next verson 1.0.5</span>
         </div>
         <div class="split-page">
             <ul class="pagination">
@@ -111,129 +140,150 @@
         <div class="line"></div>
         © 2018 - Cloud Clinic ERP _version 1.0.1 (South East Asia)
         <span style="float: right">
-            Support: <i class="fa fa-question-circle cl-blue" data-toggle="tooltip" data-placement="top" title="If you have troubles in operation / process / commerce or contract, please contact to 0902.886.862 (Henry - Thịnh). For technical problems such as 'bug, crash, machine stop working...' please contact 0906.858.628 (Jos - Hiến)"></i>  0902.886.862 - 0906.858.628
+            Support: <i class="fa fa-question-circle green" data-toggle="tooltip" data-placement="top" title="If you have troubles in operation / process / commerce or contract, please contact to 0902.886.862 (Henry - Thịnh). For technical problems such as 'bug, crash, machine stop working...' please contact 0906.858.628 (Jos - Hiến)"></i>  0902.886.862 - 0906.858.628
         </span>
     </div>
-    <div class="modal" id="modal-edit">
-        <div class="modal-dialog modal-sm" role="document">
+    <div class="modal trans fade" id="modal-trans" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h6 class="modal-title"><strong style="color: tomato;">Edit account information & permission</strong></h6>
+                    <h5 class="modal-title green" id="exampleModalLabel"> Account Transfer</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                         <span class="sr-only">Close</span>
                     </button>
                 </div>
-                <div class="modal-body" id="modal-body">
-                    <div class="row container-fluid">
-                        <div class="col-lg-6 col-md-6 col-sm-6" id="modal-body-lc">
-                            <div class="row" style="background-color: #d1ecf1; border-left: 6px solid #0c5460; padding: 10px; color: #0c5460">
-                                <span>Account information</span>
+                <div class="modal-body">
+                    <div class="part">
+                        <a data-toggle="collapse" href="#show-part" class="tag-area" style="display: block;"><strong>Account information</strong><i class="fa fa-angle-up"></i></a>
+                        <div id="show-part">
+                            <span class="title">Deductible account number (my account) *</span>
+                            <div class="input-group" data-toggle="tooltip" title="Deductible account number">
+                                <div class="input-group-addon"><i class="fa fa-code"></i></div>
+                                <select class="form-control custom-select">
+                                    <option value="1">Cash-00001 [Quỹ tiền mặt (VND)][Phuong Thao]</option>
+                                    <option value="2">Bank-00002 [Vietcombank (VND)][Phuong Thao]</option>
+                                </select>
                             </div>
-                            <div class="row">
-                                <div class="input-group mb-2 mb-sm-0">
-                                    <div class="input-group-addon"><i class="fa fa-credit-card"></i></div>
-                                    <select class="form-control custom-select" disabled>
-                                        <option selected>Cash account (default) *</option>
-                                        <option value="1">Bank account</option>
-                                        <option value="2">Gift-discount account</option>
-                                        <option value="3">Gift-service account</option>
-                                    </select>
-                                </div>
+                            <span class="title">Beneficiary account number *<i class="icofont icofont-numbered"></i></span>
+                            <div class="input-group" data-toggle="tooltip" title="Beneficiary account number">
+                                <div class="input-group-addon"><i class="fa fa-code"></i></div>
+                                <select class="form-control custom-select">
+                                    <option value="1">Bank-00002 [Vietcombank (VND)][Phuong Thao]</option>
+                                    <option value="2">Bank-00001 [ACB (VND)][Ngoc Anh]</option>
+                                </select>
                             </div>
-                            <div class="row">
-                                <div class="input-group mb-2 mb-sm-0">
-                                    <div class="input-group-addon"><i class="fa fa-money"></i></div>
-                                    <input type="text" class="form-control" placeholder="Quỹ tiền mặt (VND) *Rec đc đổi tên???">
-                                </div>
+                        </div>
+                        <a data-toggle="collapse" href="#show-part-2" class="tag-area mt-3" style="display: block;"><strong>Transfer information</strong><i class="fa fa-angle-up"></i></a>
+                        <div id="show-part-2">
+                            <span class="title">Amount (just number, no space) *</span>
+                            <div class="input-group" data-toggle="tooltip" title="Amount of transfering">
+                                <div class="input-group-addon"><i class="fa fa-code"></i></div>
+                                <input type="text" class="form-control" style="" placeholder="Maximum 900,000 vnd. Ex: 100000">
                             </div>
-                            <div class="row">
-                                <div class="input-group mb-2 mb-sm-0">
-                                    <div class="input-group-addon"><i class="fa fa-code"></i></div>
-                                    <input type="text" class="form-control" style="" placeholder="Cash-00001" disabled>
-                                </div>
+                            <span class="title">Amount (in words) *</span>
+                            <div class="input-group" data-toggle="tooltip" title="Amount in words">
+                                <div class="input-group-addon"><i class="fa fa-money"></i></div>
+                                <input type="text" class="form-control" style="" placeholder="Một trăm nghìn đồng chẵn" disabled="">
                             </div>
-                            <div class="row">
-                                <div class="input-group mb-2 mb-sm-0">
-                                    <div class="input-group-addon"><i class="fa fa-users"></i></div>
-                                    <select class="form-control custom-select" >
-                                        <option selected>Xuân tiểu thư (default) *</option>
-                                        <option value="2">@JOs: Chỉ manager đc quyền set chuyển cho ai qly tài khoản</option>
-                                    </select>
-                                </div>
+                            <span class="title">Transfer Fee (if have, just number, no space):</span>
+                            <div class="input-group" data-toggle="tooltip" title="Transfer fee (if have)">
+                                <div class="input-group-addon"><i class="fa fa-code"></i></div>
+                                <input type="text" class="form-control" style="" placeholder="Ex: 13000">
+                            </div>
+                            <span class="title">Transfer Fee (in words) *</span>
+                            <div class="input-group" data-toggle="tooltip" title="Amount in words">
+                                <div class="input-group-addon"><i class="fa fa-money"></i></div>
+                                <input type="text" class="form-control" style="" placeholder="Mười ba nghìn đồng chẵn" disabled="">
+                            </div>
+                            <span class="title">Reference number</span>
+                            <div class="input-group" data-toggle="tooltip" title="The number of invoices, contract, credit agreement number,..." >
+                                <div class="input-group-addon"><i class="fa fa-code"></i></div>
+                                <input type="text" class="form-control" style="" placeholder="Type the number...">
+                            </div>
+                            <span class="title">Reasons of transfering</span>
+                            <textarea class="form-control" placeholder="..."></textarea>
+                        </div>
+                    </div>
+                    <div class="part">
+                        <a data-toggle="collapse" href="#show-part-3" class="tag-area" style="display: block;"><strong>Addition information</strong><i class="fa fa-angle-up"></i></a>
+                        <div id="show-part-3" class="mt-3">
+                            <div class="input-group" data-toggle="tooltip" title="Not avaiable at the momment">
+                                <div class="input-group-addon"><i class="fa fa-money"></i></div>
+                                <input type="text" class="form-control" style="" placeholder="Next ver 1.0.6" disabled="">
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary " data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-secondary w-80" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn my-btn-shift w-150">DO IT !</button>
                 </div>
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
-    <!-- Cashbook acm modal transfer -->
-    <div class="modal" id="modal-trans">
-        <div class="modal-dialog" role="document">
+    <div class="modal trans fade" id="modal-edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-md" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h6 class="modal-title"><strong>Transfer the money</strong></h6>
+                    <h5 class="modal-title green" id="exampleModalLabel" >Edit account</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                         <span class="sr-only">Close</span>
                     </button>
                 </div>
-                <div class="modal-body" id="modal-body">
-                    <div class="row container-fluid">
-                        <div class="col-lg-6 col-md-6 col-sm-6" id="modal-body-lc">
-                            <div class="row" style="background-color: #d1ecf1; border-left: 6px solid #0c5460; padding: 10px; color: #0c5460">
-                                <span>From account</span>
+                <div class="modal-body">
+                    <div class="part-2">
+                        <a data-toggle="collapse" href="#show-part-4" class="tag-area" style="display: block;"><strong>Account information</strong><i class="fa fa-angle-up"></i></a>
+                        <div id="show-part-4">
+                            <span class="title">Account type *</span>
+                            <div class="input-group" data-toggle="tooltip" title="Account type" disabled>
+                                <div class="input-group-addon"><i class="fa fa-code"></i></div>
+                                <select class="form-control custom-select">
+                                    <option value="1" disabled="">Cash account</option>
+                                    <option value="2" disabled="">Bank account</option>
+                                    <option value="3" disabled="">Gift account</option>
+                                </select>
                             </div>
-                            <div class="row">
-                                <div class="input-group mb-2 mb-sm-0">
-                                    <div class="input-group-addon"><i class="fa fa-code"></i></div>
-                                    <select class="form-control custom-select">
-                                        <option selected>Cash-00001 (Xuân Tiểu thư)</option>
-                                    </select>
-                                </div>
+                            <span class="title">Currency *</span>
+                            <div class="input-group" data-toggle="tooltip" title="Choose your currency for this account">
+                                <div class="input-group-addon"><i class="fa fa-usd"></i></div>
+                                <select class="form-control custom-select">
+                                    <option value="1" disabled="">VND (vietnam)</option>
+                                    <option value="2" disabled>U.S dollars</option>
+                                    <option value="3" disabled>Euro</option>
+                                    <option value="4" disabled>Yen (Japan)</option>
+                                    <option value="5" disabled>Singapore dollars</option>
+                                    <option value="6" disabled>Hongkong dollars</option>
+                                    <option value="7" disabled>Yuan (China)</option>
+                                </select>
                             </div>
-                            <div class="row">
-                                <div class="input-group mb-2 mb-sm-0">
-                                    <div class="input-group-addon"><i class="fa fa-money"></i></div>
-                                    <input type="text" class="form-control" style="" placeholder="Amount *">
-                                </div>
-                                <span style="padding-left: 50px;">Số tiền bằng chữ: ... (vnđ)</span>
+                            <span class="title">Account ID *</span>
+                            <div class="input-group" data-toggle="tooltip" title="Account number">
+                                <div class="input-group-addon"><i class="fa fa-money"></i></div>
+                                <input type="text" class="form-control" style="" placeholder="Cash-00001" disabled="">
                             </div>
-                            <div class="row">
-                                <div class="input-group mb-2 mb-sm-0">
-                                    <div class="input-group-addon"><i class="fa fa-money"></i></div>
-                                    <input type="text" class="form-control" style="" placeholder="Fee of transfering *">
-                                </div>
+                            <span class="title">Account name *</span>
+                            <div class="input-group" data-toggle="tooltip" title="Give an account name closing to you">
+                                <div class="input-group-addon"><i class="fa fa-slack"></i></div>
+                                <input type="text" class="form-control" style="" placeholder="Quy tien mat">
+                            </div>
+                            <span class="title">Account owner/manager</span>
+                            <div class="input-group" data-toggle="tooltip" title="" >
+                                <div class="input-group-addon"><i class="fa fa-user"></i></div>
+                                <input type="text" class="form-control" style="" placeholder="Phương Thảo" disabled="">
+                            </div>
+                            <span class="title">Account co-manager</span>
+                            <div class="input-group" data-toggle="tooltip" title="" >
+                                <div class="input-group-addon"><i class="fa fa-user"></i></div>
+                                <input type="text" class="form-control" style="" placeholder="Next ver 1.0.5" disabled="">
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6" id="modal-body-rc">
-                            <div class="row" style="background-color: #d1ecf1; border-left: 6px solid #0c5460; padding: 10px; color: #0c5460">
-                                <span>To account</span>
-                            </div>
-                            <div class="row">
-                                <div class="input-group mb-2 mb-sm-0">
-                                    <div class="input-group-addon"><i class="fa fa-code"></i></div>
-                                    <select class="form-control custom-select" >
-                                        <option selected>Receiving account? *</option>
-                                        <option value="1">Cash-00002 (Nguyễn Thiện Lương)</option>
-                                        <option value="2">1813610520 (Đỗ T. Ngọc Anh)</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container" style="width: 90%">
-                        <textarea class="form-control" placeholder="Reason of transfering.. *"></textarea>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-secondary w-80" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn my-btn-shift w-150">SAVE</button>
                 </div>
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->

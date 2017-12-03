@@ -45,12 +45,12 @@
                         <a href="treasury-liabilities.html" class="nav-link">Liabilities</a>
                     </li>
                     <li class="nav-item">
-                        <a href="treasury-account.html" class="nav-link">Account Management</a>
+                        <a href="treasury-account.html" class="nav-link">Management</a>
                     </li>
                 </ul>
             </div>
             <div class="part right-part">
-                <div class="filter show-revenue">
+                <div class="filter show-revenue tag-area">
                     <strong>Revenues:</strong><span>&nbsp;900,000 <sup>vnđ</sup></span>
                 </div>
                 <div class="filter">
@@ -69,7 +69,7 @@
         <div class="announcement">
             <div class="alert alert-warning alert-dismissable fade show" style="margin-bottom: 0px;">
                 <button type="button" class="close" data-dismiss="alert">&times;</button>
-                <strong>Hướng dẫn: </strong>Hoá đơn có dấu * là hoá đơn chưa thanh toán hết
+                <strong>// @Jos Delete after done:</strong> Hoá đơn có dấu * là hoá đơn chưa thanh toán hết
             </div>
         </div>
         <div class="clear"></div>
@@ -80,11 +80,12 @@
                        <tr>
                             <th class="ell-8" style="min-width: 80px; max-width: 90px;">Voucher #</th>
                             <th class="ell-0" style="min-width: 80px; max-width: 90px;">Amount</th>
-                            <th class="ell-0" style="min-width: 100px; max-width: 100px;">Record date/time</th>
+                            <th class="ell-0" style="min-width: 100px; max-width: 150px;">Record date/time</th>
                             <th class="ell-0" style="min-width: 80px; max-width: 90px;">Invoice #</th>
+                            <th class="ell-0" style="min-width: 100px; max-width: 150px;">Created by</th>
                             <th class="ell-0" style="min-width: 100px; max-width: 150px;">Paid by</th>
-                            <th class="ell-0" style="min-width: 80px; max-width: 150px;">Received Acc</th>
                             <th class="ell-0" style="min-width: 100px; max-width: 150px;">Act by</th>
+                            <th class="ell-0" style="min-width: 100px; max-width: 150px;">Received Acc</th>
                             <th></th>
                         </tr>
                     </thead>
@@ -92,32 +93,35 @@
                         <tr>
                             <td class="ell-8" style="min-width: 80px; max-width: 90px;">RV-00005</td>
                             <td class="ell-0" style="min-width: 80px; max-width: 90px;">300,000 <sup>vnđ</sup></td>
-                            <td class="ell-0" style="min-width: 100px; max-width: 100px;">-</td>
-                            <td class="ell-0" style="min-width: 80px; max-width: 90px;"><a href=""> INV-00001</a></td>
-                            <td class="ell-0" style="min-width: 100px; max-width: 150px;">Ngô Bảo Châu</td>
-                            <td class="ell-0" style="min-width: 80px; max-width: 150px;">-</td>
                             <td class="ell-0" style="min-width: 100px; max-width: 150px;">-</td>
-                            <td><a class="btn btn-outline-success" href="" style="width: 130px;" data-toggle="modal" data-target="#modal-receivables" >Record payment</a></td>
+                            <td class="ell-0" style="min-width: 80px; max-width: 90px;"><a href=""> INV-00001</a></td>
+                            <td class="ell-0" style="min-width: 100px; max-width: 150px;">-</td>
+                            <td class="ell-0" style="min-width: 100px; max-width: 150px;">-</td>
+                            <td class="ell-0" style="min-width: 100px; max-width: 150px;">-</td>
+                            <td class="ell-0" style="min-width: 100px; max-width: 150px;">-</td>
+                            <td><a class="btn my-btn-outline w-130" href="" data-toggle="modal" data-target="#mymodal" >Record payment</a></td>
                         </tr>
                         <tr>
                             <td class="ell-8" style="min-width: 80px; max-width: 90px;">RV-00002</td>
                             <td class="ell-0" style="min-width: 80px; max-width: 90px;">300,000 <sup>vnđ</sup></td>
-                            <td class="ell-0" style="min-width: 100px; max-width: 100px;">08/11/2017 11:45</td>
+                            <td class="ell-0" style="min-width: 100px; max-width: 150px;">08/11/2017 11:45</td>
                             <td class="ell-0" style="min-width: 80px; max-width: 90px;"><a href=""> INV-00002</a></td>
-                            <td class="ell-0" style="min-width: 100px; max-width: 150px;">Ngô Bảo Châu</td>
-                            <td class="ell-0" style="min-width: 80px; max-width: 150px;">Quỹ tiền mặt</td>
-                            <td class="ell-0" style="min-width: 100px; max-width: 150px;">Em tên Chi</td>
-                            <td><a class="btn btn-outline-secondary disabled" href="" style="width: 130px;" data-toggle="modal" data-target="#modal-receivables" >Ver 1.0.4</a></td>
+                            <td class="ell-0" style="min-width: 100px; max-width: 150px;">Doctor/Sale</td>
+                            <td class="ell-0" style="min-width: 100px; max-width: 150px;">Customer</td>
+                            <td class="ell-0" style="min-width: 100px; max-width: 150px;">Treasurier</td>
+                            <td class="ell-0" style="min-width: 100px; max-width: 150px;">Account name</td>
+                            <td><a class="btn my-btn-outline-secondary w-130" href="invoice.html" target="_blank">View</td>
                         </tr>
                         <tr>
                             <td class="ell-8" style="min-width: 80px; max-width: 90px;">RV-00001</td>
                             <td class="ell-0" style="min-width: 80px; max-width: 90px;">300,000 <sup>vnđ</sup></td>
-                            <td class="ell-0" style="min-width: 100px; max-width: 100px;">08/11/2017 11:45</td>
+                            <td class="ell-0" style="min-width: 100px; max-width: 150px;">08/11/2017 11:45</td>
                             <td class="ell-0" style="min-width: 80px; max-width: 90px;"><a href=""> INV-00001 *</a></td>
+                            <td class="ell-0" style="min-width: 100px; max-width: 150px;">Thiện Lương</td>
                             <td class="ell-0" style="min-width: 100px; max-width: 150px;">Ngô Bảo Châu</td>
-                            <td class="ell-0" style="min-width: 80px; max-width: 150px;">Quỹ tiền mặt</td>
                             <td class="ell-0" style="min-width: 100px; max-width: 150px;">Em tên Chi</td>
-                            <td><a class="btn btn-outline-secondary disabled" href="" style="width: 130px;" data-toggle="modal" data-target="#modal-receivables">Ver 1.0.4</a></td>
+                            <td class="ell-0" style="min-width: 100px; max-width: 150px;">ACB</td>
+                            <td><a class="btn my-btn-outline-secondary w-130" href="invoice.html" target="_blank">View</a></td>
                         </tr>
                     </tbody>
                 </table>
@@ -137,81 +141,93 @@
         <div class="line"></div>
         © 2018 - Cloud Clinic ERP _version 1.0.1 (South East Asia)
         <span style="float: right">
-            Support: <i class="fa fa-question-circle cl-blue" data-toggle="tooltip" data-placement="top" title="If you have trouble in operation / process / commerce or contract, please contact to 0902.886.862 (Henry - Thịnh). For technical problems such as 'bug, crash, machine stop working...' please contact 0906.858.628 (Jos - Hiến)"></i>  0902.886.862 - 0906.858.628
+            Support: <i class="fa fa-question-circle green" data-toggle="tooltip" data-placement="top" title="If you have trouble in operation / process / commerce or contract, please contact to 0902.886.862 (Henry - Thịnh). For technical problems such as 'bug, crash, machine stop working...' please contact 0906.858.628 (Jos - Hiến)"></i>  0902.886.862 - 0906.858.628
         </span>
     </div>
-        <!-- <div class="screen-lock">
-            <img src="assets/img/shield.svg" class="img-md-center">
-        </div> -->
-    <div class="modal" id="modal-receivables">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h6 class="modal-title">Create new <strong>payment record</strong></h6>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                            <span class="sr-only">Close</span>
-                        </button>
-                    </div>
-                    <div class="modal-body" id="modal-body">
-                        <div class="row container-fluid">
-                            <div class="col-lg-6 col-md-6 col-sm-6" id="modal-body-lc">
-                                <div class="row" style="background-color: #d1ecf1; border-left: 6px solid #0c5460; padding: 10px; color: #0c5460">
-                                    <span>Payment information</span>
-                                </div>
-                                <div class="row">
-                                    <div class="input-group mb-2 mb-sm-0">
-                                        <div class="input-group-addon"><i class="fa fa-code"></i></div>
-                                        <input type="text" class="form-control" style="" placeholder="RV-00005" disabled>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="input-group mb-2 mb-sm-0">
-                                        <div class="input-group-addon"><i class="fa fa-money"></i></div>
-                                        <input type="text" class="form-control" placeholder="300,000                                                 (vnđ)" disabled>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="input-group mb-2 mb-sm-0">
-                                        <div class="input-group-addon"><i class="fa fa-code"></i></div>
-                                        <input type="text" class="form-control" style="" placeholder="Ngô Bảo Châu" disabled>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="input-group mb-2 mb-sm-0">
-                                        <div class="input-group-addon"><i class="fa fa-credit-card"></i></div>
-                                        <select class="form-control custom-select" >
-                                        <option selected>Receiving account? *</option>
-                                        <option value="1">Cash-00001 (Xuân tiểu thư)</option>
-                                        <option value="2">Not permited</option>
-                                        <option value="3">Chỉ được thu tiền vào TK mình qly (acc manager)</option>
-                                    </select>
-                                    </div>
-                                </div>
+    <div class="modal fade" id="mymodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title green" id="exampleModalLabel" >Record Payment</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="part">
+                        <a data-toggle="collapse" href="#show-part-8" class="tag-area db"><strong>Transfer information</strong><i class="fa fa-angle-up"></i></a>
+                            <div id="show-part-8">
+                            <span class="title red">Receipt voucher code *</span>
+                            <div class="input-group" data-toggle="tooltip" title="Receipt voucher code">
+                                <div class="input-group-addon"><i class="fa fa-code"></i></div>
+                                <input type="text" class="form-control" style="" placeholder="RV-00005" disabled>
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6" id="modal-body-rc">
-                                <div class="row" style="background-color: #d1ecf1; border-left: 6px solid #0c5460; padding: 10px; color: #0c5460">
-                                    <span>E-invoice</span>
-                                </div>
-                                <div class="row">
-                                    <div class="input-group mb-2 mb-sm-0">
-                                        <div class="input-group-addon"><i class="fa fa-code"></i></div>
-                                        <input type="text" class="form-control" placeholder="Enter email to receive E-invoice">
-                                    </div>
-                                </div>
+                            <span class="title">Your receiving account *</span>
+                            <div class="input-group" data-toggle="tooltip" title="Receiving account name" >
+                                <div class="input-group-addon"><i class="fa fa-credit-card"></i></div>
+                                <select class="form-control custom-select">
+                                    <option value="1">Cash-00001 [Quỹ tiền mặt (VND)][Phuong Thao]</option>
+                                    <option value="2">Bank-00002 [Vietcombank (VND)][Phuong Thao]</option>
+                                    <option>@Jos Chỉ được thu tiền vào tài khoản mình quản lý / sở hữu</option>
+                                </select>
+                            </div>
+                            <span class="title">Amount *</span>
+                            <div class="input-group" data-toggle="tooltip" title="Amount of voucher">
+                                <div class="input-group-addon"><i class="fa fa-code"></i></div>
+                                <input type="text" class="form-control" style="" placeholder="305,000" disabled>
+                            </div>
+                            <div class="input-group mt-2" data-toggle="tooltip" title="Amount in words">
+                                <div class="input-group-addon"><i class="fa fa-money"></i></div>
+                                <input type="text" class="form-control" style="" placeholder="Ba trăm lẻ năm nghìn đồng" disabled="">
+                            </div>
+                            <span class="title">Transfer Fee (if have, just number, no space) </span>
+                            <div class="input-group" data-toggle="tooltip" title="Transfer fee (if have)">
+                                <div class="input-group-addon"><i class="fa fa-code"></i></div>
+                                <input type="text" class="form-control" style="" placeholder="Ex: 3,000">
+                            </div>
+                            <div class="input-group mt-2" data-toggle="tooltip" title="Amount in words">
+                                <div class="input-group-addon"><i class="fa fa-money"></i></div>
+                                <input type="text" class="form-control" style="" placeholder="Ba nghìn đồng chẵn" disabled="">
+                            </div>
+                            <span class="title">Your customer *</span>
+                            <div class="input-group" data-toggle="tooltip" title="Customer's name">
+                                <div class="input-group-addon"><i class="fa fa-user"></i></div>
+                                <select class="form-control custom-select">
+                                    <option value="1">Ngo Bao Chau (1)</option>
+                                    <option value="2">Ngo Thi Nguyet Anh (2)</option>
+                                </select>
+                            </div>
+                            <span class="title">Reference number</span>
+                            <div class="input-group" data-toggle="tooltip" title="The number of invoices, contract, credit agreement number,...(separated by comma)">
+                                <div class="input-group-addon"><i class="fa fa-code"></i></div>
+                                <input type="text" class="form-control" style="" placeholder="Ex: CT8602310" >
                             </div>
                         </div>
-                        <div class="container" style="width: 90%">
-                            <textarea class="form-control" placeholder="Write your note.."></textarea>
+                    </div>
+                    <div class="part">
+                        <a data-toggle="collapse" href="#show-part-9" class="tag-area db"><strong>Addition information</strong><i class="fa fa-angle-up"></i></a>
+                        <div id="show-part-9">
+                            <span class="title">Write your note (short, clear, number):</span>
+                            <textarea class="form-control" placeholder="..."></textarea>
+                        </div>
+                        <a data-toggle="collapse" href="#show-part-10" class="tag-area db mt-3"><strong>Quick calculator</strong><i class="fa fa-angle-up"></i></a>
+                        <div id="show-part-10">
+                            Next verson 1.1.5
                         </div>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-success">Save changes</button>
-                    </div>
-                </div><!-- /.modal-content -->
-            </div><!-- /.modal-dialog -->
-        </div><!-- /.modal -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary w-80" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn my-btn-shift w-150">DO IT !</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <!-- <div class="screen-lock">
+        <img src="assets/img/shield.svg" class="img-md-center">
+    </div> -->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -219,7 +235,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
     <!-- <script src="js/fb-comments.js"></script> -->
-    <script src="https://use.fontawesome.com/8acd7bac45.js"></script>
+    <!-- <script src="https://use.fontawesome.com/8acd7bac45.js"></script> -->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     </body>
 </html>
