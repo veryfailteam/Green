@@ -129,7 +129,7 @@ Light-black: #0C0704;*/
     display: inline;
 }
 .db{
-    display: block
+    display: block;
 }
 .dib{
     display: inline-block;
@@ -138,7 +138,7 @@ Light-black: #0C0704;*/
     width: 50px !important;
 }
 .w-80{
-    width: 80px;
+    width: 80px !important;
 }
 .w-100{
     width: 100px !important;
@@ -208,13 +208,8 @@ a.dropdown-item:hover{
     background-color: #2EBD59;
     color: #FFF;
 }
-.my-btn-shift{
-    color: #FFF !important;
-    background-color: #2EBD59;
-}
-.my-btn-shift:hover{
-    color: #FFF !important;
-    background-color: #69BF83;
+.my-btn-outline:focus{
+    box-shadow: 0 0 0 3px #FFDA44;
 }
 .my-btn-outline{
     background-color: #FFF;
@@ -241,6 +236,34 @@ a.dropdown-item:hover{
 }
 .my-btn-outline-danger:focus{
     box-shadow: 0 0 0 3px rgba(220, 53, 69, .5)
+}
+.my-btn-blue{
+    border: 1px solid #2196F3;
+    background-color: #2196F3;
+    color: #FFF !important;
+}
+.my-btn-blue:hover{
+    border: 1px solid #3289C7;
+    background-color: #3289C7;
+    color: #FFF !important;
+    border-radius: 4px;
+}
+.my-btn-blue:focus{
+    box-shadow: 0 0 0 3px #2196F3;
+}
+.my-btn-outline-blue{
+    border: 1px solid #2196F3;
+    background-color: #FFF;
+    color: #2196F3 !important;
+}
+.my-btn-outline-blue:hover{
+    border: 1px solid #FFF;
+    background-color: #2196F3;
+    color: #FFF !important;
+    border-radius: 4px;
+}
+.my-btn-outline-blue:focus{
+    box-shadow: 0 0 0 3px #2196F3;
 }
 .my-btn-outline-secondary{
     border: 1px solid #868E96;
@@ -305,44 +328,55 @@ a:hover{
     color: #0C5460;
 }
 /* ----------- modal */
-.modal-dialog{
-    max-width: 840px;
-}
-.modal-md{
-    max-width: 420px !important;
-}
-.modal-body{
-    padding: 1rem .5rem;
-    width: 100%;
-}
-.modal-body .title{
-    margin: .5rem 0 .25rem;
-    display: block;
-}
-.modal-body .input-group:{
-    box-shadow: 2px 2px 2px #FFDA44;
-}
-.modal-body .custom-select, .form-control{
-    border-color: #69BF83;
-    color: #555555;
-}
-.modal-body .form-control:focus{
-    box-shadow: none;
-    border-color: #FFDA44;
-    border-left-color: #FFF;
-}
-.modal-body .input-group-addon, .custom-select{
-    height: 35px !important;
-}
-.modal-body .form-control:disabled{
-    border-color: #D6D6D6;
-}
-.modal-body textarea.form-control:focus{
-    border-left-color: #FFDA44;
-}
-.modal-backdrop{
-    opacity: 0.85 !important;
-}
+    .modal-dialog{
+        max-width: 840px;
+    }
+    .modal-md{
+        max-width: 420px !important;
+    }
+    .modal-body{
+        padding: 1rem .5rem;
+        width: 100%;
+    }
+    .modal .top-part{
+        width: 100%;
+        padding: 1rem .5rem;
+    }
+    .modal thead{
+        background-color: #2EBD59;
+        color: #FFF;
+    }
+    .modal td, th{
+        vertical-align: middle;
+    }
+    .modal-body .title{
+        margin: .5rem 0 .25rem;
+        display: block;
+    }
+    .modal-body .input-group:{
+        box-shadow: 2px 2px 2px #FFDA44;
+    }
+    .modal-body .custom-select, .form-control{
+        border-color: #69BF83;
+        color: #555555;
+    }
+    .modal-body .form-control:focus{
+        box-shadow: none;
+        border-color: #FFDA44;
+        border-left-color: #2EBD59;
+    }
+    .modal-body .input-group-addon, .custom-select{
+        height: 35px !important;
+    }
+    .modal-body .form-control:disabled{
+        border-color: #D6D6D6;
+    }
+    .modal-body textarea.form-control:focus{
+        border-left-color: #FFDA44;
+    }
+    .modal-backdrop{
+        opacity: 0.85 !important;
+    }
 
 /* ----------- @body */
 .body{
@@ -364,21 +398,17 @@ a:hover{
         margin: 0 0.4rem;
     }
 /* ----------- @second-menu at treatment*/
-    .second-menu .treatment-name{
-        background-color: #69BF83;
+    .treatment-name{
+        background-color: #FF457A;
         border-radius: 4px;
         padding: .2rem .4rem;
         color: #FFF !important;
         vertical-align: middle;
-
     }
 /* ----------- @second-menu */
     .second-menu .part{
-        display: inline-block;
         padding: 0.6rem 0;
-    }
-    .second-menu .filter{
-        display: inline-block;
+        display: inline-block; /*Lam hu menu*/
     }
     .second-menu .right-part{
         float: right;
@@ -399,6 +429,15 @@ a:hover{
     }
     .second-menu a.nav-link:hover{
         color: #2EBD59;
+    }
+/* ----------- @3rd-menu */
+    .title-area{
+        margin: 0.2rem 0;
+        display: inline-block;
+    }
+    div.part.right-part{
+        display: inline-block;
+        float: right;
     }
 /* ----------- @feature */
     .feature .part:hover{
@@ -432,6 +471,9 @@ a:hover{
         color: #FFF;
     }
 /* ----------- @treasury-table or table */
+    table{
+        border-bottom: 1px solid #D6D6D6 /*#DFDFDF*/;
+    }
     .table-list{
         padding: auto;
     }
@@ -486,10 +528,6 @@ a:hover{
         padding: 0.5rem 3rem;
         text-align: center;
     }
-/* ----------- @treatment-plan-inword */
-    .treatment-plan-inword{
-        padding: 0rem 0.5rem;
-    }
 /* ----------- @Name of main class */
 /* ----------- @Name of main class */
 /* ----------- @Name of main class */
@@ -517,6 +555,9 @@ a:hover{
     }
     .breadcrumb a{
         font-size: 13px;
+    }
+    .mbl{
+        display: none !important;
     }
     .header .brand{
         padding: 0.9rem .6rem 0 15rem;
@@ -593,6 +634,9 @@ a:hover{
     a{
         font-size: 15px;
     }
+    .mbl{
+        display: none !important;
+    }
     .btn{
         font-size: 14px;
     }
@@ -638,7 +682,6 @@ a:hover{
         display: inline-block;
     }
     .second-menu .part{
-        display: inline-block;
         padding: 0.6rem 0;
     }
     .announcement{
@@ -683,6 +726,9 @@ a:hover{
     }
     a{
         font-size: 14px;
+    }
+    .mbl{
+        display: none !important;
     }
     .btn{
         font-size: 13px;
@@ -770,6 +816,9 @@ a:hover{
     a{
         font-size: 13px;
     }
+    .dkt{
+        display: none !important;
+    }
     .btn{
         font-size: 12px;
     }
@@ -856,6 +905,10 @@ a:hover{
     a{
         font-size: 13px;
     }
+    .dkt{
+        display: none !important;
+    }
+    .b
     .btn{
         font-size: 12px;
     }

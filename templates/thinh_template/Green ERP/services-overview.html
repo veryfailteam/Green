@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html>
-    <!-- Are you our competitor? Contact me to corperate-->
-    <!-- Bạn là đối thủ cạnh tranh của chúng tôi, đừng ngần ngại liên hệ hợp tác: 0902 886 862 ^^ -->
     <head lang="vi,en">
         <!-- Meta tag -->
         <meta charset="utf-8">
@@ -12,24 +10,14 @@
         <meta name="robots" content="index,nofollow">
         <meta name="googlebot" content="index,follow" />
         <meta name="canonical" content="">
-        <title>Cloud Clinic ERP v1.0.1 (2018) - Services | Dental Room</title>
-        <!--/.Meta tag -->
-        <!-- Chèn thêm một đoạn code dữ liệu có cấu trúc nữa ở đây -->
-        <!--/.Structure data -->
+        <title>Cloud Clinic ERP v1.0.1 (2018) - Services | Booking Room</title>
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="css/catchme.css">
     </head>
     <body class="body">
-        <!-- Xem như đã bỏ qua màn hình đăng nhập -->
         <div class="header">
-            <a href="index.html">
-                <div class="brand">
-                    <i class="fa fa-angle-left" style="margin-right: 1rem"></i>
-                    Back |::
-                    <strong>Services <img src="assets/img/service-2.svg" class="img-sm-center" style="display: inline-block;"></strong>
-                </div>
-            </a>
+            <a href="index.html"><div class="brand"><i class="fa fa-angle-left" style="margin-right: 1rem"></i> Back |:: <strong>Services</strong> <img src="assets/img/service-2.svg" class="img-sm-center" style="display: inline-block;"></div></a>
             <div class="user-panel">
                 <a href="http://gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
                 <a href="http://m.me" target="_blank"><i class="fa fa-telegram"></i></a>
@@ -45,17 +33,23 @@
             <div class="part left-part">
                 <ul class="nav nav-pills">
                     <li class="nav-item">
-                        <a href="services-dental.html" class="nav-link active">Dental</a>
+                        <a href="services-dental.html" class="nav-link">Dental</a>
                     </li><!--
                     <li class="nav-item">
                         <a href="services-spa.html" class="nav-link">Spa</a>
                     </li>
                     <li class="nav-item">
-                        <a href="services-overview.html" class="nav-link">Over-view</a>
+                        <a href="services-overview.html" class="nav-link active">Over-view</a>
                     </li> -->
                 </ul>
             </div>
             <div class="part right-part">
+                <div class="filter">
+                    <select class="form-control custom-select">
+                        <option>PVH branch</option>
+                        <option>LVS branch</option>
+                    </select>
+                </div>
                 <div class="filter">
                     <select class="form-control custom-select">
                         <option>Today (default)</option>
@@ -69,61 +63,73 @@
                 </div>
             </div>
         </div>
+        <div class="announcement">
+            <div class="alert alert-warning alert-dismissable fade show" style="margin-bottom: 0px;">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>@Jos: </strong>Turn nào mà có turn khác phía trước thì nghĩa là turn trước chưa xong (done to delete turn). Property: booking code  (hour start - spending time / booked time )
+            </div>
+        </div>
         <div class="clear"></div>
         <div class="treasury-table">
-            <a href="medical-history.html"><b>treatment A</b></a>
-        </div>
-        <!-- <div class="treasury-table">
             <div class="table-list">
                 <table class="table table-responsive table-striped table-hover" style="border-bottom: 1px solid #DFDFDF">
                     <thead>
                        <tr>
-                            <th class="ell-8" style="min-width: 100px; max-width: 150px;">Customer name</th>
+                            <th class="ell-8" style="min-width: 80px; max-width: 150px;">Customer name</th>
                             <th class="ell-0" style="min-width: 80px; max-width: 90px;">Department</th>
                             <th class="ell-0" style="min-width: 80px; max-width: 90px;">Service</th>
                             <th class="ell-0" style="min-width: 100px; max-width: 150px;">Person in charge</th>
                             <th class="ell-0" style="min-width: 80px; max-width: 90px;"># Booking</th>
-                            <th class="ell-0" style="min-width: 300px; max-width: 300px;">The turn</th>
+                            <th class="ell-0" style="min-width: 300px;">The turn</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="ell-8" style="min-width: 100px; max-width: 150px;"><a href="#customer-service">Yến Vân</a></td>
+                            <td class="ell-8" style="min-width: 80px; max-width: 150px;"><a href="#customer-service">Yến Vân</a></td>
                             <td class="ell-0" style="min-width: 80px; max-width: 90px;">Dental</td>
                             <td class="ell-0" style="min-width: 80px; max-width: 90px;">Basic service</td>
-                            <td class="ell-0" style="min-width: 100px; max-width: 150px;"><a href="#dr.schedule">Ngọc Anh</a</td>
+                            <td class="ell-0" style="min-width: 100px; max-width: 150px;"><a href="#dr.schedule">Ngọc Anh</a></td>
                             <td class="ell-0" style="min-width: 80px; max-width: 90px;"><a href="#dental">026</a></td>
-                            <td class="ell-0" style="min-width: 300px; max-width: 300px;">
-                                <span>015 (10:15-88/60)</span>
-                                <span>026 (11:15-00/30)</span>
+                            <td class="ell-0" style="min-width: 300px;">
+                                <a href="#Dr.schedule" role="button" class="btn my-btn w-150">015 (10:15-88/60)</a>
+                                <a href="#Dr.schedule" role="button" class="btn my-btn w-150">026 (11:15-00/30)</a>
                             </td>
                         </tr>
                         <tr>
-                            <td class="ell-8" style="min-width: 100px; max-width: 150px;"><a href="#customer-service">Linda Trần</a></td>
+                            <td class="ell-8" style="min-width: 80px; max-width: 150px;"><a href="#customer-service">Linda Trần</a></td>
                             <td class="ell-0" style="min-width: 80px; max-width: 90px;">Spa</td>
                             <td class="ell-0" style="min-width: 80px; max-width: 90px;">Basic service</td>
                             <td class="ell-0" style="min-width: 100px; max-width: 150px;"><a href="#dr.schedule">Khôi Nguyên</a></td>
                             <td class="ell-0" style="min-width: 80px; max-width: 90px;"><a href="#spa">106</a></td>
-                            <td class="ell-0" style="min-width: 300px; max-width: 300px;">
-                                <span>106 (11:1530)</span>
+                            <td class="ell-0" style="min-width: 300px;">
+                                <a href="#Dr.schedule" role="button" class="btn my-btn w-150">106 (11:15-00/30)</a>
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-        </div> -->
         </div>
-        <div class="footer">
-            <div class="line"></div>
-            © 2018 - Cloud Clinic ERP _version 1.0.1 (South East Asia)
-            <span style="float: right">
-                Support: <i class="fa fa-question-circle cl-blue" data-toggle="tooltip" data-placement="top" title="If you have trouble in operation / process / commerce or contract, please contact to 0902.886.862 (Henry - Thịnh). For technical problems such as 'bug, crash, machine stop working...' please contact 0906.858.628 (Jos - Hiến)"></i>  0902.886.862 - 0906.858.628
-            </span>
+        <div class="split-page">
+            <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
         </div>
+    </div>
+    <div class="footer">
+        <div class="line"></div>
+        © 2018 - Cloud Clinic ERP _version 1.0.1 (South East Asia)
+        <span style="float: right">
+            Support: <i class="fa fa-question-circle cl-blue" data-toggle="tooltip" data-placement="top" title="If you have trouble in operation / process / commerce or contract, please contact to 0902.886.862 (Henry - Thịnh). For technical problems such as 'bug, crash, machine stop working...' please contact 0906.858.628 (Jos - Hiến)"></i>  0902.886.862 - 0906.858.628
+        </span>
+    </div>
         <!-- <div class="screen-lock">
             <img src="assets/img/shield.svg" class="img-md-center">
         </div> -->
-        <div class="modal" id="modal-receivables">
+    <div class="modal" id="modal-receivables">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">

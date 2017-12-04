@@ -1,27 +1,15 @@
 <!DOCTYPE html>
 <html>
-    <!-- Are you our competitor? Contact me to corperate-->
-    <!-- Bạn là đối thủ cạnh tranh của chúng tôi, đừng ngần ngại liên hệ hợp tác: 0902 886 862 ^^ -->
     <head lang="vi,en">
         <!-- Meta tag -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1.0, user-scalable=0" />
-        <meta name="Description" content="...">
-        <meta name="keywords" content="...">
-        <meta name="google-site-verification" content="..." />
-        <meta name="robots" content="index,nofollow">
-        <meta name="googlebot" content="index,follow" />
-        <meta name="canonical" content="">
         <title>Cloud Clinic ERP v1.0.1 (2018) - Services | Dental Room</title>
-        <!--/.Meta tag -->
-        <!-- Chèn thêm một đoạn code dữ liệu có cấu trúc nữa ở đây -->
-        <!--/.Structure data -->
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="css/catchme.css">
     </head>
     <body class="body">
-        <!-- Xem như đã bỏ qua màn hình đăng nhập -->
         <div class="header">
             <a href="services-dental.html">
                 <div class="brand">
@@ -34,18 +22,18 @@
         </div>
         <div class="clear"></div>
         <div class="second-menu">
-            <div class="part left-part">
-                <img src="assets/img/avatar-2.svg" class="img-md" style="margin: 0;">
-                <a class="ell-max200 dib" style="color: #8FBD9D;"> Yến Vân (Age. 26)</a>
-                <a class="treatment-name ell-max200 dib">Chỉnh nha UD</a>
+            <div class="part dib">
+                <img src="assets/img/avatar-2.svg" class="img-md m-0">
+                <a class="ell-max200" href="#customer.service">Chu Yến Vân (26)</a>
+                <a class="treatment-name ell-max200 dib">Basic Service</a>
             </div>
-            <div class="part right-part">
+            <div class="part float-right dkt">
                 <ul class="nav nav-pills">
                     <li class="nav-item">
                         <a href="medical-history.html" class="nav-link active">Medical History</a>
                     </li>
                     <li class="nav-item">
-                        <a href="exam-and-diagnosis.html" class="nav-link">Examination & Diagnosis</a>
+                        <a href="exam-and-diagnosis.html" class="nav-link">Exam & Diagnosis</a>
                     </li>
                     <li class="nav-item">
                         <a href="treatment.html" class="nav-link">Treatment</a>
@@ -55,6 +43,25 @@
                     </li>
                     <li class="nav-item">
                         <a href="storage.html" class="nav-link">Storage</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="part float-right mbl db">
+                <ul class="nav nav-pills">
+                    <li class="nav-item">
+                        <a href="medical-history.html" class="nav-link active"><i class="fa fa-heart"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="exam-and-diagnosis.html" class="nav-link"><i class="fa fa-line-chart"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="treatment.html" class="nav-link"><i class="fa fa-calendar-check-o"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pres.html" class="nav-link"><i class="fa fa-medkit"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="storage.html" class="nav-link"><i class="fa fa-database"></i></a>
                     </li>
                 </ul>
             </div>
@@ -72,78 +79,9 @@
             Support: <i class="fa fa-question-circle cl-blue" data-toggle="tooltip" data-placement="top" title="If you have trouble in operation / process / commerce or contract, please contact to 0902.886.862 (Henry - Thịnh). For technical problems such as 'bug, crash, machine stop working...' please contact 0906.858.628 (Jos - Hiến)"></i>  0902.886.862 - 0906.858.628
         </span>
     </div>
-        <!-- <div class="screen-lock">
-            <img src="assets/img/shield.svg" class="img-md-center">
-        </div> -->
-    <div class="modal" id="modal-receivables">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h6 class="modal-title">Create new <strong>payment record</strong></h6>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                            <span class="sr-only">Close</span>
-                        </button>
-                    </div>
-                    <div class="modal-body" id="modal-body">
-                        <div class="row container-fluid">
-                            <div class="col-lg-6 col-md-6 col-sm-6" id="modal-body-lc">
-                                <div class="row" style="background-color: #d1ecf1; border-left: 6px solid #0c5460; padding: 10px; color: #0c5460">
-                                    <span>Payment information</span>
-                                </div>
-                                <div class="row">
-                                    <div class="input-group mb-2 mb-sm-0">
-                                        <div class="input-group-addon"><i class="fa fa-code"></i></div>
-                                        <input type="text" class="form-control" style="" placeholder="RV-00005" disabled>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="input-group mb-2 mb-sm-0">
-                                        <div class="input-group-addon"><i class="fa fa-money"></i></div>
-                                        <input type="text" class="form-control" placeholder="300,000                                                 (vnđ)" disabled>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="input-group mb-2 mb-sm-0">
-                                        <div class="input-group-addon"><i class="fa fa-code"></i></div>
-                                        <input type="text" class="form-control" style="" placeholder="Ngô Bảo Châu" disabled>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="input-group mb-2 mb-sm-0">
-                                        <div class="input-group-addon"><i class="fa fa-credit-card"></i></div>
-                                        <select class="form-control custom-select" >
-                                        <option selected>Receiving account? *</option>
-                                        <option value="1">Cash-00001 (Xuân tiểu thư)</option>
-                                        <option value="2">Not permited</option>
-                                        <option value="3">Chỉ được thu tiền vào TK mình qly (acc manager)</option>
-                                    </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6" id="modal-body-rc">
-                                <div class="row" style="background-color: #d1ecf1; border-left: 6px solid #0c5460; padding: 10px; color: #0c5460">
-                                    <span>E-invoice</span>
-                                </div>
-                                <div class="row">
-                                    <div class="input-group mb-2 mb-sm-0">
-                                        <div class="input-group-addon"><i class="fa fa-code"></i></div>
-                                        <input type="text" class="form-control" placeholder="Enter email to receive E-invoice">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="container" style="width: 90%">
-                            <textarea class="form-control" placeholder="Write your note.."></textarea>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-success">Save changes</button>
-                    </div>
-                </div><!-- /.modal-content -->
-            </div><!-- /.modal-dialog -->
-        </div><!-- /.modal -->
+    <!-- <div class="screen-lock">
+        <img src="assets/img/shield.svg" class="img-md-center">
+    </div> -->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
