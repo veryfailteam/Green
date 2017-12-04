@@ -103,7 +103,8 @@ Light-black: #0C0704;*/
     color: #868E96;
 }
 .line{
-    color: #D6D6D6;
+    width: 100%;
+    border-bottom: : 1px solid #D6D6D6;
 }
 .lgrey{
     color: #364A4C;
@@ -432,10 +433,6 @@ a:hover{
     }
 /* ----------- @3rd-menu */
     .title-area{
-        margin: 0.2rem 0;
-        display: inline-block;
-    }
-    div.part.right-part{
         display: inline-block;
         float: right;
     }
@@ -528,7 +525,16 @@ a:hover{
         padding: 0.5rem 3rem;
         text-align: center;
     }
-/* ----------- @Name of main class */
+/* ----------- @mdental room - search box*/
+    .dental-room .box{
+        margin: 0;
+        height: 60px;
+        width: 280px;
+        border: 1px solid #D6D6D6;
+    }
+    .dental-room .right-part{
+        width: auto;
+    }
 /* ----------- @Name of main class */
 /* ----------- @Name of main class */
 /* ----------- @Name of main class */
@@ -958,6 +964,11 @@ a:hover{
     }
     .standard{
         padding: 0.2rem .6rem;
+    }
+    .title-area{
+        margin: 0.2rem 0;
+        display: inline-block;
+        float: right;
     }
     .treasury-table{
         padding: 0 .6rem;
