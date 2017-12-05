@@ -72,6 +72,12 @@ Light-black: #0C0704;*/
     margin: auto;
     display: block;
 }
+.bg-grey{
+    background-color: #ECECEC;
+}
+.bg-white{
+    background-color: #FFF;
+}
 .blue{
     color: #2196F3;
 }
@@ -122,7 +128,7 @@ Light-black: #0C0704;*/
     clear: both;
     content: "";
 }
-.clear-pm{
+.pm-0{
     padding: 0px;
     margin: 0px;
 }
@@ -535,7 +541,15 @@ a:hover{
     .dental-room .right-part{
         width: auto;
     }
-/* ----------- @Name of main class */
+/* ----------- @dental-room */
+    .dental-room{
+        padding: 1rem 0;
+        margin: 2rem auto;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+
+
 /* ----------- @Name of main class */
 /* ----------- @Name of main class */
 
