@@ -4,19 +4,35 @@ Feel Free to use it
 We are proud of making global awesome product from Saigon (Peace of South East Asia) - VietNam
 */
 
+/*// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575px) { ... }
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }*/
+
+
 /* ----------- Quick color ----------- */
 /*Color:
 Blue: 2196F3;
 naviblue: #094F71;
 Green: #2EBD59; - #69BF83;
 Orange: #F37338;
-Yellow: #FFDA44;
+Yellow: #FFDA44; #FFBF00;
 Violet: #933EC5;
 Red: #D80027;
 Secondary: #868E96;
 Line: #D6D6D6;
 Light-grey: #364A4C; -hover: #A9CEDD;
-Light-black: #0C0704;*/
+Light-black: #0C0704; #696969 */
 
 /* ----------- Quick make up ----------- */
 .subtext{
@@ -310,6 +326,36 @@ a:hover{
     color: #2EBD59;
     text-decoration: none;
 }
+.s-active{
+    background-color: #FFF;
+    color: #2196F3;
+    padding: 0 0.4rem !important;
+    border-radius: 4px;
+}
+.s-checked{
+    background-color: #FFF;
+    color: #2EBD59;
+    padding: 0 0.4rem !important;
+    border-radius: 4px;
+}
+.s-onway{
+    background-color: #FFF;
+    color: #FFBF00;
+    padding: 0 0.4rem !important;
+    border-radius: 4px;
+}
+.s-booked{
+    background-color: #FFF;
+    color: #696969;
+    padding: 0 0.4rem !important;
+    border-radius: 4px;
+}
+.s-confirm{
+    background-color: #FFF;
+    color: #FF457A;
+    padding: 0 0.4rem !important;
+    border-radius: 4px;
+}
 /* ----------- quote */
 .tag-line{
     border-left: 6px solid #2EBD59;
@@ -532,23 +578,69 @@ a:hover{
         text-align: center;
     }
 /* ----------- @mdental room - search box*/
+    .dental-room{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        overflow: hidden;
+        border-radius: 4px;
+    }
     .dental-room .box{
-        margin: 0;
+        margin: auto;
         height: 60px;
-        width: 280px;
         border: 1px solid #D6D6D6;
     }
+    .dental-room .part{
+        padding: 0 .5rem;
+    }
+    .dental-room .left-part{
+        width: 280px;
+        margin-right: -.5rem;
+        float: left;
+    }
     .dental-room .right-part{
-        width: auto;
+        overflow: hidden;
     }
-/* ----------- @dental-room */
-    .dental-room{
-        padding: 1rem 0;
-        margin: 2rem auto;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    .dental-room .left-part a{
+        display: block;
+        width: 100%;
+        border-top-color: #FFF !important;
     }
-
-
+    .dental-room .msearch{
+        margin: auto;
+        height: 60px;
+        border: 1px solid #D6D6D6;
+        padding: .8rem .5rem 0;
+        border-radius: 4px;
+        border-color: #2EBD59;
+        /*border-top-left-radius: 4px !important;
+        border-top-right-radius: 4px !important;*/
+    }
+    .form-control:focus{
+        box-shadow: none;
+        border-color: #FFDA44;
+        border-left-color: #2EBD59;
+    }
+    .dental-room .left-part .sresult{
+        padding: .4rem .5rem 0;
+    }
+    .dental-room .left-sresult{
+        float: left;
+    }
+    .dental-room .right-sresult{
+        float: right;
+        text-align: right !important;
+    }
+    .dental-room .left-part p, b{
+        margin: 0;
+        padding: 0;
+    }
+    .dental-room .left-part a{
+        color: #696969 !important;
+    }
+    .box.sresult:hover{
+        color: #FFF !important;
+        background-color: #2EBD59;
+        border-color: #2EBD59;
+    }
 
 /* ----------- @Name of main class */
 /* ----------- @Name of main class */
@@ -619,6 +711,10 @@ a:hover{
     }
     .treasury-table{
         padding: 0 15rem;
+    }
+    .dental-room{
+        padding: 5rem 2rem;
+        margin: 7rem 0;
     }
     .split-page{
         padding: 0.5rem 15rem;
@@ -713,6 +809,10 @@ a:hover{
     .treasury-table{
         padding: 0 7rem;
     }
+    .dental-room{
+        padding: 2rem 1rem;
+        margin: 3rem 0;
+    }
     .split-page{
         padding: 0.5rem 7rem;
         float: right;
@@ -803,6 +903,10 @@ a:hover{
     .treasury-table{
         padding: 0 3rem;
     }
+    .dental-room{
+        padding: 1rem 0;
+        margin: 2.5rem -2.5rem;
+    }
     .split-page{
         padding: 0.5rem 3rem;
         float: right;
@@ -840,7 +944,7 @@ a:hover{
         display: none !important;
     }
     .btn{
-        font-size: 12px;
+        font-size: 11px !important;
     }
     .form-control{
         font-size: 12px;
@@ -896,6 +1000,10 @@ a:hover{
         padding: 0.5rem 1.2rem;
         float: right;
     }
+    .dental-room{
+        padding: 1rem 0;
+        margin: 2.5rem -.7rem;
+    }
     .footer{
         padding: 0.5rem 1.2rem;
         margin: 10rem auto 0;
@@ -930,7 +1038,7 @@ a:hover{
     }
     .b
     .btn{
-        font-size: 12px;
+        font-size: 11px !important;
     }
     .form-control{
         font-size: 12px;
@@ -986,6 +1094,10 @@ a:hover{
     }
     .treasury-table{
         padding: 0 .6rem;
+    }
+    .dental-room{
+        padding: 1rem 0;
+        margin: 1.5rem -.1rem;
     }
     .split-page{
         padding: 0.5rem .6rem;
