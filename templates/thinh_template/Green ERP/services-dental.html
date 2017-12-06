@@ -46,8 +46,8 @@
                 </ul>
             </div>
             <div class="part float-right">
-                <a href="" class="btn my-btn-outline" data-toggle="modal" data-target="#modal-as"><i class="fa fa-address-card-o fa-fw fa-lg"></i> Create new customer</a>
-                <a href="" class="btn my-btn-outline" data-toggle="modal" data-target="#modal-as"><i class="fa fa-calendar-plus-o fa-fw fa-lg"></i> Create new appointment</a>
+                <a href="" class="btn my-btn-outline" data-toggle="modal" data-target="#modal-newcustomer"><i class="fa fa-address-card-o fa-fw fa-lg"></i> Create new customer</a>
+                <a href="" class="btn my-btn-outline" data-toggle="modal" data-target="#modal-newschedule"><i class="fa fa-calendar-plus-o fa-fw fa-lg"></i> Create new appointment</a>
             </div>
         </div>
         <div class="clear"></div>
@@ -332,9 +332,87 @@
                 Support: <i class="fa fa-question-circle blue" data-toggle="tooltip" data-placement="top" title="If you have trouble in operation / process / commerce or contract, please contact to 0902.886.862 (Henry - Thịnh). For technical problems such as 'bug, crash, machine stop working...' please contact 0906.858.628 (Jos - Hiến)"></i>  0902.886.862 - 0906.858.628
             </span>
         </div>
-    </body>
-
-    <!-- <div class="screen-lock">
+        <div class="modal fade" id="modal-newcustomer" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog modal-md" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title green" id="exampleModalLabel" >Create new customer</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            <span class="sr-only">Close</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="part-2">
+                            <a data-toggle="collapse" href="#collapse-perinformation" class="tag-area db"><strong>Persional Information</strong><i class="fa fa-angle-up"></i></a>
+                            <div id="collapse-perinformation">
+                                <span class="title">Basic info *</span>
+                                <div class="input-group" data-toggle="tooltip" title="">
+                                    <div class="input-group-addon"><i class="fa fa-code"></i></div>
+                                    <input type="text" class="form-control" style="" placeholder="Mid & last name *" >
+                                </div>
+                                <div class="input-group mt-2">
+                                    <div class="input-group-addon"><i class="fa fa-code"></i></div>
+                                    <input type="text" class="form-control" style="" placeholder="Mid & first name *" >
+                                </div>
+                                <div class="input-group mt-2">
+                                    <div class="input-group-addon"><i class="fa fa-code"></i></div>
+                                    <input type="text" class="form-control" style="" placeholder="Main phone number *" >
+                                </div>
+                                <div class="input-group mt-2">
+                                    <div class="input-group-addon"><i class="fa fa-user"></i></div>
+                                    <select class="form-control custom-select">
+                                        <option value="1">Male *</option>
+                                        <option value="2">Female</option>
+                                        <option value="3">Others (Surgery)</option>
+                                    </select>
+                                </div>
+                                <div class="input-group mt-2">
+                                    <div class="input-group-addon"><i class="fa fa-code"></i></div>
+                                    <input type="text" class="form-control" style="" placeholder="Email " >
+                                </div>
+                                <span class="title mt-2">Customer Affiliate</span>
+                                <div class="input-group mt-2">
+                                    <div class="input-group-addon"><i class="fa fa-user"></i></div>
+                                    <select class="form-control custom-select">
+                                        <option value="1">Rocket Age Group *</option>
+                                        <option value="2">Natural (words by mouth)</option>
+                                        <option value="3">Ngoc Anh</option>
+                                        <option value="4">Thien Luong</option>
+                                        <option value="5">Marketing campaign</option>
+                                        <option value="6">Un-known</option>
+                                    </select>
+                                </div>
+                                <span class="title mt-2">Customer Level</span>
+                                <div class="input-group mt-2">
+                                    <div class="input-group-addon"><i class="fa fa-user"></i></div>
+                                    <select class="form-control custom-select">
+                                        <option value="1">Normal</option>
+                                        <option value="2">Silver (-5%)</option>
+                                        <option value="3">Gold (-10%)</option>
+                                        <option value="3">Diamond (-15%)</option>
+                                        <option value="4">V.I.P (-20%)</option>
+                                        <option value="4">First Use (-20%)</option>
+                                    </select>
+                                </div>
+                                <a data-toggle="collapse" href="#collapse-Addiinformation" class="tag-area db mt-3"><strong>Addition information</strong><i class="fa fa-angle-up"></i></a>
+                            <div id="collapse-Addiinformation">
+                                <span class="title">Write your note (short, clear, number):</span>
+                                <textarea class="form-control" placeholder="..."></textarea>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary w-100 dkt"><i class="fa fa-times-circle-o fa-fw"></i> Cancel</button>
+                    <button type="button" class="btn my-btn-outline w-150 dkt"><i class="fa fa-save fa-fw"></i> Save</button>
+                    <button type="button" class="btn btn-secondary w-80 mbl"><i class="fa fa-times-circle-o fa-fw fa-lg"></i></button>
+                    <button type="button" class="btn my-btn-outline w-150 mbl"><i class="fa fa-save fa-fw fa-lg"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.modal -->
+        <!-- <div class="screen-lock">
         <img src="assets/img/shield.svg" class="img-md-center">
     </div> -->
     <!-- Optional JavaScript -->
@@ -345,5 +423,5 @@
     <script src="js/script.js"></script>
     <script src="https://use.fontawesome.com/8acd7bac45.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    </body>
+</body>
 </html>
