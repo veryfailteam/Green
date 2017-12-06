@@ -310,7 +310,7 @@ a.dropdown-item:hover{
     color: #555555;
 }
 .custom-select:focus{
-    box-shadow: 0 0 0 3px #FFDA44;
+    box-shadow: 0 0 0 3px #FFDA44 !important;
     border-color: #FFDA44;
 }
 .input-group-addon{
@@ -355,6 +355,12 @@ a:hover{
     color: #FF457A;
     padding: 0 0.4rem !important;
     border-radius: 4px;
+}
+.sticky{
+    position: sticky;
+    position: -webkit-sticky !important;
+    top: 0;
+    z-index: 1200 !important;
 }
 /* ----------- quote */
 .tag-line{
@@ -432,17 +438,13 @@ a:hover{
     }
 
 /* ----------- @body */
-.body{
-        position: relative;
-    }
+    .body{
+            position: relative;
+        }
 /* ----------- @header */
     .header{
         height: 50px;
         background-color: #2EBD59;
-        position: sticky;
-        position: -webkit-sticky;
-        top: 0;
-        z-index: 1;
     }
     .header .user-panel a{
         color: #FFF;
@@ -459,6 +461,15 @@ a:hover{
         vertical-align: middle;
     }
 /* ----------- @second-menu */
+    .second-menu{
+        position: sticky;
+        position: -webkit-sticky;
+        position: -moz-sticky;
+        position: -ms-sticky;
+        position: -o-sticky;
+        top: 10;
+        z-index: 100;
+    }
     .second-menu .part{
         padding: 0.6rem 0;
         display: inline-block; /*Lam hu menu*/
@@ -468,7 +479,7 @@ a:hover{
     }
     .second-menu .nav-link{
         height: 30px;
-        padding: 0.25rem 0.5rem;
+        padding: 0.25rem 1rem;
     }
     .second-menu a.nav-link.active{
         background-color: #FFDA44;
@@ -583,6 +594,23 @@ a:hover{
         overflow: hidden;
         border-radius: 4px;
     }
+    .dental-room .top-part{
+        margin: 1rem auto;
+        padding: 0 .5rem;
+    }
+    .dental-room .nav-link.active{
+        color: #FFF;
+        background-color: #2EBD59;
+    }
+    .dental-room .nav-link{
+        height: 35px;
+        width: 132px;
+        padding-top: 0.35rem;
+        padding-left: 1.5rem !important;
+    }
+    .dental-room .nav-link:hover{
+        border-color: #2EBD59;
+    }
     .dental-room .box{
         margin: auto;
         height: 60px;
@@ -595,6 +623,7 @@ a:hover{
         width: 280px;
         margin-right: -.5rem;
         float: left;
+        margin-bottom: .5rem;
     }
     .dental-room .right-part{
         overflow: hidden;
@@ -602,17 +631,17 @@ a:hover{
     .dental-room .left-part a{
         display: block;
         width: 100%;
-        border-top-color: #FFF !important;
+        border-top: 0;
     }
     .dental-room .msearch{
         margin: auto;
         height: 60px;
         border: 1px solid #D6D6D6;
         padding: .8rem .5rem 0;
-        border-radius: 4px;
+        width: 100%;
         border-color: #2EBD59;
-        /*border-top-left-radius: 4px !important;
-        border-top-right-radius: 4px !important;*/
+        border-top-left-radius: 4px !important;
+        border-top-right-radius: 4px !important;
     }
     .form-control:focus{
         box-shadow: none;
@@ -640,6 +669,8 @@ a:hover{
         color: #FFF !important;
         background-color: #2EBD59;
         border-color: #2EBD59;
+        border-right: 4px solid #FFDA44;
+        width: 268px;
     }
 
 /* ----------- @Name of main class */
@@ -810,8 +841,11 @@ a:hover{
         padding: 0 7rem;
     }
     .dental-room{
-        padding: 2rem 1rem;
+        padding: 1rem;
         margin: 3rem 0;
+    }
+    .dental-room .left-part{
+        margin-right: .5rem;
     }
     .split-page{
         padding: 0.5rem 7rem;
@@ -904,8 +938,8 @@ a:hover{
         padding: 0 3rem;
     }
     .dental-room{
-        padding: 1rem 0;
-        margin: 2.5rem -2.5rem;
+        padding: .5rem 0;
+        margin: 2rem -2.5rem;
     }
     .split-page{
         padding: 0.5rem 3rem;
@@ -996,13 +1030,13 @@ a:hover{
     .treasury-table{
         padding: 0 1.2rem;
     }
+    .dental-room{
+        padding: 1rem 0;
+        margin: 2rem -.7rem;
+    }
     .split-page{
         padding: 0.5rem 1.2rem;
         float: right;
-    }
-    .dental-room{
-        padding: 1rem 0;
-        margin: 2.5rem -.7rem;
     }
     .footer{
         padding: 0.5rem 1.2rem;
@@ -1036,7 +1070,6 @@ a:hover{
     .dkt{
         display: none !important;
     }
-    .b
     .btn{
         font-size: 11px !important;
     }
@@ -1096,7 +1129,7 @@ a:hover{
         padding: 0 .6rem;
     }
     .dental-room{
-        padding: 1rem 0;
+        padding: .5rem 0;
         margin: 1.5rem -.1rem;
     }
     .split-page{
