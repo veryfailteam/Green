@@ -25,7 +25,7 @@
             <div class="part left-part">
                 <img src="assets/img/avatar-2.svg" class="img-md m-0">
                 <a class="ell-max200" href="#customer.service">Chu Yến Vân (26)</a>
-                <a class="treatment-name ell-max200 dib">Chỉnh nha</a>
+                <a class="treatment-name ell-max200 dib">V.I.P</a>
             </div>
             <div class="part float-right dkt">
                 <ul class="nav nav-pills">
@@ -101,7 +101,7 @@
                             <td class="ell-0" style="min-width: 50px; max-width: 60px;"><a href="">-</a></td>
                             <td class="ell-0" style="min-width: 350px; max-width: 600px;">Chỉnh nha</td>
                             <td class="ell-0" style="min-width:100px; max-width: 150px;">-</td>
-                            <td><a class="btn my-btn-outline w-130" href="#" data-toggle="modal" data-target="#modal-receivables" >Mark as done</a></td>
+                            <td><a class="btn my-btn-outline w-130" href="#" >Mark as done</a></td>
                         </tr>
                         <tr>
                             <td class="ell-8" style="min-width: 30px; max-width: 40px;">01</td>
@@ -119,9 +119,9 @@
         <div class="standard mt-lg-3 mt-md-2 mt-sm-1">
             <a data-toggle="collapse" href="#note"><strong class="tag-area dib">Notes<i class="fa fa-angle-up dib"></i></strong></a>
             <div class="float-right">
-                <a class="btn my-btn-outline-danger" href="print-treatment.html" target="_blank" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-print fa-lg fa-fw"></i></a>
-                    <a class="btn my-btn-outline dkt" href="#" data-toggle="modal" data-target="#modal-edit"><i class="fa fa-files-o fa-lg fa-fw"></i> Edit</a>
-                    <a class="btn my-btn-outline mbl" href="#" data-toggle="modal" data-target="#modal-edit"><i class="fa fa-files-o fa-lg fa-fw"></i></a>
+                <a class="btn my-btn-outline-danger dkt" href="#" data-toggle="modal" data-target="#modal-edittreatmentplan"><i class="fa fa-files-o fa-lg fa-fw"></i> Edit</a>
+                <a class="btn my-btn-outline-danger mbl" href="#" data-toggle="modal" data-target="#modal-edittreatmentplan"><i class="fa fa-files-o fa-lg fa-fw"></i></a>
+                <a class="btn my-btn-outline" href="print-treatment.html" target="_blank" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-print fa-lg fa-fw"></i></a>
             </div>
         </div>
         <div class="standard" id="note">
@@ -129,6 +129,111 @@
                 This is detail of the choosen treatment in words..
             </div>
         </div>
+        </div>
+        <div class="clear"></div>
+        <div class="standard">
+            <div class="line"></div>
+        </div>
+        <!-- invoice -->
+        <div class="standard mt-lg-3 mt-md-2 mt-sm-1">
+            <a data-toggle="collapse" href="#collapse-invoices"><strong class="tag-area dib">Invoices (RV)<i class="fa fa-angle-up dib"></i></strong></a>
+            <div class="float-right">
+                <a class="btn my-btn-outline-danger dkt" href="#" data-toggle="modal" data-target="#modal-invoice"><i class="fa fa-files-o fa-lg fa-fw"></i> Separate</a>
+                <a class="btn my-btn-outline-danger mbl" href="#" data-toggle="modal" data-target="#modal-invoice"><i class="fa fa-files-o fa-lg fa-fw"></i></a>
+                <a class="btn my-btn-outline" href="print-treatment.html" target="_blank" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-print fa-lg fa-fw"></i></a>
+            </div>
+        </div>
+        <div class="standard collapse show" id="collapse-invoices">
+            <div class="table-list">
+                <table class="table table-responsive table-striped table-hover" >
+                    <thead>
+                        <tr>
+                            <th class="ell-8" style="min-width: 100px; max-width: 110px;">Voucher #</th>
+                            <th class="ell-0" style="min-width: 100px; max-width: 110px;">Amount</th>
+                            <th class="ell-0" style="min-width: 100px; max-width: 150px;">Record Date/time</th>
+                            <th class="ell-0" style="min-width: 100px; max-width: 110px;">Balance Due</th>
+                            <th class="ell-0" style="min-width: 100px; max-width: 150px;">Creator</th>
+                            <th class="ell-0" style="min-width: 100px; max-width: 150px;"><a data-toggle="tooltip" data-placement="top" title="What remind you for next payment">Notes<a></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="ell-8" style="min-width: 100px; max-width: 110px;">RV-00005</td>
+                            <td class="ell-0" style="min-width: 100px; max-width: 110px;">5,000,000 <sup>vnđ</sup></td>
+                            <td class="ell-0" style="min-width: 100px; max-width: 150px;">-</td>
+                            <td class="ell-0" style="min-width: 100px; max-width: 110px;">9,980,000 <sup>vnđ</sup></td>
+                            <td class="ell-0" style="min-width: 100px; max-width: 150px;">Joe Dr.</td>
+                            <td class="ell-0" style="min-width: 200px;"><a data-toggle="tooltip" data-placement="top" title="What remind you for next payment">Lần tới đóng 3tr</a></td>
+                            <td>
+                                <a class="btn my-btn-outline w-130" href="#" data-toggle="modal" data-target="#modal-invoice"> Edit pre-voucher</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="ell-8" style="min-width: 100px; max-width: 110px;">RV-00001</td>
+                            <td class="ell-0" style="min-width: 100px; max-width: 110px;">300,000 <sup>vnđ</sup></td>
+                            <td class="ell-0" style="min-width: 100px; max-width: 150px;">08/11/2017 11:45</td>
+                            <td class="ell-0" style="min-width: 100px; max-width: 110px;">14,980,000 <sup>vnđ</sup></td>
+                            <td class="ell-0" style="min-width: 100px; max-width: 150px;">Thiện Lương</td>
+                            <td class="ell-0" style="min-width: 200px;"></td>
+                            <td>
+                                <a class="btn my-btn-outline w-130 disabled" ><i class="fa fa-check-circle fa-lg green"></i></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- ./invoice -->
+        <!-- appointment schedule -->
+        <div class="standard mt-lg-3 mt-md-2 mt-sm-1">
+            <a data-toggle="collapse" href="#collapse-as"><strong class="tag-area dib">Appointment schedule<i class="fa fa-angle-up dib"></i></strong></a>
+            <div class="float-right">
+                <a class="btn my-btn-outline dkt" href="#" data-toggle="modal" data-target="#modal-newappointment"><i class="fa fa-plus fa-lg fa-fw"></i> Create new appointment</a>
+                <a class="btn my-btn-outline mbl" href="#" data-toggle="modal" data-target="#modal-newappointment"><i class="fa fa-plus fa-lg fa-fw"></i></a>
+                <a class="btn my-btn-outline" href="print-treatment.html" target="_blank" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-print fa-lg fa-fw"></i></a>
+            </div>
+        </div>
+        <div>
+        <div class="standard collapse show" id="collapse-as">
+            <div class="table-list">
+                <table class="table table-responsive table-striped table-hover" >
+                    <thead>
+                       <tr>
+                            <th class="ell-8" style="min-width: 100px; max-width: 120px;">Appointment D/T</th>
+                            <th class="ell-0" style="min-width: 100px; max-width: 150px;">With Doctor</th>
+                            <th class="ell-0" style="min-width: 120px; max-width: 150px;">Treatment #</th>
+                            <!-- <th class="ell-0" style="min-width: 100px; max-width: 150px;">Creator</th> -->
+                            <th class="ell-0" style="min-width: 350px;">Notes</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="ell-8" style="min-width: 100px; max-width: 120px;">09/11/2017 11:45</td>
+                            <td class="ell-0" style="min-width: 100px; max-width: 150px;"><a href="#Dr.schedule">Joe Dr.</a></td>
+                            <td class="ell-0" style="min-width: 120px; max-width: 150px;"><a href="medical-history.html">Treatment name A</a></td>
+                            <!-- <td class="ell-0" style="min-width: 100px; max-width: 150px;">Joe Dr.</td> -->
+                            <td class="ell-0" style="min-width: 350px;">Cạo vôi răng</td>
+                            <td>
+                                <a class="btn my-btn-outline w-130" href="#" data-toggle="modal" data-target="#modal-editappointment"><i class="fa fa-edit"></i> Edit</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="ell-8" style="min-width: 100px; max-width: 120px;">08/11/2017 11:45</td>
+                            <td class="ell-0" style="min-width: 100px; max-width: 150px;"><a href="#Dr.schedule">Thiện Lương</a></td>
+                            <td class="ell-0" style="min-width: 120px; max-width: 150px;"><a href="medical-history.html">Treatment name A</a></td>
+                            <!-- <td class="ell-0" style="min-width: 100px; max-width: 150px;">Phuong Thao</td> -->
+                            <td class="ell-0" style="min-width: 350px;">i wanna do 1, 2, 3 next times</td>
+                            <td>
+                                <a class="btn my-btn-outline w-130" href="#" data-toggle="modal" data-target="#modal-viewappointment"><i class="fa fa-eye fa-fw fa-lg"></i> View</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- ./appointment schedule -->
         <div class="footer">
             <div class="line"></div>
             © 2018 - Cloud Clinic ERP _version 1.0.1 (South East Asia)
@@ -137,7 +242,7 @@
             </span>
         </div>
         <!-- modal Edit -->
-        <div class="modal modal-edit fade" id="modal-edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <div class="modal modal-edit fade" id="modal-edittreatmentplan" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -248,6 +353,377 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn my-btn-outline-danger w-150" data-dismiss="modal" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-print fa-fw"></i> Save</button>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.modal -->
+        <!-- modal invoice Create -->
+        <div class="modal modal-edit fade" id="modal-invoice" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title green" id="exampleModalLabel" >Patial payment: made <strong>receipt voucher (TODAY)</strong></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            <span class="sr-only">Close</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="top-part">
+                            <table class="table table-responsive table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th class="ell-8" style="min-width: 100px; max-width: 110px;">Voucher #</th>
+                                        <th class="ell-0" style="min-width: 100px; max-width: 150px;">Amount</th>
+                                        <th class="ell-0" style="min-width: 100px; max-width: 150px;">Balance due</th>
+                                        <th class="ell-0" style="min-width: 350px; max-width: 600px;">Notes</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="ell-8" style="min-width: 100px; max-width: 110px;"><input type="text" class="form-control" style="" placeholder="RV-00001" disabled=""></td>
+                                        <td class="ell-0" style="min-width: 100px; max-width: 150px;"><input type="text" class="form-control" style="" placeholder="300,000" disabled=""></td>
+                                        <td class="ell-0" style="min-width: 100px; max-width: 150px;"><input type="text" class="form-control" style="" placeholder="14,980,000" disabled=""></td>
+                                        <td class="ell-0" style="min-width: 350px; max-width: 600px;"><input type="text" class="form-control dib" placeholder="" disabled=""></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ell-8" style="min-width: 100px; max-width: 110px;"><input type="text" class="form-control" style="" placeholder="RV-00005" disabled=""></td>
+                                        <td class="ell-0" style="min-width: 100px; max-width: 150px;" data-toggle="tooltip" data-placement="top" title="Input how much your customer pay today"><input type="text" class="form-control" style="" placeholder="5,000,000"></td>
+                                        <td class="ell-0" style="min-width: 100px; max-width: 150px;"><input type="text" class="form-control" style="" placeholder="9,980,000" disabled=""></td>
+                                        <td class="ell-0" style="min-width: 350px; max-width: 600px;" data-toggle="tooltip" data-placement="top" title="What remind you for next payment"><input type="text" class="form-control dib" placeholder="Lần tới đóng 3tr"></td>
+                                        <td class="ell-0 red"><!-- //Có nên làm nút xoá dòng ko thì mày quyết định nhé --><i class="fa fa-trash"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ell-8" style="min-width: 100px; max-width: 110px;"><input type="text" class="form-control" style="" placeholder="RV-000XX" disabled=""></td>
+                                        <td class="ell-0" style="min-width: 100px; max-width: 150px;"><input type="text" class="form-control" style="" placeholder="..."></td>
+                                        <td class="ell-0" style="min-width: 100px; max-width: 150px;"><input type="text" class="form-control" style="" placeholder="9,980,000" disabled=""></td>
+                                        <td class="ell-0" style="min-width: 350px; max-width: 600px;"><input type="text" class="form-control dib" placeholder="..."></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="part">
+                            <a data-toggle="collapse" href="#show-part-12" class="tag-area db"><strong>Addition information</strong><i class="fa fa-angle-up"></i></a>
+                            <div id="show-part-12">
+                            </div>
+                        </div>
+                        <div class="part">
+                            <a data-toggle="collapse" href="#show-part-13" class="tag-area db"><strong>Investment summary</strong><i class="fa fa-angle-up"></i></a>
+                            <span class="title green">Grand total </span>
+                            <div class="input-group" data-toggle="tooltip" title="Grand total">
+                                <div class="input-group-addon"><i class="fa fa-code"></i></div>
+                                <input type="text" class="form-control" style="" placeholder="15,280,000" disabled="">
+                            </div>
+                            <div class="input-group mt-2" data-toggle="tooltip" title="Grand total in words">
+                                <div class="input-group-addon"><i class="fa fa-money"></i></div>
+                                <input type="text" class="form-control" style="" placeholder="Mười lăm triệu hai trăm tám mươi nghìn đồng chẵn" disabled="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn my-btn-outline w-150" data-dismiss="modal" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-save fa-fw fa-lg"></i> Save</button>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.modal -->
+        <!-- Modal New appointment -->
+        <div class="modal fade" id="modal-newappointment" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title green" id="exampleModalLabel" >Create new appointment</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            <span class="sr-only">Close</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="top-part tag-line">This is Dr's schedule when select Dr bellow. Mr Loc do it very slow !</div>
+                        <div class="part">
+                            <a data-toggle="collapse" href="#collapse-perinformation" class="tag-area db"><strong>General Information</strong><i class="fa fa-angle-up"></i></a>
+                            <div id="collapse-perinformation">
+                                <span class="title">Select Doctor *</span>
+                                <div class="input-group mt-2">
+                                    <div class="input-group-addon"><i class="fa fa-user"></i></div>
+                                    <select class="form-control custom-select">
+                                        <option value="1">Ngoc Anh *</option>
+                                        <option value="2">Thien Luong</option>
+                                    </select>
+                                </div>
+                                <div class="input-group mt-2">
+                                    <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
+                                    <select class="form-control custom-select">
+                                        <option value="1">T2 - Dec 05 2017 *</option>
+                                    </select>
+                                </div>
+                                <div class="input-group mt-2">
+                                    <div class="input-group-addon"><i class="fa fa-clock-o"></i></div>
+                                    <select class="form-control custom-select" disabled="">
+                                        <option value="1">All day *</option>
+                                        <option value="2">Morning</option>
+                                        <option value="3">Afternoon</option>
+                                        <option value="4">Evening</option>
+                                    </select>
+                                </div>
+                                <span class="title">Select Customer *</span>
+                                <div class="input-group mt-2" data-toggle="tooltip" title="Nếu tạo lịch hẹn mới cho khách hiện tại đang làm thì khoá trường này lại, mặc định tên của patient đang làm">
+                                    <div class="input-group-addon"><i class="fa fa-users"></i></div>
+                                    <input type="text" class="form-control" style="" placeholder="Type phone to search *" >
+                                </div>
+                                <span class="red">Co the tao khach moi o day ?????</span>
+                            </div>
+                        </div>
+                        <div class="part">
+                            <a data-toggle="collapse" href="#collapse-perinformation" class="tag-area db"><strong>Appointment Information</strong><i class="fa fa-angle-up"></i></a>
+                            <div id="collapse-perinformation">
+                                <span class="title">Treatment *</span>
+                                <div class="input-group mt-2">
+                                    <div class="input-group-addon"><i class="fa fa-font"></i></div>
+                                    <select class="form-control custom-select">
+                                        <option value="1">Choose existed treatment * (default)</option>
+                                        <option value="2">Treatment A</option>
+                                        <option value="3">Create new treatment</option>
+                                    </select>
+                                </div>
+                                <div class="input-group mt-2" data-toggle="tooltip" data-placement="left" title="First create new or change everytime here !">
+                                    <div class="input-group-addon"><i class="fa fa-font"></i></div>
+                                    <input type="text" class="form-control" style="" placeholder="Treatment name" >
+                                </div>
+                                <div class="input-group mt-2" data-toggle="tooltip" title="Leave empty treatment name will default use this treatment code">
+                                    <div class="input-group-addon"><i class="fa fa-code"></i></div>
+                                    <input type="text" class="form-control" style="" placeholder="TRM-00006" disabled="">
+                                </div>
+                                <div class="input-group mt-2">
+                                    <div class="input-group-addon"><i class="fa fa-clock-o"></i></div>
+                                    <select class="form-control custom-select">
+                                        <option value="1">Basic service * (default)</option>
+                                        <option value="2">Implant</option>
+                                        <option value="3">Orthodontic</option>
+                                    </select>
+                                </div>
+                                <span class="title">Appointment time *</span>
+                                <div class="input-group" data-toggle="tooltip" title="Which time start?">
+                                    <div class="input-group-addon"><i class="fa fa-clock-o"></i></div>
+                                    <input type="text" class="form-control" style="" placeholder="Time start" >
+                                </div>
+                                <div class="input-group mt-2" data-toggle="tooltip" title="In how long?">
+                                    <div class="input-group-addon"><i class="fa fa-unlock"></i></div>
+                                    <input type="text" class="form-control" style="" placeholder="Remaining (minutes only).. Ex: 30" >
+                                </div>
+                                <a data-toggle="collapse" href="#collapse-Addiinformation" class="tag-area db mt-3"><strong>Addition information</strong><i class="fa fa-angle-up"></i></a>
+                                <div id="collapse-Addiinformation">
+                                    <span class="title">Write your note (short, clear, number):</span>
+                                    <textarea class="form-control" placeholder="..."></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary w-100 dkt" data-dismiss="modal"><i class="fa fa-times-circle-o fa-fw"></i> Cancel</button>
+                        <button type="button" class="btn my-btn-outline w-150 dkt"><i class="fa fa-save fa-fw"></i> Save</button>
+                        <button type="button" class="btn btn-secondary w-80 mbl" data-dismiss="modal"><i class="fa fa-times-circle-o fa-fw fa-lg"></i></button>
+                        <button type="button" class="btn my-btn-outline w-150 mbl"><i class="fa fa-save fa-fw fa-lg"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.modal -->
+        <!-- Modal Edit appointment -->
+        <div class="modal fade" id="modal-editappointment" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title green" id="exampleModalLabel" >Edit appointment</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            <span class="sr-only">Close</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="top-part tag-line">This is Dr's schedule when select Dr bellow. Mr Loc do it very slow !</div>
+                        <div class="part">
+                            <a data-toggle="collapse" href="#collapse-perinformation" class="tag-area db"><strong>General Information</strong><i class="fa fa-angle-up"></i></a>
+                            <div id="collapse-perinformation">
+                                <span class="title">Select Doctor *</span>
+                                <div class="input-group mt-2">
+                                    <div class="input-group-addon"><i class="fa fa-user"></i></div>
+                                    <select class="form-control custom-select">
+                                        <option value="1">Joe Dr. *</option>
+                                        <option value="2">Thien Luong</option>
+                                    </select>
+                                </div>
+                                <div class="input-group mt-2">
+                                    <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
+                                    <select class="form-control custom-select">
+                                        <option value="1">T2 - Jan 03 2018 *</option>
+                                    </select>
+                                </div>
+                                <div class="input-group mt-2">
+                                    <div class="input-group-addon"><i class="fa fa-clock-o"></i></div>
+                                    <select class="form-control custom-select" disabled="">
+                                        <option value="1">All day *</option>
+                                        <option value="2">Morning</option>
+                                        <option value="3">Afternoon</option>
+                                        <option value="4">Evening</option>
+                                    </select>
+                                </div>
+                                <span class="title">Select Customer *</span>
+                                <div class="input-group mt-2" data-toggle="tooltip" title="Nếu tạo lịch hẹn mới cho khách hiện tại đang làm thì khoá trường này lại, mặc định tên của patient đang làm">
+                                    <div class="input-group-addon"><i class="fa fa-users"></i></div>
+                                    <input type="text" class="form-control" style="" placeholder="0906858628 (Chu Yến Vân)" disabled="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="part">
+                            <a data-toggle="collapse" href="#collapse-perinformation" class="tag-area db"><strong>Appointment Information</strong><i class="fa fa-angle-up"></i></a>
+                            <div id="collapse-perinformation">
+                                <span class="title">Treatment *</span>
+                                <div class="input-group mt-2">
+                                    <div class="input-group-addon"><i class="fa fa-font"></i></div>
+                                    <select class="form-control custom-select">
+                                        <option value="1">Treatment name A</option>
+                                        <option value="2">Treatment name B</option>
+                                    </select>
+                                </div>
+                                <div class="input-group mt-2" data-toggle="tooltip" data-placement="left" title="First create new or change everytime here !">
+                                    <div class="input-group-addon"><i class="fa fa-font"></i></div>
+                                    <input type="text" class="form-control" style="" placeholder="Treatment name A" >
+                                </div>
+                                <div class="input-group mt-2" data-toggle="tooltip" title="Leave empty treatment name will default use this treatment code">
+                                    <div class="input-group-addon"><i class="fa fa-code"></i></div>
+                                    <input type="text" class="form-control" style="" placeholder="TRM-00006" disabled="">
+                                </div>
+                                <div class="input-group mt-2">
+                                    <div class="input-group-addon"><i class="fa fa-clock-o"></i></div>
+                                    <select class="form-control custom-select">
+                                        <option value="1">Basic service * (default)</option>
+                                        <option value="2">Implant</option>
+                                        <option value="3">Orthodontic</option>
+                                    </select>
+                                </div>
+                                <span class="title">Appointment time *</span>
+                                <div class="input-group" data-toggle="tooltip" title="Which time start?">
+                                    <div class="input-group-addon"><i class="fa fa-clock-o"></i></div>
+                                    <input type="text" class="form-control" style="" placeholder="10:30" >
+                                </div>
+                                <div class="input-group mt-2" data-toggle="tooltip" title="In how long?">
+                                    <div class="input-group-addon"><i class="fa fa-unlock"></i></div>
+                                    <input type="text" class="form-control" style="" placeholder="60" >
+                                </div>
+                                <a data-toggle="collapse" href="#collapse-Addiinformation" class="tag-area db mt-3"><strong>Addition information</strong><i class="fa fa-angle-up"></i></a>
+                                <div id="collapse-Addiinformation">
+                                    <span class="title">Write your note (short, clear, number):</span>
+                                    <textarea class="form-control" placeholder="Cạo vôi răng"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary w-100 dkt" data-dismiss="modal"><i class="fa fa-times-circle-o fa-fw"></i> Cancel</button>
+                        <button type="button" class="btn my-btn-outline w-150 dkt"><i class="fa fa-save fa-fw"></i> Save</button>
+                        <button type="button" class="btn btn-secondary w-80 mbl" data-dismiss="modal"><i class="fa fa-times-circle-o fa-fw fa-lg"></i></button>
+                        <button type="button" class="btn my-btn-outline w-150 mbl"><i class="fa fa-save fa-fw fa-lg"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.modal -->
+        <!-- Modal View appointment -->
+        <div class="modal fade" id="modal-viewappointment" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title green" id="exampleModalLabel" >Review appointment</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            <span class="sr-only">Close</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="top-part tag-line">This is Dr's schedule when select Dr bellow. Mr Loc do it very slow !</div>
+                        <div class="part">
+                            <a data-toggle="collapse" href="#collapse-perinformation" class="tag-area db"><strong>General Information</strong><i class="fa fa-angle-up"></i></a>
+                            <div id="collapse-perinformation">
+                                <span class="title">Select Doctor *</span>
+                                <div class="input-group mt-2">
+                                    <div class="input-group-addon"><i class="fa fa-user"></i></div>
+                                    <select class="form-control custom-select" disabled="">
+                                        <option value="1">Thiện Lương *</option>
+                                        <option value="2">Joe Dr.</option>
+                                    </select>
+                                </div>
+                                <div class="input-group mt-2">
+                                    <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
+                                    <select class="form-control custom-select" disabled>
+                                        <option value="1">T2 - Jan 03 2018 *</option>
+                                    </select>
+                                </div>
+                                <div class="input-group mt-2">
+                                    <div class="input-group-addon"><i class="fa fa-clock-o"></i></div>
+                                    <select class="form-control custom-select" disabled="">
+                                        <option value="1">All day *</option>
+                                        <option value="2">Morning</option>
+                                        <option value="3">Afternoon</option>
+                                        <option value="4">Evening</option>
+                                    </select>
+                                </div>
+                                <span class="title">Select Customer *</span>
+                                <div class="input-group mt-2" data-toggle="tooltip" title="Nếu tạo lịch hẹn mới cho khách hiện tại đang làm thì khoá trường này lại, mặc định tên của patient đang làm">
+                                    <div class="input-group-addon"><i class="fa fa-users"></i></div>
+                                    <input type="text" class="form-control" style="" placeholder="0906858628 ( Chu Yến Vân)" disabled="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="part">
+                            <a data-toggle="collapse" href="#collapse-perinformation" class="tag-area db"><strong>Appointment Information</strong><i class="fa fa-angle-up"></i></a>
+                            <div id="collapse-perinformation">
+                                <span class="title">Treatment *</span>
+                                <div class="input-group mt-2">
+                                    <div class="input-group-addon"><i class="fa fa-font"></i></div>
+                                    <select class="form-control custom-select" disabled>
+                                        <option value="1">Treatment name A</option>
+                                        <option value="2">Treatment name B</option>
+                                    </select>
+                                </div>
+                                <div class="input-group mt-2" data-toggle="tooltip" data-placement="left" title="First create new or change everytime here !">
+                                    <div class="input-group-addon"><i class="fa fa-font"></i></div>
+                                    <input type="text" class="form-control" style="" placeholder="Treatment name A" disabled>
+                                </div>
+                                <div class="input-group mt-2" data-toggle="tooltip" title="Leave empty treatment name will default use this treatment code">
+                                    <div class="input-group-addon"><i class="fa fa-code"></i></div>
+                                    <input type="text" class="form-control" style="" placeholder="TRM-00006" disabled="">
+                                </div>
+                                <div class="input-group mt-2">
+                                    <div class="input-group-addon"><i class="fa fa-clock-o"></i></div>
+                                    <select class="form-control custom-select" disabled>
+                                        <option value="1">Basic service * (default)</option>
+                                        <option value="2">Implant</option>
+                                        <option value="3">Orthodontic</option>
+                                    </select>
+                                </div>
+                                <span class="title">Appointment time *</span>
+                                <div class="input-group" data-toggle="tooltip" title="Which time start?">
+                                    <div class="input-group-addon"><i class="fa fa-clock-o"></i></div>
+                                    <input type="text" class="form-control" style="" placeholder="10:30" disabled>
+                                </div>
+                                <div class="input-group mt-2" data-toggle="tooltip" title="In how long?">
+                                    <div class="input-group-addon"><i class="fa fa-unlock"></i></div>
+                                    <input type="text" class="form-control" style="" placeholder="60" disabled>
+                                </div>
+                                <a data-toggle="collapse" href="#collapse-Addiinformation" class="tag-area db mt-3"><strong>Addition information</strong><i class="fa fa-angle-up"></i></a>
+                                <div id="collapse-Addiinformation">
+                                    <span class="title">Write your note (short, clear, number):</span>
+                                    <textarea class="form-control" placeholder="i wanna do 1, 2, 3 next times" disabled=""></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary w-100 dkt" data-dismiss="modal"><i class="fa fa-times-circle-o fa-fw"></i> Cancel</button>
+                        <button type="button" class="btn my-btn-outline w-150 dkt"><i class="fa fa-save fa-fw"></i> Save</button>
+                        <button type="button" class="btn btn-secondary w-80 mbl" data-dismiss="modal"><i class="fa fa-times-circle-o fa-fw fa-lg"></i></button>
+                        <button type="button" class="btn my-btn-outline w-150 mbl"><i class="fa fa-save fa-fw fa-lg"></i></button>
                     </div>
                 </div>
             </div>
