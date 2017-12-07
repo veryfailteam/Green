@@ -363,29 +363,118 @@ a:hover{
     z-index: 1200 !important;
 }
 /* ----------- quote */
-.tag-line{
-    border-left: 6px solid #2EBD59;
-    padding: .5rem;
-    padding-bottom: -.5rem;
-    min-height: 35px !important;
-}
-.tag-area{
-    color: #0C5460 !important;
-    border-color: #BEE5EB;
-    padding: .35rem .75rem;
-    background-color: #D1ECF1;
-    border-radius: 4px;
-    height: 35px;
-}
-.tag-area i{
-    float: right;
-    vertical-align: middle;
-    padding-left: 1rem;
-    padding-top: .2rem;
-}
-.tag-area a{
-    color: #0C5460;
-}
+    .tag-line{
+        border-left: 6px solid #2EBD59;
+        padding: .5rem;
+        padding-bottom: -.5rem;
+        min-height: 35px !important;
+    }
+    .tag-area{
+        color: #0C5460 !important;
+        border-color: #BEE5EB;
+        padding: .35rem .75rem;
+        background-color: #D1ECF1;
+        border-radius: 4px;
+        height: 35px;
+    }
+    .tag-area i{
+        float: right;
+        vertical-align: middle;
+        padding-left: 1rem;
+        padding-top: .2rem;
+    }
+    .tag-area a{
+        color: #0C5460;
+    }
+/* ----------- @two-part */
+    .two-part{
+        width: 100%;
+        margin: auto;
+    }
+    .two-part .part{
+        padding: .5rem;
+        width: 50%;
+        float: left;
+        margin: auto;
+    }
+    .two-part .part .title{
+        margin: .5rem 0 .25rem;
+        display: block;
+    }
+/* ----------- @treasury-table or table */
+    table{
+        border-bottom: 1px solid #D6D6D6 /*#DFDFDF*/;
+    }
+    .table-list{
+        padding: auto;
+    }
+    .table-list thead{
+        background: #2EBD59;
+        color: #FFF;
+    }
+    .table-list td, th{
+        vertical-align: middle;
+    }
+    .table-list td, th{
+        height: 50px !important;
+        padding: 0;
+    }
+    /*.table-list th{
+        padding-right: 0px;
+    }*/
+    .table-list span{
+        border: 1px solid #2EBD59;
+        background-color: #FFF;
+        padding: 0.4rem 1rem;
+        border-radius: 4px;
+    }
+    .table-list a{
+        color: #2EBD59;
+    }
+    .table-list a.btn.b{
+        background-color: #FFF;
+        border-color: #2EBD59;
+    }
+    .table-list a.btn.b:hover{
+        background-color: #2EBD59;
+        border-color: #2EBD59;
+    }
+/* ----------- @mini-table */
+    .mini-table{
+        padding: auto;
+        margin: auto;
+    }
+    .mini-table thead{
+        background: #2EBD59;
+        color: #FFF;
+    }
+    .mini-table td, th{
+        vertical-align: middle;
+    }
+    .mini-table td{
+        height: 40px;
+    }
+    .mini-table th{
+        height: 40px;
+        margin: auto;
+    }
+    .mini-table span{
+        border: 1px solid #2EBD59;
+        background-color: #FFF;
+        padding: 0.25rem .5rem;
+        border-radius: 4px;
+    }
+    .mini-table a{
+        color: #2EBD59;
+    }
+    .mini-table a.btn.b{
+        background-color: #FFF;
+        border-color: #2EBD59;
+    }
+    .mini-table a.btn.b:hover{
+        background-color: #2EBD59;
+        border-color: #2EBD59;
+    }
 /* ----------- modal */
     .modal-dialog{
         max-width: 840px;
@@ -521,75 +610,6 @@ a:hover{
         color: #FFF;
         box-shadow: 0 0.8rem 1rem #FF457A;
         transform: translateY(-0.3333rem);
-    }
-/* ----------- @feature */
-    .feature .part:hover{
-        border: 1px solid #2EBD59;
-        box-shadow: 0 0.8rem 1rem #FF457A;
-        transform: translateY(-0.3333rem);
-    }/*
-    .nav-item{
-        margin: auto;
-    }*/
-    .feature .go{
-        width: 101%;
-        height: 40px;
-        border: 1px solid #2EBD59;
-        color: #2EBD59;
-        position: absolute;
-        bottom: 0;
-        padding: 0.5rem 0;
-        margin: -1px;
-        border-bottom-left-radius: 4px;
-        border-bottom-right-radius: 4px;
-    }
-    .feature i{
-        color: #FFF;
-    }
-    .feature .go:hover{
-        background-color: #2EBD59;
-        color: #FFF;
-    }
-    .feature i:hover{
-        color: #FFF;
-    }
-/* ----------- @treasury-table or table */
-    table{
-        border-bottom: 1px solid #D6D6D6 /*#DFDFDF*/;
-    }
-    .table-list{
-        padding: auto;
-    }
-    .table-list thead{
-        background: #2EBD59;
-        color: #FFF;
-    }
-    .table-list td, th{
-        vertical-align: middle;
-    }
-    .table-list td, th{
-        height: 50px;
-        padding: 0;
-    }
-    .table-list th{
-        padding-right: 0px;
-    }
-    .table-list span{
-        border: 1px solid #2EBD59;
-        background-color: #FFF;
-        padding: 0.4rem 1rem;
-        border-radius: 4px;
-    }
-    .table-list a{
-        color: #2EBD59;
-    }
-    .table-list a.btn.b{
-        background-color: #FFF;
-        border-color: #2EBD59;
-    }
-    .table-list a.btn.b:hover{
-        background-color: #2EBD59;
-        border-color: #2EBD59;
     }
 /* ----------- @split-page */
     .split-page .page-link{
@@ -791,6 +811,12 @@ a:hover{
         float: left;
         margin: auto;
     }
+    .two-part .part{
+        padding: 1rem;
+        width: 50%;
+        float: left;
+        margin: auto;
+    }
 }
 
 /* ----------- large screen ----------- */
@@ -891,6 +917,12 @@ a:hover{
         float: left;
         margin: auto;
     }
+    .two-part .part{
+        padding: .5rem;
+        width: 50%;
+        float: left;
+        margin: auto;
+    }
 }
 
 /* ----------- Popular desktop screen ----------- */
@@ -984,6 +1016,12 @@ a:hover{
         padding: .5rem;
         margin: auto;
     }
+    .two-part .part{
+        padding: .5rem;
+        width: 50%;
+        float: left;
+        margin: auto;
+    }
 }
 
 /* ----------- iphone 6+ đến ipad ----------- */
@@ -997,7 +1035,7 @@ a:hover{
     a{
         font-size: 13px;
     }
-    .dkt{
+    .mbl{
         display: none !important;
     }
     .btn{
@@ -1075,6 +1113,12 @@ a:hover{
     .modal-body .part-2{
         width: 100%;
         padding: .5rem;
+        margin: auto;
+    }
+    .two-part .part{
+        padding: .5rem;
+        width: 90%;
+        float: left;
         margin: auto;
     }
 }
@@ -1174,6 +1218,12 @@ a:hover{
     .modal-body .part-2{
         width: 100%;
         padding: .5rem;
+        margin: auto;
+    }
+    .two-part .part{
+        padding: .5rem;
+        width: 100%;
+        float: left;
         margin: auto;
     }
 }

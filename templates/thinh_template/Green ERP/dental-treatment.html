@@ -303,7 +303,7 @@
                         </div>
                         <div class="part">
                             <a data-toggle="collapse" href="#show-part-12" class="tag-area db"><strong>Addition information</strong><i class="fa fa-angle-up"></i></a>
-                            <div id="show-part-12">
+                            <div id="show-part-12" class="collapse show">
                                 <span class="title">Notes for this treatment plan (short, clear, number):</span>
                                 <textarea class="form-control" placeholder="..."></textarea>
                                 <span class="title green">Type of dental service *</span>
@@ -318,40 +318,42 @@
                             </div>
                             <div class="mt-3">
                                 <a data-toggle="collapse" href="#show-part-11" class="tag-area db"><strong>All the dupplicates</strong><i class="fa fa-angle-up"></i></a>
-                                <div id="show-part-11">
+                                <div id="show-part-11" class="collapse show">
                                     Next 1.0.5
                                 </div>
                             </div>
                         </div>
                         <div class="part">
                             <a data-toggle="collapse" href="#show-part-13" class="tag-area db"><strong>Investment summary</strong><i class="fa fa-angle-up"></i></a>
-                            <span class="title">The tax *</span>
-                            <div class="input-group" data-toggle="tooltip" title="Input your regional tax" >
-                                <div class="input-group-addon"><i class="fa fa-code"></i></div>
-                                <select class="form-control custom-select">
-                                    <option value="1">10%</option>
-                                    <option value="2">5%</option>
-                                    <option value="3">0%</option>
-                                    <option value="4">No tax</option>
-                                </select>
-                            </div>
-                            <span class="title">Discount</span>
-                            <div class="input-group" data-toggle="tooltip" title="Discount in number">
-                                <div class="input-group-addon"><i class="fa fa-code"></i></div>
-                                <input type="text" class="form-control" style="" placeholder="In number">
-                            </div>
-                            <div class="input-group mt-2" data-toggle="tooltip" title="Discount in percentage">
-                                <div class="input-group-addon"><i class="fa fa-percent"></i></div>
-                                <input type="text" class="form-control" style="" placeholder="in percent">
-                            </div>
-                            <span class="title green">Grand total </span>
-                            <div class="input-group" data-toggle="tooltip" title="Grand total">
-                                <div class="input-group-addon"><i class="fa fa-code"></i></div>
-                                <input type="text" class="form-control" style="" placeholder="15,280,000" disabled="">
-                            </div>
-                            <div class="input-group mt-2" data-toggle="tooltip" title="Grand total in words">
-                                <div class="input-group-addon"><i class="fa fa-money"></i></div>
-                                <input type="text" class="form-control" style="" placeholder="Mười lăm triệu hai trăm tám mươi nghìn đồng chẵn" disabled="">
+                            <div class="collapse show" id="show-part-13">
+                                <span class="title">The tax *</span>
+                                <div class="input-group" data-toggle="tooltip" title="Input your regional tax" >
+                                    <div class="input-group-addon"><i class="fa fa-code"></i></div>
+                                    <select class="form-control custom-select">
+                                        <option value="1">10%</option>
+                                        <option value="2">5%</option>
+                                        <option value="3">0%</option>
+                                        <option value="4">No tax</option>
+                                    </select>
+                                </div>
+                                <span class="title">Discount</span>
+                                <div class="input-group" data-toggle="tooltip" title="Discount in number">
+                                    <div class="input-group-addon"><i class="fa fa-code"></i></div>
+                                    <input type="text" class="form-control" style="" placeholder="In number">
+                                </div>
+                                <div class="input-group mt-2" data-toggle="tooltip" title="Discount in percentage">
+                                    <div class="input-group-addon"><i class="fa fa-percent"></i></div>
+                                    <input type="text" class="form-control" style="" placeholder="in percent">
+                                </div>
+                                <span class="title green">Grand total </span>
+                                <div class="input-group" data-toggle="tooltip" title="Grand total">
+                                    <div class="input-group-addon"><i class="fa fa-code"></i></div>
+                                    <input type="text" class="form-control" style="" placeholder="15,280,000" disabled="">
+                                </div>
+                                <div class="input-group mt-2" data-toggle="tooltip" title="Grand total in words">
+                                    <div class="input-group-addon"><i class="fa fa-money"></i></div>
+                                    <input type="text" class="form-control" style="" placeholder="Mười lăm triệu hai trăm tám mươi nghìn đồng chẵn" disabled="">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -416,19 +418,21 @@
                         </div>
                         <div class="part">
                             <a data-toggle="collapse" href="#show-part-12" class="tag-area db"><strong>Addition information</strong><i class="fa fa-angle-up"></i></a>
-                            <div id="show-part-12">
+                            <div id="show-part-12" class="collapse show">
                             </div>
                         </div>
                         <div class="part">
-                            <a data-toggle="collapse" href="#show-part-13" class="tag-area db"><strong>Investment summary</strong><i class="fa fa-angle-up"></i></a>
-                            <span class="title green">Grand total </span>
-                            <div class="input-group" data-toggle="tooltip" title="Grand total">
-                                <div class="input-group-addon"><i class="fa fa-code"></i></div>
-                                <input type="text" class="form-control" style="" placeholder="15,280,000" disabled="">
-                            </div>
-                            <div class="input-group mt-2" data-toggle="tooltip" title="Grand total in words">
-                                <div class="input-group-addon"><i class="fa fa-money"></i></div>
-                                <input type="text" class="form-control" style="" placeholder="Mười lăm triệu hai trăm tám mươi nghìn đồng chẵn" disabled="">
+                            <a data-toggle="collapse" href="#show-part-14" class="tag-area db"><strong>Investment summary</strong><i class="fa fa-angle-up"></i></a>
+                            <div class="collapse show" id="show-part-14">
+                                <span class="title green">Grand total </span>
+                                <div class="input-group" data-toggle="tooltip" title="Grand total">
+                                    <div class="input-group-addon"><i class="fa fa-code"></i></div>
+                                    <input type="text" class="form-control" style="" placeholder="15,280,000" disabled="">
+                                </div>
+                                <div class="input-group mt-2" data-toggle="tooltip" title="Grand total in words">
+                                    <div class="input-group-addon"><i class="fa fa-money"></i></div>
+                                    <input type="text" class="form-control" style="" placeholder="Mười lăm triệu hai trăm tám mươi nghìn đồng chẵn" disabled="">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -452,8 +456,8 @@
                     <div class="modal-body">
                         <div class="top-part tag-line">This is Dr's schedule when select Dr bellow. Mr Loc do it very slow !</div>
                         <div class="part">
-                            <a data-toggle="collapse" href="#collapse-perinformation" class="tag-area db"><strong>General Information</strong><i class="fa fa-angle-up"></i></a>
-                            <div id="collapse-perinformation">
+                            <a data-toggle="collapse" href="#collapse-perinformation-18" class="tag-area db"><strong>General Information</strong><i class="fa fa-angle-up"></i></a>
+                            <div id="collapse-perinformation-18" class="collapse show">
                                 <span class="title">Select Doctor *</span>
                                 <div class="input-group mt-2">
                                     <div class="input-group-addon"><i class="fa fa-user"></i></div>
@@ -484,10 +488,23 @@
                                 </div>
                                 <span class="red">Co the tao khach moi o day ?????</span>
                             </div>
+                            <a data-toggle="collapse" href="#collapse-status-3" class="tag-area db mt-3"><strong>Booking status</strong><i class="fa fa-angle-up"></i></a>
+                            <div id="collapse-status-3" class="collapse show">
+                                <span class="title">Change status back to *</span>
+                                <div class="input-group mt-2" data-toggle="tooltip" title="Reset status to previous point-time">
+                                    <div class="input-group-addon"><i class="fa fa-undo"></i></div>
+                                    <select class="form-control custom-select">
+                                        <option value="1">Booked *</option>
+                                        <option value="2">On way</option>
+                                        <option value="3">Checked</option>
+                                        <option value="4">Active</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
                         <div class="part">
-                            <a data-toggle="collapse" href="#collapse-perinformation" class="tag-area db"><strong>Appointment Information</strong><i class="fa fa-angle-up"></i></a>
-                            <div id="collapse-perinformation">
+                            <a data-toggle="collapse" href="#collapse-perinformation-11" class="tag-area db"><strong>Appointment Information</strong><i class="fa fa-angle-up"></i></a>
+                            <div id="collapse-perinformation-11" class="collapse show">
                                 <span class="title">Treatment *</span>
                                 <div class="input-group mt-2">
                                     <div class="input-group-addon"><i class="fa fa-font"></i></div>
@@ -506,7 +523,7 @@
                                     <input type="text" class="form-control" style="" placeholder="TRM-00006" disabled="">
                                 </div>
                                 <div class="input-group mt-2">
-                                    <div class="input-group-addon"><i class="fa fa-clock-o"></i></div>
+                                    <div class="input-group-addon"><i class="fa fa-s15"></i></div>
                                     <select class="form-control custom-select">
                                         <option value="1">Basic service * (default)</option>
                                         <option value="2">Implant</option>
@@ -519,7 +536,7 @@
                                     <input type="text" class="form-control" style="" placeholder="Time start" >
                                 </div>
                                 <div class="input-group mt-2" data-toggle="tooltip" title="In how long?">
-                                    <div class="input-group-addon"><i class="fa fa-unlock"></i></div>
+                                    <div class="input-group-addon"><i class="fa fa-spinner fa-spin"></i></div>
                                     <input type="text" class="form-control" style="" placeholder="Remaining (minutes only).. Ex: 30" >
                                 </div>
                                 <a data-toggle="collapse" href="#collapse-Addiinformation" class="tag-area db mt-3"><strong>Addition information</strong><i class="fa fa-angle-up"></i></a>
@@ -553,8 +570,8 @@
                     <div class="modal-body">
                         <div class="top-part tag-line">This is Dr's schedule when select Dr bellow. Mr Loc do it very slow !</div>
                         <div class="part">
-                            <a data-toggle="collapse" href="#collapse-perinformation" class="tag-area db"><strong>General Information</strong><i class="fa fa-angle-up"></i></a>
-                            <div id="collapse-perinformation">
+                            <a data-toggle="collapse" href="#collapse-perinformation-12" class="tag-area db"><strong>General Information</strong><i class="fa fa-angle-up"></i></a>
+                            <div id="collapse-perinformation-12" class="collapse show">
                                 <span class="title">Select Doctor *</span>
                                 <div class="input-group mt-2">
                                     <div class="input-group-addon"><i class="fa fa-user"></i></div>
@@ -584,10 +601,27 @@
                                     <input type="text" class="form-control" style="" placeholder="0906858628 (Chu Yến Vân)" disabled="">
                                 </div>
                             </div>
+                            <a data-toggle="collapse" href="#collapse-status-4" class="tag-area db mt-3"><strong>Booking status</strong><i class="fa fa-angle-up"></i></a>
+                            <div id="collapse-status-4" class="collapse show">
+                                <span class="title">Change status back to *</span>
+                                <div class="input-group mt-2" data-toggle="tooltip" title="Reset status to previous point-time">
+                                    <div class="input-group-addon"><i class="fa fa-undo"></i></div>
+                                    <select class="form-control custom-select">
+                                        <option value="1">Booked *</option>
+                                        <option value="2">On way</option>
+                                        <option value="3">Checked</option>
+                                        <option value="4">Active</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="input-group mt-2" data-toggle="tooltip" title="Current status">
+                                <div class="input-group-addon"><i class="fa fa-lock"></i></div>
+                                <input type="text" class="form-control" style="" placeholder="Onway" disabled="">
+                            </div>
                         </div>
                         <div class="part">
-                            <a data-toggle="collapse" href="#collapse-perinformation" class="tag-area db"><strong>Appointment Information</strong><i class="fa fa-angle-up"></i></a>
-                            <div id="collapse-perinformation">
+                            <a data-toggle="collapse" href="#collapse-perinformation-13" class="tag-area db"><strong>Appointment Information</strong><i class="fa fa-angle-up"></i></a>
+                            <div id="collapse-perinformation-13" class="collapse show">
                                 <span class="title">Treatment *</span>
                                 <div class="input-group mt-2">
                                     <div class="input-group-addon"><i class="fa fa-font"></i></div>
@@ -621,8 +655,8 @@
                                     <div class="input-group-addon"><i class="fa fa-unlock"></i></div>
                                     <input type="text" class="form-control" style="" placeholder="60" >
                                 </div>
-                                <a data-toggle="collapse" href="#collapse-Addiinformation" class="tag-area db mt-3"><strong>Addition information</strong><i class="fa fa-angle-up"></i></a>
-                                <div id="collapse-Addiinformation">
+                                <a data-toggle="collapse" href="#collapse-addiinformation-5" class="tag-area db mt-3"><strong>Addition information</strong><i class="fa fa-angle-up"></i></a>
+                                <div id="collapse-addiinformation-5" class="collapse show">
                                     <span class="title">Write your note (short, clear, number):</span>
                                     <textarea class="form-control" placeholder="Cạo vôi răng"></textarea>
                                 </div>
@@ -652,8 +686,8 @@
                     <div class="modal-body">
                         <div class="top-part tag-line">This is Dr's schedule when select Dr bellow. Mr Loc do it very slow !</div>
                         <div class="part">
-                            <a data-toggle="collapse" href="#collapse-perinformation" class="tag-area db"><strong>General Information</strong><i class="fa fa-angle-up"></i></a>
-                            <div id="collapse-perinformation">
+                            <a data-toggle="collapse" href="#collapse-perinformation-14" class="tag-area db"><strong>General Information</strong><i class="fa fa-angle-up"></i></a>
+                            <div id="collapse-perinformation-14" class="collapse show">
                                 <span class="title">Select Doctor *</span>
                                 <div class="input-group mt-2">
                                     <div class="input-group-addon"><i class="fa fa-user"></i></div>
@@ -683,10 +717,17 @@
                                     <input type="text" class="form-control" style="" placeholder="0906858628 ( Chu Yến Vân)" disabled="">
                                 </div>
                             </div>
+                            <a data-toggle="collapse" href="#collapse-status-5" class="tag-area db mt-3"><strong>Booking status</strong><i class="fa fa-angle-up"></i></a>
+                            <div id="collapse-status-5" class="collapse show">
+                            </div>
+                            <div class="input-group mt-2" data-toggle="tooltip" title="Current status">
+                                <div class="input-group-addon"><i class="fa fa-lock"></i></div>
+                                <input type="text" class="form-control" style="" placeholder="Complete" disabled="">
+                            </div>
                         </div>
                         <div class="part">
-                            <a data-toggle="collapse" href="#collapse-perinformation" class="tag-area db"><strong>Appointment Information</strong><i class="fa fa-angle-up"></i></a>
-                            <div id="collapse-perinformation">
+                            <a data-toggle="collapse" href="#collapse-perinformation-15" class="tag-area db"><strong>Appointment Information</strong><i class="fa fa-angle-up"></i></a>
+                            <div id="collapse-perinformation-15" class="collapse show">
                                 <span class="title">Treatment *</span>
                                 <div class="input-group mt-2">
                                     <div class="input-group-addon"><i class="fa fa-font"></i></div>
@@ -720,8 +761,8 @@
                                     <div class="input-group-addon"><i class="fa fa-unlock"></i></div>
                                     <input type="text" class="form-control" style="" placeholder="60" disabled>
                                 </div>
-                                <a data-toggle="collapse" href="#collapse-Addiinformation" class="tag-area db mt-3"><strong>Addition information</strong><i class="fa fa-angle-up"></i></a>
-                                <div id="collapse-Addiinformation">
+                                <a data-toggle="collapse" href="#collapse-addiinformation-8" class="tag-area db mt-3"><strong>Addition information</strong><i class="fa fa-angle-up"></i></a>
+                                <div id="collapse-addiinformation" class="collapse show">
                                     <span class="title">Write your note (short, clear, number):</span>
                                     <textarea class="form-control" placeholder="i wanna do 1, 2, 3 next times" disabled=""></textarea>
                                 </div>
