@@ -701,19 +701,19 @@ a:hover{
         float: right;
         text-align: right !important;
     }
-    .dental-room .left-part p, b{
+    /*.dental-room .left-part p, b{
         margin: 0;
         padding: 0;
-    }
+    }*/
     .dental-room .left-part a{
         color: #696969 !important;
     }
     .box.sresult:hover{
         color: #FFF !important;
         background-color: #2EBD59;
-        border-color: #2EBD59;
+        /*border-color: #2EBD59;
         border-right: 4px solid #BEE5EB;
-        width: 268px;
+        width: 268px;*/
     }
 
 /* ----------- @Name of main class */
@@ -1081,6 +1081,12 @@ a:hover{
     }
     .homepage .go{
         padding: .8rem 0;
+    }
+    .second-menu{
+        margin: auto;
+        padding: 0 1.2rem;
+        width: 100%;
+        display: inline-block;
     }
     .announcement{
         padding: 0.5rem 1.2rem;
