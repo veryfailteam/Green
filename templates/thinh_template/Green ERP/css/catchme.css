@@ -221,14 +221,10 @@ a.dropdown-item:hover{
 }
 .my-btn{
     color: #FFF !important;
-    background-color: #69BF83;
-}
-.my-btn{
-    color: #FFF !important;
-    background-color: #69BF83;
+    background-color: #2EBD59;
 }
 .my-btn:hover{
-    background-color: #2EBD59;
+    background-color: #2BAB51;
     color: #FFF;
 }
 .my-btn-outline:focus{
@@ -245,6 +241,20 @@ a.dropdown-item:hover{
 }
 .my-btn-outline:focus{
     box-shadow: 0 0 0 3px #2EBD59;
+}
+.my-btn-danger{
+    border: 1px solid #FF457A;
+    background-color: #FF457A;
+    color: #FFF !important;
+}
+.my-btn-danger:hover{
+    border: 1px solid #E04370;
+    background-color: #E04370;
+    color: #FFF !important;
+    border-radius: 4px;
+}
+.my-btn-danger:focus{
+    box-shadow: 0 0 0 3px #FF457A;
 }
 .my-btn-outline-danger{
     border: 1px solid #FF457A;
